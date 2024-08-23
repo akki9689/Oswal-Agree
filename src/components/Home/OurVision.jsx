@@ -2,7 +2,7 @@ import React from 'react'
 
 const OurVision = () => {
   return (
-    <div>OurVision</div>
+    <div className='text-2xl text-dark-green-200'>OurVision</div>
   )
 }
 
