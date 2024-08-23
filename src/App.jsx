@@ -1,14 +1,14 @@
-import React from 'react'
-// import HeroSection from  './components/Home/HeroSection'
-import OurVision from './components/Home/OurVision'
 
+import HeroSection from  './components/home/HeroSection'
+// import Protection from './components/home/Protection'
 import './App.css'
+// import {protectionData} from './data/home/protectionData'
 
 const App=()=> {
  return(
-  <div className='bg-dark-green-200'>
-  {/* <HeroSection /> */}
-  <OurVision/>
+  <div >
+  <HeroSection />
+   
   </div>
  )
   
