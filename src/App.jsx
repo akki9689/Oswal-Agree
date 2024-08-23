@@ -1,12 +1,12 @@
-import { Component, useState } from 'react'
-import HeroSection from  './components/herosection'
+import React from 'react'
+// import HeroSection from  './components/Home/HeroSection'
 
 import './App.css'
 
 const App=()=> {
  return(
   <div >
-  <HeroSection />
+  {/* <HeroSection /> */}
   </div>
  )
   
