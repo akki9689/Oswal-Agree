@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { Component, useState } from 'react'
+import HeroSection from  './components/herosection'
 
 import './App.css'
 
 const App=()=> {
  return(
   <div >
-    <h1 className='text-2xl text-black'>I am in app js</h1>
+  <HeroSection />
   </div>
  )
   
