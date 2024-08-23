@@ -7,11 +7,12 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-cube';  // Import Cube effect CSS
 import { Navigation, Pagination, Autoplay, EffectCube } from 'swiper/modules';
 
-import image1 from '../images/Home/agro1.jpg';
-import image2 from '../images/Home/agro2.jpg';
-import image3 from '../images/Home/agro3.jpg';
-import image4 from '../images/Home/agro4.jpg';
-import image5 from '../images/Home/agro5.jpg';
+
+import image1 from '../../images/Home/herosection/agro1.jpg';
+import image2 from '../../images/Home/herosection/agro2.jpg';
+import image3 from '../../images/Home/herosection/agro3.jpg';
+import image4 from '../../images/Home/herosection/agro4.jpg';
+import image5 from '../../images/Home/herosection/agro5.jpg';
 
 const images = [image1, image2, image3, image4, image5];
 

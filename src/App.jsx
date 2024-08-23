@@ -1,5 +1,5 @@
 
-import HeroSection from  './components/herosection'
+import HeroSection from  './components/home/HeroSection'
 import Protection from './components/home/Protection'
 import './App.css'
 import {protectionData} from './data/home/protectionData'
