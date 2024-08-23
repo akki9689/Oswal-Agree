@@ -7,11 +7,12 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-cube';  // Import Cube effect CSS
 import { Navigation, Pagination, Autoplay, EffectCube } from 'swiper/modules';
 
-import image1 from '../images/Home/agro1.jpg';
-import image2 from '../images/Home/agro2.jpg';
-import image3 from '../images/Home/agro3.jpg';
-import image4 from '../images/Home/agro4.jpg';
-import image5 from '../images/Home/agro5.jpg';
+
+import image1 from '../../images/Home/herosection/agro1.jpg';
+import image2 from '../../images/Home/herosection/agro2.jpg';
+import image3 from '../../images/Home/herosection/agro3.jpg';
+import image4 from '../../images/Home/herosection/agro4.jpg';
+import image5 from '../../images/Home/herosection/agro5.jpg';
 
 const images = [image1, image2, image3, image4, image5];
 
@@ -20,7 +21,7 @@ const HeroSection = () => {
     <section id="home" className="relative w-full">
       <div className="container-fluid p-0">
         <div className="row">
-          <div className="col">
+          <div className="col ">
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
@@ -39,7 +40,7 @@ const HeroSection = () => {
               }}
             >
               {images.map((image, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className=''>
                   <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
                 </SwiperSlide>
               ))}
