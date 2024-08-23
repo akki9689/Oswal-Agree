@@ -20,7 +20,7 @@ const HeroSection = () => {
     <section id="home" className="relative w-full">
       <div className="container-fluid p-0">
         <div className="row">
-          <div className="col">
+          <div className="col ">
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
@@ -39,7 +39,7 @@ const HeroSection = () => {
               }}
             >
               {images.map((image, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className=''>
                   <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
                 </SwiperSlide>
               ))}
