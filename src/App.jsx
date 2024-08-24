@@ -1,14 +1,16 @@
 
 import HeroSection from  './components/home/HeroSection'
-import Protection from './components/home/Protection'
+// import Companyprotection from './components/home/Companyprotection'
+
 import './App.css'
-import {protectionData} from './data/home/protectionData'
+// import {protectionData} from './data/home/protectionData'
 
 const App=()=> {
  return(
   <div >
   <HeroSection />
-   <Protection data={protectionData}/>
+  
+   
   </div>
  )
   
