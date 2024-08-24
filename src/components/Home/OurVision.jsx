@@ -1,7 +1,7 @@
 import React from 'react'
-import India from '../../images/Home/india_icon.png'
-import Export from '../../images/Home/export_icon.png'
-import Vision from '../../images/Home/vision_mission.png'
+import India from '../../images/Home/Vision/india_icon.png'
+import Export from '../../images/Home/Vision/export_icon.png'
+import Vision from '../../images/Home/Vision/vision_mission.png'
 
 const OurVision = () => {
   return (
