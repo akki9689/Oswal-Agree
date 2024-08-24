@@ -1,4 +1,3 @@
-import React from 'react'
 import { product } from '../../data/home/products-data'
 import Card from '../common/Card'
 import { motion } from 'framer-motion'
