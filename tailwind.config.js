@@ -20,6 +20,8 @@ export default {
       },
 
       richblack: {
+
+        50: "#B6C9DB",
         100: "#B7B7B7",
         200: "#7A7A7A",
         300: "#515050",
@@ -38,6 +40,7 @@ export default {
         100: "#6EC1E4",
         200: "#B7DA7A",
         300: "#BAD900",
+        400: "#C4DDBF",
         
 
       },
