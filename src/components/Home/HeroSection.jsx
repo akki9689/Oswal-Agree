@@ -19,7 +19,7 @@ const images = [image1, image2, image3, image4, image5];
 const HeroSection = () => {
   return (
     <section id="home" className="relative w-full">
-      <div className="container-fluid p-0">
+      <div className="p-0 container-fluid">
         <div className="row">
           <div className="col ">
             <Swiper
@@ -28,7 +28,7 @@ const HeroSection = () => {
               navigation
               pagination={{ clickable: true }}
               modules={[Navigation, Pagination, Autoplay, EffectCube]}  // Add EffectCube module
-              className="rounded-lg overflow-hidden h-full"
+              className="h-full overflow-hidden rounded-lg"
               loop={true}
               autoplay={{ delay: 10000 }} // 10000ms = 10 seconds
               effect="cube"  // Enable cube effect
@@ -41,7 +41,7 @@ const HeroSection = () => {
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index} className=''>
-                  <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+                  <img src={image} alt={`Slide ${index}`} className="object-cover w-full h-full" />
                 </SwiperSlide>
               ))}
             </Swiper>
