@@ -90,7 +90,7 @@ export default {
         }
       },
       animation: {
-        float: 'float 1.5s ease-in-out infinite'
+        float: 'float 0.7s ease-in '
       }
     }
   },
