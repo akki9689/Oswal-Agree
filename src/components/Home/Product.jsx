@@ -17,7 +17,7 @@ function Product () {
           initial='hidden'
           whileInView='visible'
           exit='hidden'
-          variants={cardVariants}
+          variants={cardVariants} //this is use for when the object or card is on screen view then animate while starts
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className='px-10 py-2'
         >
@@ -33,7 +33,7 @@ function Product () {
             <motion.div
               key={index}
               initial='hidden'
-              whileInView='visible'
+              whileInView='visible' //this is use for when the object or card is on screen view then animate while starts
               exit='hidden'
               variants={cardVariants}
               transition={{ duration: 0.8, ease: 'easeOut' }}
