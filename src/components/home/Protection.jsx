@@ -18,7 +18,7 @@ const Companyprotection = ({ data }) => {
        <div className='flex flex-col'>
          {/* Left side: Two images stacked vertically */}
       <div className="flex flex-row">
-        <img src={oneside} alt="First image" className=" h-auto shadow-lg" />
+        <img src={oneside} alt="First image" className="h-auto shadow-lg " />
         <img src={secondside} alt="Second image" className="w-full h-auto" />
       </div>
 
