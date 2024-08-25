@@ -3,6 +3,7 @@
 export const protectionData=[
     {
         id: "paragraph-1",
+        about:false,
         content: "The Company Oswal Crop Protection Pvt. Ltd. has been established by Mr. Ramesh Bansal and is an ISO 9001:2015 certified company. The company is one of the leading manufacturers and suppliers of Insecticides, Herbicides, Fungicides, Weedicides, and Plant Growth Regulators."
       },
       {
