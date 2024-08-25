@@ -2,7 +2,7 @@
 import './App.css'
 
 import Product from './components/Home/Product'
-import Footer from './components/Home/Footer'
+import Footer from './components/common/Footer'
 import Companyprotection from './components/home/Companyprotection'
 // import OurVision from './components/Home/OurVision'
 // import {protectionData} from './data/home/protectionData'

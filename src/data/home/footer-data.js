@@ -19,8 +19,9 @@ export const footerData = {
         title: 'Contact Us',
         address:
             '310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)',
-        phone: 'Phone : +91-11-49072043',
-        email: 'Email : info@oswalcrop.com'
+        countryCode: "+91",
+        phone: '1149072043',
+        email: 'info@oswalcrop.com'
     },
     works: {
         title: 'Works',
