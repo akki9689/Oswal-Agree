@@ -73,7 +73,7 @@ export const Companyprotection = ({ data }) => {
               <div
                 key={item.id}
                 dangerouslySetInnerHTML={{ __html: parseText(item.content) }}
-                className="mb-4 leading-8 first:mt-40 first:md:mt-0"
+                className="mb-4 font-open-sans leading-[1.8rem] first:mt-40 first:md:mt-0 text-justify"
               />
             ))}
           </div>
