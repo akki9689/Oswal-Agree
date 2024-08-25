@@ -35,6 +35,10 @@ export default {
         300: '#BAD900',
         400: '#C4DDBF'
       },
+     "orange":{
+      600:"#EEA90E",
+     },
+
       yellow: {
         100: '#E8C204',
         200: '#EEA90E'
