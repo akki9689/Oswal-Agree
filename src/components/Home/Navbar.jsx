@@ -68,7 +68,7 @@ const Navbar = () => {
          
 
           {/* Navbar Links */}
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-6">
             <NavLink to="/" className="p-2 hover:bg-dark-green-100 rounded-xl">Home</NavLink>
 
             <div className="relative"
@@ -107,7 +107,7 @@ const Navbar = () => {
               <NavLink
                 to="/products"
                 className="p-2 flex items-center hover:bg-dark-green-100 rounded-xl">
-                Products <IoIosArrowDown className="ml-1" />
+                Product Range<IoIosArrowDown className="ml-1" />
               </NavLink>
               {activeDropdown === 'products' && (
                 <ul className="absolute left-0 top-full mt-2  w-56 bg-light-green-200 shadow-md z-40">
@@ -205,7 +205,7 @@ const Navbar = () => {
                 </ul>)}
             </div>
              
-            <div className="relative"><NavLink className="text-lg p-2 flex items-center hover:bg-dark-green-100 rounded-xl"><FaFilter className="mr-1"/>Filter</NavLink></div>
+            <div className="relative"><NavLink className="text-sm p-2 flex items-center hover:bg-dark-green-100 rounded-xl"><FaFilter className="mr-1 text-lg"/>Filter</NavLink></div>
 
 
           </nav>
