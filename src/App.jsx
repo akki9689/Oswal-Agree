@@ -1,4 +1,4 @@
-import HeroSection from './components/Home/HeroSection'
+
 import './App.css'
 import Product from './components/Home/Product'
 import Footer from './components/Home/Footer'
@@ -8,8 +8,7 @@ import Footer from './components/Home/Footer'
 const App = () => {
     return (
         <div className='w-screen min-h-screen overflow-x-hidden font-open-sans'>
-        <HeroSection/>
-           <HeroSection/>
+        
            <Product />
           <Footer/>
         </div>
