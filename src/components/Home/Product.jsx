@@ -9,7 +9,7 @@ const cardVariants = {
 
 function Product () {
   return (
-    <section className='relative w-full'>
+    <section className='relative w-full overflow-y-hidden'>
       <div className='w-10/12 pt-20 mx-auto mb-20 '>
         {/* ----------------Animation form Heading--------------------- */}
         <motion.div

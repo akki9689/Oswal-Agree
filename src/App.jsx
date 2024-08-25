@@ -10,7 +10,7 @@ import IconSection from './components/Home/IconSection'
 
 const App = () => {
     return (
-        <div className='w-screen min-h-screen overflow-x-hidden font-open-sans'>
+        <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
            <Navbar/>
            <HeroSection/>
            {/* <Companyprotection/> */}
