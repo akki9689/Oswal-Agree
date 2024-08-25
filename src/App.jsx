@@ -16,8 +16,7 @@ const App = () => {
         <div className='w-screen min-h-screen overflow-x-hidden font-open-sans'>
         
              <Navbar/>
-        <HeroSection/>
-           <Companyprotection data={protectionData}/>
+      
           
            {/* <Companyprotection/> */}
            <Product />
