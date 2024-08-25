@@ -47,20 +47,20 @@ const Navbar = () => {
         <div className="flex justify-end">
           {/* Social Media Icons */}
           <div className="flex space-x-6">
-            <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300">Pay Now<span><FaRegHandPointRight /></span></button>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg">
+            <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
               <FaFacebookF />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
               <FaInstagram />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
               <FaYoutube />
             </a>
-            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg">
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
               <FaWhatsapp />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
               <FaLinkedinIn />
             </a>
           </div>

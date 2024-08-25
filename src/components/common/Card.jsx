@@ -33,9 +33,9 @@ Card.propTypes = {
   className: PropTypes.string, 
 };
 //----------------Defining Default props-----------------
-Card.defaultProps = {
-  showIcon: true,
-  className: '', 
-};
+// Card.defaultProps = {
+//   showIcon: true,
+//   className: '', 
+// };
 
 export default Card;
