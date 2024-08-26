@@ -12,7 +12,7 @@ import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
 import Companyprofile from './components/about/Companyprofile'
 import PhotoGallery from './components/Galllery/PhotoGallery'
-
+import Visionabt from './components/about/Visionabt'
 
 const App = () => {
     return (
@@ -25,7 +25,7 @@ const App = () => {
 
            <IconSection/>
            <PhotoGallery/> */}
-           <Companyprofile/>
+           
             <Footer/>
           
         </div>
