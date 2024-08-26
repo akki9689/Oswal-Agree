@@ -12,6 +12,7 @@ import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
 
 
+
 const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
