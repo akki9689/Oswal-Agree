@@ -12,6 +12,7 @@ export const allProducts = [
             {
                 id: 1,
                 name: "Fila Plus",
+                img: fila,
                 activeIngredient: "Alphacypermethrin 10% SC",
                 details: {
                     targetCrops: "Not specified on the page",
@@ -25,7 +26,26 @@ export const allProducts = [
                         "Suitable for public health pest control."
                     ],
                     application: "Contact & Stomach Poison",
-                }
+                },
+                url: "#"
+            },
+            {
+                id: 2,
+                name: "Expert",
+                img: expert,
+                activeIngredient: "Indoxacarb 14.5% SC",
+                details: {
+                    targetCrops: "Cotton, Cabbage, Chilli, Tomato, Pigeon Pea",
+                    dose: "Cotton, Dose : 1 ml/ 2 lit of water Cabbage, Dose : 1 ml/ 3 Lit of water Tomato, Dose : 1 ml/ lit of water. Chilli, Dose : 1 ml/ 1.5 lit of water Pigeonpea, Dose : 1 ml/ 2.5 lit of water",
+                    pests: ["Diamon Back Moth", "Fruit borer", "Pod borer, Boll worms"],
+                    uses: "Indoxacarb 14.5% Suspension Concentrate is a broad spectrum contact and stomach insecticide effective as a foliar spray for the control of insect pests of Cotton, Tomato, Chilli, Cabbage and Pigeonpea.",
+                    advantages: [ 
+                        "P.P. Equipment:-High volume spraying equipment, such as knapsack sprayer, rocking sprayer, foot sprayer etc."
+                    ],
+                    application: "Indoxacarb 14.5% SC should be applied at 5 to 7-day intervals or as needed to manage specific target insect pests, as specified in the specific crop sections to maintain control",
+
+                },
+                url: "#",
             }
         ]
     },
