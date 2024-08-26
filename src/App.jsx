@@ -5,12 +5,12 @@ import Product from './components/Home/Product'
 import Footer from './components/common/Footer'
 import Companyprotection from './components/home/Companyprotection'
 // import OurVision from './components/Home/OurVision'
-import {protectionData} from './data/home/protectionData'
+
 import Navbar from './components/Home/Navbar'
 import OurVision from './components/Home/OurVision'
 import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
-
+import Companyprofile from './components/about/Companyprofile'
 
 
 const App = () => {
@@ -18,10 +18,12 @@ const App = () => {
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
            <Navbar/>
            <HeroSection/>
-           <Companyprotection data={protectionData}/>
+           <Companyprotection/>
            <Product />
            <OurVision/>
+
            <IconSection/>
+           
             <Footer/>
           
         </div>

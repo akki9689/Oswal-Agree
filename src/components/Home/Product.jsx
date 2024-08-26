@@ -25,7 +25,7 @@ function Product () {
           </h1>
           <div className='w-[70px] h-1 bg-dark-green-100 mb-10'></div>
         </motion.div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
+        <div className='grid grid-cols-1 smd:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
           {/* ----------------Mapping  Card---------------------*/}
           {product.map((data, index) => (
             // {/* ----------------Animation form Card---------------------*/}
