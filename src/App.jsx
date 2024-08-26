@@ -10,18 +10,19 @@ import Navbar from './components/Home/Navbar'
 import OurVision from './components/Home/OurVision'
 import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
-
+import Companyprofile from './components/about/Companyprofile'
 
 
 const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
            <Navbar/>
-           <HeroSection/>
+           {/* <HeroSection/>
            <Companyprotection/>
            <Product />
            <OurVision/>
-           <IconSection/>
+           <IconSection/> */}
+           
             <Footer/>
           
         </div>
