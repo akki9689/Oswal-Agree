@@ -157,10 +157,361 @@ export const allProducts = [
             },
             {
                 id: 9,
-                name: "Copper",
-                img: copper,
-                activeIngredient: "Copper 0.5% GR",
+                name: "Black Gold",
+                img: blackGold,
+                activeIngredient: "Buprofezin 25% SC",
                 url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Grapes", "Chilli", "Mango", "Rice"],
+                    dose: "Cotton 400 ml/HA, Rice 320 ml/HA, Chilli 120-240 ml/HA, Mango 1-2 ml/ lit of water/HA, Grape 400-600 ml/HA",
+                    pests: ["Thrips ", "Mealy Bug", "Aphids", "Jassid", "White Fly", "BPH (Brown Plant Hopper)", "GLH (Green Leaf Hopper) ", "Hoppers"],
+                    uses: "Preparation of spray mixture: Take the required quantity of insecticide, dilute with a little water, and stir well using a stick, then add the remaining quantity of water as per the spray volume required and mix well again by stirring. b) Plant protection equipment: Use a knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer, or ASPEE-HTP sprayer. COMPATIBILITY: Buprofezin 25% SC is compatible with commonly used insecticides and fungicides. ",
+                    advantages: [
+                        "Insecticides used for control of selected insect pests such as brown plant hopper on paddy and aphid, leaf hopper, and whitefly on vegetable crops. Also, act as an insect growth regulator. A broad spectrum, systemic and contact insecticide, and a basic insect growth regulator. It works more effectively if used in combination with predators and parasitoids."
+                    ],
+                    application: "Interference with chitin synthesis in larval stages, Failure of the cuticle to develop fully & Mortality during molting"
+                }
+            },
+            {
+                id: 10,
+                name: "Cantabil",
+                img: cantabil,
+                activeIngredient: "Fenobucarb (B.P.M.C) 50% EC",
+                url: "#",
+                details: {
+                    targetCrops: ["Paddy"],
+                    dose: "1.5 L/500 L",
+                    pests: ["Brown Plant Hopper", "Green leaf hopper"],
+                    uses: "Knapsack sprayer, Foot Sprayer, Compression Knapsack sprayer Compression knapsack, battery sprayer, and ASPEE-HTP power sprayer.",
+                    advantages: [
+                        "BPMC (Fenobucarb) 50 % E.C. is a stomach and contacts action insecticide recommended for the control of Brown Plant hopper, Green leaf hopper of rice"
+                    ],
+                    application: "Fenobucarb is the most popular pesticide for plant hoppers worldwide. It is extensively used for control of plant hopper in rice. It is a low mammalian toxic carbonate with good action against leafhoppers and plant hoppers, major pests of rice. It acts as a contact poison. It has a relatively fast killing action and a moderately long residual action. It is non-phytotoxic to rice and harmless to beneficial predatory and pollination insects."
+                }
+            },
+            {
+                id: 11,
+                name: "Dahak",
+                img: dahak,
+                activeIngredient: "Fipronil 4% + Acetamiprid 4% SC",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton"],
+                    dose: "1000 ml / 500 L",
+                    pests: ["Aphids", "Jassid", "White Fly"],
+                    uses: "Do not spray during the active Bee-foraging period of the day. Preparation of Spray Solution: Mix the recommended dose in ¼ of the recommended quantity of water to the spray tank with agitation and add the remaining quantity with continuous agitation. Ensure complete dispersion of the product in mixed water before spraying the spray solution. Maintain agitation while spraying. Apply as soon as the insect population begins to appear in the field but before it reaches Economic Threshold Level (ETL). The weather should be clear calm, no rain, and no strong winds. Number of applications: 2-3 sprays are required at an interval of 7-14 days, depending upon the pest infestation. No more than three sprays in a season. Re-entry Period: As soon as the spray dries up in the crop. ",
+                    advantages: [
+                        "Fipronil 4.0% + Acetamiprid 4.0% (w/w SC) is a combination of a new-generation Phenylpyrazole compound. Fipronil and a neonicotinoid, Acetamiprid bring together excellent synergism in controlling various sucking pests complex in cotton crops. It kills insects through contact, ingestion, systemic action as well as translaminar effect.  "
+                    ],
+                    application: "Fipronil 4.0% + Acetamiprid 4.0% (w/w SC) is a combination of a new-generation Phenylpyrazole compound. Fipronil and a neonicotinoid, Acetamiprid bring together excellent synergism in controlling various sucking pests complex in cotton crops. It kills insects through contact, ingestion, systemic action as well as translaminar effect. "
+                }
+            },
+            {
+                id: 12, 
+                name: "Daman-70",
+                img: daman70,
+                activeIngredient: "Imidacloprid 70% WG",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton"],
+                    dose: "30 gm/500 L",
+                    pests: ["White backed plant hopper", "Thrips ", "Aphids"," Jassid", "White fly"," Brown plant hopper"],
+                    uses: "Spray with a hand-operated Knapsack sprayer. Compatibility:- It is compatible with generally used fungicides, insecticides, and urea. ",
+                    advantages: [
+                        "Imidacloprid 70% WG is recommended for the control of sucking pests Viz Jassids, Aphids & Thrips in cotton, Brown Plant hoppers & White-backed Plant hoppers in rice, aphid, jassid and thrips in okra, aphid and jassid in cucumber, thrips & whitefly in Tomato crops."
+                    ],
+                    application: "0.3 gm/ltr of water for Spray"
+                }
+            },
+            {
+                id: 13,
+                name: "Dinote",
+                img: dinote,
+                activeIngredient: "Dinotefuran 20% SG",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Paddy"],
+                    dose: "150 gm/500 L",
+                    pests: ["Brown Plant Hopper", "Aphids", "Jassid", "Thrips and Whitefly"],
+                    uses: "1. Take the measured quantity of Dinotefuran 20% w/w SG add to a small quantity of water, mix thoroughly and then add the remaining quantity of water while stirring vigorously. 2. Do not spray facing the wind ",
+                    advantages: [
+                        "Dinotefuran 20% SG is a water-soluble granule formulation containing 20 % (w/w) of a third-generation neonicotinoid active ingredient. Dinotefuran 20 % SG is a highly systemic insecticide for the control of brown plant hopper in rice and aphids, jassids, thrips, and white flies in cotton crops."
+                    ],
+                    application: "Apply the insecticide, when the first incidence is observed and repeat application as necessary."
+                }
+            },
+            {
+                id: 14,
+                name: "DUM",
+                img: dum,
+                activeIngredient: "Thiamethoxam 12.6% + Lambda-Cyhalothrin 9.5% ZC",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Chilli", "Sugarcane", "Tomato", "Groundnut", "Tea", "Maize", "Soybean"],
+                    dose: "150 ml/500 L",
+                    pests: ["Fruit borer"," Thrips" , "Aphids", "Jassid", "White Fly", "Mosquito bug", "Girdle beetle", "Semilooper", "Shoot fly", "Steam borer", "Leaf eating caterpillar", "Boll worms", "Leaf hoppers"],
+                    uses: "Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified through agitation for total coverage of the crop with suitable sprayers. ",
+                    advantages: [
+                        "Thiamethoxam 12.6% + Lambda-cyhalothrin 9.5% ZC is a combination insecticide having quick stomach and contact activity and is recommended to control Aphids, jassids, Thrips & Bollworms in Cotton, Aphid, shootfly, steam borer in Maize, Leaf hopper, leaf-eating caterpillars in Groundnut, Stem fly, semi looper, girdle beetle in Soyabean, Thrips & fruit borer in Chilli, Thrips, semi looper, tea mosquito bug in Tea, Thrips, whiteflies, fruit borer in Tomato crop.  "
+                    ],
+                    application: "The product should not be applied during flowering of the crop. DO NOT use the product where bees are actively foraging. DO NOT allow spray drift to flowering weeds, hedges, or flowering crops in the vicinity of the treatment area. DO NOT spray if a high amount of aphid honeydew is present in the treatment area. DO NOT spray on flowering crops between 5 days before the start of flowering and the end of flowering. Not to be used on crops when honey bees are pollinators/foraging. This product is also toxic to fish "
+                }
+            },
+            {
+                id: 15,
+                name: "Duro",
+                img: duro,
+                activeIngredient: "Diafenthiuron 50% WP",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Cabbage", "Brinjal", "Okra", "Chilli", "Tomato", "Citrus", "Watermelon", "Cardemom"],
+                    dose: "600 g /1000 L",
+                    pests: ["Diamon Back Moth"," Thrips ", "Aphids", "Jassid", "White Fly", "Red spider mite", "mites", "Capsule borer"],
+                    uses: "Measure our required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for total coverage of crops with a suitable sprayer.",
+                    advantages: [
+                        "Diafenthiuron 50% WP is a Broad Spectrum Insecticide. It paralyzes the pest which remains immobile on the crop until death in about 3-4 days. It is recommended for its use to control Whiteflies, Aphids, Thrips, and Jassids in Cotton and Diamond Back Moth (DBM) in Cabbage, mites in chili, white fly in brinjal, and thrips capsule borers in cardamom crops. It contains 500 g. Diafenthiuron as an active ingredient in a kg of the product (w/w)"
+                    ],
+                    application:"Cotton: Apply the first spray during the initial appearance of pests and repeat one or two sprays at 15 days intervals depending on pest intensity. Cabbage: First spray at 30 DAT or at the time of first pest appearance and repeat 2-3 sprays at 10-15 days intervals depending on pest intensity. Chilli: First spray at 30 DAT or at the time of first pest appearance and repeat two or four sprays at 14-21 days intervals depending on pest intensity. Brinjal: First spray at the time of pest appearance and repeat two sprays at 14-21 days intervals depending on pest intensity. Cardamom: First spray at the time of pest appearance and repeat two sprays at 21-30 days intervals depending on pest intensity. Citrus: First spray at the time of pest appearance and repeat spray at 14-21 days intervals depending on pest infection."
+                }
+            },
+            {
+                id: 16,
+                name: "Hillary",
+                img: hillary,
+                activeIngredient: "Pyriproxyfen 5% + Diafenthiuron 25% SE",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Chilli"],
+                    dose: "1250 ml/1000 L",
+                    pests: ["Thrips" ," Aphids", "Jassid", "White Fly"],
+                    uses: "Prevent hatching of eggs, inhibit metamorphosis from nymph to adult, causes adult sterility, and gives quick knockdown of Adult white fly.",
+                    advantages: [
+                        "Use : For the control of Whitefly (Bemisia tabaci), Thrips (Thrips tabaci), Jassid (Amrasca biguttula bituttua) and Aphid (Aphis gossypii) in cotton as foliar spray @ 1000 to 1250 ml/ha."
+                    ],
+                    application: "Spraying should be done when pest population reaches at etl level. ETL for white fly : 3-5 adult/leaf and 5-10 mites/ leaf."
+                }
+            },
+            {
+                id: 17,
+                name: "Kargo",
+                img: kargo,
+                activeIngredient: "Carbofuran 3% CG",
+                url: "#",
+                details: {
+                    targetCrops: ["Cabbage", "Brinjal", "Sugarcane", "Tomato", "Paddy", "Citrus", "Maize", "Peach"," Potato", "Banana", "Wheat", "Jute", "Barley", "Sorghum", "Bajra", "Bhindi"],
+                    dose: "33 KG / Hac",
+                    pests: ["Stem borer", "Gall midge", "Aphids", "White Fly", "BPH (Brown Plant Hopper)", "GLH (Green Leaf Hopper)" , "Hispa", "Shoot fly", "Rhizome weevil", "Nematode", "Ear cockle", "Leaf minor", "Top borer", "Jassids, Leaf curl"],
+                    uses: "This is a 3% carbofuran granular formulation used for the control of sucking pests, caterpillars, root grubs, beetles, and nematodes pests of cereals, pulses, oilseeds, fiber crops, vegetables, fruit crops, plantation crops, etc",
+                    advantages: [
+                        "It is a broad spectrum carbamate insecticide, nematicide and miticide having systematic action. Carbofuran 3% CG is a Systemic Insecticide/ nematicide. It Controls The Insects By Its Contact & Stomach Action Absorbed By The Plant Roots. It Moves Systemically To The Plant System To Control Root Feeding, Foliage Pests."
+                    ],
+                    application: "Use the recommended dosage of Carbofuran 3% CG over the area by broadcast, in-furrow application or place around the root zones of plant. Not more than One application"
+                }
+            },
+            {
+                id: 18,
+                name: "Killer",
+                img: killer,
+                activeIngredient: "Lambda Cyhalothrin 5% EC", 
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton","Red Gram"," ChickPea", "Brinjal", "Okra", "Chilli", "Mango", "Rice", "Tomato"," Groundnut"," Onion"],
+                    dose: "300 ML/600 L",
+                    pests: ["Leaf folder", "Stem borer", "Gall midge", "Whorl maggot","Thrips", "Pod borer", "Mite", "Aphids", "White Fly", "BPH (Brown Plant Hopper)", "Hispa", "Fruit & shoot borer"," Hoppers", "Boll worms", "Leaf minor", "Jassids"],
+                    uses: "Plant Protection Equipment:- Bucket sprayer, Rocking sprayer, Stirrup pump sprayer(Single and double barrel) Knapsack sprayer, foot sprayer, wheelbarrow sprayer, compression Knapsack sprayer, compression Knapsack battery or ASPEE-HTP powder sprayer. ",
+                    advantages: [
+                        "Lambda cyhalothrin 5% EC is a contact and systemic insecticide which is effective for the control of different insects of Cotton, Rice, Brinjal, Tomato, Mango, Okra, Red gram, Chilli, Ground nut, Onion and Chickpea."
+                    ],
+                    application: "Foliar spray is recommended. Mix the recommended dose in or LOCSLAY 5 in a bucket half filled with water with agitation, add remain recommended quantity of water with continuous agitation, and spray uniformly for batter result. First spraying is recommended at 30 to 40 days after sowing or as soon as insects begin to appear (at the economic threshold level). The second spray is recommended 10 to 15 days after the first spraying"
+                }
+            },
+            {
+                id: 19,
+                name: "Killer Super",
+                img: killerSuper,
+                activeIngredient: "Lambda Cyhalothrin 4.9% CS",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Grapes", "Brinjal", "Okra", "Chilli", "Tomato", "Paddy", "Soybean", "Pomgranate", "Cardemom"],
+                    dose: "300 ml / 500 L",
+                    pests: ["Stem borer", "Fruit borer", "Thrips" , "Pod borer", "Fruit & shoot borer", "Stem fly", "Bollworm", "Flea beetle"],
+                    uses: "Lambda-cyhalothrin 4.9% Capsule Suspension is a capsule suspension formulation wherein the active ingredient is sealed in tiny thin-walled capsules suspended in water and is released only when the spray deposit dries on the target pest and leaf surface. It is recommended for the control of bollworms in cotton, stem borer & Leaf folder in Paddy, shoot and fruit borer in Brinjal, Fruit borer in Okra & Tomato, Thrips & Flea beetle in Grapes, and Thrips & Pod Borer in Chili and stem fly & semiloopr in soybean crops, Thrips, and fruit borer on Pomegranate, Shoot & capsule borer and Thrips on Cardamom Crop",
+                    advantages: [
+                        "Lambda-cyhalothrin 4.9% Capsule Suspension is a capsule suspension formulation wherein the active ingredient is sealed in tiny thin-walled capsules suspended in water and is released only when the spray deposit dries on the target pest and leaf surface. It is recommended for the control of bollworms in cotton, stem borer & Leaf folder in Paddy, shoot and fruit borer in Brinjal, Fruit borer in Okra & Tomato, Thrips & Flea beetle in Grapes and Thrips & Pod Borer in Chili Crop."
+                    ],
+                    application: "Method of application and spray equipment: Apply as a high-volume spray with a Knapsack sprayer fitted with a fine-mist nozzle or mist blower. "
+                }
+            },
+            {
+                id: 20,
+                name: "Killer Ultra",
+                img: killerUltra,
+                activeIngredient: "Lambda Cyhalothrin 2.5% EC",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton"," Rice"],
+                    dose: "600-1000 ml/400-600 L",
+                    pests: ["Green leaf hopper", "Leaf folder", "Stem borer", "Gall midge", "Thrips ", "Hispa", "Jassids", "Bollworm"],
+                    uses: "Plant Protection Equipment: Lambda-cyhalothrin 2.5% EC can be sprayed in the field for high-volume spraying using equipment like a Bucket sprayer, Rocking sprayer, stirrup pump sprayer (single and double barrel) Knapsack sprayer, Foot sprayer, Wheel barrow-sprayer, Compression Knapsack sprayer, A S P E E HTP Power sprayer. For low-volume spraying motorized knapsack mist blower cum duster can be used",
+                    advantages: [
+                        "It is a stomach and contact insecticide with little fumigant action. It contains lambda cyhlothrin 2.5% A.I. and balance adjuvants. It is a contact and systemic insecticide which is effective for the control of insect pests of Cotton & Rice."
+                    ],
+                    applications: "Relambda (Lambda-cyhalothrin) kills by acting as a very strong poison to the insect’s central nervous system. The insect’s nerve cells become excited, upon poisoning leading to paralysis and eventual death. It begins its work on the insect immediately, upon contact or ingestion resulting in its fast knock-down and kill."
+                }
+            },
+            {
+                id: 21,
+                name: "Kshitij",
+                img: kshitij,
+                activeIngredient: "Thiamethoxam 75% SG",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Rice", "Sugarcane", "Groundnut"],
+                    dose: "750 gm/1 kg",
+                    pests: ["Brown Plant Hopper", "Early shoot borer", "Termite", "Green leaf hopper", "Thrips" , "Jassids"],
+                    uses: "Direction for use in Groundnut, Sugarcane & cotton: Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation and apply as soil drenching in crops. Direction for use in Rice: Measure out the required quantity of the product and dissolve in 500ml of water to make a solution for mixing and broadcasting with sand @20 kg/ha. ",
+                    advantages: [
+                        "Thiamethoxam 75% w/w SG is recommended for the control of the following pests in groundnut, sugarcane, rice, and cotton. Thiamethoxam 75% w/w SG is a broad spectrum systemic insecticide, recommended for its use to control termites in Groundnut, Termite & Early shoot borer in sugarcane, Greenleaf hopper & brown plant hopper in rice, and Jassids & thrips in cotton crop."
+                    ],
+                    application: "Thiamethoxam 75% w/w SG is recommended for the control of the following pests in groundnut, sugarcane, rice, and cotton. Thiamethoxam 75% w/w SG is a broad spectrum systemic insecticide, recommended for its use to control termites in Groundnut, Termite & Early shoot borer in sugarcane, Greenleaf hopper & brown plant hopper in rice, and Jassids & thrips in cotton crop."
+                }
+            },
+            {
+                id: 22,
+                name: "LIZZARD 25",
+                img: lizzard25,
+                activeIngredient: "Cypermethrin 25% EC",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton"," Brinjal", "Bhindi"],
+                    dose: "280 ml / 800 L",
+                    pests: ["Thrips" ," Ballworm", "Epliachna Grubs", "Fruit & shoot borer", "Jassids"],
+                    uses:"P.P. Equipment:- Knapsack sprayer, Knapsack, motorized knapsack sprayer cum duster, compression knapsack battery sprayer, Wheelbarrow sprayer",
+                    advantages: [
+                        "It is recommended to control bollworms, Jassids, Thrips of cotton, shoot & fruit borders and jassids of Bhindi, Shoot & fruit borders, Jassids and Epilachna grub of brinjal crops."
+                    ],
+                    application: "Cypermethrin 25% EC exhibits a stomach, contact activity."
+
+                }
+            },
+            {
+                id: 23,
+                name: "O-Dan",
+                img: odan,
+                activeIngredient: "Cartap Hydrochloride 4% GR",
+                url: "#",
+                details: {
+                    targetCrops: ["Rice"],
+                    dose: "20 kg/ha",
+                    pests: ["Leaf folder", "Stem borer", "Whorl maggot"],
+                    uses: "It is recommended to broadcast with hand operated granules applicator, by a mechanical dispenser, or by hand",
+                    advantages: [
+                        "It is of Nereistoxin analog group, which gives effective control on insect pests through its contact, systemic, and stomach poison action. Cartap Hydrochloride 4% GR has a remarkable capacity to control caterpillars. It is safe for the environment and is also suitable for Integrated Pest Management (IPM) systems. It is a persistent insecticide and controls insect pests for a longer period."
+                    ],
+                    application: "The 1st application of 4G should be a Prophylactic application at 15 – 25 DAT. The 2nd application should be at 45 – 55 DAT on need-based in 4 – 5cm of standing water."
+                }
+            },
+            {
+                id: 24,
+                name: "O-Dan Ultra",
+                img: odanUltra,
+                activeIngredient: "Cartap Hydrochloride 75% SG",
+                url: "#",
+                details: {
+                    targetCrops: ["Rice"],
+                    dose: "450 gm/500 L",
+                    pests: ["Leaf folder", "Yellow Stem borer"],
+                    uses: "Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery spryer and, ASPEE-HTP power sprayers etc",
+                    advantages: [
+                        "Cartap Hydrochloride (Mortar 75% SG) is a systemic insecticide with stomach and contact action, which effectively control of yellow stem borers and leaf folder in rice crop."
+                    ],
+                    application: "Cartap Hydrochloride (Mortar 75% SG) is a systemic insecticide with stomach and contact action, which effectively control yellow stem borers and leaf folder in rice crop."
+                }
+            },
+            {
+                id: 25,
+                name: "O-Nata",
+                img: onata,
+                activeIngredient: "Imidacloprid 17.8% SL",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Grapes", "Okra", "Chilli", "Mango", "Sugarcane", "Tomato", "Paddy", "Citrus", "Sunflower"," Groundnut"],
+                    dose: "300 ML/1000 L",
+                    pests: ["Termite", "Stem borer", "Thrips" , "Aphids", "White Fly", "BPH (Brown Plant Hopper)", "GLH (Green Leaf Hopper)", "Psylla", "Hoppers", "Leaf minor", "Jassids", "Flea beetle", "WBPH"],
+                    uses:"Plant Protection Equipment: Hand operated knapsack sprayer or foot sprayer is recommended and tractor mounted sprayer can also be used.",
+                    advantages: [   
+                        "Imidacloprid 17.8% SL is a systemic insecticide containing Imidacloprid active ingredient balance auxiliaries and inert material. It is used as a spray for the control of sucking and other insects in different crops."
+                    ],
+                    application: "Systemic insecticide with translaminar activity and with contact and stomach action. Readily taken up by the plant and further distributed acropetally, with good root-systemic action."
+                }
+            },
+            {
+                id: 26,
+                name: "O-Star",
+                img: ostar,
+                activeIngredient: "Bifenthrin 10% EC",  
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Rice", "Sugarcane"],
+                    dose: "800 ml / 500 L",   
+                    pests: ["Termite", "Green leaf hopper", "Leaf folder"," Stem borer", "Ballworm", "White Fly"],
+                    uses: "Take the measured quantity of Bifenthrin 10% EC, add to it a small quantity of water, mix thoroughly and then add the remaining quantity of water while stirring vigorously. Do not spray facing the wind.",
+                    advantages: [
+                        "Bifenthrin 10% EC is a broad spectrum insecticide having contact and stomach action against bollworm and sucking pest white fly in Cotton and leaf folder, green leaf hopper & stem borer in Rice, termite in Sugarcane. It contains 10% w/w active ingredient Bifenthrin with other relevant ingredients."
+                    ],
+                    application: "Knapsack sprayer, Knapsack power sprayer, motorized Knapsack sprayer cum duster, compression Knapsack sprayer, compression Knapsack battery sprayer, wheel barrow sprayer and HTP power sprayer."
+                }
+            },
+            {
+                id: 27,
+                name: "O-Tara",
+                img: otara,
+                activeIngredient: "Thiamethoxam 25% WG",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Brinjal", "Okra", "Mango", "Rice"," Tomato", "Citrus", "Tea", "Potato", "Wheat", "Mustard", "Cumin"],
+                    dose: "100 ml /1000 L",
+                    pests: ["Green leaf hopper", "Leaf folder", "Stem borer", "Gall midge", "White backed plant hopper", "Thrips", "Aphids", "White Fly", "Psylla", "Mosquito bug", "Hoppers", "Jassids"],
+                    uses: "Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for total coverage of the crop with a suitable sprayer. P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack sprayer, Compression knapsack battery sprayer, Battery operated power sprayer, and ASPEE-HTP power sprayer.",
+                    advantages: [
+                        "Thiamethoxam 25 % WG is broad spectrum systemic insecticide having quick stomach and contacts action and is recommended for its use to control Stem Borer, Gall Midge, Leaf Folder, Brown Plant Hopper (BHP), while Backed Plant Hopper (WBPH) Green Leaf Hopper (GLH), Thrips, in rice; jassids, aphids, and whiteflies in cotton; hoppers in mango; aphids in Wheat; aphids in Mustard; Whiteflies in Tomato; Whiteflies, Jassids in Brinjal; mosquito bug in Tea, aphids in Potato, Psylla in citrus, aphid in Cumin, soil drench in Rice, Aphid in Cumin and GLH thrips, shorl maggat in Rice (Nursery). It contains 250g of Thiamethoxam as an active ingredient in a kg of the product (w/w)."
+                    ],
+                    application: "1. Mango: Hoppers (Apply first spray during initial pest appearance and repeat one or two sprays at 15 days intervals depending on the level of pest intensity) 2. Potato: Foliar-application- Apply first spray during initial pest appearance and repeat 2-3 sprays at 10-15 days intervals depending on the level of pest intensity. Soil drench- Apply the root zone before the appearance of a pest as a soil drench, once during the crop season. 3. Cotton: Apply first spray at 25-30 DAS or at the time of first pest appearance and repeat 2-3 sprays at 15 days intervals depending on the pest intensity. 4. Wheat: Apply the first spray during the initial pest appearance and repeat one or two sprays at 15 days intervals depending on the level of pest intensity. 5. Tea: Apply first spray during initial pest appearance and repeat 2-3 sprays at 15-21 days intervals depending on the level of pest intensity. 6. Tomato: Apply first spray during initial pest appearance and repeat 2-3 sprays at 10-15 days intervals depending on the level of pest intensity. Soil drench: Apply the root zone before the appearance of a pest as a soil drench, once during the crop season. 7. Rice: One spray at 25-30 DAT in the early stage of the crop for control of early rice pests such as Stem Borer, Gall Midge, and the other spray at the booting leaf stage (@ 50 to 55 DAT) for the control of late rice pests such as GLH, BPH, WBPH, etc. 8. Brinjal: Apply first spray during initial pest appearance and repeat 2-3 sprays at 10-15 days interval depending on the level of pest intensity. 9. Okra: Apply the first spray during the initial pest appearance and repeat one or two sprays at 15 days intervals depending on the pest intensity. 10. Mustard: Apply the first spray during the initial pest appearance and repeat one or two sprays at 15 days intervals depending on the level of pest intensity. 11. Citrus: Apply first spray during initial pest appearance and repeat 2-3 sprays at 15-21 days intervals depending on the level of pest intensity."
+                }
+            },
+            {
+                id: 28,
+                name: "o-Tara Pro",
+                img: otaraPro,
+                activeIngredient: "Thiamethoxam 30% FS",
+                url: "#",
+                details: {
+                    targetCrops: ["Cotton", "Okra", "Chilli", "Rice", "Sunflower", "Maize", "Wheat", "Sorghum", "Soybean"],
+                    dose: "10 ml /Kg Seed",
+                    pests: ["Termite", "Leaf folder", "Stem borer", "Whorl maggot", "Thrips ", "Aphids", "White Fly", "Shoot fly", "Jassids", "Stem fly"],
+                    uses: "For small lots, mix the required quantity of Thiamethoxam 30 % FS with 10-20 ml of water for each kg of seed to be treated. Add the slurry to the seed and rotate or stir the container (Plastic drum or bag) until the seeds are uniformly covered(usually less than a minute). It is recommended for application as a slurry with continuously operating commercial seed dressing equipment. For preparation of slurry, proceed as follows: 1. Put 1/2 of the required water top of the mix tank 2. Add the required quantity of Thiamethoxam 30 % FS while stirring continuously. 3. Allow the product to disperse. 4. Switch the agitation system or stir manually. 5. Top up with the remaining volume of water. 6. Maintain agitation of the slurry during the whole time of use. 7. The slurry has to be used within 24 hours after preparation.",
+                    advantages: [
+                        "Thiamethoxam 30 % FS is broad- spectrum systemic insecticide that is well suited for seed treatment used to control early-season sucking pests. Recommended as a seed treatment to control Jassids, aphids, and Whitefly in cotton, shoot a fly on sorghum and Maize, termites in wheat, jassids in okra, Thrips, GLH, and Whorl Maggot in rice, jassid and thrips in sunflower, stem fly in soybean and thrips in chili crop. Due to its fast action on sucking pests, it limits the transmission of leaf curl virus.  "
+                    ],
+                    application: "Application Procedure: 1. Prepare this slurry as described. 2. Fill the seed into the receptacle. 3. Start mixing the seed. 4. Apply the required amount of slurry by pouring it onto the mixing seed. 5. Mix for about 30 seconds to one minute to achieve a homogenous treatment. An extended mixing will lead to abrasion and dust forming. "
+                }
+            },
+            {
+                id: 29,
+                name: "Odan-50",
+                img: odan50,
+                activeIngredient: "Cartap Hydrochloride 50% SP",
+                url: "#",
+                details: {
+                    targetCrops: ["Rice"],
+                    dose: "1Kg /500-1000L",
+                    pests: ["Leaf folder", "Stem borer"],
+                    uses: "P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack battery sprayer and ASPEE-HTP power sprayer.",
+                    advantages: [
+                        "It is recommended to control stem borer and leaf folder on rice crop."
+                    ],
+                    application: "It is of Nereistoxin analogue group, which gives effective control on insects through its contact, systemic and stomach action. It has remarkable capacity to control biting, chewing and sucking type of insects. It is suitable insecticide for Integrated Pest Management (IPM)."
+                }
             }
         ]
     },
@@ -172,6 +523,7 @@ export const allProducts = [
     {
         id: 3,
         title: 'Herbicides',
+
         // image: 'herbicides.png'
     },
     {
