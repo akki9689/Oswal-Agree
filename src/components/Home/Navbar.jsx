@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
+import { SocialIcon } from 'react-social-icons'
 import { FaBars, FaTimes, FaRegHandPointRight, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'; // Importing React Icons
 import { FaFilter } from "react-icons/fa6";
 import logo from '../../images/Home/oswal-crop-logo.jpg'
+import 'react-social-icons/facebook'
+import 'react-social-icons/instagram'
+import 'react-social-icons/youtube'
+import 'react-social-icons/whatsapp'
+import 'react-social-icons/linkedin'
+
 const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,20 +84,20 @@ const Navbar = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-6">
               <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-                <FaFacebookF />
+              <a  target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                <SocialIcon url="https://www.facebook.com/oswalcropprotection" style = {{width:30 , height:30}} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-                <FaInstagram />
+              <SocialIcon url="www.instagram.com" style = {{width:30 , height:30}} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-                <FaYoutube />
+              <a target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <SocialIcon url="https://youtube.com" style = {{width:30 , height:30}} />
               </a>
               <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-                <FaWhatsapp />
+              <SocialIcon url="https://whatsapp.com" style = {{width:30 , height:30}} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-                <FaLinkedinIn />
+              <SocialIcon url="https://linkedin.com" style = {{width:30 , height:30}} />
               </a>
             </div>
           </div>
@@ -434,7 +441,7 @@ const Navbar = () => {
             </ul>
 
             <li>
-              <button className="bg-dark-green-100 text-white mt-2 py-2 px-4 rounded flex justify-center gap-2 items-center text-richblack-500 hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
+              <button className="bg-dark-green-100 text-white mt-2 py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
             </li>
           </li>
 
