@@ -1,21 +1,11 @@
 import React from 'react'
 import Protection from '../../components/common/Protection'
 import {companyprofileData} from '../../data/Companyprofile/companyprofileData'
-import image1 from '../../images/About/Wide-Range-of-Insecticides.png'
-import image2 from '../../images/About/Highest-Quality-Products-Solutions-2.png'
-import image3 from '../../images/About/Focussed-on-100-Farmers-Satisfaction.png'
-import directorImage from '../../images/About/Ramesh-Bansal.png'
 
+import directorImage from '../../images/About/Ramesh-Bansal.png'
+import Whyoswal from './companyProfile/Whyoswal'
 const Companyprofile = () => {
-  const profileData=[
-    {
-      heading:"Why Buy Oswal Products ?",
-      card:[{img:image1,tag:"Wide Range of Insecticides, Fungicides, Herbicide & PGRs"},
-        {img:image2,tag:"Highest Quality Products & Solutions"},
-        {img:image3,tag:"Focussed on 100% Farmer’s Satisfaction"}
-      ]
-    }
-  ]
+  
   const directorMsg=[
     {
       title:"Message From the Director",
@@ -36,11 +26,11 @@ const Companyprofile = () => {
 <Protection data={companyprofileData } spanWidth="w-[20%]"  />
 
     </div>
-    <div>
+    {/* <div>
 <h1>vision and mission component </h1>
-    </div>
+    </div> */}
     <div>
-      <p>profile data map here</p>
+      <Whyoswal/>
     </div>
     <div>
       <p>director data map here</p>
