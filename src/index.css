@@ -10,9 +10,9 @@
 /* Base styles for the arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(145, 119, 119, 0.6);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -20,8 +20,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 20;
+  transition: transform 0.3s ease, background-color 0.3s ease opacity 0.1s ease;
 }
 
 /* Arrow icon styles */
@@ -29,7 +29,9 @@
 .swiper-button-prev::after {
   color: #fff;
   font-size: 16px;
+  
 }
+
 
 /* Positioning for arrows */
 .swiper-button-next {
@@ -45,10 +47,24 @@
 .swiper-button-prev:hover {
   transform: translateY(-50%) scale(1.2);  /* Slightly enlarges the button */
   background-color: rgba(0, 0, 0, 0.8);    /* Darkens the background */
+  opacity: 1; /* Fully opaque on hover */
 }
 
 /* Active (clicked) effect */
 .swiper-button-next:active,
 .swiper-button-prev:active {
   transform: translateY(-50%) scale(1.1);  /* Slightly reduces the scale */
+}
+/* Target the pagination bullets */
+/* Custom Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: #eee4e4; /* Change bullet color */
+  width: 10px; /* Change bullet size */
+  height: 10px; /* Change bullet size */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #bdb3b3; /* Change active bullet color */
+  width: 10px; /* Change active bullet size */
+  height: 10px; /* Change active bullet size */
 }
