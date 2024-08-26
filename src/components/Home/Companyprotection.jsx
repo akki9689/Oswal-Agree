@@ -22,12 +22,12 @@ export const Companyprotection = ({ data }) => {
   };
 
   return (
-    <section className="p-8 h-auto mx-auto w-11/12">
-      <div className="flex flex-col md:flex-row md:items-start">
+    <section className="w-full pt-20 py-10 border border-red-600 ">
+      <div className="mx-auto xl:w-10/12 md:w-11/12 w-10/12 flex flex-col  md:flex-row md:gap-x-16 md:items-start">
 
         {/* Text content (heading, subtitle, and paragraph) - Below md */}
         <motion.div
-          className="flex-1 order-1 mt-8 md:mt-0"
+          className="flex-1 order-1 mt-8 md:mt-0 "
           initial="hidden"
           animate="visible"
           variants={textVariants}
@@ -81,7 +81,7 @@ export const Companyprotection = ({ data }) => {
 
         {/* Images - Above md */}
         <motion.div
-          className="relative flex-1 hidden md:block md:order-1"
+          className="relative flex-1 hidden md:block md:order-1 border border-red-400"
           initial="hidden"
           animate="visible"
           variants={imageVariants}
@@ -89,12 +89,12 @@ export const Companyprotection = ({ data }) => {
           <img
             src={oneside}
             alt="First image"
-            className="w-full md:w-2/3 h-[480px] rounded-tl-3xl rounded-tr-3xl"
+            className="w-full md:w-2/3 h-[35vh]  rounded-tl-3xl rounded-tr-3xl"
           />
           <img
             src={secondside}
             alt="Second image"
-            className="absolute h-[480px] bottom-0 bg-white-shade-100 p-2 right-0 w-full md:w-2/3 rounded-tl-3xl rounded-tr-3xl transform translate-x-[-20px] translate-y-[180px]"
+            className="absolute h-[35vh]  bottom-0 bg-white-shade-100 p-2 right-0 w-full md:w-2/3 rounded-tl-3xl rounded-tr-3xl transform translate-x-[-20px] translate-y-[180px]"
             style={{ zIndex: 1 }}
           />
         </motion.div>
