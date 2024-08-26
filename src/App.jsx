@@ -11,17 +11,20 @@ import OurVision from './components/Home/OurVision'
 import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
 import Companyprofile from './components/about/Companyprofile'
+import PhotoGallery from './components/Galllery/PhotoGallery'
 
 
 const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-          
-           {/* <HeroSection/>
+           <Navbar/>
+           <HeroSection/>
            <Companyprotection/>
            <Product />
            <OurVision/>
-           <IconSection/> */}
+
+           <IconSection/>
+           <PhotoGallery/>
            
             <Footer/>
           
