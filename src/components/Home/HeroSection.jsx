@@ -4,9 +4,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import 'swiper/css/effect-cube';  // Import Cube effect CSS
+import 'swiper/css/effect-cube';
 import { Navigation, Pagination, Autoplay, EffectCube } from 'swiper/modules';
-
 
 import image1 from '../../images/Home/herosection/agro1.jpg';
 import image2 from '../../images/Home/herosection/agro2.jpg';
@@ -23,15 +22,15 @@ const HeroSection = () => {
         <div className="row">
           <div className="col ">
             <Swiper
-              spaceBetween={50}
+              spaceBetween={30} // Adjusted space between slides for responsiveness
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
-              modules={[Navigation, Pagination, Autoplay, EffectCube]}  // Add EffectCube module
-              className="h-full overflow-hidden rounded-lg"
+              modules={[Navigation, Pagination, Autoplay, EffectCube]}
+              className="h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-[100vh] overflow-hidden rounded-lg"
               loop={true}
-              autoplay={{ delay: 10000 }} // 10000ms = 10 seconds
-              effect="cube"  // Enable cube effect
+              autoplay={{ delay: 10000 }}
+              effect="cube"
               cubeEffect={{
                 shadow: true,
                 slideShadows: true,
@@ -41,7 +40,11 @@ const HeroSection = () => {
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index} className=''>
-                  <img src={image} alt={`Slide ${index}`} className="object-cover w-full h-full" />
+                  <img 
+                    src={image} 
+                    alt={`Slide ${index}`} 
+                    className="object-cover w-full h-full" 
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
