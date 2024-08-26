@@ -11,6 +11,7 @@ import OurVision from './components/Home/OurVision'
 import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
 import Companyprofile from './components/about/Companyprofile'
+import PhotoGallery from './components/Galllery/PhotoGallery'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
            <OurVision/>
 
            <IconSection/>
+           <PhotoGallery/>
            
             <Footer/>
           
