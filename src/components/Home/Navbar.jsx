@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
-import { FaRegHandPointRight, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'; // Importing React Icons
+import { SocialIcon } from 'react-social-icons'
+import { FaBars, FaTimes, FaRegHandPointRight, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'; // Importing React Icons
 import { FaFilter } from "react-icons/fa6";
 import logo from '../../images/Home/oswal-crop-logo.jpg'
+import 'react-social-icons/facebook'
+import 'react-social-icons/instagram'
+import 'react-social-icons/youtube'
+import 'react-social-icons/whatsapp'
+import 'react-social-icons/linkedin'
+
 const Navbar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
   let hideDropdownTimeout;
 
 
@@ -34,41 +45,66 @@ const Navbar = () => {
     }, 400);
   }
 
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  const handleMobileDropdownToggle = (dropdownId) => {
+    if (activeMobileDropdown === dropdownId) {
+      setActiveMobileDropdown(null);
+    } else {
+      setActiveMobileDropdown(dropdownId);
+    }
+  };
+
+  const handleMobileSubMouseEnter = (SubdropdownId) => {
+    if (activeMobileSubDropdown === SubdropdownId) {
+      setActiveMobileSubDropdown(null);
+    } else {
+      setActiveMobileSubDropdown(SubdropdownId);
+    }
+  };
+
+
   return (
     <header className="bg-white shadow-lg">
-      <div className="w-10/12 container flex justify-between mx-auto px-20 py-4">
-       {/* Logo */}
-       <NavLink to="/" className="text-xl font-bold">
-            <img src={logo} alt="Logo" className="w-[120px]" />
-          </NavLink>
-       
-        <div className=" flex flex-col items-center gap-4">
+      <div className="w-10/12 container flex justify-between mx-auto px-6 md:px-20 py-4">
+        {/* Logo */}
+        <NavLink to="/" className="text-xl font-bold ">
+          <img src={logo} alt="Logo" className="w-[120px]" />
+        </NavLink>
+        {/* Mobile Menu Button */}
+        <button onClick={toggleMenu} className="lg:hidden text-2xl">
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+        <div className={`hidden smd:flex flex-col items-center gap-4`}>
 
-        <div className="flex justify-end">
-          {/* Social Media Icons */}
-          <div className="flex space-x-6">
-            <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-              <FaFacebookF />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-              <FaInstagram />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-              <FaYoutube />
-            </a>
-            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-              <FaWhatsapp />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
-              <FaLinkedinIn />
-            </a>
+          <div className="flex justify-end">
+            {/* Social Media Icons */}
+            <div className="flex space-x-6">
+              <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
+              <a  target="_blank" rel="noopener noreferrer" className="text-xl   rounded-lg flex items-center">
+                <SocialIcon url="https://www.facebook.com/oswalcropprotection" style = {{width:30 , height:30}} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl  rounded-lg flex items-center">
+              <SocialIcon url="www.instagram.com" style = {{width:30 , height:30}} />
+              </a>
+              <a target="_blank" rel="noopener noreferrer" className="text-xl  rounded-lg flex items-center">
+              <SocialIcon url="https://youtube.com" style = {{width:30 , height:30}} />
+              </a>
+              <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl rounded-lg flex items-center">
+              <SocialIcon url="https://whatsapp.com" style = {{width:30 , height:30}} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl p-2 rounded-lg flex items-center">
+              <SocialIcon url="https://linkedin.com" style = {{width:30 , height:30}} />
+              </a>
+            </div>
           </div>
-        </div>
-         
+
 
           {/* Navbar Links */}
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-6">
             <NavLink to="/" className="p-2 hover:bg-dark-green-100 rounded-xl">Home</NavLink>
 
             <div className="relative"
@@ -107,7 +143,7 @@ const Navbar = () => {
               <NavLink
                 to="/products"
                 className="p-2 flex items-center hover:bg-dark-green-100 rounded-xl">
-                Products <IoIosArrowDown className="ml-1" />
+                Product Range<IoIosArrowDown className="ml-1" />
               </NavLink>
               {activeDropdown === 'products' && (
                 <ul className="absolute left-0 top-full mt-2  w-56 bg-light-green-200 shadow-md z-40">
@@ -204,17 +240,217 @@ const Navbar = () => {
                   <li><NavLink to="/contactUs/" className="block px-4 py-2  hover:bg-yellow-100">Branches</NavLink></li>
                 </ul>)}
             </div>
-             
-            <div className="relative"><NavLink className="text-lg p-2 flex items-center hover:bg-dark-green-100 rounded-xl"><FaFilter className="mr-1"/>Filter</NavLink></div>
 
+            <div className="relative"><NavLink className="text-sm p-2 flex items-center hover:bg-dark-green-100 rounded-xl"><FaFilter className="mr-1 text-lg" />Filter</NavLink></div>
+
+            {/* Sliding Menu for Smaller Screens */}
+            {/* Sliding Mobile Menu */}
+            <nav className={`lg:hidden fixed top-0 right-0 h-full w-3/4 bg-light-green-200 z-50 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300`}>
+              <ul className="flex flex-col space-y-4 mt-24 mx-4 justify-center items-center">
+                <li>
+                  <NavLink to="/" className="block text-xl font-bold text-center p-4 bg-dark-green-100 rounded-xl">Home</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about" className="block text-xl font-bold text-center p-4 bg-dark-green-100 rounded-xl">About Us</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products" className="block text-xl font-bold text-center p-4 bg-dark-green-100 rounded-xl">Product Range</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/gallery" className="block text-xl font-bold text-center p-4 bg-dark-green-100 rounded-xl">Gallery</NavLink>
+                </li>
+                <li>
+                  <button className="bg-dark-green-100 text-white py-2 px-4 rounded-lg flex justify-center gap-2 items-center mx-auto hover:bg-light-green-300 transition-all duration-200">
+                    Pay Now<span><FaRegHandPointRight /></span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
 
           </nav>
 
 
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <nav
+        className={`lg:hidden fixed top-0 left-0 w-full h-full z-50 bg-white-shade-100 text-richblack-500 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      >
+        <div className="flex justify-between items-center px-6 py-4">
+          <h1 className="text-xl font-bold">Menu</h1>
+          <button onClick={toggleMenu} className="text-2xl">
+            <FaTimes />
+          </button>
+        </div>
+        <ul className="flex flex-col items-start space-y-2 px-6">
+          <li>
+            <NavLink to="/" className="p-2 block hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Home</NavLink>
+          </li>
+          <li className="relative">
+            <button onClick={() => handleMobileDropdownToggle('aboutUs')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+              About Us <IoIosArrowDown className="ml-1" />
+            </button>
+            {activeMobileDropdown === 'aboutUs' && (
+              <ul className="pl-4 space-y-2 bg-gray-800">
+                <li>
+                  <NavLink to="/about/companyprofile" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Company Profile</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Vision and Mission</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Awards and Recognition</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Terms and Condition</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>FAQ</NavLink>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li className="relative">
+            <button onClick={() => handleMobileDropdownToggle('products')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+              Product Range <IoIosArrowDown className="ml-1" />
+            </button>
+            {activeMobileDropdown === 'products' && (
+              <ul className="pl-4 space-y-2 bg-gray-800">
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Insecticides</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Fungicides</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Herbicides</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Fertilizers</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Bio Products</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Micro Nutrients</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Plant Growth Regulators</NavLink>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li className="relative">
+            <button onClick={() => handleMobileDropdownToggle('gallery')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+              Gallery <IoIosArrowDown className="ml-1" />
+            </button>
+            {activeMobileDropdown === 'gallery' && (
+              <ul className="pl-4 space-y-2 bg-gray-800">
+                <li>
+                  <NavLink to="/gallery/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Video Gallery</NavLink>
+                </li>
+                <li className="relative">
+                  <button onClick={() => handleMobileSubMouseEnter('photoGallery')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+                    Photo Gallery <IoIosArrowDown className="ml-1" />
+                  </button>
+                  {activeMobileSubDropdown === 'photoGallery' && (
+                    <ul className="pl-4 space-y-2 bg-gray-800">
+                      <li>
+                        <NavLink to="/gallery/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Sales Achievement</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/gallery/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Photo Factory</NavLink>
+                      </li>
+
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            )}
+          </li>
+          <li className="relative">
+            <button onClick={() => handleMobileDropdownToggle('career')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+              Career <IoIosArrowDown className="ml-1" />
+            </button>
+            {activeMobileDropdown === 'career' && (
+              <ul className="pl-4 space-y-2 bg-gray-800">
+                <li>
+                  <NavLink to="/career/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Life at Oswal</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/career/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Vacancy</NavLink>
+                </li>
+
+              </ul>
+            )}
+          </li>
+
+          <li className="relative">
+            <button onClick={() => handleMobileDropdownToggle('contact')} className="w-full text-left p-2 flex items-center hover:bg-gray-700 rounded-xl">
+              Career <IoIosArrowDown className="ml-1" />
+            </button>
+            {activeMobileDropdown === 'contact' && (
+              <ul className="pl-4 space-y-2 bg-gray-800">
+                <li>
+                  <NavLink to="/contact/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Contact</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact/" className="block px-4 py-2 hover:bg-gray-700 rounded-xl" onClick={toggleMenu}>Branches</NavLink>
+                </li>
+
+              </ul>
+            )}
+          </li>
+          <li>
+            <NavLink to="/filter" className="p-2 flex justify-center items-center hover:bg-gray-700 rounded-xl" onClick={toggleMenu}><FaFilter classname="ml-2" />Filter</NavLink>
+          </li>
+          <li>
+
+            <ul className="flex justify-center gap-2 text-richblack-500">
+              <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                  <FaFacebookF />
+                </a>
+              </li>
+
+              <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                  <FaInstagram />
+                </a>
+
+              </li>
+              <li>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                  <FaYoutube />
+                </a>
+
+              </li>
+              <li>
+                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                  <FaWhatsapp />
+                </a>
+
+              </li>
+              <li>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                  <FaLinkedinIn />
+                </a>
+
+              </li>
+            </ul>
+
+            <li>
+              <button className="bg-dark-green-100 text-white mt-2 py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
+            </li>
+          </li>
+
+        </ul>
+      </nav>
     </header>
   );
 };
 
 export default Navbar;
+
+

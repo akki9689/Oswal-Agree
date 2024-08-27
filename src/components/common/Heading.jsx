@@ -10,7 +10,7 @@ const Heading = ({text , isBorder}) => {
             <span className='text-light-green-300 text-4xl'><IoLeaf/></span>
 
             {/* Add heading text */}
-            <h1 className='text-4xl font-bold text-dark-green-200'>{text}</h1>
+            <h1 className='text-4xl font-bold text-dark-green-200 uppercase'>{text}</h1>
       </div>
 
      {/* if Border is true */}
