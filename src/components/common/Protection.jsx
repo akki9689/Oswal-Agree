@@ -43,7 +43,7 @@ export const Protection = ({ data ,spanWidth = 'w-[80%]' }) => {
             <span className={`absolute left-0 bottom-[-10px] ${spanWidth} h-[2px] bg-[#040504]`}></span>
           </h3>
 
-          <p className="text-lg italic p-2 mt-8 text-left text-[#0C0000] font-[600] text-[25px]">
+          <p className="text-2xl italic p-2 mt-8 text-left text-[#0C0000] font-[600] text-[25px]">
             “Har Kadam Par Kisaano Ka Humsafar”
           </p>
 
