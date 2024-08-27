@@ -23,9 +23,7 @@ const Vision2 = () => {
     <section className='w-full py-20 flex flex-col gap-y-10'>
       {/* --------- heading part ---------- */}
       <div className='w-10/12 mx-auto flex flex-col gap-y-7 items-center'>
-        <h1 className='xs:text-[40px] text-[28px] font-bold text-dark-green-200'>Vision & Mission</h1>
-        {/* ------- small line ------ */}
-        <div className='w-24 h-1 bg-richblack-500'></div>
+        
       </div>
 
       {/* ------------- content part ------------ */}
