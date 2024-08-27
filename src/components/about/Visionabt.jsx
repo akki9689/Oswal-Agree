@@ -4,7 +4,7 @@ import Popupname from '../common/Popupname'
 const Visionabt = () => {
   return (
     <section>
-      
+      <Popupname title='vision and mission'/>
         <Vision2/>
     </section>
   )
