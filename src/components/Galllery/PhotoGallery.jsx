@@ -41,7 +41,7 @@ const PhotoGallery = () => {
 
         {/* ---------- filter title ---------- */}
 
-        <div className='flex md:gap-x-10 sm:gap-x-6 gap-x-4 gap-y-4  xs:flex-nowrap flex-wrap  items-center justify-center md:text-lg font-bold'>
+        <div className='flex md:gap-x-10 sm:gap-x-6 gap-x-4 gap-y-4  xs:flex-nowrap flex-wrap  items-center justify-center md:text-lg font-bold '>
             
       
 
@@ -50,7 +50,7 @@ const PhotoGallery = () => {
                     <button key={index} 
                     onClick={()=> setCategory(item.toLowerCase())}
                     className={`
-                    sm:px-4 px-3 py-2 rounded-lg
+                    sm:px-4 px-3 py-2 rounded-lg hover:bg-light-green-200 transition-all duration-300
                     ${
                         category === item.toLowerCase() ? " border-2  border-dark-green-200 bg-light-green-200 " : ""
                     }
