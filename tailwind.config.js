@@ -96,9 +96,9 @@ export default {
         300: '#BAD900',
         400: '#C4DDBF'
       },
-     "orange":{
-      600:"#EEA90E",
-     },
+      "orange": {
+        600: "#EEA90E",
+      },
 
       yellow: {
         100: '#E8C204',
@@ -151,12 +151,12 @@ export default {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' }
-        }
+          '50%': { transform: 'translateY(-8px)' },
+        },
       },
       animation: {
-        float: 'float 0.7s ease-in '
-      }
+        float: 'float 2s ease-in-out infinite',
+      },
     }
   },
   plugins: []
