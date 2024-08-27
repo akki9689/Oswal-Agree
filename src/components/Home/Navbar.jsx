@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { SocialIcon } from 'react-social-icons';
-import { FaBars, FaTimes, FaRegHandPointRight, FaFilter, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaBars, FaTimes, FaRegHandPointRight} from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faMagnifyingGlass} from '@fortawesome/react-fontawesome';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
 import { navbarData } from '../../data/nav-links'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const { navItems, socialLinks } = navbarData;
@@ -91,10 +94,10 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-lg">
-      <div className="container w-10/12 flex justify-between mx-auto px-6 md:px-20 py-4">
+      <div className="container w-10/12 flex justify-between mx-auto px-0 md:px-20 py-4">
         {/* Logo */}
-        <NavLink to="/" className="text-xl font-bold">
-          <img src={logo} alt="Logo" className="w-[100px] smd:w-[120px]" />
+        <NavLink to="/">
+          <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
         </NavLink>
 
         {/* MOBILE MODE: Payment Button and Social Icons */}
@@ -104,12 +107,13 @@ const Navbar = () => {
             Pay Now <FaRegHandPointRight className="ml-1"/>
           </button>
           <div className="flex space-x-1 ">
-          {socialLinks.map(({ url, Icon }) => (
+          {socialLinks.map(({ url}) => (
             <div
               key={url}
               className="text-xl p-1 bg-dark-green-100 hover:bg-light-green-300 rounded-lg flex items-center"
             >
-              <SocialIcon url={url} style={{ width: 18, height: 18 }} />
+              <SocialIcon url={url} style={{ width: 20, height: 20}} />
+              
             </div>
           ))}
 
@@ -156,44 +160,51 @@ const Navbar = () => {
                   to={item.path}
                   className="p-2 flex items-center hover:bg-dark-green-100 rounded-xl"
                 >
-                  {item.icon ? item.icon : item.label}
+                  {item.label}
                   {item.dropdown && <IoIosArrowDown className="ml-1" />}
                 </NavLink>
                 {item.dropdown && activeDropdown === item.label && renderDropdown(item.dropdown)}
               </div>
             ))}
+
+            <div>
+            <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#186d26", fontSize:"28px", fontWeight:"900" }} />
+            </div>
+            
           </nav>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-0 left-0 w-full h-screen bg-white z-50 p-6">
+          <div className="lg:hidden absolute top-0 left-0 w-full  bg-white z-50 p-2">
             <div className="flex justify-between mb-4">
               {/* Logo */}
               <NavLink to="/" className="text-xl font-bold">
-                <img src={logo} alt="Logo" className="w-[85px]" />
+                <img src={logo} alt="Logo" className="w-[120px]" />
               </NavLink>
               <button onClick={toggleMenu} className="text-2xl">
                 <FaTimes />
               </button>
             </div>
             <nav className="space-y-4">
+              <a href="/filter">Search products<FontAwesomeIcon icon={faMagnifyingGlass} className="ml-1" style={{color: "#186d26", fontSize:"24px", fontWeight:"900" }} /></a>
               {navItems.map((item) => (
-                <div key={item.label} className="relative">
-                  <button
+                <div key={item.label} className="relative p-1 border-2 border-dark-green-100 rounded-xl">
+                  <NavLink
+                    path={item.path}
                     onClick={() => handleMobileDropdownToggle(item.label)}
-                    className="w-full text-left p-2 flex items-center justify-between hover:bg-dark-green-100 rounded-xl"
+                    className="w-full text-left p-2 flex items-center justify-between  hover:bg-dark-green-100 rounded-xl"
                   >
-                    <span>{item.icon ? item.icon : item.label}</span>
+                    <span>{item.label}</span>
                     {item.dropdown && <IoIosArrowDown />}
-                  </button>
+                  </NavLink>
                   {item.dropdown && activeMobileDropdown === item.label && (
-                    <div className="pl-4">
+                    <div className="pl-4 pr-2">
                       {item.dropdown.map((dropdownItem) => (
                         <div key={dropdownItem.label}>
                           <button
                             onClick={() => handleMobileSubMouseEnter(dropdownItem.label)}
-                            className="w-full text-left p-2 flex items-center justify-between hover:bg-dark-green-100 rounded-xl"
+                            className="w-full text-left p-2 flex items-center justify-between bg-light-green-200 m-1 hover:bg-yellow-100 rounded-xl"
                           >
                             <span>{dropdownItem.label}</span>
                             {dropdownItem.subDropdown && <IoIosArrowForward />}
@@ -219,6 +230,8 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+               <div>
+            </div>
             </nav>
           </div>
         )}

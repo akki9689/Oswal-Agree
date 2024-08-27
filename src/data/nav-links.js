@@ -43,15 +43,15 @@ export const navbarData = {
        { label: 'Branches', path: '/contactUs/branches' },
      ],
    },
-   { label: 'Filter', icon: FaFilter },
+   
  ],
 
   socialLinks : [
-   { url: 'https://www.facebook.com', Icon: FaFacebookF },
-   { url: 'https://instagram.com', Icon: FaInstagram },
-   { url: 'https://youtube.com', Icon: FaYoutube },
-   { url: 'https://whatsapp.com', Icon: FaWhatsapp },
-   { url: 'https://linkedin.com', Icon: FaLinkedinIn },
+   { url: 'https://www.facebook.com'},
+   { url: 'https://instagram.com'},
+   { url: 'https://youtube.com'},
+   { url: 'https://whatsapp.com'},
+   { url: 'https://linkedin.com'},
  ]
 
 }
