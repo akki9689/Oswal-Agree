@@ -1,57 +1,57 @@
+import React from 'react'
+import { FaFilter, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { SocialIcon } from 'react-social-icons';
+
 export const navbarData = {
+ navItems : [
+   { label: 'Home', path: '/' },
+   {
+     label: 'About Us',
+     path: '/about',
+     dropdown: [
+       { label: 'Company Profile', path: '/about/companyprofile' },
+       { label: 'Vision and Mission', path: '/about/vision' },
+       { label: 'Awards and Recognition', path: '/about/awards' },
+       { label: 'Terms and Condition', path: '/about/terms' },
+       { label: 'FAQ', path: '/about/faq' },
+     ],
+   },
+   {
+     label: 'Product Range',
+     path: '/products',
+     dropdown: [
+       { label: 'Insecticides', path: '/products/insecticides' },
+       { label: 'Fungicides', path: '/products/fungicides' },
+       { label: 'Herbicides', path: '/products/herbicides' },
+       { label: 'Fertilizers', path: '/products/fertilizers' },
+       { label: 'Bio Products', path: '/products/bioproducts' },
+       { label: 'Micro Nutrients', path: '/products/micronutrients' },
+       { label: 'Plant Growth Regulators', path: '/products/plantgrowth' },
+     ],
+   },
+   {
+     label: 'Gallery',
+     path: '/gallery',
+     
+   },
+   
+   {
+     label: 'Contact Us',
+     path: '/contact',
+     dropdown: [
+       { label: 'Contact', path: '/contactUs/contact' },
+       { label: 'Branches', path: '/contactUs/branches' },
+     ],
+   },
+   { label: 'Filter', icon: FaFilter },
+ ],
 
-    navLinks : [
-         {
-            id:1,
-            title: 'Home',
-            path: '/'
-         },
+  socialLinks : [
+   { url: 'https://www.facebook.com', Icon: FaFacebookF },
+   { url: 'https://instagram.com', Icon: FaInstagram },
+   { url: 'https://youtube.com', Icon: FaYoutube },
+   { url: 'https://whatsapp.com', Icon: FaWhatsapp },
+   { url: 'https://linkedin.com', Icon: FaLinkedinIn },
+ ]
 
-         {
-            id:2,
-            title: 'About Us',
-            path:'/about-us',
-            dropdown:[
-                {id:21 , title:'Company Profile' , path:'/about-us/company-profile'},
-                {id:22 , title: 'Vision and Mission' , path: '/about-us/vision-and-mission'},
-                {id:23 , title:'Awards and Recognition' , path:'/about-us/awards-and-recognition'},
-                {id:24 , title:'Terms and Condition' , path:'/about-us/terms-and-condition'},
-                {id: 25 , title:'FAQ' , path:'/about-us/faq'}
-            ]
-         },
-
-         {
-            id:3,
-            title:'Product Range',
-            path: '/product-range',
-            dropdown:[
-             {id:31 , title:'Insecticides' ,path:'/product-range/insecticides'},
-             {id:32 , title:'Fungicides' ,path:'/product-range/fungicides'},
-             {id:33 , title:'Herbicides' ,path:'/product-range/herbicides'},
-             {id:34 , title:'Fertilizers' , path:'/product-range/fertilizers'},
-             {id:35 , title:'Bio Products' , path:'/product-range/bio-products'},
-             {id:36 , title:'Micro Nutrients' ,path:'/product-range/micro-nutrients'},
-             {id:37 , title:'Plant Growth Regulators' ,path:'/product-range/plant-growth-regulators'},
-            ]
-         },
-
-         {
-            id:4,
-            title:'Gallery',
-            path:'/gallery'
-         },
-
-         {
-            id:5,
-            title:'Contact Us',
-            path:'/contact-us',
-            dropdown: [
-                {id:51 , title:'Contact' , path:'/contact-us/contact' },
-                {id:52 , title:'Branches' , path:'/contact-us/bramches'}
-
-            ]
-         }
-
-        
-    ]
 }
