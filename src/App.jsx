@@ -15,6 +15,7 @@ import PhotoGallery from './components/Galllery/PhotoGallery'
 import Visionabt from './components/about/Visionabt'
 import Awards from './components/about/Awards'
 import Popupname from './components/common/Popupname'
+import Terms from './components/about/Terms'
 const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
