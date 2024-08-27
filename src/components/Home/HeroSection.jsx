@@ -67,7 +67,7 @@ const HeroSection = () => {
                       alt={`Slide ${index}`} 
                       className="object-cover w-full h-full" 
                     />
-                    <div className="absolute bottom-8 left-4 bg-gray-600 bg-opacity-80 text-white p-2 md:bottom-12 md:left-10 md:p-3">
+                    <div className="absolute bottom-8 left-4 rounded-md bg-richblack-500 bg-opacity-60 text-white p-2 md:bottom-12 md:left-10 md:p-4">
                       <h2 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-regular">{slide.title}</h2>
                     </div>
                   </div>

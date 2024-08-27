@@ -84,19 +84,19 @@ const Navbar = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-6">
               <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200 ">Pay Now<span><FaRegHandPointRight /></span></button>
-              <a  target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <a  target="_blank" rel="noopener noreferrer" className="text-xl   rounded-lg flex items-center">
                 <SocialIcon url="https://www.facebook.com/oswalcropprotection" style = {{width:30 , height:30}} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl  rounded-lg flex items-center">
               <SocialIcon url="www.instagram.com" style = {{width:30 , height:30}} />
               </a>
-              <a target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <a target="_blank" rel="noopener noreferrer" className="text-xl  rounded-lg flex items-center">
               <SocialIcon url="https://youtube.com" style = {{width:30 , height:30}} />
               </a>
-              <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xl rounded-lg flex items-center">
               <SocialIcon url="https://whatsapp.com" style = {{width:30 , height:30}} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xl p-2 rounded-lg flex items-center">
               <SocialIcon url="https://linkedin.com" style = {{width:30 , height:30}} />
               </a>
             </div>
