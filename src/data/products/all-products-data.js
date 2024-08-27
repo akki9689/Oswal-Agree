@@ -1118,8 +1118,61 @@ export const allProducts = [
     },
     {
         id: 2,
-        title: 'Fungicides'
-        // image: 'fungicides.png'
+        title: 'Fungicides',
+        // image: 'fungicides.png',
+        productName: [
+            {
+                id: 1,
+                name: 'Zordaar',
+                img: zordaar,
+                activeIngredient: 'Tebuconazole 38.39% SC',
+                url: '#',
+                details: {
+                    targetCrops: ['Cabbage', 'Wheat'],
+                    dose: '2 ml / Liter',
+                    pests: ['Yellow Rust',' Powdery Mildew', 'Alternaria Leaf Spot', 'Leaf Blight'],
+                    uses: 'It is a systemic fungicide recommended for use as a foliar spray for the control of alternaria leaf spot disease in cabbage as well as yellow rust and powdery mildew diseases in wheat. It contains 383.9 g of Tebuconazole active ingredients per litre of formulation.',
+                    advantages: [
+                        'Tebuconazole 38.39% w/w SC is a systemic fungicide recommended for use as a foliar spray for the control of Alternaria leaf spot disease in cabbage as well as yellow rust and powdery mildew diseases in wheat.'
+                    ],
+                    application: 'Spray fungicide with high volume knapsack sprayer. Give 1st spray as soon as the appearance of signs of disease and subsequent 1-2 sprays at 10-15 days interval depending on the disease deverly.'
+                }
+            },
+            {
+                id: 2,
+                name: 'Osavet',
+                img: osavet,
+                activeIngredient: 'Sulphur 80% WDG',
+                url: '#',
+                details: {
+                    targetCrops: ['Grapes', 'Mango', 'Wheat', 'Cowpea', 'Guar', 'Pea', 'Apple', 'Cumin'],
+                    dose: '2kg/1000L',
+                    pests: ['Powdery mildew', 'Scab'],
+                    uses: 'Sulphur is not recommended for application on sulphur “shy” vegetables e.g. cucurbits etc. and certain variety apples, pears and other fruits where high temp (85 deg F or 30 deg. C) prevail sulphur will be phytotoxic. Plant Protection equipment : Knapsack sprayer, Foot sprayer, Compression Knapsack sprayer with hollow cone nozzle. ',
+                    advantages: [
+                        'It is a water dispersible granules containing 80% sulphur as active ingredient and balance adjuvants 20% w/w.'
+                    ],
+                    application: 'Sulphur 80% WDG used for the control of powdery mildew and scab on Grapes, Cowpea, Guar, Pea, Cumin, Apple Groundnut, mustard, wheat, paddy, maize, sugarcane, banana & Mango. Scab disease of apple. It is dry flow able water dispersable granules containing Sulphur 80% w/w, balance ingredients, the particle size range from 2 to 6 microns, thus displaying a fine layer of active ingredient on sprayed crop resulting in enchanced-efficacy.'
+                }
+            },
+            {
+                id: 3,
+                name: 'Azoxybin',
+                img: azoxybin,
+                activeIngredient: 'Azoxystrobin 23% SC',
+                url: '#',
+                details: {
+                    targetCrops: ['Grapes', 'Chilli', 'Mango', 'Tomato', 'Potato'],
+                    dose: '500 ml / 500-750 L',
+                    pests: ['Powdery mildew', 'Late BLIGHT', 'fruit rot', 'Downey Mildew', 'Early blight', 'Anthacnose'],
+                    uses: 'PLANT PROTECTION EQUIPMENT: Knapsack sprayer, Compression knapsack sprayer, Battery operated power sprayer and Tractor mounted sprayer.',
+                    advantages: [
+                        'Azoxystrobin 23% SC is a broadspectrum systemic fungicide recommended for the control of diseases infecting Grapes, Chilli, Mango, Tomato, and Potato crops as under. It contains 23% SC of active ingredient, which is equivalent to 250 g/litre of the product.'
+                    ],
+                    application: 'First spray as preventive or at the of initial disease appearance, followed by another application at 10-15 days intervals depending upon.'
+                }
+            }
+        ]
     },
     {
         id: 3,
