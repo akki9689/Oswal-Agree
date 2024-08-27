@@ -5,6 +5,8 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+// index.js or App.js
+import 'swiper/swiper-bundle.css';
 
 AOS.init();
 
