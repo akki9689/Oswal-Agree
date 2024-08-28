@@ -16,6 +16,30 @@ const Navbar = () => {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
+  const [iconSize , setIconSize] = useState({width:35 , height:35});
+
+  //IconSize logic
+
+  useEffect(() => {
+     const handleResize = () => {
+        const screenWidth = window.innerWidth;
+        if(screenWidth >= 768){
+             setIconSize({width: 30 , height:30});
+        }
+        else{
+          setIconSize({width:22 , height:22});
+        }
+     };
+     window.addEventListener('resize' , handleResize);
+
+     handleResize();
+
+     return() => {
+       window.addEventListener('resize' , handleResize);
+     }
+
+    },[]);
+  
   let hideDropdownTimeout;
 
   useEffect(() => {
@@ -102,7 +126,7 @@ const Navbar = () => {
 
         {/* MOBILE MODE: Payment Button and Social Icons */}
 
-        <div className="flex flex-col items-center space-x-4 p-2 smd:hidden">
+        <div className="flex flex-col items-center space-x-4 p-2 lg:hidden">
           <button className="text-sm bg-dark-green-100 text-white mb-2 py-2 px-2 rounded flex justify-center items-center hover:bg-light-green-300 transition-all duration-200">
             Pay Now <FaRegHandPointRight className="ml-1"/>
           </button>
@@ -112,7 +136,7 @@ const Navbar = () => {
               key={url}
               className="text-xl p-1 bg-dark-green-100 hover:bg-light-green-300 rounded-lg flex items-center"
             >
-              <SocialIcon url={url} style={{ width: 20, height: 20}} />
+              <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height}} />
               
             </div>
           ))}
