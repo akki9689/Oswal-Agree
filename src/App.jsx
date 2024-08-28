@@ -22,13 +22,13 @@ const App = () => {
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
            <Navbar/>
            <HeroSection/>
-           {/* <HeroSection/>
-           <Companyprotection/>
+           <HeroSection/>
+           {/* <Companyprotection/> */}
            <Product />
            <OurVision/>
-
+<Faq/>
            <IconSection/>
-           <PhotoGallery/> */}
+           <PhotoGallery/>
         
             <Footer/>
           
