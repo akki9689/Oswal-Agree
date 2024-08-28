@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { SocialIcon } from 'react-social-icons';
-import { FaBars, FaTimes, FaRegHandPointRight} from 'react-icons/fa';
+import { FaBars, FaTimes, FaRegHandPointRight } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faMagnifyingGlass} from '@fortawesome/react-fontawesome';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
@@ -16,30 +16,30 @@ const Navbar = () => {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
-  const [iconSize , setIconSize] = useState({width:35 , height:35});
+  const [iconSize, setIconSize] = useState({ width: 35, height: 35 });
 
   //IconSize logic
 
   useEffect(() => {
-     const handleResize = () => {
-        const screenWidth = window.innerWidth;
-        if(screenWidth >= 768){
-             setIconSize({width: 30 , height:30});
-        }
-        else{
-          setIconSize({width:22 , height:22});
-        }
-     };
-     window.addEventListener('resize' , handleResize);
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 768) {
+        setIconSize({ width: 30, height: 30 });
+      }
+      else {
+        setIconSize({ width: 22, height: 22 });
+      }
+    };
+    window.addEventListener('resize', handleResize);
 
-     handleResize();
+    handleResize();
 
-     return() => {
-       window.addEventListener('resize' , handleResize);
-     }
+    return () => {
+      window.addEventListener('resize', handleResize);
+    }
 
-    },[]);
-  
+  }, []);
+
   let hideDropdownTimeout;
 
   useEffect(() => {
@@ -119,7 +119,9 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg">
       <div className="container w-10/12 flex justify-between mx-auto px-0 md:px-20 py-4">
-        {/* Logo */}
+
+        {/* Navbar Logo */}
+
         <NavLink to="/">
           <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
         </NavLink>
@@ -128,31 +130,35 @@ const Navbar = () => {
 
         <div className="flex flex-col items-center space-x-4 p-2 lg:hidden">
           <button className="text-sm bg-dark-green-100 text-white mb-2 py-2 px-2 rounded flex justify-center items-center hover:bg-light-green-300 transition-all duration-200">
-            Pay Now <FaRegHandPointRight className="ml-1"/>
+            Pay Now <FaRegHandPointRight className="ml-1" />
           </button>
           <div className="flex space-x-1 ">
-          {socialLinks.map(({ url}) => (
-            <div
-              key={url}
-              className="text-xl p-1 bg-dark-green-100 hover:bg-light-green-300 rounded-lg flex items-center"
-            >
-              <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height}} />
-              
-            </div>
-          ))}
+            {socialLinks.map(({ url }) => (
+              <div
+                key={url}
+                className="text-xl p-1 bg-dark-green-100 hover:bg-light-green-300 rounded-lg flex items-center"
+              >
+                <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height }} />
+
+              </div>
+            ))}
 
           </div>
-          
+
         </div>
 
         {/* Mobile Menu Button */}
+
         <button onClick={toggleMenu} className="lg:hidden text-2xl">
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Navbar Links */}
+
         <div className="hidden lg:flex flex-col items-center gap-4">
+
           {/* Social Media Icons (for larger screens) */}
+
           <div className="flex justify-end">
             <div className="flex space-x-6">
               <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200">
@@ -160,14 +166,14 @@ const Navbar = () => {
               </button>
 
               {socialLinks.map(({ url }) => (
-                <div   key={url} className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                <div key={url} className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
                   <SocialIcon
-                  url={url}
-                  style={{ width: 30, height: 30 }}
-                  
-                />
+                    url={url}
+                    style={{ width: 30, height: 30 }}
+
+                  />
                 </div>
-                
+
               ))}
             </div>
           </div>
@@ -192,13 +198,15 @@ const Navbar = () => {
             ))}
 
             <div>
-            <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#186d26", fontSize:"28px", fontWeight:"900" }} />
+              <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#186d26", fontSize: "28px", fontWeight: "900" }} />
             </div>
-            
+
           </nav>
         </div>
 
         {/* Mobile Menu */}
+
+        
         {isMenuOpen && (
           <div className="lg:hidden absolute top-0 left-0 w-full  bg-white z-50 p-2">
             <div className="flex justify-between mb-4">
@@ -211,7 +219,7 @@ const Navbar = () => {
               </button>
             </div>
             <nav className="space-y-4">
-              <a href="/filter">Search products<FontAwesomeIcon icon={faMagnifyingGlass} className="ml-1" style={{color: "#186d26", fontSize:"24px", fontWeight:"900" }} /></a>
+              <a href="/filter">Search products<FontAwesomeIcon icon={faMagnifyingGlass} className="ml-1" style={{ color: "#186d26", fontSize: "24px", fontWeight: "900" }} /></a>
               {navItems.map((item) => (
                 <div key={item.label} className="relative p-1 border-2 border-dark-green-100 rounded-xl">
                   <NavLink
@@ -254,8 +262,8 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-               <div>
-            </div>
+              <div>
+              </div>
             </nav>
           </div>
         )}
