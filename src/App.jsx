@@ -8,6 +8,8 @@ import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
 
+import Contact from './components/contactUs/Contact';
+
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Companyprofile = lazy(() => import('./components/about/Companyprofile'));
@@ -18,30 +20,30 @@ const Faq = lazy(() => import('./components/about/Faq'));
 
 
 const App = () => {
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        // Simulate a loading delay for demonstration purposes
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 100); // Adjust the timing as needed
+    // useEffect(() => {
+    //     // Simulate a loading delay for demonstration purposes
+    //     const timer = setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 100); // Adjust the timing as needed
 
-        return () => clearTimeout(timer); // Cleanup timer on unmount
-    }, []);
+    //     return () => clearTimeout(timer); // Cleanup timer on unmount
+    // }, []);
 
-    if (isLoading) {
-        return <Loader />;
-    }
+    // if (isLoading) {
+    //     return <Loader />;
+    // }
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-            <Navbar />
+            {/* <Navbar />
             <Suspense fallback={<Loader/>}>
-                <Routes>
+                <Routes> */}
                     {/* Homepage */}
-                    <Route path='/' element={<Home />} />
+                    {/* <Route path='/' element={<Home />} /> */}
 
                     {/* About */}
-                    <Route path='/about' element={<About />}>
+                    {/* <Route path='/about' element={<About />}>
                        
                         <Route path='/about/companyprofile' element={<Companyprofile />} />
                         <Route path='/about/vision' element={<Visionabt />} />
@@ -52,7 +54,9 @@ const App = () => {
                     </Route>
                 </Routes>
             </Suspense>
-            <Footer />
+            <Footer /> */}
+
+            <Contact/>
         </div>
     );
 };
