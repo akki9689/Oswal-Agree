@@ -1,4 +1,9 @@
 
+import Jalwa from '../../images/Products/PGR/Jalwa.png'
+import  NainoBooster from '../../images/Products/PGR/ Naino-Booster.png'
+import Naino from '../../images/Products/PGR/Naino-Booster-Ultra.png'
+import  NainoPlus from '../../images/Products/PGR/ Naino-Plus.png'
+import Seltar from '../../images/Products/PGR/Seltar.png'
 
 
 
@@ -25,7 +30,7 @@ plantproductName: [
     {
         id: 2,
         name: "Naino Booster",
-        img: Naino,
+        img: NainoBooster,
         activeIngredient: "Triacontanol 0.05% GR (Min.)",
         url: "#",
         details: {
@@ -61,7 +66,7 @@ plantproductName: [
     {
         id: 4,
         name: "Naino Plus",
-        img: Naino,
+        img: NainoPlus,
         activeIngredient: "Triacontanol EW 0.1% Min",
         url: "#",
         details: {

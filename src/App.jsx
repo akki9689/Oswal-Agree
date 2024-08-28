@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Footer from './components/common/Footer';
-import Navbar from './components/Home/Navbar';
+import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';

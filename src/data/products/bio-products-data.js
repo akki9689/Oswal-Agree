@@ -1,4 +1,21 @@
 
+import Thunder from '../../images/Products/Bio-products/Thunder.png'
+import Borohit from '../../images/Products/Bio-products/Borohit-Plus.png'
+import Dhoom from '../../images/Products/Bio-Products/Dhoom.png'
+import Diamondgold from '../../images/Products/Bio-Products/Diamond-gold.png'
+import Diamond from '../../images/Products/Bio-Products/Diamond-gold-Organic.png'
+import  Gazab from '../../images/Products/Bio-Products/Gazab-G.png'
+import Grow from '../../images/Products/Bio-Products/Grow-UP.png'
+import Osovitagold from '../../images/Products/Bio-Products/Osovita-Gold.png'
+import Osovita from '../../images/Products/Bio-Products/Osovita-G.png'
+import Oswal from '../../images/Products/Bio-Products/Oswal-Gold.png'
+import  OswalPunch from '../../images/Products/Bio-Products/OSWAL-PUNCH.png'
+import OswalZinc from '../../images/Products/Bio-Products/Oswal-Zinc.png'
+import SATVAT from '../../images/Products/Bio-Products/SAT-VAT.png'
+import  MPSuper from '../../images/Products/Bio-Products/ MP-Super.png'
+import Mit from '../../images/Products/Bio-Products/Mit-Magic.png'
+
+
 
 
 
@@ -61,7 +78,7 @@ BioproductName: [
     {
         id: 4,
         name: "Diamond Gold",
-        img: Diamond ,
+        img: Diamondgold ,
         activeIngredient: "Crop Vigour Stimulant",
         url: "#",
         details: {
@@ -95,7 +112,7 @@ BioproductName: [
     {
         id: 6,
         name: "Gazab-G",
-        img: Gazab-G,
+        img: Gazab,
         activeIngredient: "Seaweed 7% + Protein Hydrolysate 3%",
         url: "#",
         details: {
@@ -129,7 +146,7 @@ BioproductName: [
     {
         id: 8,
         name: "Osovita Gold",
-        img: Osovita ,
+        img: Osovitagold ,
         activeIngredient: "Liquid Sea-Weed Based Bio-Extract",
         url: "#",
         details: {
@@ -146,7 +163,7 @@ BioproductName: [
    {
         id: 9,
         name: "Osovita-G",
-        img: Osovita ,
+        img: Osovita,
         activeIngredient: "Granulated Sea Weed Based Bio-Extract",
         url: "#",
         details: {
@@ -180,7 +197,7 @@ BioproductName: [
     {
         id: 11,
         name: "Oswal Punch",
-        img: Oswal ,
+        img: OswalPunch ,
         activeIngredient: "A Bio Extract Pest Controller",
         url: "#",
         details: {
@@ -197,7 +214,7 @@ BioproductName: [
     {
         id: 12,
         name: "Oswal Zinc",
-        img: Oswal ,
+        img: OswalZinc ,
         activeIngredient: "Microbial Zinc Solubilizer",
         url: "#",
         details: {
@@ -214,7 +231,7 @@ BioproductName: [
     {
         id: 13,
         name: "SAT-VAT",
-        img: SAT-VAT ,
+        img: SATVAT ,
         activeIngredient: "Superspreader",
         url: "#",
         details: {
@@ -231,7 +248,7 @@ BioproductName: [
     {
         id: 14,
         name: "MP Super",
-        img: MP-Super ,
+        img: MPSuper ,
         activeIngredient: "Multipurpose Bio Plant Protector Eco Friendly",
         url: "#",
         details: {
