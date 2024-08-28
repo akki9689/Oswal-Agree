@@ -16,21 +16,24 @@ import Awards from './components/about/Awards'
 import Popupname from './components/common/Popupname'
 import Terms from './components/about/Terms'
 import Faq from './components/about/Faq'
+
+
+import Branches from './components/contactUs/Branches'
 const App = () => {
    
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-           <Navbar/>
-           
-           <HeroSection/>
+           {/* <Navbar/>
+           <HeroSection/> */}
            {/* <Companyprotection/> */}
-           <Product />
+           {/* <Product />
            <OurVision/>
 
            <IconSection/>
            <PhotoGallery/>
         
-            <Footer/>
+            <Footer/> */}
+            <Branches/>
           
         </div>
         
