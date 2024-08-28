@@ -1,5 +1,7 @@
 
-
+import Jaandaar from '../../images/Products/Micro-Nutrients/Jaandaar.png'
+import  Takatwar from '../../images/Products/Micro-Nutrients/ Takatwar.png'
+import Kaabil from '../../images/Products/Micro-Nutrients/KAABIL.png'
 
 
 

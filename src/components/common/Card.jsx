@@ -4,7 +4,6 @@ import Button from './Button';
 const Card = ({
   title,
   picture = null,  // Default value for picture
-  buttonText,
   className = ''   // Default value for className
 }) => {
   return (
@@ -17,8 +16,9 @@ const Card = ({
             <img src={picture} alt='products' className='object-cover w-full h-full' />
           </div>
           <Button
-            buttonText={buttonText}
+            buttonText='Click More'
             showIcon={true}
+            handlar={() => console.log('Button clicked!')} 
             />
         </div>
       </div>
@@ -29,7 +29,6 @@ const Card = ({
 // ---------------Defining Props-------------------
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
   picture: PropTypes.string,
   className: PropTypes.string,
 };

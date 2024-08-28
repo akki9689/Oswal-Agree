@@ -1,4 +1,5 @@
-export const branches = [
+
+export  const branchItem = [
     {
      id:1,
      title:'Hisar | Karnal (Haryana)'

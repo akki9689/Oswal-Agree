@@ -42,7 +42,6 @@ function Product () {
               <Card
                 title={data.title}
                 picture={data.image}
-                buttonText='Click More'
                 showIcon={true}
                 className='w-full max-w-[22rem] h-[25rem] md:max-w-[20rem] lg:max-w-[22rem] mb-10 border-light-green-200 border rounded-3xl'
               />
