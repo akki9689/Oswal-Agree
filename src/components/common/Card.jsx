@@ -19,6 +19,7 @@ const Card = ({
           <Button
             buttonText={buttonText}
             showIcon={true}
+            handlar={() => console.log('Button clicked!')} 
             />
         </div>
       </div>
