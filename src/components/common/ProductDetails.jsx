@@ -12,6 +12,11 @@ const ProductDetails = ({
   advantages,
   applications
 }) => {
+  // Handler function to open the PDF in a new browser tab
+  const handleOpenPDF = () => {
+    window.open('/src/pdf/OSWAL-CROP-PROTECTION-CATALOGUE.pdf', '_blank'); // Replace with the actual path to your PDF
+  };
+
   return (
     <div className='flex flex-col items-center p-6 mx-auto max-w-7xl md:p-7 lg:flex-row lg:p-8 lg:space-x-8 dsx:w-8/12'>
       {/* Left Side: Image */}
@@ -82,15 +87,16 @@ const ProductDetails = ({
 
         {/* Buttons */}
         <div className='flex mt-6 space-x-4'>
-
           <Button
             buttonText='Send Query'
             showIcon={true}
             handlar={() => console.log('Button clicked!')} 
           />
-          <Button buttonText='Download Catalog'
+
+          <Button
+            buttonText='Download Catalog'
             showIcon={true}
-            handlar={() => console.log('Button clicked!')} 
+            handlar={handleOpenPDF} // Use the open PDF handler here
           />
         </div>
       </div>
