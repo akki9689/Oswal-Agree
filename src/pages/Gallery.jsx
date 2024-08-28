@@ -1,8 +1,10 @@
 import React from 'react'
-
+import { Outlet } from 'react-router-dom'
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div>
+<Outlet/>
+    </div>
   )
 }
 

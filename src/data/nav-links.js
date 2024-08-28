@@ -1,6 +1,4 @@
-import React from 'react'
-import { FaFilter, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
-import { SocialIcon } from 'react-social-icons';
+
 
 export const navbarData = {
  navItems : [
