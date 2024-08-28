@@ -5,7 +5,7 @@ import Product from './components/Home/Product'
 import Footer from './components/common/Footer'
 // import OurVision from './components/Home/OurVision'
 
-import Navbar from './components/Home/Navbar'
+import Navbar from './components/common/Navbar'
 import OurVision from './components/Home/OurVision'
 import IconSection from './components/Home/IconSection'
 import HeroSection from './components/Home/HeroSection'
@@ -21,16 +21,16 @@ const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
            <Navbar/>
+           
            <HeroSection/>
-           {/* <HeroSection/>
-           <Companyprotection/>
+           {/* <Companyprotection/> */}
            <Product />
            <OurVision/>
 
            <IconSection/>
-           <PhotoGallery/> */}
+           <PhotoGallery/>
         
-            {/* <Footer/> */}
+            <Footer/>
           
         </div>
         

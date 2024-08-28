@@ -197,9 +197,9 @@ const Navbar = () => {
               </div>
             ))}
 
-            <div>
+            <NavLink to="/filter" className="cursor-pointer">
               <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#186d26", fontSize: "28px", fontWeight: "900" }} />
-            </div>
+            </NavLink>
 
           </nav>
         </div>
@@ -219,11 +219,11 @@ const Navbar = () => {
               </button>
             </div>
             <nav className="space-y-4">
-              <a href="/filter">Search products<FontAwesomeIcon icon={faMagnifyingGlass} className="ml-1" style={{ color: "#186d26", fontSize: "24px", fontWeight: "900" }} /></a>
+              <NavLink to="/filter" className="cursor:pointer">Search products<FontAwesomeIcon icon={faMagnifyingGlass} className="ml-1" style={{ color: "#186d26", fontSize: "24px", fontWeight: "900" }} /></NavLink>
               {navItems.map((item) => (
                 <div key={item.label} className="relative p-1 border-2 border-dark-green-100 rounded-xl">
                   <NavLink
-                    path={item.path}
+                    to={item.path}
                     onClick={() => handleMobileDropdownToggle(item.label)}
                     className="w-full text-left p-2 flex items-center justify-between  hover:bg-dark-green-100 rounded-xl"
                   >
@@ -234,13 +234,14 @@ const Navbar = () => {
                     <div className="pl-4 pr-2">
                       {item.dropdown.map((dropdownItem) => (
                         <div key={dropdownItem.label}>
-                          <button
+                          <NavLink
+                            to= {dropdownItem.path}
                             onClick={() => handleMobileSubMouseEnter(dropdownItem.label)}
                             className="w-full text-left p-2 flex items-center justify-between bg-light-green-200 m-1 hover:bg-yellow-100 rounded-xl"
                           >
                             <span>{dropdownItem.label}</span>
                             {dropdownItem.subDropdown && <IoIosArrowForward />}
-                          </button>
+                          </NavLink>
                           {dropdownItem.subDropdown &&
                             activeMobileSubDropdown === dropdownItem.label && (
                               <ul className="pl-4">
