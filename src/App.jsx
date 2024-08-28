@@ -5,6 +5,7 @@ import Product from './components/Home/Product'
 import Footer from './components/common/Footer'
 // import OurVision from './components/Home/OurVision'
 import Branches from './components/contactUs/Branches'
+import Contact from './components/contactUs/Contact'
 
 import Navbar from './components/common/Navbar'
 import ProductDetails from './components/common/ProductDetails'
@@ -13,14 +14,14 @@ const App = () => {
 
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-            <Navbar />
+            {/* <Navbar />
             <Product/>
             <ProductDetails/>
 
           <Products/>
 
-            <Footer />
-            <Branches/>
+            <Footer /> */}
+            <Contact/>
 
         </div>
 
