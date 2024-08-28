@@ -41,7 +41,41 @@ import shooter from '../../images/Products/Insecticides/Shooter-Profenofos-40_-C
 import seeko from '../../images/Products/Insecticides/Seeko-THIAMETHOXAM-0.9-_-FIPRONIL-0.2_-GR.png'
 import superFaster from '../../images/Products/Insecticides/Super-Faster-Chlorpyriphos-10_-GR.png'
 import tango from '../../images/Products/Insecticides/Tango-Emamectin-Benzoate-1.9_-EC.png'
+
+
+// ------------------- Fungicides ------------------------
+
+import azoxybinPlus from '../../images/Products/Fungicides/Azoxybin-Plus.png'
+import azoxybin from '../../images/Products/Fungicides/Azoxybin.png'
+import azoxybinTop from '../../images/Products/Fungicides/Azoxybin-Top.png'
+import  breeza from '../../images/Products/Fungicides/Breeza.png'
+import osavet from '../../images/Products/Fungicides/Osavet.png'
+import carbot from '../../images/Products/Fungicides/Carbot.png'
+import zordaar from '../../images/Products/Fungicides/Zordaar.png'
+import combination from '../../images/Products/Fungicides/Combination.png'
+import combo75 from '../../images/Products/Fungicides/Combo-75.png'
+import conceptPlus from '../../images/Products/Fungicides/Concept-Plus.png'
+import doubleCentury from '../../images/Products/Fungicides/Double-Century.png'
+import fullcure from '../../images/Products/Fungicides/Fullcure.png'
+import gillette from '../../images/Products/Fungicides/Gillette.png'
+import odomil from '../../images/Products/Fungicides/ODOMIL.png'
+import oxyl from '../../images/Products/Fungicides/OXYL.png'
+import proton from '../../images/Products/Fungicides/Proton.png'
+import raka from '../../images/Products/Fungicides/Raka.png'
+import rio from '../../images/Products/Fungicides/RIO.png'
+import tebxil from '../../images/Products/Fungicides/Tebxil.png'
+import tuskon from '../../images/Products/Fungicides/Tuskon.png'
+import utsav20 from '../../images/Products/Fungicides/Utsav-20.png'
+import vazood from '../../images/Products/Fungicides/Vazood.png'
+import  viberant from '../../images/Products/Fungicides/Viberant.png'
+import vinasham from '../../images/Products/Fungicides/VINASHAM.png'
+
+
+
+
 // ------------------All Data -------------------
+
+
 export const allProducts = [
     {
         id: 1,
