@@ -14,14 +14,14 @@ const App = () => {
 
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-            {/* <Navbar />
+            <Navbar />
             <Product/>
             <ProductDetails/>
 
           <Products/>
 
-            <Footer /> */}
-            <Contact/>
+            <Footer />
+            {/* <Contact/> */}
 
         </div>
 
