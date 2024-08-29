@@ -107,35 +107,35 @@ function Contact() {
   return (
     <section>
       <div className="w-full py-6" style={{ backgroundImage: `url(${image})` }}>
-        <div className="w-full flex flex-row space-x-2">
+        <div className="w-full flex flex-col smd:space-x-2">
           {/* ROW-1   ADDRESS && FORM*/}
-          <div className="w-full flex justify-center gap-8 px-20">
+          <div className="w-full px-3  flex flex-wrap md:justify-center md:px-1 gap-8 smd:px-20">
             {/* ADDRESS */}
-            <div className="w-[40%] flex flex-col gap-10 text-dark-green-200">
+            <div className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
               {/* CONTACT US HEADING */}
               <div>
                 <h2 className="text-4xl font-bold "><span className="underline decoration-black underline-offset-[30px]" >Cont</span>act Us</h2>
               </div>
               {/* ADDRESS HEADING */}
-              <div className="flex items-center">
-                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '50px' }} /><span className="text-lg font-bold ml-3  max-w-md">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
+              <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
+                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3  max-w-md">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
               </div>
 
               {/*PHONE HEADING */}
-              <div className="flex items-center">
-                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold ml-3">+91-011-49072043</span>
+              <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
+                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold md:ml-3">+91-011-49072043</span>
               </div>
 
               {/* EMAIL HEADING */}
-              <div className="flex items-center">
-                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold ml-3">info@oswalcrop.com</span>
+              <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
+                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold md:ml-3">info@oswalcrop.com</span>
               </div>
 
             </div>
 
 
             {/* FORM */}
-            <div className="w-[45%] flex flex-col gap-10">
+            <div className="w-full px-3 md:px-1 md:w-[50%] smd:w-[45%] flex flex-col gap-10">
               {/* ENQUIRY FROM HEADING */}
               <div>
                 <h2 className="text-4xl font-bold text-dark-green-200 "><span className="underline decoration-black underline-offset-[30px]" >Enqu</span>iry Form</h2>
@@ -311,8 +311,8 @@ function Contact() {
           </div>
 
           {/* ROW-2  MAP*/}
-          <div>
-
+          <div className="w-full flex justify-center items-center relative overflow-hidden h-0  pb-[50%] m-2">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22771.658681247576!2d77.17803811614137!3d28.710394768348912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fcf000001%3A0xd5d5de14a71e1f1d!2sAzadpur%20Transport%20Centre!5e0!3m2!1sen!2sin!4v1724965332109!5m2!1sen!2sin" width="600" height="450" style={{border:'0',height:'100%',width:'100%',left:'0',top:'0',position:'absolute',justifyContent:'center'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
