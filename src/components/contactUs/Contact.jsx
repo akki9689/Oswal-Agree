@@ -39,10 +39,10 @@ function Contact() {
 
 
             {/* FORM */}
-            <div className="w-[45%] flex flex-col gap-10 text-dark-green-200 ">
+            <div className="w-[45%] flex flex-col gap-10">
               {/* ENQUIRY FROM HEADING */}
               <div>
-                <h2 className="text-4xl font-bold "><span className="underline decoration-black underline-offset-[30px]" >Enqu</span>iry Form</h2>
+                <h2 className="text-4xl font-bold text-dark-green-200 "><span className="underline decoration-black underline-offset-[30px]" >Enqu</span>iry Form</h2>
               </div>
               {/* FORM CODE*/}
 
@@ -56,7 +56,7 @@ function Contact() {
                         id="name"
                         aria-label='Name'
                         placeholder="Name"
-                        className="w-full p-2 border-2 border-gray-300"
+                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
                         {...register('name', { required: 'This field is required' })} />
                       {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
 
@@ -69,7 +69,7 @@ function Contact() {
                       <input
                         id="phone"
                         placeholder="Phone"
-                        className="w-full p-2 border-2 border-gray-300"
+                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
                         {...register('phone', {
                           required: 'This field is required', pattern: {
                             value: /^[6-9]\d{9}$/,
@@ -89,7 +89,7 @@ function Contact() {
                         id="email"
                         aria-label='Email'
                         placeholder="Email"
-                        className="w-full p-2 border-2 border-gray-300 "
+                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none  "
                         {...register('name', {
                           required: 'This field is required', pattern: /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
                         })} />
@@ -104,7 +104,7 @@ function Contact() {
                       <input
                         id="company"
                         placeholder="Company"
-                        className="w-full p-2 border-2 border-gray-300"
+                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
                         {...register('company', { required: 'This field is required' })} />
                       {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
                     </div>
@@ -116,7 +116,7 @@ function Contact() {
                       <label htmlFor="state"></label>
                       <select
                         id="state"
-                        className="w-full p-2 border-2 border-gray-300 text-gray-400"
+                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
                         {...register('state', { required: 'Please select an option' })}>
                         <option value="">State</option>
                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands (UT)</option>
@@ -164,14 +164,33 @@ function Contact() {
                       <input
                       id="city"
                       placeholder="City"
-                      className="w-full p-2 border-2 border-gray-300"
+                      className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
                       />
 
                     </div>
                   </div>
 
+                  {/*Message*/}
+                  <div className="w-full">
+                    <label htmlFor="message"></label>
+                    <textarea
+                    rows="4"
+                    id="message"
+                    placeholder="Message"
+                    className="w-full p2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                    {...register('message' , {required:'This field is required'})}
+                    />
+
+                  </div>
+
+                  <div>
+                    <button
+                    type='submit'
+                    className="px-5 py-3 bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                  </div>
+
                 </div>
-              </form>
+              </form> 
 
 
 
