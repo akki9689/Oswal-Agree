@@ -5,6 +5,7 @@ const ProductCard = ({
     imageSrc,
     productName,
     productDescription,
+    handler
 }) => {
     return (
         <div className="w-full max-w-xs mx-auto">
@@ -22,7 +23,7 @@ const ProductCard = ({
                     <Button
                         buttonText="Read More"
                         showIcon={true}
-                        handlar={() => console.log('Button clicked!')}
+                        handlar={handler}
                     />
                 </div>
             </div>

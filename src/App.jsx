@@ -9,6 +9,7 @@ import Branches from './components/contactUs/Branches'
 import Navbar from './components/common/Navbar'
 import ProductDetails from './components/common/ProductDetails'
 import Products from './components/product/Products'
+
 const App = () => {
 
     return (
@@ -21,6 +22,7 @@ const App = () => {
 
             <Footer />
             <Branches/>
+
 
         </div>
 
