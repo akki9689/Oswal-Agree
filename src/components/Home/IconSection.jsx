@@ -4,7 +4,7 @@ import IconCounts from './IconCounts'
 
 const IconSection = () => {
   return (
-    <section className='w-full py-12 bg-white-shade-200 '>
+    <section className='w-full pt-12 pb-20 bg-white-shade-200 '>
 
         {/* --------- container --------- */}
 
