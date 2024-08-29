@@ -146,12 +146,9 @@ export const allProducts = [
           targetCrops: ['........'],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
-          uses: 'High performance, residual insecticide for controlling mosquitoes, houseflies, and cockroaches. Suitable for use in domestic, institutional, and public buildings. Low toxicity to humans, usable in hospitals, kitchens, restaurants, and food storage areas.',
+          uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
           advantages: [
-            'Effective against crawling and flying insects in domestic, public, and industrial settings.',
-            'Compatible with most knapsack sprayers and residual spray equipment.',
-            'Low pressure application with even-sized droplets for thorough coverage.',
-            'Suitable for public health pest control.'
+            'It is suitable for the control of crawling and flying insects on domestic, public and industrial premises. It is suitable for use with most types of knapsack sprayers and other residual spray equipment commonly used to control public health pests. Application should be made at low pressure and with a nozzle that produces even-sized droplets. It should be thoroughly mixed with water to give the required concentration. Treated surface should be thoroughly sprayed to the point of minimal run-off. The applicator should ensure uniform coverage and pay particular attention to those areas where insects are most likely to came in contact with the insecticide.'
           ],
           application: 'Contact & Stomach Poison'
         }
@@ -1413,7 +1410,7 @@ export const allProducts = [
         activeIngredient: 'Carbendazim 50% WP ',
         url: '#',
         details: {
-          targetCrops: ['Cotton', 'Grapes' , "Brinjal" , "Chilli" , "Paddy" , "Groundnut" , "Wheat" , "Jute" , "Barley" , "Cowpea" , "Apple" , "Tobacco" , "Sugarbeet" , "Peas" , "Topioca" , "Moong" , "Cluster bean" , "Walnut" , "Rose" , "Ber" , "Cucurbits"],
+          targetCrops: ['Cotton', 'Grapes', "Brinjal", "Chilli", "Paddy", "Groundnut", "Wheat", "Jute", "Barley", "Cowpea", "Apple", "Tobacco", "Sugarbeet", "Peas", "Topioca", "Moong", "Cluster bean", "Walnut", "Rose", "Ber", "Cucurbits"],
           dose: '250 gm / 750 L',
           pest: [
             'Powdery mildew',
@@ -1431,10 +1428,10 @@ export const allProducts = [
             'Seeding Blight',
             'Leaf Spot',
 
-            
+
           ],
           uses: 'Mix the required quantity in a small quantity of water to move the thick uniform paste. Allowed to soak for 5 to 10 minutes. Add the remaining quantity of water slowly while stirring continuously and make up the volume. Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer, ASPEEHTP power sprayer. WARNING: Pregnant women should avoid contact with Carbendazim formulations.',
-          
+
           advantages: [
             'It is recommended to control blast & sheath blight of paddy, loose smut of wheat & barely, brown rot of maize, powdery mildew of sugar beet, peas, cluster bean, cucurbits, rose & ber, anthracnose of grapes and tobacco, dumping off of chilies and scab of apples, etc.'
           ],
@@ -1456,10 +1453,10 @@ export const allProducts = [
             'Anthracnose',
             'Alternaria leaf spot/blight and scab '
 
-      
+
           ],
           uses: 'The required quantity of ready mix chemical Tebuconazole 6.7% + captan 26.9% w/w SC needs to be diluted in water and sprayed by using a knapsack sprayer foot sprayer fitted with hollow cone nozzle with spray volume @ 500 L/ha for Chilli and 10 L/tree for Apple. Time of application: To be applied preventively and to be repeated at 15 days intervals depending upon prevailing weather conditions and disease pressure. Application Techniques: Foliar application with the help of Knapsack sprayer foot sprayer Instruction for mixing: Thoroughly mix the recommended quantity of Tebuconazole 6.7% + Captan 26.9% w/w SC into the water volume recommended for the unit area. The stage for application: Vegetative stage and at the time of appearance of disease. Plant Protection Equipment: Knapsack Sprayer/Foot Sprayer fitted with hollow cone nozzle. Nozzle Type: Hollow cone nozzle. Weather conditions: Do not spray during windy conditions. Soil: Light to heavy soil.',
-          
+
           advantages: [
             'Tebuconazole 6.7% + Captan 26.9% w/w SC is a Suspension Concentration containing Tebuconazole 6.7% (a.i) and Captan 26.9% (a.i) in the formulation. It is used for the control of Powdery mildew. Alternaria leaf spot/blight and Scab on Apple; Powdery Mildew and Anthracnose on Chilli. CAUTION: – It should not be used in the areas where pisciculture aquaculture is practiced. WARNING: 1. Not to be used on Crops other than mentioned on labels & Leaflets. 2. Not to be used for Post-Harvest Application. 3. Destroy the Container after use as directed on the leaflet.'
           ],
@@ -1474,7 +1471,7 @@ export const allProducts = [
         activeIngredient: 'Carbendazim 12% + Mancozeb 63% WP ',
         url: '#',
         details: {
-          targetCrops: ['Grapes', 'Chilli' , 'Mango' , 'Paddy' , 'Groundnut' , 'Tea' , 'Maize' , 'Potato' , 'Apple'],
+          targetCrops: ['Grapes', 'Chilli', 'Mango', 'Paddy', 'Groundnut', 'Tea', 'Maize', 'Potato', 'Apple'],
           dose: '750 gm / 750 L',
           pest: [
             ' Powdery Mildew',
@@ -1485,7 +1482,7 @@ export const allProducts = [
             'Red rust',
             'Late Blight Tikka Leaf Spot',
             'Rice blast',
-            
+
           ],
           uses: 'Spray by using a high volume sprayer viz. Knapsack sprayer.',
           advantages: [
@@ -1502,12 +1499,12 @@ export const allProducts = [
         activeIngredient: 'Hexaconazole 5% SC',
         url: '#',
         details: {
-          targetCrops: ['Grapes', "Mango" , "Rice"],
+          targetCrops: ['Grapes', "Mango", "Rice"],
           dose: '200 ml / 100 L',
           pest: [
             ' Powdery Mildew',
             'Sheath blight ',
-           
+
           ],
           uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
 
@@ -1518,37 +1515,15 @@ export const allProducts = [
             'First spray at the appearance of disease symptoms. Repeat spray at an interval of 7 to 10 days.'
         }
       },
+     
       {
         id: 53,
-        name: 'Concept Plus',
-        img: conceptPlus,
-        activeIngredient: 'Hexaconazole 5% SC',
-        url: '#',
-        details: {
-          targetCrops: ['Grapes', "Mango" , "Rice"],
-          dose: '200 ml / 100 L',
-          pest: [
-            ' Powdery Mildew',
-            'Sheath blight ',
-           
-          ],
-          uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
-
-          advantages: [
-            'Hexaconazole 5% SC is a systematic fungicide used for the control of powdery mildew of mango & Grapes and Sheath blight of Rice.'
-          ],
-          application:
-            'First spray at the appearance of disease symptoms. Repeat spray at an interval of 7 to 10 days.'
-        }
-      },
-      {
-        id: 54,
         name: 'Double Century',
         img: doubleCentury,
         activeIngredient: 'Difenoconazole 25% EC',
         url: '#',
         details: {
-          targetCrops: ['Grapes', "Chilli" , "Paddy" , "Apple"],
+          targetCrops: ['Grapes', "Chilli", "Paddy", "Apple"],
           dose: '15-30 ml / 500 L',
           pest: [
             ' Powdery Mildew',
@@ -1557,8 +1532,8 @@ export const allProducts = [
             'fruit rot',
             'Sheath blight ',
             'Dieback',
-            
-           
+
+
           ],
           uses: 'Measure out required quantity of the product and mix it well with a small quantity of water, Add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayers of high volume sprayers.',
 
@@ -1570,24 +1545,24 @@ export const allProducts = [
         }
       },
       {
-        id: 55,
+        id: 54,
         name: 'Fullcure',
         img: fullcure,
         activeIngredient: 'Tebuconazole 25.9% EC ',
         url: '#',
         details: {
-          targetCrops: ['Chilli', 'Rice' , 'Groundnut' , 'Onion' , 'Soybean'],
+          targetCrops: ['Chilli', 'Rice', 'Groundnut', 'Onion', 'Soybean'],
           dose: '750 ml / 500 L',
           pest: [
-          
+
             ' Powdery Mildew',
             'Anthacnose',
-            'fruit rot' ,
+            'fruit rot',
             'Purple Blotch',
-            'Tikka Leaf Spot' ,
+            'Tikka Leaf Spot',
             'Blast',
             'Seath Blight'
-           
+
           ],
           uses: 'Tebuconazole 25.9% EC is applied as protective as well as curative fungicide with knapsack sprayer at early appearance of disease.',
           advantages: [
@@ -1598,16 +1573,16 @@ export const allProducts = [
         }
       },
       {
-        id: 56,
+        id: 55,
         name: 'Gillete',
         img: gillette,
         activeIngredient: 'Propiconazole 25% EC ',
         url: '#',
         details: {
-          targetCrops: ['Rice' , 'Groundnut Tea' , 'Banana' , 'Wheat' , 'Soybean' , 'Coffee'],
+          targetCrops: ['Rice', 'Groundnut Tea', 'Banana', 'Wheat', 'Soybean', 'Coffee'],
           dose: '500 ml / 750 L',
 
-          pest: ['Sheath blight', 'Blister blight' , 'Stripe rust' , 'Sigatoka leaf spot' , 'Early leaf spot' , 'Stem rust' , 'Brown rust' , 'Leaf rust' , 'Karnal bunt'],
+          pest: ['Sheath blight', 'Blister blight', 'Stripe rust', 'Sigatoka leaf spot', 'Early leaf spot', 'Stem rust', 'Brown rust', 'Leaf rust', 'Karnal bunt'],
 
           uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for the volume of application through knapsack sprayers or high-volume sprayers.',
 
@@ -1619,16 +1594,16 @@ export const allProducts = [
         }
       },
       {
-        id: 57,
+        id: 56,
         name: 'Odomil',
         img: odomil,
         activeIngredient: 'Metalaxyl 8% + Mancozeb 64% WP ',
         url: '#',
         details: {
-          targetCrops: ['Grapes' , 'Potato' , 'Mustard' , 'Black Pepper' , 'Tobacco' , 'Pearl Millet'],
+          targetCrops: ['Grapes', 'Potato', 'Mustard', 'Black Pepper', 'Tobacco', 'Pearl Millet'],
           dose: '2500 gm / 500 L',
 
-          pest: ['Late blight', 'Leaf Blotch' , 'Downey Mildew' , 'Damping Off' , 'White rust' , 'Alterneria blight' , 'Phytophthora foot rot' ],
+          pest: ['Late blight', 'Leaf Blotch', 'Downey Mildew', 'Damping Off', 'White rust', 'Alterneria blight', 'Phytophthora foot rot'],
 
           uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation. Adjust the quantity of product in proportion to the water required to cover a hectare when high volume spray equipment such as knapsack sprayers, hand compression sprayer are used. It is also suitable for low volume application with motorized knapsack sprayer, mist blowers etc. with flood jet nozzle. Compatibility: At recommended rates, Metalaxyl 8% + Mancozeb 64% WP is compatible with most other commonly used insecticides and fungicides except lime sulphur. ',
 
@@ -1640,20 +1615,20 @@ export const allProducts = [
         }
       },
       {
-        id: 58,
+        id: 57,
         name: 'Oxyl',
         img: oxyl,
         activeIngredient: 'Metalaxyl 35% WS ',
         url: '#',
         details: {
-          targetCrops: ['Sunflower', 'Maize' , 'Sorghum' , 'Bajra' , 'Mustard'],
+          targetCrops: ['Sunflower', 'Maize', 'Sorghum', 'Bajra', 'Mustard'],
           dose: '600g / 100 kg seed',
           pest: [
-          
+
             ' Downey Mildew',
             'White rust',
-          
-           
+
+
           ],
           uses: 'For small lots, mix the required quantity of Metalaxyl 35% WS with 10-20 ml of water for each kg of seed to be treated. Add the slurry to the seed and rotate or stir the container (plastic drum or plastic bag) until the seeds are uniformly covered. Usually less than a minute. Metalaxyl 35 WS is recommended for application as slurry with continuously operating commercial seed dressing equipment.',
           advantages: [
@@ -1663,9 +1638,218 @@ export const allProducts = [
             '1. Fill the slurry tank with the required volume of water which will be 1.5 times the quantity of Metalaxyl 35 WS to be used. As a general rule, this will be about 750 ml and should not exceed 1000 ml /100 kg seed even when other products are used in combination treatments. 2. Add the specified quantity of Metalaxyl 35 WS on the water surface. 3. Wait until the product has completely disappeared into the water without stirring. 4. Stir the solution for about 10 minutes. The Slurry is ready for immediate application. Use the slurry to treat seeds as required in a seed treating drum. Dry the seeds in shade before sowing. No significant deleterious effects are noticed on seed viability and disease control in Metalaxyl 35 WS treated seeds for a period of 12 months, provided seeds are of high quality to begin with and are stored under prescribed cool dry conditions.'
         }
       },
-
-
+      {
+        id: 58,
+        name: 'Proton',
+        img: proton,
+        activeIngredient: 'Isoprothiolane 40% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'],
+          dose: '750 ml / 1000 L',
+          pest: [
+            'Blast',
+           
+          ],
+          uses: 'Use a knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer or ASPEE-HTP sprayer',
+          advantages: [
+            'Isoprothinolane 40 % EC (Fuji one 40 E) is a systemic fungicide approved for the cotrol of blast disease in rice crop.'
+          ],
+          application:
+            'Foliar Spray is recommended. First spray is recommended as soon as the disease begins to appear in the field. Three spray can be done per season depending on the disease severity. Mix the recommended dose in ¼ of the recommended quantity of water to the spray tank with agitation. Add remaining quantity of water with continuous agitation. Uniform coverage is necessary for effective control of disease'
+        }
+      },
+      {
+        id: 59,
+        name: 'Raka',
+        img: raka,
+        activeIngredient: 'Thiophanate Methyl 70% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato' , 'Apple' , 'Papaya' , 'Bottle Gourd'],
+          dose: '715 gm / 1000 L',
+          pest: [
+            'Powdery mildew',
+            'Scab',
+            'Anthracnose',
+            'Ring Rot',
+           
+          ],
+          uses: 'Knapsack sprayer, Foot sprayer, Compression Knapsack sprayer and ASPEE-HTP power sprayer, etc.',
+          advantages: [
+            'It is a systemic fungicide containing thiophanate methyl 70% active ingredient and other balance adjuvants.'
+          ],
+          application:
+            'It can be used as a preventive spray or at the appearance of disease symptoms (Curative spray). Repeat the spray at an interval of 10 to 15 days as per the disease severity.'
+        }
+      },
+      {
+        id: 60,
+        name: 'Rio',
+        img: rio,
+        activeIngredient: 'Validamycin 3% L ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice' ],
+          dose: '2 L / 750 L',
+          pest: [
+            'Sheath blight',
       
+           
+          ],
+          uses: 'Validamycin 3% L is an antifungal preparation and antibiotic comound. It has low mammalian toxicity and hence a safe antibniotic. It is an effective antibiotic for the control of rice sheath blight only.',
+
+          advantages: [
+            'P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery and ASPEE-HTP power sprayer etc. Validamycin is compatible with most common insecticides.'
+          ],
+          application:
+            'It is non-systemic antibiotic with fungi static action. It causes abnormal branching of the tips of the pathogen, followed by cessation of further development. Being curative in action, it helps to control diseases very fast.'
+        }
+      },
+      {
+        id: 61,
+        name: 'Tebxil',
+        img: tebxil,
+        activeIngredient: 'Tebuconazole 2% DS ',
+        url: '#',
+        details: {
+          targetCrops: ['Groundnut' , 'Wheat' ],
+          dose: '10 L / 10 Kg Seed',
+          pest: [
+            'Loose Smut',
+            'Flag Smut',
+            'Collar Rot',
+            'Root Rot',
+            'Stem rust',
+
+          ],
+          uses: 'Plant Protection Equipment: Manually/Mechanically operated seed dressing rotating drum. Seed Treatment: Any small dressing rotating drum by mixing quantity of seed can be readily treated by mixing in proper amount of fungicide and seed in closed container. Roll the seed until each grain is uniformally coated with fungicide.',
+
+          advantages: [
+            'Tebuconazole 2 % DS is a systemic fungicides containing tebuconazole active, ingredients, balance auxiliaries and inert material. On account of its systemic properties tebuconazole used as a seed dressing, controls pathogens adhering to the surface of seed as well as those developing inside the grain. It shows effectiveness against loose smut & flag smut of wheat and collor rot, root rot and stem rot of ground nut.'
+          ],
+          application:
+            'It is a Triazole based Fungicide which controls Seed Borne Diseases and acts as a Demethylation Inhibitor (DMI) of Fungal Sterol Biosynthesis'
+        }
+      },
+      {
+        id: 62,
+        name: 'Tuskon',
+        img: tuskon,
+        activeIngredient: 'Propiconazole 10.7% + Tricyclazole 34.2% SE ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '500 gm / 500 L',
+          pest: [
+            'Sheath blight',
+            'Blast',
+            
+
+          ],
+          uses: 'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.',
+
+          advantages: [
+            'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.'
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and tricyclazole permits protective and curative use, best result are achieved when the product is applied with knapsack spray pump when the disease is active but still in the early stage of development. Repeat the spray depending on the disease intensity.'
+        }
+      },
+      {
+        id: 63,
+        name: 'Utsav-20',
+        img: utsav20,
+        activeIngredient: 'Azoxystrobin 11.5% + Mancozeb 30% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato'  ],
+          dose: '750-875 gm / 500 L',
+          pest: [
+            'Late blight',
+            'Barly Blight',
+            
+
+          ],
+          uses: '1. Spray Equipment: Knapsack sprayer or power operate sprayer machine may be used. 2. Limitations for use: It should not be used in crops where it has not been recommended. It should not be used in combination with any insecticides or plant growth regulators.',
+
+          advantages: [
+            'The fungicidal combination is used for controlling disease complex in Tomatoes which contains Azoxystrobin 11.5% and Mancozeb 30% and remaining adjuvants.'
+          ],
+          application:
+            'Apply the fungicide when the first disease incidence is observed and repeat application as necessary.'
+        }
+      },
+      {
+        id: 64,
+        name: 'Vazood',
+        img: vazood,
+        activeIngredient: 'Tebuconazole 10% + Sulphur 65% WG ',
+        url: '#',
+        details: {
+          targetCrops: ['Chilli' , 'Soybean'  ],
+          dose: '1.25 gm / 500 L',
+          pest: [
+            'Powdery Mildew' , 'fruit rot' , 'Leaf Spot' , 'Pod blight'
+            
+          ],
+          uses: 'Take the required quantity with a small volume of water and stir well using a rod or stick to form a uniform suspension then, add the remaining quantity of water as spray volume required and mix well again by stirring.',
+
+          advantages: [
+            'Tebuconazole 10% + Sulphur 65% WG (water dispersible granule) is a effective fungicide with protective, creative and eradicative action. It controls powdery mildew, fruit rot diseases of Chilli and leaf spot, pod blight disease of Soybean. '
+          ],
+          application:
+            'Tebuconazole 10% + Sulphur 65% WG is applied with knapsack sprayer at early appearance of disease.'
+        }
+      },
+      {
+        id: 66,
+        name: 'Viberant',
+        img: viberant,
+        activeIngredient: 'Thifluzamide 24% SC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'  ],
+          dose: '375 ml / 500 L',
+          pest: [
+            'Sheath blight' , 'Rhizoctonia'
+            
+          ],
+          uses: 'Measure required quantity of the product and mix it well with a small quantity of water. Then add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayer of high volume sprays.',
+
+          advantages: [
+            'Thifluzamide 24% SC is a systemic fungicide which is used for controlling sheath blight disease in Rice.'
+          ],
+          application:
+            'Foliar spray on appearance of disease symptoms.'
+        }
+      },
+      {
+        id: 67,
+        name: 'Vinasham',
+        img: vinasham,
+        activeIngredient: 'Propiconazole 13.9% + Difenconazole 13.9% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '1 ml / Liter in 500 L',
+          pest: [
+            'Sheath blight' , 'Dirty panicle'
+            
+          ],
+          uses: 'When used as per the recommendations given below, Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC protects the paddy crop from fungal diseases like sheath blight and dirty panicle.',
+
+          advantages: [
+            'Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC is a mixture of triazole fungicides recommended for the control of sheath blight and dirty panicle disease in paddy. This is an emulsifiable concentrate formulation containing 27.8% active ingredients, equivalent to 30% w/v or 300 g/L of formulation.  '
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and difenoconazole permits protective, curative or eradicative use, best results are achieved when fungicide is applied when the disease is active but still in the early stage of development. '
+        }
+      },
+
+
+
+
 
 
 
@@ -2199,7 +2383,7 @@ export const allProducts = [
   //               ],
   //               application: "Mix 2-4 Kg of along with other BioProducts in 30-40 Kg soil or fully decomposed farm yard manure and broadcasting it over one acre of land at the time of last ploughing. In plantation crops, incorporate this mixture in the feeder zone and irrigate the field immediately after spreading.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -2216,9 +2400,9 @@ export const allProducts = [
   //                   "Improves Soil health, Soil fertility status, and Soil Ph. Minimizes recommended chemical fertilizers doses and economic in rainfed areas. Enhances product quality (Aroma, Color, Shining, Taste, Size, Shelf life, etc.) and yield. Crop plants become hardy, enhance flowering and reduce flower & fruit droppings."
   //               ],
   //               application: "It can be broadcasted in the field at the time of last plowing or within 30-45 days of sowing/transplanting in standing crops. For uniform broadcasting, it can be mixed with 50-80 kg of well-rotten farm yard manure/compost/ vermicompost or soil of the same field. There should be sufficient moisture in the field at the time of application or give light irrigation after application.",
-    
+
   //           },
-    
+
   //       }
   //   ]
   // },
@@ -2243,7 +2427,7 @@ export const allProducts = [
   //               ],
   //               application: "Plants Should be uniformly drenched.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -2260,9 +2444,9 @@ export const allProducts = [
   //                   "Thus Borohit Plus help in the free transport of calcium coupled with boron and performs even in calcareous soil and hick alkaline soil since it is a chelated mix. Boron is essential to maintain the structural integrity of plant membranes along with calcium and is involved in nucleic acid metabolism. Production of vegetable crops is adversely affected much more than vegetative growth with a low supply of available boron."
   //               ],
   //               application: "Make a solution of Borohit Plus 250-300 gm per acre in 125-150 liter water. Use in 2nd spray 7-10 day Interval. Apply In a basal dose of 500 gm per acre with mixed fertilizer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,
@@ -2577,7 +2761,7 @@ export const allProducts = [
   //               ],
   //               application: "Gibberellic Acid 0.001% L is to be diluted at the rate of 1 ml in one liter of water and sprayed uniformly on the foliage to cover all parts of the plants. Gibberellic Acid 0.001% L shall be sprayed during the cool hours of the day. Repeat the application if there is rain within six hours of spraying. Shake the bottle well before using the Product.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -2594,9 +2778,9 @@ export const allProducts = [
   //                   "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer."
   //               ],
   //               application: "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,

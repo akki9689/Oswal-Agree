@@ -38,15 +38,16 @@ const Products = () => {
   }, [category, controls]);
 
   const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${encodeURIComponent(productName)}`);
+    navigate(`/products/${category}/${productName}`);
   };
 
   return (
     <div className="container p-4 mx-auto">
+      
       <motion.div animate={controls}>
         <Popupname title={category ? category : 'All Products'} />
       </motion.div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 pt-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
             <ProductCard

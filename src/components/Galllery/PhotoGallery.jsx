@@ -1,5 +1,5 @@
 import React from 'react'
-import Heading from '../common/Heading'
+import Popupname from '../common/Popupname'
 import { photoGallery } from '../../data/gallery/photo-gallery'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -38,7 +38,7 @@ const PhotoGallery = () => {
 
 
     return (
-        <section className='w-full py-16 relative'>
+        <section className='w-full pt-8 pb-16 relative'>
 
             {/* ----------- container ----------- */}
 
@@ -46,7 +46,7 @@ const PhotoGallery = () => {
 
                 {/* ------- heading --------- */}
 
-                <Heading text="Photo Gallery" isBorder={false} />
+                <Popupname title="PHOTO GALLERY" isBorder={false} />
 
                 {/* ---------- filter title ---------- */}
 
