@@ -18,6 +18,7 @@ const Faq = lazy(() => import('./components/about/Faq'));
 
 const PhotoGallery =lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
+const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
 
 const App = () => {
@@ -57,7 +58,8 @@ const App = () => {
 
                     {/* Products with dynamic category */}
                     <Route path='/products/:category' element={<Products />} />
-                    <Route path='/products' element={<Products />} />
+                    <Route path="/products/:category" element={<Products />} />
+                    <Route path="/products/:category/:productName" element={<ProductPage />} />
                     <Route path='/Filter' element={<Filter />} />
 
                     {/* Gallery */}

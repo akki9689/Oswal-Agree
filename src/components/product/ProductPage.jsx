@@ -23,13 +23,15 @@ const ProductPage = () => {
   }, [category, productName]);
 
   if (!product) {
-    return <Loader />;
+    return<div> <Loader /></div>;
   }
 
   return (
     <div>
       <Popupname title={category ? category : 'All Products'} />
+      
       <div className='pt-10 pb-10'>
+        
         <ProductDetails
           imageUrl={product.img || 'default-image.png'} // Fallback image
           title={product.name}
