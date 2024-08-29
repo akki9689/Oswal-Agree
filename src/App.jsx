@@ -15,6 +15,7 @@ const Awards = lazy(() => import('./components/about/Awards'));
 const Terms = lazy(() => import('./components/about/Terms'));
 const Faq = lazy(() => import('./components/about/Faq'));
 const Products = lazy(() => import('./components/product/Products'));
+const Filter = lazy(() => import('./components/filter/SearchFilter'));
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -52,6 +53,7 @@ const App = () => {
           {/* Products with dynamic category */}
           <Route path='/products/:category' element={<Products />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/Filter' element={<Filter />} />
 
         </Routes>
       </Suspense>
