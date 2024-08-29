@@ -1498,31 +1498,9 @@ export const allProducts = [
             'First spray at the appearance of disease symptoms. Repeat spray at an interval of 7 to 10 days.'
         }
       },
+     
       {
         id: 53,
-        name: 'Concept Plus',
-        img: conceptPlus,
-        activeIngredient: 'Hexaconazole 5% SC',
-        url: '#',
-        details: {
-          targetCrops: ['Grapes', "Mango" , "Rice"],
-          dose: '200 ml / 100 L',
-          pest: [
-            ' Powdery Mildew',
-            'Sheath blight ',
-           
-          ],
-          uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
-
-          advantages: [
-            'Hexaconazole 5% SC is a systematic fungicide used for the control of powdery mildew of mango & Grapes and Sheath blight of Rice.'
-          ],
-          application:
-            'First spray at the appearance of disease symptoms. Repeat spray at an interval of 7 to 10 days.'
-        }
-      },
-      {
-        id: 54,
         name: 'Double Century',
         img: doubleCentury,
         activeIngredient: 'Difenoconazole 25% EC',
@@ -1550,7 +1528,7 @@ export const allProducts = [
         }
       },
       {
-        id: 55,
+        id: 54,
         name: 'Fullcure',
         img: fullcure,
         activeIngredient: 'Tebuconazole 25.9% EC ',
@@ -1578,7 +1556,7 @@ export const allProducts = [
         }
       },
       {
-        id: 56,
+        id: 55,
         name: 'Gillete',
         img: gillette,
         activeIngredient: 'Propiconazole 25% EC ',
@@ -1599,7 +1577,7 @@ export const allProducts = [
         }
       },
       {
-        id: 57,
+        id: 56,
         name: 'Odomil',
         img: odomil,
         activeIngredient: 'Metalaxyl 8% + Mancozeb 64% WP ',
@@ -1620,7 +1598,7 @@ export const allProducts = [
         }
       },
       {
-        id: 58,
+        id: 57,
         name: 'Oxyl',
         img: oxyl,
         activeIngredient: 'Metalaxyl 35% WS ',
@@ -1643,6 +1621,75 @@ export const allProducts = [
             '1. Fill the slurry tank with the required volume of water which will be 1.5 times the quantity of Metalaxyl 35 WS to be used. As a general rule, this will be about 750 ml and should not exceed 1000 ml /100 kg seed even when other products are used in combination treatments. 2. Add the specified quantity of Metalaxyl 35 WS on the water surface. 3. Wait until the product has completely disappeared into the water without stirring. 4. Stir the solution for about 10 minutes. The Slurry is ready for immediate application. Use the slurry to treat seeds as required in a seed treating drum. Dry the seeds in shade before sowing. No significant deleterious effects are noticed on seed viability and disease control in Metalaxyl 35 WS treated seeds for a period of 12 months, provided seeds are of high quality to begin with and are stored under prescribed cool dry conditions.'
         }
       },
+      {
+        id: 58,
+        name: 'Proton',
+        img: proton,
+        activeIngredient: 'Isoprothiolane 40% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'],
+          dose: '750 ml / 1000 L',
+          pest: [
+            'Blast',
+           
+          ],
+          uses: 'Use a knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer or ASPEE-HTP sprayer',
+          advantages: [
+            'Isoprothinolane 40 % EC (Fuji one 40 E) is a systemic fungicide approved for the cotrol of blast disease in rice crop.'
+          ],
+          application:
+            'Foliar Spray is recommended. First spray is recommended as soon as the disease begins to appear in the field. Three spray can be done per season depending on the disease severity. Mix the recommended dose in ¼ of the recommended quantity of water to the spray tank with agitation. Add remaining quantity of water with continuous agitation. Uniform coverage is necessary for effective control of disease'
+        }
+      },
+      {
+        id: 59,
+        name: 'Raka',
+        img: raka,
+        activeIngredient: 'Thiophanate Methyl 70% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato' , 'Apple' , 'Papaya' , 'Bottle Gourd'],
+          dose: '715 gm / 1000 L',
+          pest: [
+            'Powdery mildew',
+            'Scab',
+            'Anthracnose',
+            'Ring Rot',
+           
+          ],
+          uses: 'Knapsack sprayer, Foot sprayer, Compression Knapsack sprayer and ASPEE-HTP power sprayer, etc.',
+          advantages: [
+            'It is a systemic fungicide containing thiophanate methyl 70% active ingredient and other balance adjuvants.'
+          ],
+          application:
+            'It can be used as a preventive spray or at the appearance of disease symptoms (Curative spray). Repeat the spray at an interval of 10 to 15 days as per the disease severity.'
+        }
+      },
+      {
+        id: 60,
+        name: 'Rio',
+        img: rio,
+        activeIngredient: 'Validamycin 3% L ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice' ],
+          dose: '2 L / 750 L',
+          pest: [
+            'Sheath blight',
+      
+           
+          ],
+          uses: 'Validamycin 3% L is an antifungal preparation and antibiotic comound. It has low mammalian toxicity and hence a safe antibniotic. It is an effective antibiotic for the control of rice sheath blight only.',
+
+          advantages: [
+            'P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery and ASPEE-HTP power sprayer etc. Validamycin is compatible with most common insecticides.'
+          ],
+          application:
+            't is non-systemic antibiotic with fungi static action. It causes abnormal branching of the tips of the pathogen, followed by cessation of further development. Being curative in action, it helps to control diseases very fast.'
+        }
+      },
+      
 
 
       
