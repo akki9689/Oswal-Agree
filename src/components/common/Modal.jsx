@@ -1,9 +1,9 @@
-// Modal.js
 import React, { useState } from 'react';
 import { FaTimes, FaSearchPlus, FaSearchMinus } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Import Swiper core CSS
+import 'swiper/swiper-bundle.css';
 import { Pagination, Navigation } from 'swiper/modules';
+import '../../App.css'; // Import custom CSS for Swiper buttons
 
 const Modal = ({ images, isOpen, onClose }) => {
   const [scale, setScale] = useState(1);
@@ -22,14 +22,14 @@ const Modal = ({ images, isOpen, onClose }) => {
           slidesPerView={1}
           pagination={{ clickable: true }}
           navigation
-          className="h-[50vh] w-[40vw]"
+          className="h-[50vh] w-[50vw] mx-auto "
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className="flex items-center justify-center h-full">
               <img
                 src={image}
                 alt={`Full Screen ${index + 1}`}
-                className="max-w-full max-h-full object-contain"
+                className="mx-auto object-contain py-2"
                 style={{ transform: `scale(${scale})`, transition: 'transform 0.3s ease' }}
               />
             </SwiperSlide>
@@ -37,22 +37,24 @@ const Modal = ({ images, isOpen, onClose }) => {
         </Swiper>
         <button 
           onClick={onClose} 
-          className="absolute top-4 right-4 text-white text-2xl bg-gray-800 p-2 rounded-full"
+          className="absolute top-[-40px] right-4 text-white text-2xl bg-gray-800 p-2 rounded-full"
         >
           <FaTimes />
         </button>
-        <button
-          onClick={handleZoomIn}
-          className="absolute top-4 left-50 text-white text-2xl bg-gray-800 p-2 rounded-full"
-        >
-          <FaSearchPlus />
-        </button>
-        <button
-          onClick={handleZoomOut}
-          className="absolute top-4 left-16 text-white text-2xl bg-gray-800 p-2 rounded-full"
-        >
-          <FaSearchMinus />
-        </button>
+        <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 flex space-x-4">
+          <button
+            onClick={handleZoomIn}
+            className="text-white text-2xl bg-gray-800 p-2 rounded-full"
+          >
+            <FaSearchPlus />
+          </button>
+          <button
+            onClick={handleZoomOut}
+            className="text-white text-2xl bg-gray-800 p-2 rounded-full"
+          >
+            <FaSearchMinus />
+          </button>
+        </div>
       </div>
     </div>
   );

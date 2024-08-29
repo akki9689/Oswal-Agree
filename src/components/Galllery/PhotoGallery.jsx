@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import PhotoModal from './PhotoModal'
+import SendQueryModal from '../common/SendQueryModal'
 
 const PhotoGallery = () => {
 
@@ -12,6 +13,7 @@ const PhotoGallery = () => {
 
     const [category, setCategory] = useState('all');
     const [modalData, setModalData] = useState("");
+    const [queryModal , setQueryModal] = useState("");
 
     useEffect(() => {
         if (modalData) {
@@ -113,11 +115,22 @@ const PhotoGallery = () => {
 
                 </div>
 
+                <button onClick={()=> setQueryModal("Fila Plus")}>
+                    CLick Here
+                </button>
+
             </div>
 
             {
                 modalData && <PhotoModal modalData={modalData} setModalData={setModalData} />
             }
+
+            {
+                queryModal && <SendQueryModal queryModal={queryModal}  setQueryModal={setQueryModal}/>
+            }
+
+           
+            
 
         </section>
     )
