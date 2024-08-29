@@ -1,3 +1,12 @@
+// ---------------------Main product image---------------
+import INSECTICIDE from '../../images/Home/Our Products/insecticides-product-img11.png'
+import FUNGICIDE from '../../images/Home/Our Products/FUNGICIDE.png'
+import HERBICIDE from '../../images/Home/Our Products/HERBICIDE.png'
+import BIO_PRODUCTS from '../../images/Home/Our Products/Bio-PRODUCTS-Home-page.png'
+import PGR from '../../images/Home/Our Products/PLANT-GROWTH-REGULATORS-home-page.png'
+import MICRO_NUTRIENTS from '../../images/Home/Our Products/MICRO-NUTRIENTS-Home-page.png'
+import FERTILIZER from '../../images/Home/Our Products/Fertilizer.png'
+
 // -------------------------------**Insecticides**--------------------------------------
 import fila from '../../images/Products/Insecticides/Fila-Plus-Alphacypermethrin-10-SC.png'
 import expert from '../../images/Products/Insecticides/Expert-Indoxacarb-14.5-SC.png'
@@ -137,7 +146,7 @@ export const allProducts = [
   {
     id: 1,
     title: 'Insecticides',
-    // image: 'insecticides.png'
+    image : INSECTICIDE,
     productName: [
       {
         id: 1,
@@ -1232,7 +1241,7 @@ export const allProducts = [
   {
     id: 2,
     title: 'Fungicides',
-    // image: 'fungicides.png',
+    image : FUNGICIDE,
     productName: [
       {
         id: 43,
@@ -1866,7 +1875,7 @@ export const allProducts = [
   {
     id: 3,
     title: 'Herbicides',
-    // image: 'insecticides.png'
+    image : HERBICIDE,
     productName: [
       {
         id: 68,
@@ -2448,7 +2457,7 @@ export const allProducts = [
   {
     id: 4,
     title: 'Fertilizers',
-    // Image: '#####'
+    image: FERTILIZER,
     productName: [
       {
         id: 91,
@@ -2491,7 +2500,7 @@ export const allProducts = [
   {
     id: 5,
     title: 'BioProducts',
-    // Image: '#####'
+    image : BIO_PRODUCTS,
     productName: [
       {
         id: 93,
@@ -2756,7 +2765,7 @@ export const allProducts = [
   {
     id: 6,
     title: 'micronutrients',
-    // image:'#',
+    image : MICRO_NUTRIENTS,
     productName: [
       {
         id: 108,
@@ -2819,7 +2828,7 @@ export const allProducts = [
   {
     id: 7,
     title: 'plantgrowth',
-    // Image:"#",
+    image : PGR,
     productName: [
       {
         id: 1,
