@@ -12,7 +12,7 @@ const ProductDetails = ({
   advantages,
   applications
 }) => {
-  // Handler function to open the PDF in a new browser tab
+  // Handler function to open the PDF in a new browser tab name
   const handleOpenPDF = () => {
     window.open('/src/pdf/OSWAL-CROP-PROTECTION-CATALOGUE.pdf', '_blank'); // Replace with the actual path to your PDF
   };

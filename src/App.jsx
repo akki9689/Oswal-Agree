@@ -15,49 +15,51 @@ const Awards = lazy(() => import('./components/about/Awards'));
 const Terms = lazy(() => import('./components/about/Terms'));
 const Faq = lazy(() => import('./components/about/Faq'));
 const Products = lazy(() => import('./components/product/Products'));
+const ProductPage = lazy(() => import('./components/product/ProductPage'));
 
 const App = () => {
-  const [isLoading, setIsLoading] = React.useState(true);
+    const [isLoading, setIsLoading] = React.useState(true);
 
-  React.useEffect(() => {
-    // Simulate a loading delay for demonstration purposes
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 100); // Adjust the timing as needed
+    React.useEffect(() => {
+        // Simulate a loading delay for demonstration purposes
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 100); // Adjust the timing as needed
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
-  }, []);
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+    }, []);
 
-  if (isLoading) {
-    return <Loader />;
-  }
+    if (isLoading) {
+        return <Loader />;
+    }
 
-  return (
-    <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
-      <Navbar />
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          {/* Homepage */}
-          <Route path='/' element={<Home />} />
+    return (
+        <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
+            <Navbar />
+            <Suspense fallback={<Loader />}>
+                <Routes>
+                    {/* Homepage */}
+                    <Route path='/' element={<Home />} />
 
-          {/* About */}
-          <Route path='/about' element={<About />}>
-            <Route path='companyprofile' element={<Companyprofile />} />
-            <Route path='vision' element={<Visionabt />} />
-            <Route path='awards' element={<Awards />} />
-            <Route path='terms' element={<Terms />} />
-            <Route path='faq' element={<Faq />} />
-          </Route>
+                    {/* About */}
+                    <Route path='/about' element={<About />}>
+                        <Route path='companyprofile' element={<Companyprofile />} />
+                        <Route path='vision' element={<Visionabt />} />
+                        <Route path='awards' element={<Awards />} />
+                        <Route path='terms' element={<Terms />} />
+                        <Route path='faq' element={<Faq />} />
+                    </Route>
 
-          {/* Products with dynamic category */}
-          <Route path='/products/:category' element={<Products />} />
-          <Route path='/products' element={<Products />} />
+                    {/* Products with dynamic category */}
+                    <Route path='/products/:category' element={<Products />} />
+                    <Route path="/products/:category" element={<Products />} />
+                    <Route path="/products/:category/:productName" element={<ProductPage />} />
 
-        </Routes>
-      </Suspense>
-      <Footer />
-    </div>
-  );
+                </Routes>
+            </Suspense>
+            <Footer />
+        </div>
+    );
 };
 
 export default App;

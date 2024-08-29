@@ -1,3 +1,4 @@
+
 // -------------------------------**Insecticides**--------------------------------------
 import fila from '../../images/Products/Insecticides/Fila-Plus-Alphacypermethrin-10-SC.png'
 import expert from '../../images/Products/Insecticides/Expert-Indoxacarb-14.5-SC.png'
@@ -1209,7 +1210,7 @@ export const allProducts = [
     // image: 'fungicides.png',
     productName: [
       {
-        id: 1,
+        id: 43,
         name: 'Zordaar',
         img: zordaar,
         activeIngredient: 'Tebuconazole 38.39% SC',
@@ -1232,7 +1233,7 @@ export const allProducts = [
         }
       },
       {
-        id: 2,
+        id: 44,
         name: 'Osavet',
         img: osavet,
         activeIngredient: 'Sulphur 80% WDG',
@@ -1259,7 +1260,7 @@ export const allProducts = [
         }
       },
       {
-        id: 3,
+        id: 45,
         name: 'Azoxybin',
         img: azoxybin,
         activeIngredient: 'Azoxystrobin 23% SC',
@@ -1284,7 +1285,7 @@ export const allProducts = [
         }
       },
       {
-        id: 4,
+        id: 46,
         name: 'Azoxybin Plus',
         img: azoxybinPlus,
         activeIngredient: 'Azoxystrobin 11% + Tebuconazole 18.30% SC',
@@ -1322,7 +1323,7 @@ export const allProducts = [
         }
       },
       {
-        id: 5,
+        id: 47,
         name: 'Azoxybin Top',
         img: azoxybinTop,
         activeIngredient: 'Azoxystrobin 18.2% + Difenoconazole 11.4% SC',
@@ -1363,7 +1364,7 @@ export const allProducts = [
         }
       },
       {
-        id: 6,
+        id: 48,
         name: 'Breeza',
         img: breeza,
         activeIngredient: 'Captan 70% + Hexaconazole 5% WP',

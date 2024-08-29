@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import ProductCard from '../../components/common/ProductCard'; // Make sure this path is correct
+import { useParams, useNavigate } from 'react-router-dom';
+import ProductCard from '../../components/common/ProductCard'; // Ensure correct path
 import { allProducts } from '../../data/products/all-products-data'; // Ensure correct import
+import Popupname from '../common/Popupname';
+import { motion, useAnimation } from 'framer-motion';
 
 const Products = () => {
-  const { category } = useParams(); // Get the category from the URL
+  const { category } = useParams();
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const navigate = useNavigate();
+  const controls = useAnimation();
 
   useEffect(() => {
     const getProducts = () => {
       if (category) {
-        // Find the category data from allProducts
         const categoryData = allProducts.find(cat => cat.title.toLowerCase() === category.toLowerCase());
         if (categoryData) {
           setFilteredProducts(categoryData.productName || []);
@@ -18,8 +21,7 @@ const Products = () => {
           setFilteredProducts([]);
         }
       } else {
-        // If no category is selected, display all products
-        const allProductsList = allProducts.flatMap(categoryData => categoryData.productName || []);
+        const allProductsList = allProducts.flatMap(cat => cat.productName || []);
         setFilteredProducts(allProductsList);
       }
     };
@@ -27,18 +29,32 @@ const Products = () => {
     getProducts();
   }, [category]);
 
+  useEffect(() => {
+    controls.start({
+      opacity: [0, 1],
+      scale: [0.9, 1],
+      transition: { duration: 0.5 },
+    });
+  }, [category, controls]);
+
+  const handleReadMoreClick = (productName) => {
+    navigate(`/products/${category}/${encodeURIComponent(productName)}`);
+  };
+
   return (
     <div className="container p-4 mx-auto">
-      <h1 className="mb-4 text-2xl font-semibold">{category ? category : 'All Products'}</h1>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <motion.div animate={controls}>
+        <Popupname title={category ? category : 'All Products'} />
+      </motion.div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
+          filteredProducts.map(product => (
             <ProductCard
-              key={product.id}
-              imageSrc={product.img}
+              key={product.name}
+              imageSrc={product.img || 'default-image.png'} // Fallback image
               productName={product.name}
               productDescription={product.activeIngredient}
-              onReadMoreClick={() => console.log(`Clicked on product ${product.id}`)}
+              onReadMoreClick={() => handleReadMoreClick(product.name)}
             />
           ))
         ) : (
