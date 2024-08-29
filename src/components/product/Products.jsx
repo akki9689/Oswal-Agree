@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import ProductCard from '../../components/common/ProductCard'; // Ensure correct path
-import { allProducts } from '../../data/products/all-products-data'; // Ensure correct import
+import ProductCard from '../../components/common/ProductCard'; 
+import { allProducts } from '../../data/products/all-products-data'; 
 import Popupname from '../common/Popupname';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -53,7 +53,7 @@ const Products = () => {
           filteredProducts.map(product => (
             <ProductCard
               key={product.name}
-              imageSrc={product.img || 'default-image.png'} // Fallback image
+              imageSrc={product.img } 
               productName={product.name}
               productDescription={product.activeIngredient}
               onReadMoreClick={() => handleReadMoreClick(product.name)}

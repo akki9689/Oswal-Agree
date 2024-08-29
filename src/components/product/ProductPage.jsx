@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { allProducts } from '../../data/products/all-products-data'; // Ensure correct import
-import ProductDetails from '../common/ProductDetails'; // Ensure correct path
+import { allProducts } from '../../data/products/all-products-data'; 
+import ProductDetails from '../common/ProductDetails';
 import Popupname from '../common/Popupname';
 import Loader from '../../components/common/Loader';
 
@@ -33,7 +33,7 @@ const ProductPage = () => {
       <div className='pt-10 pb-10'>
         
         <ProductDetails
-          imageUrl={product.img || 'default-image.png'} // Fallback image
+          imageUrl={product.img } 
           title={product.name}
           subtitle={product.activeIngredient}
           targetCrop={product.details.targetCrops?.length ? product.details.targetCrops.join(', ') : ''}
