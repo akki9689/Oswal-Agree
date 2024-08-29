@@ -77,6 +77,7 @@ import attack from '../../images/Products/Herbicides/Attack.png'
 import beamar from '../../images/Products/Herbicides/Beamar.png'
 import combitec from '../../images/Products/Herbicides/Combitec.png'
 import fadal from '../../images/Products/Herbicides/Fadal.png'
+import finish from '../../images/Products/Herbicides/Finish.png'
 import fadalsuper from '../../images/Products/Herbicides/Fadal-Super.png'
 import goldmix from '../../images/Products/Herbicides/Goldmix.png'
 import jaikaal from '../../images/Products/Herbicides/jaikaal.png'
@@ -85,7 +86,19 @@ import karonasuper from '../../images/Products/Herbicides/Karona-Super.png'
 import nexa from '../../images/Products/Herbicides/Nexa.png'
 import ocloud from '../../images/Products/Herbicides/O-Cloud.png'
 import omega from '../../images/Products/Herbicides/OMEGA-.png'
-import omini from '../../images/Products/Herbicides/OMEGA-.png'
+import ominigold from '../../images/Products/Herbicides/Omini-Gold.png'
+import openda from '../../images/Products/Herbicides/Openda.png'
+import opendaultra from '../../images/Products/Herbicides/Openda-Ultra.png'
+import oxyherb from '../../images/Products/Herbicides/Oxyherb.png'
+import ozin from '../../images/Products/Herbicides/OZIN.png'
+import quit from '../../images/Products/Herbicides/Quit.png'
+import solid80 from '../../images/Products/Herbicides/Solid-80.png'
+import saathsaath from '../../images/Products/Herbicides/Saath-Saath.png'
+
+
+
+
+
 
 
 
@@ -1847,15 +1860,11 @@ export const allProducts = [
         }
       },
 
-
-
-
-
-
-
     ]
 
   },
+
+
   // herbicides
   {
     id: 3,
@@ -1872,7 +1881,7 @@ export const allProducts = [
           targetCrops: ['Maize'],
           dose: '115 ml / Acre',
           pest: ['Enchinochloa sp', 'Trianthema portulacastrum', 'Bracharia sp'],
-          uses: 'Tembotrione 34.4% w/w SC contains 344 g of Tembotrione active ingredient per kg of formulation, which is equal to 420 g of Tembotrione active ingredient per litre of formulation.',
+          uses: 'Tembotrione 34.4% w/w SC is a post emergence recommended for use alongwith surfactant for control of broadleaf and grassy weeds in Maize. Tembotrione 34.4% w/w SC formulation is recommended for use with surfactant @ 1000ml/ha.',
           advantages: [
             'Tembotrione 34.4% w/w SC contains 344 g of Tembotrione active ingredient per kg of formulation, which is equal to 420 g of Tembotrione active ingredient per litre of formulation.',
           ],
@@ -1882,7 +1891,7 @@ export const allProducts = [
       {
         id: 69,
         name: 'All Grip',
-        img: grip,
+        img: allgrip,
         activeIngredient: 'Metsulfuron Methyl 20% WP',
         url: '#',
         details: {
@@ -1900,9 +1909,9 @@ export const allProducts = [
       {
         id: 70,
         name: 'Attack',
-        img: 'attack.jpg',  // Image name matches the title and is in lowercase
+        img: attack,  
         activeIngredient: 'Metribuzin 70% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Sugarcane', 'Tomato', 'Potato', 'Wheat', 'Soybean'],
           dose: '750 gm/1000 L',
@@ -1928,9 +1937,9 @@ export const allProducts = [
       {
         id: 71,
         name: 'Beamar-58',
-        img: 'beamar-58.jpg',  // Image name matches the title and is in lowercase
+        img: beamar,  
         activeIngredient: '2,4-D Amine Salt 58% SL',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: [
             'Sugarcane', 
@@ -1968,9 +1977,9 @@ export const allProducts = [
       {
         id: 72,
         name: 'Combitec',
-        img: 'combitec.jpg',  // Image name matches the title and is in lowercase
+        img: combitec, 
         activeIngredient: 'Clodinafop Propagyl 9% + Metribuzin 20% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Wheat'],
           dose: '600 gm/300 L',
@@ -1994,11 +2003,11 @@ export const allProducts = [
         }
       },
       {
-        id: 73, // Assign a unique ID based on your existing data
+        id: 73, 
         name: 'Fadal',
-        img: 'fadal.jpg',  // Image name matches the title and is in lowercase
+        img: fadal, 
         activeIngredient: 'Quizalofop Ethyl 5% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Cotton', 'Groundnut', 'Onion', 'Soybean', 'Black gram'],
           dose: '1000 ml/500 L',
@@ -2023,11 +2032,11 @@ export const allProducts = [
         }
       },
       {
-        id: 74, // Assign a unique ID based on your existing data
+        id: 74,
         name: 'Finish',
-        img: 'finish.jpg',  // Image name matches the title and is in lowercase
+        img: finish, 
         activeIngredient: 'Sulfosulfuron 75% WG',
-        url: '#', // Replace this with the correct URL if available
+        url: '#',
         details: {
           targetCrops: ['Wheat'],
           dose: '33 gm/250 L',
@@ -2049,11 +2058,11 @@ export const allProducts = [
         }
       },
       {
-        id: 75, // Assign a unique ID based on your existing data
+        id: 75, 
         name: 'Fadal Super',
-        img: 'fadal-super.jpg',  // Image name matches the title and is in lowercase
+        img: fadalsuper, 
         activeIngredient: 'Quizalofop Ethyl 10% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Soybean'],
           dose: '450 ml/500 L',
@@ -2072,11 +2081,11 @@ export const allProducts = [
         }
       },
       {
-        id: 76, // Assign a unique ID based on your existing data
+        id: 76, 
         name: 'Goldmix',
-        img: 'goldmix.jpg',  // Image name matches the title and is in lowercase
+        img: goldmix, 
         activeIngredient: 'Metsulfuron Methyl 10% + Chlorimuron Ethyl 10% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Direct sown Rice', 'Transplanted Rice'],
           dose: '20 gm/300 L',
@@ -2095,11 +2104,11 @@ export const allProducts = [
         }
       },
       {
-        id: 77, // Assign a unique ID based on your existing data
+        id: 77, 
         name: 'Jaikaal',
-        img: 'jaikaal.jpg',  // Image name matches the title and is in lowercase
+        img: jaikaal,
         activeIngredient: '2,4-D Ethyl Ester 38% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Sugarcane', 'Paddy', 'Maize', 'Wheat', 'Sorghum', 'Aquatic weeds'],
           dose: '2.94 L/425 L',
@@ -2120,11 +2129,11 @@ export const allProducts = [
         }
       },
       {
-        id: 78, // Assign a unique ID based on your existing data
+        id: 78,
         name: 'Karona',
-        img: 'karona.jpg',  // Image name matches the title and is in lowercase
+        img: karona,
         activeIngredient: 'Pretilachlor 50% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#',
         details: {
           targetCrops: ['Transplanted Rice'],
           dose: '1000 ml/500 L',
@@ -2144,11 +2153,11 @@ export const allProducts = [
         }
       },
       {
-        id: 79, // Assign a unique ID based on your existing data
+        id: 79,
         name: 'Karona Super',
-        img: 'karona-super.jpg',  // Image name matches the title and is in lowercase
+        img: karonasuper,  
         activeIngredient: 'Pretilachlor 37% EW',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Transplanted Rice'],
           dose: '1500 ml / 500 L',
@@ -2167,11 +2176,11 @@ export const allProducts = [
         }
       },
       {
-        id: 80, // Assign a unique ID based on your existing data
+        id: 80, 
         name: 'Nexa',
-        img: 'nexa.jpg',  // Image name matches the title and is in lowercase
+        img: nexa,  
         activeIngredient: 'Chlorimuron Ethyl 25% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Rice', 'Soybean'],
           dose: '24 gm/500 L',
@@ -2190,11 +2199,11 @@ export const allProducts = [
         }
       },
       {
-        id: 81, // Assign a unique ID based on your existing data
+        id: 81, 
         name: 'O-Cloud',
-        img: 'o-cloud.jpg',  // Image name matches the title and is in lowercase
+        img: ocloud, 
         activeIngredient: 'Clodinafop – Propargyl 15% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Wheat'],
           dose: '400 gm/400 L',
@@ -2207,11 +2216,11 @@ export const allProducts = [
         }
       },
       {
-        id: 82, // Assign a unique ID based on your existing data
+        id: 82, 
         name: 'Omega',
-        img: 'omega.jpg',  // Image name matches the title and is in lowercase
+        img: omega,  
         activeIngredient: 'Imazethapyr 10% SL',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Groundnut', 'Soybean'],
           dose: '1 L / 500 L',
@@ -2224,11 +2233,11 @@ export const allProducts = [
         }
       },
       {
-        id: 83, // Assign a unique ID based on your existing data
+        id: 83, 
         name: 'Omini Gold',
-        img: 'omini_gold.jpg',  // Image name matches the title and is in lowercase
+        img: ominigold,  
         activeIngredient: 'Bispyribac Sodium 10% SC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#',
         details: {
           targetCrops: ['Rice'],
           dose: '200 ml / 300 L',
@@ -2241,11 +2250,11 @@ export const allProducts = [
         }
       },
       {
-        id: 84, // Assign a unique ID based on your existing data
+        id: 84, 
         name: 'Openda',
-        img: 'openda.jpg',  // Image name matches the title and is in lowercase
+        img: openda,  
         activeIngredient: 'Pendimethalin 30% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Cotton', 'Rice', 'Wheat', 'Soybean'],
           dose: '3.5 liters / 600 L',
@@ -2258,14 +2267,14 @@ export const allProducts = [
         }
       },
       {
-        id: 85, // Assign a unique ID based on your existing data
+        id: 85, 
         name: 'Openda Ultra',
-        img: 'openda-ultra.jpg',  // Image name matches the title and is in lowercase
+        img: opendaultra, 
         activeIngredient: 'Pendimethalin 30% + Imazethapyr 2% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#',
         details: {
           targetCrops: ['Soybean'],
-          dose: '2.5-3 L / ha',  // Assumed 'ha' for hectare; adjust if necessary
+          dose: '2.5-3 L / ha',
           pest: ['Echinocloa crusigalli', 'Amaranthus viridis', 'Digeria arvensis', 'Portulaca oleracea', 'Benghalensis', 'Commelina'],
           uses: `Preparation of spray solution: Take the measured quantity of Pendimethalin 30% + Imazethapyr 2% EC and add it to a small quantity of water. Mix thoroughly and then add the remaining quantity of water while stirring vigorously. Do not spray against the wind direction. Ensure thorough land preparation. Spray uniformly without overlapping. Clear the sprayer thoroughly before and after use.`,
           advantages: [
@@ -2275,16 +2284,16 @@ export const allProducts = [
         }
       },
       {
-        id: 86, // Assign a unique ID based on your existing data
+        id: 86,
         name: 'Oxyherb',
-        img: 'oxyherb.jpg',  // Image name matches the title and is in lowercase
+        img: oxyherb,  
         activeIngredient: 'Oxyfluorfen 23.5% EC',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Rice', 'Groundnut', 'Tea', 'Potato', 'Onion', 'Mentha'],
           dose: '600 ml / 750 L',
           pest: ['Chenopodium album', 'Digeteria sp', 'Cyperus iria', 'Echinochloa spp'],
-          uses: `For conventional high volume spray. The recommended quantity of water is mentioned above. Commonly used sprayers include bucket pump sprayer, stirrup pump sprayer, knapsack sprayer, wheel barrow sprayer, and compression knapsack sprayer. Use the sprayer with a flood jet or flat fan nozzle, keeping the nozzle at a fixed height from the ground. Spray in a straight line at a uniform speed.`,
+          uses: `For conventional spray ( High Volume spray). On field crop quantity of water is recommended above. The most commonly used sprayer are Bucket pump sprayer, Stirrup pump sprayer, Knapscak sprayer, wheel barrow sprayer, compression knapscak sprayer etc. Use the sprayer with flood jet or flat fan nozzle. Keep the nozzle at fixed height from the ground level. Spray the area in straight line at uniform speed.`,
           advantages: [
             `Oxyfluorfen 23.5% EC [22.8% EC (w/v)] is a selective herbicide with a residual activity, containing 23.5% oxyfluorfen. It effectively controls important weeds in crops such as Rice, Tea, Potato, Onion, Groundnut, and Mentha.`
           ],
@@ -2292,11 +2301,11 @@ export const allProducts = [
         }
       },
       {
-        id: 87, // Assign a unique ID based on your existing data
+        id: 87, 
         name: 'Ozin',
-        img: 'ozin.jpg',  // Image name matches the title and is in lowercase
+        img: ozin,  
         activeIngredient: 'Atrazine 50% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Sugarcane', 'Maize'],
           dose: '1 kg / 500 L',
@@ -2309,11 +2318,11 @@ export const allProducts = [
         }
       },
       {
-        id: 88, // Assign a unique ID based on your existing data
+        id: 88, 
         name: 'Quit',
-        img: 'quit.jpg',  // Image name matches the title and is in lowercase
+        img: quit,  
         activeIngredient: 'Paraquat Dichloride 24% SL',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Cotton', 'Grapes', 'Rice', 'Tea', 'Potato', 'Wheat', 'Aquatic weeds', 'Rubber'],
           dose: '4 L / 500 L',
@@ -2326,11 +2335,11 @@ export const allProducts = [
         }
       },
       {
-        id: 89, // Assign a unique ID based on your existing data
+        id: 89, 
         name: 'Solid-80',
-        img: 'solid-80.jpg',  // Image name matches the title and is in lowercase
+        img: solid80,  
         activeIngredient: '2,4-D Sodium Salt 80% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#',
         details: {
           targetCrops: ['Wheat', 'Maize', 'Citrus', 'Grapes'],
           dose: 'As per recommended dosage based on crop and weed type',
@@ -2343,11 +2352,11 @@ export const allProducts = [
         }
       },
       {
-        id: 90, // Assign a unique ID based on your existing data
+        id: 90, 
         name: 'Saath-Saath',
-        img: 'saath-saath.jpg',  // Image name matches the title and is in lowercase
+        img: saathsaath,  
         activeIngredient: 'Pyrazosulfuron ethyl 10% WP',
-        url: '#', // Replace this with the correct URL if available
+        url: '#', 
         details: {
           targetCrops: ['Transplanted Rice'],
           dose: '0.15 kg / 500 L',
