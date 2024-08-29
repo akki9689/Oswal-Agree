@@ -1687,10 +1687,150 @@ export const allProducts = [
             'P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery and ASPEE-HTP power sprayer etc. Validamycin is compatible with most common insecticides.'
           ],
           application:
-            't is non-systemic antibiotic with fungi static action. It causes abnormal branching of the tips of the pathogen, followed by cessation of further development. Being curative in action, it helps to control diseases very fast.'
+            'It is non-systemic antibiotic with fungi static action. It causes abnormal branching of the tips of the pathogen, followed by cessation of further development. Being curative in action, it helps to control diseases very fast.'
         }
       },
-      
+      {
+        id: 61,
+        name: 'Tebxil',
+        img: tebxil,
+        activeIngredient: 'Tebuconazole 2% DS ',
+        url: '#',
+        details: {
+          targetCrops: ['Groundnut' , 'Wheat' ],
+          dose: '10 L / 10 Kg Seed',
+          pest: [
+            'Loose Smut',
+            'Flag Smut',
+            'Collar Rot',
+            'Root Rot',
+            'Stem rust',
+
+          ],
+          uses: 'Plant Protection Equipment: Manually/Mechanically operated seed dressing rotating drum. Seed Treatment: Any small dressing rotating drum by mixing quantity of seed can be readily treated by mixing in proper amount of fungicide and seed in closed container. Roll the seed until each grain is uniformally coated with fungicide.',
+
+          advantages: [
+            'Tebuconazole 2 % DS is a systemic fungicides containing tebuconazole active, ingredients, balance auxiliaries and inert material. On account of its systemic properties tebuconazole used as a seed dressing, controls pathogens adhering to the surface of seed as well as those developing inside the grain. It shows effectiveness against loose smut & flag smut of wheat and collor rot, root rot and stem rot of ground nut.'
+          ],
+          application:
+            'It is a Triazole based Fungicide which controls Seed Borne Diseases and acts as a Demethylation Inhibitor (DMI) of Fungal Sterol Biosynthesis'
+        }
+      },
+      {
+        id: 62,
+        name: 'Tuskon',
+        img: tuskon,
+        activeIngredient: 'Propiconazole 10.7% + Tricyclazole 34.2% SE ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '500 gm / 500 L',
+          pest: [
+            'Sheath blight',
+            'Blast',
+            
+
+          ],
+          uses: 'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.',
+
+          advantages: [
+            'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.'
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and tricyclazole permits protective and curative use, best result are achieved when the product is applied with knapsack spray pump when the disease is active but still in the early stage of development. Repeat the spray depending on the disease intensity.'
+        }
+      },
+      {
+        id: 63,
+        name: 'Utsav-20',
+        img: utsav20,
+        activeIngredient: 'Azoxystrobin 11.5% + Mancozeb 30% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato'  ],
+          dose: '750-875 gm / 500 L',
+          pest: [
+            'Late blight',
+            'Barly Blight',
+            
+
+          ],
+          uses: '1. Spray Equipment: Knapsack sprayer or power operate sprayer machine may be used. 2. Limitations for use: It should not be used in crops where it has not been recommended. It should not be used in combination with any insecticides or plant growth regulators.',
+
+          advantages: [
+            'The fungicidal combination is used for controlling disease complex in Tomatoes which contains Azoxystrobin 11.5% and Mancozeb 30% and remaining adjuvants.'
+          ],
+          application:
+            'Apply the fungicide when the first disease incidence is observed and repeat application as necessary.'
+        }
+      },
+      {
+        id: 64,
+        name: 'Vazood',
+        img: vazood,
+        activeIngredient: 'Tebuconazole 10% + Sulphur 65% WG ',
+        url: '#',
+        details: {
+          targetCrops: ['Chilli' , 'Soybean'  ],
+          dose: '1.25 gm / 500 L',
+          pest: [
+            'Powdery Mildew' , 'fruit rot' , 'Leaf Spot' , 'Pod blight'
+            
+          ],
+          uses: 'Take the required quantity with a small volume of water and stir well using a rod or stick to form a uniform suspension then, add the remaining quantity of water as spray volume required and mix well again by stirring.',
+
+          advantages: [
+            'Tebuconazole 10% + Sulphur 65% WG (water dispersible granule) is a effective fungicide with protective, creative and eradicative action. It controls powdery mildew, fruit rot diseases of Chilli and leaf spot, pod blight disease of Soybean. '
+          ],
+          application:
+            'Tebuconazole 10% + Sulphur 65% WG is applied with knapsack sprayer at early appearance of disease.'
+        }
+      },
+      {
+        id: 66,
+        name: 'Viberant',
+        img: viberant,
+        activeIngredient: 'Thifluzamide 24% SC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'  ],
+          dose: '375 ml / 500 L',
+          pest: [
+            'Sheath blight' , 'Rhizoctonia'
+            
+          ],
+          uses: 'Measure required quantity of the product and mix it well with a small quantity of water. Then add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayer of high volume sprays.',
+
+          advantages: [
+            'Thifluzamide 24% SC is a systemic fungicide which is used for controlling sheath blight disease in Rice.'
+          ],
+          application:
+            'Foliar spray on appearance of disease symptoms.'
+        }
+      },
+      {
+        id: 67,
+        name: 'Vinasham',
+        img: vinasham,
+        activeIngredient: 'Propiconazole 13.9% + Difenconazole 13.9% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '1 ml / Liter in 500 L',
+          pest: [
+            'Sheath blight' , 'Dirty panicle'
+            
+          ],
+          uses: 'When used as per the recommendations given below, Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC protects the paddy crop from fungal diseases like sheath blight and dirty panicle.',
+
+          advantages: [
+            'Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC is a mixture of triazole fungicides recommended for the control of sheath blight and dirty panicle disease in paddy. This is an emulsifiable concentrate formulation containing 27.8% active ingredients, equivalent to 30% w/v or 300 g/L of formulation.  '
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and difenoconazole permits protective, curative or eradicative use, best results are achieved when fungicide is applied when the disease is active but still in the early stage of development. '
+        }
+      },
+
 
 
       
