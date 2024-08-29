@@ -1394,7 +1394,7 @@ export const allProducts = [
         activeIngredient: 'Carbendazim 50% WP ',
         url: '#',
         details: {
-          targetCrops: ['Cotton', 'Grapes' , "Brinjal" , "Chilli" , "Paddy" , "Groundnut" , "Wheat" , "Jute" , "Barley" , "Cowpea" , "Apple" , "Tobacco" , "Sugarbeet" , "Peas" , "Topioca" , "Moong" , "Cluster bean" , "Walnut" , "Rose" , "Ber" , "Cucurbits"],
+          targetCrops: ['Cotton', 'Grapes', "Brinjal", "Chilli", "Paddy", "Groundnut", "Wheat", "Jute", "Barley", "Cowpea", "Apple", "Tobacco", "Sugarbeet", "Peas", "Topioca", "Moong", "Cluster bean", "Walnut", "Rose", "Ber", "Cucurbits"],
           dose: '250 gm / 750 L',
           pest: [
             'Powdery mildew',
@@ -1412,10 +1412,10 @@ export const allProducts = [
             'Seeding Blight',
             'Leaf Spot',
 
-            
+
           ],
           uses: 'Mix the required quantity in a small quantity of water to move the thick uniform paste. Allowed to soak for 5 to 10 minutes. Add the remaining quantity of water slowly while stirring continuously and make up the volume. Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer, ASPEEHTP power sprayer. WARNING: Pregnant women should avoid contact with Carbendazim formulations.',
-          
+
           advantages: [
             'It is recommended to control blast & sheath blight of paddy, loose smut of wheat & barely, brown rot of maize, powdery mildew of sugar beet, peas, cluster bean, cucurbits, rose & ber, anthracnose of grapes and tobacco, dumping off of chilies and scab of apples, etc.'
           ],
@@ -1437,10 +1437,10 @@ export const allProducts = [
             'Anthracnose',
             'Alternaria leaf spot/blight and scab '
 
-      
+
           ],
           uses: 'The required quantity of ready mix chemical Tebuconazole 6.7% + captan 26.9% w/w SC needs to be diluted in water and sprayed by using a knapsack sprayer foot sprayer fitted with hollow cone nozzle with spray volume @ 500 L/ha for Chilli and 10 L/tree for Apple. Time of application: To be applied preventively and to be repeated at 15 days intervals depending upon prevailing weather conditions and disease pressure. Application Techniques: Foliar application with the help of Knapsack sprayer foot sprayer Instruction for mixing: Thoroughly mix the recommended quantity of Tebuconazole 6.7% + Captan 26.9% w/w SC into the water volume recommended for the unit area. The stage for application: Vegetative stage and at the time of appearance of disease. Plant Protection Equipment: Knapsack Sprayer/Foot Sprayer fitted with hollow cone nozzle. Nozzle Type: Hollow cone nozzle. Weather conditions: Do not spray during windy conditions. Soil: Light to heavy soil.',
-          
+
           advantages: [
             'Tebuconazole 6.7% + Captan 26.9% w/w SC is a Suspension Concentration containing Tebuconazole 6.7% (a.i) and Captan 26.9% (a.i) in the formulation. It is used for the control of Powdery mildew. Alternaria leaf spot/blight and Scab on Apple; Powdery Mildew and Anthracnose on Chilli. CAUTION: – It should not be used in the areas where pisciculture aquaculture is practiced. WARNING: 1. Not to be used on Crops other than mentioned on labels & Leaflets. 2. Not to be used for Post-Harvest Application. 3. Destroy the Container after use as directed on the leaflet.'
           ],
@@ -1455,7 +1455,7 @@ export const allProducts = [
         activeIngredient: 'Carbendazim 12% + Mancozeb 63% WP ',
         url: '#',
         details: {
-          targetCrops: ['Grapes', 'Chilli' , 'Mango' , 'Paddy' , 'Groundnut' , 'Tea' , 'Maize' , 'Potato' , 'Apple'],
+          targetCrops: ['Grapes', 'Chilli', 'Mango', 'Paddy', 'Groundnut', 'Tea', 'Maize', 'Potato', 'Apple'],
           dose: '750 gm / 750 L',
           pest: [
             ' Powdery Mildew',
@@ -1466,7 +1466,7 @@ export const allProducts = [
             'Red rust',
             'Late Blight Tikka Leaf Spot',
             'Rice blast',
-            
+
           ],
           uses: 'Spray by using a high volume sprayer viz. Knapsack sprayer.',
           advantages: [
@@ -1483,12 +1483,12 @@ export const allProducts = [
         activeIngredient: 'Hexaconazole 5% SC',
         url: '#',
         details: {
-          targetCrops: ['Grapes', "Mango" , "Rice"],
+          targetCrops: ['Grapes', "Mango", "Rice"],
           dose: '200 ml / 100 L',
           pest: [
             ' Powdery Mildew',
             'Sheath blight ',
-           
+
           ],
           uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
 
@@ -1506,12 +1506,12 @@ export const allProducts = [
         activeIngredient: 'Hexaconazole 5% SC',
         url: '#',
         details: {
-          targetCrops: ['Grapes', "Mango" , "Rice"],
+          targetCrops: ['Grapes', "Mango", "Rice"],
           dose: '200 ml / 100 L',
           pest: [
             ' Powdery Mildew',
             'Sheath blight ',
-           
+
           ],
           uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
 
@@ -1529,7 +1529,7 @@ export const allProducts = [
         activeIngredient: 'Difenoconazole 25% EC',
         url: '#',
         details: {
-          targetCrops: ['Grapes', "Chilli" , "Paddy" , "Apple"],
+          targetCrops: ['Grapes', "Chilli", "Paddy", "Apple"],
           dose: '15-30 ml / 500 L',
           pest: [
             ' Powdery Mildew',
@@ -1538,8 +1538,8 @@ export const allProducts = [
             'fruit rot',
             'Sheath blight ',
             'Dieback',
-            
-           
+
+
           ],
           uses: 'Measure out required quantity of the product and mix it well with a small quantity of water, Add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayers of high volume sprayers.',
 
@@ -1557,18 +1557,18 @@ export const allProducts = [
         activeIngredient: 'Tebuconazole 25.9% EC ',
         url: '#',
         details: {
-          targetCrops: ['Chilli', 'Rice' , 'Groundnut' , 'Onion' , 'Soybean'],
+          targetCrops: ['Chilli', 'Rice', 'Groundnut', 'Onion', 'Soybean'],
           dose: '750 ml / 500 L',
           pest: [
-          
+
             ' Powdery Mildew',
             'Anthacnose',
-            'fruit rot' ,
+            'fruit rot',
             'Purple Blotch',
-            'Tikka Leaf Spot' ,
+            'Tikka Leaf Spot',
             'Blast',
             'Seath Blight'
-           
+
           ],
           uses: 'Tebuconazole 25.9% EC is applied as protective as well as curative fungicide with knapsack sprayer at early appearance of disease.',
           advantages: [
@@ -1585,10 +1585,10 @@ export const allProducts = [
         activeIngredient: 'Propiconazole 25% EC ',
         url: '#',
         details: {
-          targetCrops: ['Rice' , 'Groundnut Tea' , 'Banana' , 'Wheat' , 'Soybean' , 'Coffee'],
+          targetCrops: ['Rice', 'Groundnut Tea', 'Banana', 'Wheat', 'Soybean', 'Coffee'],
           dose: '500 ml / 750 L',
 
-          pest: ['Sheath blight', 'Blister blight' , 'Stripe rust' , 'Sigatoka leaf spot' , 'Early leaf spot' , 'Stem rust' , 'Brown rust' , 'Leaf rust' , 'Karnal bunt'],
+          pest: ['Sheath blight', 'Blister blight', 'Stripe rust', 'Sigatoka leaf spot', 'Early leaf spot', 'Stem rust', 'Brown rust', 'Leaf rust', 'Karnal bunt'],
 
           uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for the volume of application through knapsack sprayers or high-volume sprayers.',
 
@@ -1606,10 +1606,10 @@ export const allProducts = [
         activeIngredient: 'Metalaxyl 8% + Mancozeb 64% WP ',
         url: '#',
         details: {
-          targetCrops: ['Grapes' , 'Potato' , 'Mustard' , 'Black Pepper' , 'Tobacco' , 'Pearl Millet'],
+          targetCrops: ['Grapes', 'Potato', 'Mustard', 'Black Pepper', 'Tobacco', 'Pearl Millet'],
           dose: '2500 gm / 500 L',
 
-          pest: ['Late blight', 'Leaf Blotch' , 'Downey Mildew' , 'Damping Off' , 'White rust' , 'Alterneria blight' , 'Phytophthora foot rot' ],
+          pest: ['Late blight', 'Leaf Blotch', 'Downey Mildew', 'Damping Off', 'White rust', 'Alterneria blight', 'Phytophthora foot rot'],
 
           uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation. Adjust the quantity of product in proportion to the water required to cover a hectare when high volume spray equipment such as knapsack sprayers, hand compression sprayer are used. It is also suitable for low volume application with motorized knapsack sprayer, mist blowers etc. with flood jet nozzle. Compatibility: At recommended rates, Metalaxyl 8% + Mancozeb 64% WP is compatible with most other commonly used insecticides and fungicides except lime sulphur. ',
 
@@ -1627,14 +1627,14 @@ export const allProducts = [
         activeIngredient: 'Metalaxyl 35% WS ',
         url: '#',
         details: {
-          targetCrops: ['Sunflower', 'Maize' , 'Sorghum' , 'Bajra' , 'Mustard'],
+          targetCrops: ['Sunflower', 'Maize', 'Sorghum', 'Bajra', 'Mustard'],
           dose: '600g / 100 kg seed',
           pest: [
-          
+
             ' Downey Mildew',
             'White rust',
-          
-           
+
+
           ],
           uses: 'For small lots, mix the required quantity of Metalaxyl 35% WS with 10-20 ml of water for each kg of seed to be treated. Add the slurry to the seed and rotate or stir the container (plastic drum or plastic bag) until the seeds are uniformly covered. Usually less than a minute. Metalaxyl 35 WS is recommended for application as slurry with continuously operating commercial seed dressing equipment.',
           advantages: [
@@ -1646,7 +1646,7 @@ export const allProducts = [
       },
 
 
-      
+
 
 
 
@@ -1680,7 +1680,7 @@ export const allProducts = [
   //               ],
   //               application: "Mix 2-4 Kg of along with other BioProducts in 30-40 Kg soil or fully decomposed farm yard manure and broadcasting it over one acre of land at the time of last ploughing. In plantation crops, incorporate this mixture in the feeder zone and irrigate the field immediately after spreading.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -1697,9 +1697,9 @@ export const allProducts = [
   //                   "Improves Soil health, Soil fertility status, and Soil Ph. Minimizes recommended chemical fertilizers doses and economic in rainfed areas. Enhances product quality (Aroma, Color, Shining, Taste, Size, Shelf life, etc.) and yield. Crop plants become hardy, enhance flowering and reduce flower & fruit droppings."
   //               ],
   //               application: "It can be broadcasted in the field at the time of last plowing or within 30-45 days of sowing/transplanting in standing crops. For uniform broadcasting, it can be mixed with 50-80 kg of well-rotten farm yard manure/compost/ vermicompost or soil of the same field. There should be sufficient moisture in the field at the time of application or give light irrigation after application.",
-    
+
   //           },
-    
+
   //       }
   //   ]
   // },
@@ -1724,7 +1724,7 @@ export const allProducts = [
   //               ],
   //               application: "Plants Should be uniformly drenched.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -1741,9 +1741,9 @@ export const allProducts = [
   //                   "Thus Borohit Plus help in the free transport of calcium coupled with boron and performs even in calcareous soil and hick alkaline soil since it is a chelated mix. Boron is essential to maintain the structural integrity of plant membranes along with calcium and is involved in nucleic acid metabolism. Production of vegetable crops is adversely affected much more than vegetative growth with a low supply of available boron."
   //               ],
   //               application: "Make a solution of Borohit Plus 250-300 gm per acre in 125-150 liter water. Use in 2nd spray 7-10 day Interval. Apply In a basal dose of 500 gm per acre with mixed fertilizer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,
@@ -2058,7 +2058,7 @@ export const allProducts = [
   //               ],
   //               application: "Gibberellic Acid 0.001% L is to be diluted at the rate of 1 ml in one liter of water and sprayed uniformly on the foliage to cover all parts of the plants. Gibberellic Acid 0.001% L shall be sprayed during the cool hours of the day. Repeat the application if there is rain within six hours of spraying. Shake the bottle well before using the Product.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -2075,9 +2075,9 @@ export const allProducts = [
   //                   "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer."
   //               ],
   //               application: "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,

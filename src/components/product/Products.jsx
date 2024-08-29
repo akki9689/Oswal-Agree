@@ -7,6 +7,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 const Products = () => {
   const { category } = useParams();
+  console.log(category);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const navigate = useNavigate();
   const controls = useAnimation();
@@ -38,11 +39,12 @@ const Products = () => {
   }, [category, controls]);
 
   const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${encodeURIComponent(productName)}`);
+    navigate(`/products/${category}/${productName}`);
   };
 
   return (
     <div className="container p-4 mx-auto">
+      
       <motion.div animate={controls}>
         <Popupname title={category ? category : 'All Products'} />
       </motion.div>
