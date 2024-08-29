@@ -1,4 +1,4 @@
-import { product } from '../../data/home/products-data'
+import { allProducts } from '../../data/products/all-products-data'
 import Card from '../common/Card'
 import { motion } from 'framer-motion'
 
@@ -27,7 +27,7 @@ function Product () {
         </motion.div>
         <div className='grid grid-cols-1 smd:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
           {/* ----------------Mapping  Card---------------------*/}
-          {product.map((data, index) => (
+          {allProducts.map((data, index) => (
             // {/* ----------------Animation form Card---------------------*/}
             <motion.div
               key={index}

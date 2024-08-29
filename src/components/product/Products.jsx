@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import ProductCard from '../../components/common/ProductCard'; // Ensure correct path
-import { allProducts } from '../../data/products/all-products-data'; // Ensure correct import
+import ProductCard from '../../components/common/ProductCard'; 
+import { allProducts } from '../../data/products/all-products-data'; 
 import Popupname from '../common/Popupname';
 import { motion, useAnimation } from 'framer-motion';
 
 const Products = () => {
   const { category } = useParams();
+  // console.log(category);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const navigate = useNavigate();
   const controls = useAnimation();
@@ -38,20 +39,21 @@ const Products = () => {
   }, [category, controls]);
 
   const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${encodeURIComponent(productName)}`);
+    navigate(`/products/${category}/${productName}`);
   };
 
   return (
     <div className="container p-4 mx-auto">
+      
       <motion.div animate={controls}>
         <Popupname title={category ? category : 'All Products'} />
       </motion.div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 pt-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
             <ProductCard
               key={product.name}
-              imageSrc={product.img || 'default-image.png'} // Fallback image
+              imageSrc={product.img } 
               productName={product.name}
               productDescription={product.activeIngredient}
               onReadMoreClick={() => handleReadMoreClick(product.name)}
