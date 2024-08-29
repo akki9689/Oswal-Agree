@@ -18,7 +18,7 @@ const Card = ({
           <Button
             buttonText='Click More'
             showIcon={true}
-            handlar={() => console.log('Button clicked!')} 
+            handlar={() => console.log('Button clicked!')}
             />
         </div>
       </div>

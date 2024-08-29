@@ -98,10 +98,10 @@ const Terms = () => {
       <div className="w-10/12 mx-auto mt-10">
         {privacyPolicyData.map((section, index) => (
           <div key={index} className="mb-12"> {/* Margin between sections */}
-            <h2 className="text-lg text-[rgb(56,149,63)] font-bold mb-4">{section.section}</h2>
+            <h2 className="text-2xl text-[rgb(56,149,63)] font-bold mb-4">{section.section}</h2>
             {section.title && <h3 className="text-xl mb-4">{section.title}</h3>}
             {section.content && section.content.length > 0 && (
-              <div className="text-xl mmd:text-justify mmd:text-wrap mt-2">
+              <div className="text-base mmd:text-justify mmd:text-wrap mt-2">
                 {section.content.map((paragraph, paraIndex) => (
                   <div
                     key={paraIndex}

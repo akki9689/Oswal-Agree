@@ -1,3 +1,4 @@
+
 // -------------------------------**Insecticides**--------------------------------------
 import fila from '../../images/Products/Insecticides/Fila-Plus-Alphacypermethrin-10-SC.png'
 import expert from '../../images/Products/Insecticides/Expert-Indoxacarb-14.5-SC.png'
@@ -49,29 +50,61 @@ import azoxybin from '../../images/Products/Fungicides/Azoxybin.png'
 import azoxybinTop from '../../images/Products/Fungicides/Azoxybin-Top.png'
 import breeza from '../../images/Products/Fungicides/Breeza.png'
 import osavet from '../../images/Products/Fungicides/Osavet.png'
-// import carbot from '../../images/Products/Fungicides/Carbot.png'
+import carbot from '../../images/Products/Fungicides/Carbot.png'
 import zordaar from '../../images/Products/Fungicides/Zordaar.png'
-// import combination from '../../images/Products/Fungicides/Combination.png'
-// import combo75 from '../../images/Products/Fungicides/Combo-75.png'
-// import conceptPlus from '../../images/Products/Fungicides/Concept-Plus.png'
-// import doubleCentury from '../../images/Products/Fungicides/Double-Century.png'
-// import fullcure from '../../images/Products/Fungicides/Fullcure.png'
-// import gillette from '../../images/Products/Fungicides/Gillette.png'
-// import odomil from '../../images/Products/Fungicides/ODOMIL.png'
-// import oxyl from '../../images/Products/Fungicides/OXYL.png'
-// import proton from '../../images/Products/Fungicides/Proton.png'
-// import raka from '../../images/Products/Fungicides/Raka.png'
-// import rio from '../../images/Products/Fungicides/RIO.png'
-// import tebxil from '../../images/Products/Fungicides/Tebxil.png'
-// import tuskon from '../../images/Products/Fungicides/Tuskon.png'
-// import utsav20 from '../../images/Products/Fungicides/Utsav-20.png'
-// import vazood from '../../images/Products/Fungicides/Vazood.png'
-// import viberant from '../../images/Products/Fungicides/Viberant.png'
-// import vinasham from '../../images/Products/Fungicides/VINASHAM.png'
+import combination from '../../images/Products/Fungicides/Combination.png'
+import combo75 from '../../images/Products/Fungicides/Combo-75.png'
+import conceptPlus from '../../images/Products/Fungicides/Concept-Plus.png'
+import doubleCentury from '../../images/Products/Fungicides/Double-Century.png'
+import fullcure from '../../images/Products/Fungicides/Fullcure.png'
+import gillette from '../../images/Products/Fungicides/Gillette.png'
+import odomil from '../../images/Products/Fungicides/ODOMIL.png'
+import oxyl from '../../images/Products/Fungicides/OXYL.png'
+import proton from '../../images/Products/Fungicides/Proton.png'
+import raka from '../../images/Products/Fungicides/Raka.png'
+import rio from '../../images/Products/Fungicides/RIO.png'
+import tebxil from '../../images/Products/Fungicides/Tebxil.png'
+import tuskon from '../../images/Products/Fungicides/Tuskon.png'
+import utsav20 from '../../images/Products/Fungicides/Utsav-20.png'
+import vazood from '../../images/Products/Fungicides/Vazood.png'
+import viberant from '../../images/Products/Fungicides/Viberant.png'
+import vinasham from '../../images/Products/Fungicides/VINASHAM.png'
+
+                 // Herbicides
+import melisa from '../../images/Products/Herbicides/Melisa.png'
+import allgrip from '../../images/Products/Herbicides/All-Grip.png'
+import attack from '../../images/Products/Herbicides/Attack.png'
+import beamar from '../../images/Products/Herbicides/Beamar.png'
+import combitec from '../../images/Products/Herbicides/Combitec.png'
+import fadal from '../../images/Products/Herbicides/Fadal.png'
+import finish from '../../images/Products/Herbicides/Finish.png'
+import fadalsuper from '../../images/Products/Herbicides/Fadal-Super.png'
+import goldmix from '../../images/Products/Herbicides/Goldmix.png'
+import jaikaal from '../../images/Products/Herbicides/jaikaal.png'
+import karona from '../../images/Products/Herbicides/Karona.png'
+import karonasuper from '../../images/Products/Herbicides/Karona-Super.png'
+import nexa from '../../images/Products/Herbicides/Nexa.png'
+import ocloud from '../../images/Products/Herbicides/O-Cloud.png'
+import omega from '../../images/Products/Herbicides/OMEGA-.png'
+import ominigold from '../../images/Products/Herbicides/Omini-Gold.png'
+import openda from '../../images/Products/Herbicides/Openda.png'
+import opendaultra from '../../images/Products/Herbicides/Openda-Ultra.png'
+import oxyherb from '../../images/Products/Herbicides/Oxyherb.png'
+import ozin from '../../images/Products/Herbicides/OZIN.png'
+import quit from '../../images/Products/Herbicides/Quit.png'
+import solid80 from '../../images/Products/Herbicides/Solid-80.png'
+import saathsaath from '../../images/Products/Herbicides/Saath-Saath.png'
+
+
+
+
+
+
+
 
 // ------------------Fertilizer Product------------------
-import Oswal from '../../images/Products/Fertilizer/Oswal-potash.png'
-import  GrowMore from '../../images/Products/Fertilizer/Grow-More.png'
+// import Oswal from '../../images/Products/Fertilizer/Oswal-potash.png'
+// import  GrowMore from '../../images/Products/Fertilizer/Grow-More.png'
 
 // ------------------Bio Product----------------------
 // import Thunder from '../../images/Products/BioProducts/Thunder.png'
@@ -102,6 +135,12 @@ import  GrowMore from '../../images/Products/Fertilizer/Grow-More.png'
 // import  NainoPlus from '../../images/Products/PGR/ Naino-Plus.png'
 // import Seltar from '../../images/Products/PGR/Seltar.png'
 
+
+
+
+
+
+
 // ------------------All Data -------------------
 
 export const allProducts = [
@@ -120,12 +159,9 @@ export const allProducts = [
           targetCrops: ['........'],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
-          uses: 'High performance, residual insecticide for controlling mosquitoes, houseflies, and cockroaches. Suitable for use in domestic, institutional, and public buildings. Low toxicity to humans, usable in hospitals, kitchens, restaurants, and food storage areas.',
+          uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
           advantages: [
-            'Effective against crawling and flying insects in domestic, public, and industrial settings.',
-            'Compatible with most knapsack sprayers and residual spray equipment.',
-            'Low pressure application with even-sized droplets for thorough coverage.',
-            'Suitable for public health pest control.'
+            'It is suitable for the control of crawling and flying insects on domestic, public and industrial premises. It is suitable for use with most types of knapsack sprayers and other residual spray equipment commonly used to control public health pests. Application should be made at low pressure and with a nozzle that produces even-sized droplets. It should be thoroughly mixed with water to give the required concentration. Treated surface should be thoroughly sprayed to the point of minimal run-off. The applicator should ensure uniform coverage and pay particular attention to those areas where insects are most likely to came in contact with the insecticide.'
           ],
           application: 'Contact & Stomach Poison'
         }
@@ -1209,7 +1245,7 @@ export const allProducts = [
     // image: 'fungicides.png',
     productName: [
       {
-        id: 1,
+        id: 43,
         name: 'Zordaar',
         img: zordaar,
         activeIngredient: 'Tebuconazole 38.39% SC',
@@ -1232,7 +1268,7 @@ export const allProducts = [
         }
       },
       {
-        id: 2,
+        id: 44,
         name: 'Osavet',
         img: osavet,
         activeIngredient: 'Sulphur 80% WDG',
@@ -1259,7 +1295,7 @@ export const allProducts = [
         }
       },
       {
-        id: 3,
+        id: 45,
         name: 'Azoxybin',
         img: azoxybin,
         activeIngredient: 'Azoxystrobin 23% SC',
@@ -1284,7 +1320,7 @@ export const allProducts = [
         }
       },
       {
-        id: 4,
+        id: 46,
         name: 'Azoxybin Plus',
         img: azoxybinPlus,
         activeIngredient: 'Azoxystrobin 11% + Tebuconazole 18.30% SC',
@@ -1322,7 +1358,7 @@ export const allProducts = [
         }
       },
       {
-        id: 5,
+        id: 47,
         name: 'Azoxybin Top',
         img: azoxybinTop,
         activeIngredient: 'Azoxystrobin 18.2% + Difenoconazole 11.4% SC',
@@ -1363,7 +1399,7 @@ export const allProducts = [
         }
       },
       {
-        id: 6,
+        id: 48,
         name: 'Breeza',
         img: breeza,
         activeIngredient: 'Captan 70% + Hexaconazole 5% WP',
@@ -1379,14 +1415,961 @@ export const allProducts = [
           application:
             'It is a broad-spectrum fungicide highly useful for the management of Powdery mildew, anthracnose, late blight, early blight, downy mildew & grey mildew diseases on fruits & vegetables and various other crops.'
         }
-      }
+      },
+      {
+        id: 49,
+        name: 'Carbot',
+        img: carbot,
+        activeIngredient: 'Carbendazim 50% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Cotton', 'Grapes', "Brinjal", "Chilli", "Paddy", "Groundnut", "Wheat", "Jute", "Barley", "Cowpea", "Apple", "Tobacco", "Sugarbeet", "Peas", "Topioca", "Moong", "Cluster bean", "Walnut", "Rose", "Ber", "Cucurbits"],
+          dose: '250 gm / 750 L',
+          pest: [
+            'Powdery mildew',
+            ' Scab',
+            'Anthracnose',
+            'fruit rot',
+            'Sheath blight',
+            'Tikka Leaf Spot',
+            'Loose Smut',
+            'Collar Rot',
+            'Set rot',
+            'Frog eye spot',
+            'Blast',
+            'Damping Off',
+            'Seeding Blight',
+            'Leaf Spot',
+
+
+          ],
+          uses: 'Mix the required quantity in a small quantity of water to move the thick uniform paste. Allowed to soak for 5 to 10 minutes. Add the remaining quantity of water slowly while stirring continuously and make up the volume. Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer, ASPEEHTP power sprayer. WARNING: Pregnant women should avoid contact with Carbendazim formulations.',
+
+          advantages: [
+            'It is recommended to control blast & sheath blight of paddy, loose smut of wheat & barely, brown rot of maize, powdery mildew of sugar beet, peas, cluster bean, cucurbits, rose & ber, anthracnose of grapes and tobacco, dumping off of chilies and scab of apples, etc.'
+          ],
+          application:
+            'Dissolve recommended dose in 150 liters of water and spray with cone type nozzle.'
+        }
+      },
+      {
+        id: 50,
+        name: 'Combination',
+        img: combination,
+        activeIngredient: 'Tebuconazole 6.7% + Captan 26.9% SC  ',
+        url: '#',
+        details: {
+          targetCrops: ['Chilli', 'Apple'],
+          dose: '1000 ml / 500 L',
+          pest: [
+            'Powdery mildew',
+            'Anthracnose',
+            'Alternaria leaf spot/blight and scab '
+
+
+          ],
+          uses: 'The required quantity of ready mix chemical Tebuconazole 6.7% + captan 26.9% w/w SC needs to be diluted in water and sprayed by using a knapsack sprayer foot sprayer fitted with hollow cone nozzle with spray volume @ 500 L/ha for Chilli and 10 L/tree for Apple. Time of application: To be applied preventively and to be repeated at 15 days intervals depending upon prevailing weather conditions and disease pressure. Application Techniques: Foliar application with the help of Knapsack sprayer foot sprayer Instruction for mixing: Thoroughly mix the recommended quantity of Tebuconazole 6.7% + Captan 26.9% w/w SC into the water volume recommended for the unit area. The stage for application: Vegetative stage and at the time of appearance of disease. Plant Protection Equipment: Knapsack Sprayer/Foot Sprayer fitted with hollow cone nozzle. Nozzle Type: Hollow cone nozzle. Weather conditions: Do not spray during windy conditions. Soil: Light to heavy soil.',
+
+          advantages: [
+            'Tebuconazole 6.7% + Captan 26.9% w/w SC is a Suspension Concentration containing Tebuconazole 6.7% (a.i) and Captan 26.9% (a.i) in the formulation. It is used for the control of Powdery mildew. Alternaria leaf spot/blight and Scab on Apple; Powdery Mildew and Anthracnose on Chilli. CAUTION: – It should not be used in the areas where pisciculture aquaculture is practiced. WARNING: 1. Not to be used on Crops other than mentioned on labels & Leaflets. 2. Not to be used for Post-Harvest Application. 3. Destroy the Container after use as directed on the leaflet.'
+          ],
+          application:
+            'To be applied preventively and to be repeated at 15 days intervals depending upon prevailing weather conditions and disease pressure.'
+        }
+      },
+      {
+        id: 51,
+        name: 'Combo-75',
+        img: combo75,
+        activeIngredient: 'Carbendazim 12% + Mancozeb 63% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Grapes', 'Chilli', 'Mango', 'Paddy', 'Groundnut', 'Tea', 'Maize', 'Potato', 'Apple'],
+          dose: '750 gm / 750 L',
+          pest: [
+            ' Powdery Mildew',
+            'Anthracnose',
+            'Downey Mildew',
+            'Tikka Leaf Spot',
+            'Blister blight',
+            'Red rust',
+            'Late Blight Tikka Leaf Spot',
+            'Rice blast',
+
+          ],
+          uses: 'Spray by using a high volume sprayer viz. Knapsack sprayer.',
+          advantages: [
+            'Spray by using a high-volume sprayer viz. Knapsack sprayer.'
+          ],
+          application:
+            'The product should be sprayed immediately on the appearance of disease symptoms. As per recommendation, mix the pesticides and water at the right dosage and spray. Before spraying the pesticides, Its suspension should be mixed well with a wooden stick.'
+        }
+      },
+      {
+        id: 52,
+        name: 'Concept Plus',
+        img: conceptPlus,
+        activeIngredient: 'Hexaconazole 5% SC',
+        url: '#',
+        details: {
+          targetCrops: ['Grapes', "Mango", "Rice"],
+          dose: '200 ml / 100 L',
+          pest: [
+            ' Powdery Mildew',
+            'Sheath blight ',
+
+          ],
+          uses: '(a) Preparation of spray Mixture: Take the required quantity of Hexaconazole 5% SC to dilute with a little water as per the spray plume required and mixed well again by string. (b) Plant Protection Equipment:- The most commonly used sprayer is Bucket pump sprayers, Stirrup pump sprayer, Rocking sprayer, Foot sprayers, Wheel barrow sprayer, Compression knapsack sprayer, Compression knapsack battery sprayer and ASPEE HTP power sprayer. COMPATIBILITY: Hexaconazole 5% SC is compatible with the commonly used insecticide and fungicides. ',
+
+          advantages: [
+            'Hexaconazole 5% SC is a systematic fungicide used for the control of powdery mildew of mango & Grapes and Sheath blight of Rice.'
+          ],
+          application:
+            'First spray at the appearance of disease symptoms. Repeat spray at an interval of 7 to 10 days.'
+        }
+      },
+     
+      {
+        id: 53,
+        name: 'Double Century',
+        img: doubleCentury,
+        activeIngredient: 'Difenoconazole 25% EC',
+        url: '#',
+        details: {
+          targetCrops: ['Grapes', "Chilli", "Paddy", "Apple"],
+          dose: '15-30 ml / 500 L',
+          pest: [
+            ' Powdery Mildew',
+            'Scab',
+            'Anthacnose',
+            'fruit rot',
+            'Sheath blight ',
+            'Dieback',
+
+
+          ],
+          uses: 'Measure out required quantity of the product and mix it well with a small quantity of water, Add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayers of high volume sprayers.',
+
+          advantages: [
+            'It is a systemic fungicide with excellent action against diseases such as Apple scab, leaf spot rust on Groundnut, Blight (alternaria burnsii) & Powdery mildew (Erysiphae polygoni) on Cumin, Purple blotch (Alternaria porri) on Onion, sheath blight in Paddy and die back and fruit rot in Chilli crop, Anthracnose, Powdery mildew in Grapes. It contains 250 gm Difenoconazole 1-{2-[4-(4- clorophenoxy) -2- chlorpheny]-4-methyl-1-3- dioxolan 2-y1methyl}-1,2,4 trazole. per kg of emulsifiable concentrate (EC) formulation.'
+          ],
+          application:
+            ''
+        }
+      },
+      {
+        id: 54,
+        name: 'Fullcure',
+        img: fullcure,
+        activeIngredient: 'Tebuconazole 25.9% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Chilli', 'Rice', 'Groundnut', 'Onion', 'Soybean'],
+          dose: '750 ml / 500 L',
+          pest: [
+
+            ' Powdery Mildew',
+            'Anthacnose',
+            'fruit rot',
+            'Purple Blotch',
+            'Tikka Leaf Spot',
+            'Blast',
+            'Seath Blight'
+
+          ],
+          uses: 'Tebuconazole 25.9% EC is applied as protective as well as curative fungicide with knapsack sprayer at early appearance of disease.',
+          advantages: [
+            'Tebuconazole 25.9% EC is a systemic fungicide containing 25.9% w/w Tebuconazole Technical as the active ingredient, balance auxiliaries, and inert material. Tebuconazole 25.9% EC is used as a foliar spray for the control of powdery mildew and fruit rot of chili, tikka, and rust of groundnut, blast, and sheath blight of rice.'
+          ],
+          application:
+            'Tebuconazole 25.9% EC is a systemic fungicide containing 25.9% w/w Tebuconazole Technical as the active ingredient, balance auxiliaries, and inert material. Tebuconazole 25.9% EC is used as a foliar spray for the control of powdery mildew and fruit rot of chili, tikka, and rust of groundnut, blast, and sheath blight of rice.'
+        }
+      },
+      {
+        id: 55,
+        name: 'Gillete',
+        img: gillette,
+        activeIngredient: 'Propiconazole 25% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice', 'Groundnut Tea', 'Banana', 'Wheat', 'Soybean', 'Coffee'],
+          dose: '500 ml / 750 L',
+
+          pest: ['Sheath blight', 'Blister blight', 'Stripe rust', 'Sigatoka leaf spot', 'Early leaf spot', 'Stem rust', 'Brown rust', 'Leaf rust', 'Karnal bunt'],
+
+          uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for the volume of application through knapsack sprayers or high-volume sprayers.',
+
+          advantages: [
+            'Propiconazole 25% EC is a Systemic Fungicide with excellent action against diseases such as Kamal bunt, rust of wheat; leaf spot, rust of groundnut, sheath blight of rice, blight of tea and rust of soyabean.'
+          ],
+          application:
+            'Propiconazole 25% EC is a Systemic Fungicide with excellent action against diseases such as Kamal bunt, rust of wheat; leaf spot, rust of groundnut, sheath blight of rice, blight of tea and rust of soyabean.'
+        }
+      },
+      {
+        id: 56,
+        name: 'Odomil',
+        img: odomil,
+        activeIngredient: 'Metalaxyl 8% + Mancozeb 64% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Grapes', 'Potato', 'Mustard', 'Black Pepper', 'Tobacco', 'Pearl Millet'],
+          dose: '2500 gm / 500 L',
+
+          pest: ['Late blight', 'Leaf Blotch', 'Downey Mildew', 'Damping Off', 'White rust', 'Alterneria blight', 'Phytophthora foot rot'],
+
+          uses: 'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation. Adjust the quantity of product in proportion to the water required to cover a hectare when high volume spray equipment such as knapsack sprayers, hand compression sprayer are used. It is also suitable for low volume application with motorized knapsack sprayer, mist blowers etc. with flood jet nozzle. Compatibility: At recommended rates, Metalaxyl 8% + Mancozeb 64% WP is compatible with most other commonly used insecticides and fungicides except lime sulphur. ',
+
+          advantages: [
+            'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation. Adjust the quantity of product in proportion to the water required to cover a hectare when high volume spray equipment such as knapsack sprayers, hand compression sprayer are used. It is also suitable for low volume application with motorized knapsack sprayer, mist blowers etc. with flood jet nozzle. Compatibility: At recommended rates, Metalaxyl 8% + Mancozeb 64% WP is compatible with most other commonly used insecticides and fungicides except lime sulphur. '
+          ],
+          application:
+            'Measure out the required quantity of the product and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation. Adjust the quantity of product in proportion to the water required to cover a hectare when high volume spray equipment such as knapsack sprayers, hand compression sprayer are used. It is also suitable for low volume application with motorized knapsack sprayer, mist blowers etc. with flood jet nozzle. Compatibility: At recommended rates, Metalaxyl 8% + Mancozeb 64% WP is compatible with most other commonly used insecticides and fungicides except lime sulphur. '
+        }
+      },
+      {
+        id: 57,
+        name: 'Oxyl',
+        img: oxyl,
+        activeIngredient: 'Metalaxyl 35% WS ',
+        url: '#',
+        details: {
+          targetCrops: ['Sunflower', 'Maize', 'Sorghum', 'Bajra', 'Mustard'],
+          dose: '600g / 100 kg seed',
+          pest: [
+
+            ' Downey Mildew',
+            'White rust',
+
+
+          ],
+          uses: 'For small lots, mix the required quantity of Metalaxyl 35% WS with 10-20 ml of water for each kg of seed to be treated. Add the slurry to the seed and rotate or stir the container (plastic drum or plastic bag) until the seeds are uniformly covered. Usually less than a minute. Metalaxyl 35 WS is recommended for application as slurry with continuously operating commercial seed dressing equipment.',
+          advantages: [
+            'Metalaxyl 35% WS is a highly active and systemic fungicide based on the active ingredient, metalaxyl. It contains 350 g. active ingredient per kg. of the product. It is used as a wet slurry seed dresser.'
+          ],
+          application:
+            '1. Fill the slurry tank with the required volume of water which will be 1.5 times the quantity of Metalaxyl 35 WS to be used. As a general rule, this will be about 750 ml and should not exceed 1000 ml /100 kg seed even when other products are used in combination treatments. 2. Add the specified quantity of Metalaxyl 35 WS on the water surface. 3. Wait until the product has completely disappeared into the water without stirring. 4. Stir the solution for about 10 minutes. The Slurry is ready for immediate application. Use the slurry to treat seeds as required in a seed treating drum. Dry the seeds in shade before sowing. No significant deleterious effects are noticed on seed viability and disease control in Metalaxyl 35 WS treated seeds for a period of 12 months, provided seeds are of high quality to begin with and are stored under prescribed cool dry conditions.'
+        }
+      },
+      {
+        id: 58,
+        name: 'Proton',
+        img: proton,
+        activeIngredient: 'Isoprothiolane 40% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'],
+          dose: '750 ml / 1000 L',
+          pest: [
+            'Blast',
+           
+          ],
+          uses: 'Use a knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery sprayer or ASPEE-HTP sprayer',
+          advantages: [
+            'Isoprothinolane 40 % EC (Fuji one 40 E) is a systemic fungicide approved for the cotrol of blast disease in rice crop.'
+          ],
+          application:
+            'Foliar Spray is recommended. First spray is recommended as soon as the disease begins to appear in the field. Three spray can be done per season depending on the disease severity. Mix the recommended dose in ¼ of the recommended quantity of water to the spray tank with agitation. Add remaining quantity of water with continuous agitation. Uniform coverage is necessary for effective control of disease'
+        }
+      },
+      {
+        id: 59,
+        name: 'Raka',
+        img: raka,
+        activeIngredient: 'Thiophanate Methyl 70% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato' , 'Apple' , 'Papaya' , 'Bottle Gourd'],
+          dose: '715 gm / 1000 L',
+          pest: [
+            'Powdery mildew',
+            'Scab',
+            'Anthracnose',
+            'Ring Rot',
+           
+          ],
+          uses: 'Knapsack sprayer, Foot sprayer, Compression Knapsack sprayer and ASPEE-HTP power sprayer, etc.',
+          advantages: [
+            'It is a systemic fungicide containing thiophanate methyl 70% active ingredient and other balance adjuvants.'
+          ],
+          application:
+            'It can be used as a preventive spray or at the appearance of disease symptoms (Curative spray). Repeat the spray at an interval of 10 to 15 days as per the disease severity.'
+        }
+      },
+      {
+        id: 60,
+        name: 'Rio',
+        img: rio,
+        activeIngredient: 'Validamycin 3% L ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice' ],
+          dose: '2 L / 750 L',
+          pest: [
+            'Sheath blight',
+      
+           
+          ],
+          uses: 'Validamycin 3% L is an antifungal preparation and antibiotic comound. It has low mammalian toxicity and hence a safe antibniotic. It is an effective antibiotic for the control of rice sheath blight only.',
+
+          advantages: [
+            'P.P. Equipment:- Knapsack sprayer, foot sprayer, compression knapsack sprayer, compression knapsack battery and ASPEE-HTP power sprayer etc. Validamycin is compatible with most common insecticides.'
+          ],
+          application:
+            'It is non-systemic antibiotic with fungi static action. It causes abnormal branching of the tips of the pathogen, followed by cessation of further development. Being curative in action, it helps to control diseases very fast.'
+        }
+      },
+      {
+        id: 61,
+        name: 'Tebxil',
+        img: tebxil,
+        activeIngredient: 'Tebuconazole 2% DS ',
+        url: '#',
+        details: {
+          targetCrops: ['Groundnut' , 'Wheat' ],
+          dose: '10 L / 10 Kg Seed',
+          pest: [
+            'Loose Smut',
+            'Flag Smut',
+            'Collar Rot',
+            'Root Rot',
+            'Stem rust',
+
+          ],
+          uses: 'Plant Protection Equipment: Manually/Mechanically operated seed dressing rotating drum. Seed Treatment: Any small dressing rotating drum by mixing quantity of seed can be readily treated by mixing in proper amount of fungicide and seed in closed container. Roll the seed until each grain is uniformally coated with fungicide.',
+
+          advantages: [
+            'Tebuconazole 2 % DS is a systemic fungicides containing tebuconazole active, ingredients, balance auxiliaries and inert material. On account of its systemic properties tebuconazole used as a seed dressing, controls pathogens adhering to the surface of seed as well as those developing inside the grain. It shows effectiveness against loose smut & flag smut of wheat and collor rot, root rot and stem rot of ground nut.'
+          ],
+          application:
+            'It is a Triazole based Fungicide which controls Seed Borne Diseases and acts as a Demethylation Inhibitor (DMI) of Fungal Sterol Biosynthesis'
+        }
+      },
+      {
+        id: 62,
+        name: 'Tuskon',
+        img: tuskon,
+        activeIngredient: 'Propiconazole 10.7% + Tricyclazole 34.2% SE ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '500 gm / 500 L',
+          pest: [
+            'Sheath blight',
+            'Blast',
+            
+
+          ],
+          uses: 'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.',
+
+          advantages: [
+            'When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast.'
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and tricyclazole permits protective and curative use, best result are achieved when the product is applied with knapsack spray pump when the disease is active but still in the early stage of development. Repeat the spray depending on the disease intensity.'
+        }
+      },
+      {
+        id: 63,
+        name: 'Utsav-20',
+        img: utsav20,
+        activeIngredient: 'Azoxystrobin 11.5% + Mancozeb 30% WP ',
+        url: '#',
+        details: {
+          targetCrops: ['Tomato'  ],
+          dose: '750-875 gm / 500 L',
+          pest: [
+            'Late blight',
+            'Barly Blight',
+            
+
+          ],
+          uses: '1. Spray Equipment: Knapsack sprayer or power operate sprayer machine may be used. 2. Limitations for use: It should not be used in crops where it has not been recommended. It should not be used in combination with any insecticides or plant growth regulators.',
+
+          advantages: [
+            'The fungicidal combination is used for controlling disease complex in Tomatoes which contains Azoxystrobin 11.5% and Mancozeb 30% and remaining adjuvants.'
+          ],
+          application:
+            'Apply the fungicide when the first disease incidence is observed and repeat application as necessary.'
+        }
+      },
+      {
+        id: 64,
+        name: 'Vazood',
+        img: vazood,
+        activeIngredient: 'Tebuconazole 10% + Sulphur 65% WG ',
+        url: '#',
+        details: {
+          targetCrops: ['Chilli' , 'Soybean'  ],
+          dose: '1.25 gm / 500 L',
+          pest: [
+            'Powdery Mildew' , 'fruit rot' , 'Leaf Spot' , 'Pod blight'
+            
+          ],
+          uses: 'Take the required quantity with a small volume of water and stir well using a rod or stick to form a uniform suspension then, add the remaining quantity of water as spray volume required and mix well again by stirring.',
+
+          advantages: [
+            'Tebuconazole 10% + Sulphur 65% WG (water dispersible granule) is a effective fungicide with protective, creative and eradicative action. It controls powdery mildew, fruit rot diseases of Chilli and leaf spot, pod blight disease of Soybean. '
+          ],
+          application:
+            'Tebuconazole 10% + Sulphur 65% WG is applied with knapsack sprayer at early appearance of disease.'
+        }
+      },
+      {
+        id: 66,
+        name: 'Viberant',
+        img: viberant,
+        activeIngredient: 'Thifluzamide 24% SC ',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'  ],
+          dose: '375 ml / 500 L',
+          pest: [
+            'Sheath blight' , 'Rhizoctonia'
+            
+          ],
+          uses: 'Measure required quantity of the product and mix it well with a small quantity of water. Then add the remaining quantity of water as specified with through agitation for high volume of application through knapsack sprayer of high volume sprays.',
+
+          advantages: [
+            'Thifluzamide 24% SC is a systemic fungicide which is used for controlling sheath blight disease in Rice.'
+          ],
+          application:
+            'Foliar spray on appearance of disease symptoms.'
+        }
+      },
+      {
+        id: 67,
+        name: 'Vinasham',
+        img: vinasham,
+        activeIngredient: 'Propiconazole 13.9% + Difenconazole 13.9% EC ',
+        url: '#',
+        details: {
+          targetCrops: ['Paddy'  ],
+          dose: '1 ml / Liter in 500 L',
+          pest: [
+            'Sheath blight' , 'Dirty panicle'
+            
+          ],
+          uses: 'When used as per the recommendations given below, Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC protects the paddy crop from fungal diseases like sheath blight and dirty panicle.',
+
+          advantages: [
+            'Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC is a mixture of triazole fungicides recommended for the control of sheath blight and dirty panicle disease in paddy. This is an emulsifiable concentrate formulation containing 27.8% active ingredients, equivalent to 30% w/v or 300 g/L of formulation.  '
+          ],
+          application:
+            'Although the biological mode of action of propiconazole and difenoconazole permits protective, curative or eradicative use, best results are achieved when fungicide is applied when the disease is active but still in the early stage of development. '
+        }
+      },
+
     ]
+
   },
+
+
+  // herbicides
   {
     id: 3,
-    title: 'Herbicides'
-
-    // image: 'herbicides.png'
+    title: 'Herbicides',
+    // image: 'insecticides.png'
+    productName: [
+      {
+        id: 68,
+        name: 'Melisa',
+        img: melisa,
+        activeIngredient: 'Tembotrione 34.4% SC',
+        url: '#',
+        details: {
+          targetCrops: ['Maize'],
+          dose: '115 ml / Acre',
+          pest: ['Enchinochloa sp', 'Trianthema portulacastrum', 'Bracharia sp'],
+          uses: 'Tembotrione 34.4% w/w SC is a post emergence recommended for use alongwith surfactant for control of broadleaf and grassy weeds in Maize. Tembotrione 34.4% w/w SC formulation is recommended for use with surfactant @ 1000ml/ha.',
+          advantages: [
+            'Tembotrione 34.4% w/w SC contains 344 g of Tembotrione active ingredient per kg of formulation, which is equal to 420 g of Tembotrione active ingredient per litre of formulation.',
+          ],
+          application: 'Maize: Tembotrione 34.4% w/w SC can be applied with knapsack sprayer fitted with flat fan nozzle at 3-5 leaf stage of weeds.'
+        }
+      },
+      {
+        id: 69,
+        name: 'All Grip',
+        img: allgrip,
+        activeIngredient: 'Metsulfuron Methyl 20% WP',
+        url: '#',
+        details: {
+          targetCrops: ['Rice', 'Sugarcane', 'Wheat'],
+          dose: '20 ml/500 L',
+          pest: ['Chenopodium album', 'Amaranthus viridis', 'Parthenium hysterophorus','Cyperus Rotundus','Anagallis arvensis','C. esculantum','Lathyrus aphaca','Melilotus indica'],
+          uses: 'Metsulfuron methyl 20% WP is used for the control of predominantly broad leaf weeds of wheat, transplanted rice, sugarcane',
+          advantages: [
+            'Metsulfuron Methyl is a post emergence herbicide beloying to chemical family of sulfonyl urea herbicides. Metsulfuron Methyl predominantly controls broad leaf weeds of wheat like Chenopodium album, Melilotus indiea, Melitlous alba, Lathymus aphaca, Anagallis arvensis, Vicia sativa, vicia hirsurn, Circium arvense with a wide selectivity and broad spectrum activity.'
+          ],
+          application:
+            'Wheat: 25-35 days after sowing (1 application).'
+        }
+      },
+      {
+        id: 70,
+        name: 'Attack',
+        img: attack,  
+        activeIngredient: 'Metribuzin 70% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Sugarcane', 'Tomato', 'Potato', 'Wheat', 'Soybean'],
+          dose: '750 gm/1000 L',
+          pest: [
+            'Chenopodium album',
+            'Convolvulus arvensis',
+            'Amaranthus viridis',
+            'Cyperus Rotundus',
+            'Anagallis arvensis',
+            'C. iria',
+            'Cynadon ductylon',
+            'Phaloris minor'
+          ],
+          uses: 'Preparation of spray solution: First add a little quantity of water to the wettable powder and prepare a thin paste. Add this solution slowly into the required quantity of water and stir well. Operators are always recommended to give the spray a thorough stirring when resuming work after breaks. Plant Protection Equipments: Knapsack or foot-operated sprayers fitted with flat fan or flood jet type of nozzle. To ensure better effectiveness, follow the undermentioned guidelines. (1) For pre-emergence application: (a) Ensure that the field does not have clods and stubbles. (b) After spraying metribuzin 70 WP, do not disturb the soil. (2) For pre and post-emergence application: (a) Avoid drift of spray.',
+          advantages: [
+            'Metribuzin 70 WP should be sprayed with flood jet/flat fan nozzles without overlapping spray swaths. To keep uniform swath width, it is advisable to keep the nozzle height constant from ground level, i.e., 48-50 cm.'
+          ],
+          application: 
+            'Soybean: Pre-emergence- 1-2 days after sowing. Wheat: post-emergence- 35 days after sowing. Sugarcane: Pre-emergence- 3-5 days after planting or Post-emergence- 25-30 days after planting. Potato: Pre-emergence- 3-4 days after planting or post-emergence- between emergence and the time when the first potato plant has reached a height of 5 cm. Tomato: Pre-planting- a week before transplanting or post-planting- 15 days after transplanting.'
+        }
+      },
+      
+      {
+        id: 71,
+        name: 'Beamar-58',
+        img: beamar,  
+        activeIngredient: '2,4-D Amine Salt 58% SL',
+        url: '#', 
+        details: {
+          targetCrops: [
+            'Sugarcane', 
+            'Maize', 
+            'Potato', 
+            'Wheat', 
+            'Sorghum', 
+            'Aquatic weeds'
+          ],
+          dose: '4 L/500 L',
+          pest: [
+            'Chenopodium album',
+            'Convolvulus arvensis',
+            'Digera arvensis',
+            'Anagallis arvensis',
+            'Euphorbia hirta',
+            'Cyperus rotundus',
+            'Cyperus iria'
+          ],
+          uses: `Plant Protection Equipment: Knapsack sprayer, foot sprayer, compression battery sprayer & ASPEE – HTP power sprayer fitted with flat fan or flood jet nozzle. 
+          Limitation & Caution for use: Do not spray the crop in the neighborhood of cotton, tobacco, chilies, tomato & grapes as they are very susceptible. Do not use it in those situations where there is a possibility of harming bees. Avoid spray drift. Keep livestock away from the spray area for two weeks. Do not store near seeds, fertilizer & insecticide. Do not inhale or mix with bare hands.`,
+          advantages: [
+            `It is recommended to control Cyperus iria, Striga spp, Trianthema spp., Tridax procumbens, Digera arvensis of sorghum, Trianthema monogyna, Amaranthus spp., etc. of maize, Chenopodium album, Asphodelus tenuifolius, Fumaria spp, Melilotus alba, Spergula arvensis of wheat, Eichhornia crassipes of aquatic weeds, and other weeds of Potato and non-crop area.`
+          ],
+          application: 
+            `Sorghum: Post-emergence, apply when sorghum is 10 – 30 cm tall; 
+            Maize: Pre-emergence, 2-3 days after the sowing of crop;
+            Wheat: Post-emergence, 30 – 35 days after sowing of crop; 
+            Aquatic weeds: When weeds are young & actively growing; 
+            Potato: Pre-emergence of crop/weeds;
+            Non-crop Area: Spraying should be made in fallow land;
+            Mode of application: Mostly blanket application.`
+        }
+      },
+      {
+        id: 72,
+        name: 'Combitec',
+        img: combitec, 
+        activeIngredient: 'Clodinafop Propagyl 9% + Metribuzin 20% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '600 gm/300 L',
+          pest: [
+            'Phalaris minor',
+            'Medicago spp',
+            'Chenopodium album',
+            'Cronopus didymus',
+            'Vicia sativa',
+            'Rumex spp',
+            'Dinebra Vetroflexa'
+          ],
+          uses: `Preparation of spray solution: First fill 1/3 or ½ of the knapsack sprayer tank with clean water and put the water-soluble pouch of herbicide. Gently stir the solution until the whole pouch and its contents fully dissolve in water. Now, add the rest of the water to the sprayer tank to make up the volume for spraying.
+          Plant Protection Equipment: Knapsack or foot-operated sprayers fitted with flat fan or flood jet type of nozzle.
+          Limitation for use: It should not be used in crops where it has not been recommended. It should never be used in combination with any insecticides, urea, or plant growth regulators.`,
+          advantages: [
+            `It is a selective and post-emergence herbicide used for weed control in wheat crops, containing Clodinafop Propagyl (9% a.i.), Metribuzin (20% a.i.), and remaining adjuvant.`
+          ],
+          application: 
+            `This herbicide is recommended for post-emergence application, i.e., 35 days after sowing of the wheat crop when weeds are at the 3-4 leaves stage.`
+        }
+      },
+      {
+        id: 73, 
+        name: 'Fadal',
+        img: fadal, 
+        activeIngredient: 'Quizalofop Ethyl 5% EC',
+        url: '#', 
+        details: {
+          targetCrops: ['Cotton', 'Groundnut', 'Onion', 'Soybean', 'Black gram'],
+          dose: '1000 ml/500 L',
+          pest: [
+            'Goose grass',
+            'Wild finger',
+            'Crab grass',
+            'Barnyard grass',
+            'Crowfoot grass'
+          ],
+          uses: `PREPARATION OF SPRAY EMULSION: Add slowly the required quantity of herbicide to water and stir well with a rod or stick till it is properly emulsified.
+          SPRAYING INSTRUCTION:
+          1. Shake the bottle before use.
+          2. Spray uniformly.
+          3. Do not spray against wind direction.
+          4. Wash the sprayer thoroughly with water before and after use.`,
+          advantages: [
+            `Quizalofop ethyl 5% EC, based on Ethyl 2-{4-(6-chloroquinoxalin-2-yloxy) phenoxy} propionate, is a selective post-emergence herbicide for the effective control of Grassy weeds in Soybean, Cotton, Groundnut, Black gram, and Onion crops.`
+          ],
+          application: 
+            `Quizalofop ethyl 5% EC is a selective post-emergence herbicide, recommended for effective control of Grassy weeds in Soybean, Cotton, Groundnut, Black gram, and Onion crops.`
+        }
+      },
+      {
+        id: 74,
+        name: 'Finish',
+        img: finish, 
+        activeIngredient: 'Sulfosulfuron 75% WG',
+        url: '#',
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '33 gm/250 L',
+          pest: [
+            'Chenopodium album',
+            'Phaloris minor',
+            'Mellilotus alba'
+          ],
+          uses: `Use the Sachet contents (13.5 gm) in one acre for effective control of Phalaris Minor and other weeds listed above.
+          Mixing:
+          1. Dissolve the entire contents of Sulfosulfuron 75% WG Sachet (13.5 gm) in Six litres of water and mix thoroughly.
+          2. Then add the entire content of cationic surfactant (500 ml) to the above solution and mix thoroughly with a stick.
+          3. Dilute the solution with 100 liters of water to uniformly spray one acre. Sorghum/Maize crops should not be taken as succeeding crops after Wheat crops.`,
+          advantages: [
+            `It is a selective herbicide for early post-emergence control of Phalaris minor and common broad-leaved weeds like Chenopodium spp; and Melilotus alba in wheat.`
+          ],
+          application: 
+            `In wheat crop, apply 30-35 days after sowing when Phalaris minor plants are at 2-4 leaf stage.`
+        }
+      },
+      {
+        id: 75, 
+        name: 'Fadal Super',
+        img: fadalsuper, 
+        activeIngredient: 'Quizalofop Ethyl 10% EC',
+        url: '#', 
+        details: {
+          targetCrops: ['Soybean'],
+          dose: '450 ml/500 L',
+          pest: [
+            'Eragrostispilosa',
+            'Digitariamarginata',
+            'Echinocloa spp',
+            'E. viscosa'
+          ],
+          uses: `Spray with the help of knapsack sprayer using a flat fan nozzle on soybean at 15 to 20 days after sowing.`,
+          advantages: [
+            `Quizalofop ethyl 10% EC is a selective post-emergence herbicide for the effective control of grassy weeds in soybean crops.`
+          ],
+          application: 
+            `Shake the bottle before use, measure out the requisite quantity of the herbicide, and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for total coverage of the crop with a suitable sprayer. Apply on soybean 15 to 20 days after sowing.`
+        }
+      },
+      {
+        id: 76, 
+        name: 'Goldmix',
+        img: goldmix, 
+        activeIngredient: 'Metsulfuron Methyl 10% + Chlorimuron Ethyl 10% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Direct sown Rice', 'Transplanted Rice'],
+          dose: '20 gm/300 L',
+          pest: [
+            'Cyperus difformis',
+            'Monochoria vaginalis',
+            'Eclipta alba',
+            'C. iria'
+          ],
+          uses: `Recommendations for use as a foliar spray using high-volume spraying equipment, such as Knapsack sprayer, rocking sprayer, foot sprayer, etc. Apply herbicide with a flat fan or flood jet nozzle. Add non-ionic surfactant @ 2 ml/L of water to ensure desired efficacy of the product.`,
+          advantages: [
+            `It is a broad-spectrum herbicide effective for the control of different broad-leaf weeds and sedges in transplanted and direct seeded rice (under puddled conditions).`
+          ],
+          application: 
+            `Transplanted Rice (pre-emergence application): 3 days after transplanting. Transplanted Rice (post-emergence application): 21-25 days after transplanting. Direct sown Rice (puddled condition): 20 days after sowing.`
+        }
+      },
+      {
+        id: 77, 
+        name: 'Jaikaal',
+        img: jaikaal,
+        activeIngredient: '2,4-D Ethyl Ester 38% EC',
+        url: '#', 
+        details: {
+          targetCrops: ['Sugarcane', 'Paddy', 'Maize', 'Wheat', 'Sorghum', 'Aquatic weeds'],
+          dose: '2.94 L/425 L',
+          pest: [
+            'Chenopodium album',
+            'Amaranthus sp',
+            'Digitaria sp',
+            'Cyperus iria',
+            'Eichhornia crassipes',
+            'Echinochloa colonum'
+          ],
+          uses: `It is recommended to control Cyperus iria, Striga sp, Trianthema sp, Tridax procumbens, Digitaria arvensis of sorghum, Trianthema monogyna, Amaranthus sp, etc. of maize; Chenopodium album, Asphodelus tenufolius, Fumaria diffusa, Melilotus alba, Spergula arvensis of wheat; Eichhornia crassipes of aquatic weeds, and other weeds of sugarcane and paddy crops.`,
+          advantages: [
+            `It is a herbicide containing 38% active ingredient, 2,4-D Ethyl Ester by mass and the balance as adjuvants.`
+          ],
+          application: 
+            `It is a selective systemic herbicide that acts as a growth inhibitor. The salts are readily absorbed by the roots, while esters are readily absorbed by the foliage. Translocation occurs, with accumulation principally at the meristematic regions of shoots and roots.`
+        }
+      },
+      {
+        id: 78,
+        name: 'Karona',
+        img: karona,
+        activeIngredient: 'Pretilachlor 50% EC',
+        url: '#',
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '1000 ml/500 L',
+          pest: [
+            'Cyperus difformis',
+            'Eclipta alba',
+            'C. iria',
+            'E. crusigalli',
+            'Echinocloa colonum'
+          ],
+          uses: `Measure out the required amount of the product and mix it well with a small quantity of water. Agitate thoroughly for high-volume application through a knapsack sprayer using a flat fan or flood jet nozzle.`,
+          advantages: [
+            `Efficient for use in high-volume application through knapsack sprayers with flat fan or flood jet nozzles.`
+          ],
+          application: 
+            `Apply within 5 days after transplanting.`
+        }
+      },
+      {
+        id: 79,
+        name: 'Karona Super',
+        img: karonasuper,  
+        activeIngredient: 'Pretilachlor 37% EW',
+        url: '#', 
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '1500 ml / 500 L',
+          pest: [
+            'Cyperus difformis',
+            'Cyperus iria',
+            'Echinochloa colonum',
+            'E. crusigalli'
+          ],
+          uses: `Apply as a pre-emergence spray between 0-5 days after transplanting using a knapsack sprayer fitted with a flat fan nozzle. Avoid flooding the field up to 24 hours after application.`,
+          advantages: [
+            `Pretilachlor 37% EW is a selective pre-emergence herbicide recommended for the control of grasses, sedges, and some broad leaf weeds in transplanted rice. It contains 37% of the active ingredient Pretilachlor, which is equal to 400 g per litre of the formulation.`
+          ],
+          application: 
+            `Apply within 5 days after transplanting to control grasses, sedges, and some broad leaf weeds.`
+        }
+      },
+      {
+        id: 80, 
+        name: 'Nexa',
+        img: nexa,  
+        activeIngredient: 'Chlorimuron Ethyl 25% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Rice', 'Soybean'],
+          dose: '24 gm/500 L',
+          pest: [
+            'Chenopodium album',
+            'Echinocloa crusigalli',
+            'Parthenium hysterophorus',
+            'Cyperus Rotundus',
+            'C. iria'
+          ],
+          uses: `Use of Iso-octyl Phenoxyl-Polo xethanol 12.5% (Non-ionic surfactant) is approved @ 0.2% with Chlorimuron Ethyl 25% WP in soybean crop only. Its use has not been approved in rice crop.`,
+          advantages: [
+            `The use of Iso-octyl Phenoxyl-Polo xethanol 12.5% (Non-ionic surfactant) is approved @ 0.2% with Chlorimuron Ethyl 25% WP in soybean crop only. Its use has not been approved in rice crop.`
+          ],
+          application: `Soybean: 3-10 days after sowing (once). Rice: 5-10 days after transplanting (once).`
+        }
+      },
+      {
+        id: 81, 
+        name: 'O-Cloud',
+        img: ocloud, 
+        activeIngredient: 'Clodinafop – Propargyl 15% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '400 gm/400 L',
+          pest: ['Phaloris minor'],
+          uses: `It is a post-emergence herbicide recommended for controlling grass weeds (Phalaris minor) in wheat.`,
+          advantages: [
+            `This post-emergence herbicide controls most important grass weeds in wheat and contains 150 gms of Clodinafop-propargyl ester per kilogram of wettable powder formulation.`
+          ],
+          application: `Recommended as a post-emergence herbicide, i.e., 30-35 days after sowing of wheat or when grassy weeds are in the 3-4 leaf stage. Use Flat Fan / Flood Jet nozzle and proper water volume (at least 375-400L of water/hectare). Ensure weeds are in the proper stage (3-4 leaf stages).`
+        }
+      },
+      {
+        id: 82, 
+        name: 'Omega',
+        img: omega,  
+        activeIngredient: 'Imazethapyr 10% SL',
+        url: '#', 
+        details: {
+          targetCrops: ['Groundnut', 'Soybean'],
+          dose: '1 L / 500 L',
+          pest: ['Cyperus difformis', 'Euphorbia hirta', 'E. crusigalli', 'Echinocloa colonum'],
+          uses: `Mix thoroughly the recommended quantity of Imazethapyr 10% SL with adequate stirring using a rod or stick. Add the required quantity of water. Use high volume sprays like knapsack or foot sprayers fitted with a flat fan nozzle for application.`,
+          advantages: [
+            `Imazethapyr 10% SL contains 10 gms a.i/kg of product. It is recommended for controlling annual grasses, broad leaf weeds, and sedges in Soybean and Groundnut crops.`
+          ],
+          application: `Apply early post-emergence when weeds are in the 1-2 leaf stage or 7-14 days after sowing. Ensure thorough land preparation and uniform spraying without overlapping. Do not spray against the wind direction. Clean the sprayer thoroughly before and after use.`
+        }
+      },
+      {
+        id: 83, 
+        name: 'Omini Gold',
+        img: ominigold,  
+        activeIngredient: 'Bispyribac Sodium 10% SC',
+        url: '#',
+        details: {
+          targetCrops: ['Rice'],
+          dose: '200 ml / 300 L',
+          pest: ['Cyperus difformis', 'Eclipta alba', 'C. iria', 'E. crusigalli', 'Echinocloa colonum'],
+          uses: `Shake the bottle before use. Measure out the requisite quantity of herbicide and mix it well with a small quantity of water. Add the remaining water with thorough agitation. Before application, drain the field and re-flood within one day. Maintain water level for at least 10 days post-application. Spray uniformly in the direction of the wind ensuring thorough coverage of the weeds.`,
+          advantages: [
+            `Bispyribac sodium 10% SC is a post-emergence herbicide effective against grasses, sedges, and broad-leaf weeds in rice crops.`
+          ],
+          application: `Nursery/Transplanted: Apply 10-12 days after sowing for nursery rice and 10-14 days after planting for transplanted rice, when most weeds are 3-4 leaves stage. Direct Seed Rice: Apply 15-25 days after sowing. Use a high volume sprayer, such as a knapsack sprayer with a flat fan or flood jet nozzle.`
+        }
+      },
+      {
+        id: 84, 
+        name: 'Openda',
+        img: openda,  
+        activeIngredient: 'Pendimethalin 30% EC',
+        url: '#', 
+        details: {
+          targetCrops: ['Cotton', 'Rice', 'Wheat', 'Soybean'],
+          dose: '3.5 liters / 600 L',
+          pest: ['Phalaris minor', 'Cyperus difformis', 'Euphorbia hirta', 'Echinochloa spp'],
+          uses: `Plant Protection Equipments in use: Knapsack sprayer, foot sprayer, fitted with flat fan/flood jet nozzle.`,
+          advantages: [
+            `It is an emulsifiable pre-emergence selective herbicide containing Pendimethalin 30% w/w and balanced other relevant ingredients.`
+          ],
+          application: `Wheat: Pre-emergence of weeds, immediately after sowing. Cotton: Pre-plant incorporation up to 7 days before planting or pre-emergence within 2 days of sowing. Soybean: Pre-emergence within 24 hours of planting or pre-plant incorporation in top 2-5 cm of soil with suitable farm equipment. Rice: (transplanted or direct sowing) Pre-emergence of weeds. Ensure uniform level of the puddled field. Maintain 5-10 cm of standing water for at least one week after application. Pigeon Pea: Pre-emergence to weeds, 0-2 days after planting/sowing. Chilies: Pre-emergence to weeds, 0-4 days after transplanting. Onion: Pre-emergence to weeds, after transplanting/sowing.`
+        }
+      },
+      {
+        id: 85, 
+        name: 'Openda Ultra',
+        img: opendaultra, 
+        activeIngredient: 'Pendimethalin 30% + Imazethapyr 2% EC',
+        url: '#',
+        details: {
+          targetCrops: ['Soybean'],
+          dose: '2.5-3 L / ha',
+          pest: ['Echinocloa crusigalli', 'Amaranthus viridis', 'Digeria arvensis', 'Portulaca oleracea', 'Benghalensis', 'Commelina'],
+          uses: `Preparation of spray solution: Take the measured quantity of Pendimethalin 30% + Imazethapyr 2% EC and add it to a small quantity of water. Mix thoroughly and then add the remaining quantity of water while stirring vigorously. Do not spray against the wind direction. Ensure thorough land preparation. Spray uniformly without overlapping. Clear the sprayer thoroughly before and after use.`,
+          advantages: [
+            `Pendimethalin 30% + Imazethapyr 2% EC is a combination product containing 30% Pendimethalin and 2% Imazethapyr as active ingredients. It is a selective herbicide that controls susceptible annual grasses, sedges, and broad-leaf weeds as they germinate. It is recommended for use in Soybean.`
+          ],
+          application: `Incorporate the herbicide into the soil before sowing the crop.`
+        }
+      },
+      {
+        id: 86,
+        name: 'Oxyherb',
+        img: oxyherb,  
+        activeIngredient: 'Oxyfluorfen 23.5% EC',
+        url: '#', 
+        details: {
+          targetCrops: ['Rice', 'Groundnut', 'Tea', 'Potato', 'Onion', 'Mentha'],
+          dose: '600 ml / 750 L',
+          pest: ['Chenopodium album', 'Digeteria sp', 'Cyperus iria', 'Echinochloa spp'],
+          uses: `For conventional spray ( High Volume spray). On field crop quantity of water is recommended above. The most commonly used sprayer are Bucket pump sprayer, Stirrup pump sprayer, Knapscak sprayer, wheel barrow sprayer, compression knapscak sprayer etc. Use the sprayer with flood jet or flat fan nozzle. Keep the nozzle at fixed height from the ground level. Spray the area in straight line at uniform speed.`,
+          advantages: [
+            `Oxyfluorfen 23.5% EC [22.8% EC (w/v)] is a selective herbicide with a residual activity, containing 23.5% oxyfluorfen. It effectively controls important weeds in crops such as Rice, Tea, Potato, Onion, Groundnut, and Mentha.`
+          ],
+          application: `Apply pre-emergence within 3-4 days of transplanting/plantation.`
+        }
+      },
+      {
+        id: 87, 
+        name: 'Ozin',
+        img: ozin,  
+        activeIngredient: 'Atrazine 50% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Sugarcane', 'Maize'],
+          dose: '1 kg / 500 L',
+          pest: ['Digitariamarginata', 'Echinocloa spp', 'Amaranthus viridis', 'Boerhaavia diffusa', 'Euphorbia spp'],
+          uses: `Use with plant protection equipment such as knapsack sprayers, compression knapsack sprayers, or compression knapsack battery sprayers fitted with a flat fan or flood jet nozzle. Caution: Use with care in areas with high groundwater levels.`,
+          advantages: [
+            `Recommended for controlling a wide range of weeds, including Trianthema monogyna, Digitaria arvensis, Echinocloa spp., Flusin spp., Xanthium strumarium, Brachiaria sp., Amaranthus viridies, Clematis viseosa, Polygonum sp. in maize and bajra; Portulaca oleracea, Digitaria sp., Boerhavia diffusa, Euphorbia spp., Tribulus terrestris in sugarcane; Spergula arvensis, Digitaria spp., Chenopodium album in potato crops.`
+          ],
+          application: `For maize: Apply immediately after transplanting (pre-emergence). For sugarcane: Apply pre-emergence on weed-free soil.`
+        }
+      },
+      {
+        id: 88, 
+        name: 'Quit',
+        img: quit,  
+        activeIngredient: 'Paraquat Dichloride 24% SL',
+        url: '#', 
+        details: {
+          targetCrops: ['Cotton', 'Grapes', 'Rice', 'Tea', 'Potato', 'Wheat', 'Aquatic weeds', 'Rubber'],
+          dose: '4 L / 500 L',
+          pest: ['Chenopodium album', 'Imparata cylindrica', 'Digitaria arvensis', 'Anagallis arvensis', 'Cynodon dactylon', 'C. rotundus', 'Cyperus iria'],
+          uses: `Apply using knapsack sprayers, foot sprayers, compression knapsack battery sprayers, or ASPEE-HTP power sprayers fitted with flat fan or flood jet nozzles.`,
+          advantages: [
+            `Non-selective, contact herbicide containing 24% Paraquat Dichloride as the active ingredient, designed for a wide range of target crops and weeds.`
+          ],
+          application: `Non-selective contact herbicide absorbed by foliage with some translocation in the xylem. Apply according to the needs of the crop and weed conditions.`
+        }
+      },
+      {
+        id: 89, 
+        name: 'Solid-80',
+        img: solid80,  
+        activeIngredient: '2,4-D Sodium Salt 80% WP',
+        url: '#',
+        details: {
+          targetCrops: ['Wheat', 'Maize', 'Citrus', 'Grapes'],
+          dose: 'As per recommended dosage based on crop and weed type',
+          pest: ['Broad leaved weeds', 'Sedges', 'Germinating grass seedlings'],
+          uses: `Use plant protection equipment such as knapsack sprayers or compression knapsack battery sprayers fitted with flat fan or flood jet nozzles.`,
+          advantages: [
+            `Contains 80% active ingredient 2,4-Dichlorophenoxyacetic acid in soluble powder form with sodium salt. It is a selective herbicide effective against broad-leaved weeds, sedges, and germinating grass seedlings in various crops.`
+          ],
+          application: `Maize & Bajra: Pre-emergence, 1-2 days after sowing. Sorghum: Post-emergence when the crop reaches 10-30 cm height. Rice: If needed, apply 40 days after transplanting. Wheat: Post-emergence, 35 days after sowing.`
+        }
+      },
+      {
+        id: 90, 
+        name: 'Saath-Saath',
+        img: saathsaath,  
+        activeIngredient: 'Pyrazosulfuron ethyl 10% WP',
+        url: '#', 
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '0.15 kg / 500 L',
+          pest: ['Cyperus difformis', 'Monochoria vaginalis', 'Cyperus iria', 'Ludwigia parviflora', 'Fimbristylis miliacea'],
+          uses: `Mix the pesticide with water at the recommended dosage and spray using a high-volume sprayer, such as a knapsack sprayer fitted with a herbicide nozzle. Use 500 to 600 liters of water per hectare. Ensure thorough mixing of the pesticide suspension with a wooden log before spraying.`,
+          advantages: [
+            `Pyrazosulfuron ethyl is a selective, systemic, and pre-emergence herbicide effective against various weeds in transplanted rice.`
+          ],
+          application: `Apply the spray before weed emergence, 3-7 days after transplanting rice.`
+        }
+      },
+     
+    ]
   },
   // {
   //   id: 4,
@@ -1409,7 +2392,7 @@ export const allProducts = [
   //               ],
   //               application: "Mix 2-4 Kg of along with other BioProducts in 30-40 Kg soil or fully decomposed farm yard manure and broadcasting it over one acre of land at the time of last ploughing. In plantation crops, incorporate this mixture in the feeder zone and irrigate the field immediately after spreading.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -1426,9 +2409,9 @@ export const allProducts = [
   //                   "Improves Soil health, Soil fertility status, and Soil Ph. Minimizes recommended chemical fertilizers doses and economic in rainfed areas. Enhances product quality (Aroma, Color, Shining, Taste, Size, Shelf life, etc.) and yield. Crop plants become hardy, enhance flowering and reduce flower & fruit droppings."
   //               ],
   //               application: "It can be broadcasted in the field at the time of last plowing or within 30-45 days of sowing/transplanting in standing crops. For uniform broadcasting, it can be mixed with 50-80 kg of well-rotten farm yard manure/compost/ vermicompost or soil of the same field. There should be sufficient moisture in the field at the time of application or give light irrigation after application.",
-    
+
   //           },
-    
+
   //       }
   //   ]
   // },
@@ -1453,7 +2436,7 @@ export const allProducts = [
   //               ],
   //               application: "Plants Should be uniformly drenched.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -1470,9 +2453,9 @@ export const allProducts = [
   //                   "Thus Borohit Plus help in the free transport of calcium coupled with boron and performs even in calcareous soil and hick alkaline soil since it is a chelated mix. Boron is essential to maintain the structural integrity of plant membranes along with calcium and is involved in nucleic acid metabolism. Production of vegetable crops is adversely affected much more than vegetative growth with a low supply of available boron."
   //               ],
   //               application: "Make a solution of Borohit Plus 250-300 gm per acre in 125-150 liter water. Use in 2nd spray 7-10 day Interval. Apply In a basal dose of 500 gm per acre with mixed fertilizer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,
@@ -1787,7 +2770,7 @@ export const allProducts = [
   //               ],
   //               application: "Gibberellic Acid 0.001% L is to be diluted at the rate of 1 ml in one liter of water and sprayed uniformly on the foliage to cover all parts of the plants. Gibberellic Acid 0.001% L shall be sprayed during the cool hours of the day. Repeat the application if there is rain within six hours of spraying. Shake the bottle well before using the Product.",
   //           },
-    
+
   //       },
   //       {
   //           id: 2,
@@ -1804,9 +2787,9 @@ export const allProducts = [
   //                   "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer."
   //               ],
   //               application: "APPLICATION EQUIPMENT: 1) High-volume knap sack sprayer. 2) Low-volume motorized knapsack sprayer.",
-    
+
   //           },
-    
+
   //       },
   //       {
   //           id: 3,
