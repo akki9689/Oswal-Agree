@@ -70,6 +70,25 @@ import vazood from '../../images/Products/Fungicides/Vazood.png'
 import viberant from '../../images/Products/Fungicides/Viberant.png'
 import vinasham from '../../images/Products/Fungicides/VINASHAM.png'
 
+                 // Herbicides
+import melisa from '../../images/Products/Herbicides/Melisa.png'
+import allgrip from '../../images/Products/Herbicides/All-Grip.png'
+import attack from '../../images/Products/Herbicides/Attack.png'
+import beamar from '../../images/Products/Herbicides/Beamar.png'
+import combitec from '../../images/Products/Herbicides/Combitec.png'
+import fadal from '../../images/Products/Herbicides/Fadal.png'
+import fadalsuper from '../../images/Products/Herbicides/Fadal-Super.png'
+import goldmix from '../../images/Products/Herbicides/Goldmix.png'
+import jaikaal from '../../images/Products/Herbicides/jaikaal.png'
+import karona from '../../images/Products/Herbicides/Karona.png'
+import karonasuper from '../../images/Products/Herbicides/Karona-Super.png'
+import nexa from '../../images/Products/Herbicides/Nexa.png'
+import ocloud from '../../images/Products/Herbicides/O-Cloud.png'
+import omega from '../../images/Products/Herbicides/OMEGA-.png'
+import omini from '../../images/Products/Herbicides/OMEGA-.png'
+
+
+
 // ------------------Fertilizer Product------------------
 // import Oswal from '../../images/Products/Fertilizer/Oswal-potash.png'
 // import  GrowMore from '../../images/Products/Fertilizer/Grow-More.png'
@@ -1653,11 +1672,511 @@ export const allProducts = [
     ]
 
   },
+  // herbicides
   {
     id: 3,
-    title: 'Herbicides'
-
-    // image: 'herbicides.png'
+    title: 'Herbicides',
+    // image: 'insecticides.png'
+    productName: [
+      {
+        id: 68,
+        name: 'Melisa',
+        img: melisa,
+        activeIngredient: 'Tembotrione 34.4% SC',
+        url: '#',
+        details: {
+          targetCrops: ['Maize'],
+          dose: '115 ml / Acre',
+          pest: ['Enchinochloa sp', 'Trianthema portulacastrum', 'Bracharia sp'],
+          uses: 'Tembotrione 34.4% w/w SC contains 344 g of Tembotrione active ingredient per kg of formulation, which is equal to 420 g of Tembotrione active ingredient per litre of formulation.',
+          advantages: [
+            'Tembotrione 34.4% w/w SC contains 344 g of Tembotrione active ingredient per kg of formulation, which is equal to 420 g of Tembotrione active ingredient per litre of formulation.',
+          ],
+          application: 'Maize: Tembotrione 34.4% w/w SC can be applied with knapsack sprayer fitted with flat fan nozzle at 3-5 leaf stage of weeds.'
+        }
+      },
+      {
+        id: 69,
+        name: 'All Grip',
+        img: grip,
+        activeIngredient: 'Metsulfuron Methyl 20% WP',
+        url: '#',
+        details: {
+          targetCrops: ['Rice', 'Sugarcane', 'Wheat'],
+          dose: '20 ml/500 L',
+          pest: ['Chenopodium album', 'Amaranthus viridis', 'Parthenium hysterophorus','Cyperus Rotundus','Anagallis arvensis','C. esculantum','Lathyrus aphaca','Melilotus indica'],
+          uses: 'Metsulfuron methyl 20% WP is used for the control of predominantly broad leaf weeds of wheat, transplanted rice, sugarcane',
+          advantages: [
+            'Metsulfuron Methyl is a post emergence herbicide beloying to chemical family of sulfonyl urea herbicides. Metsulfuron Methyl predominantly controls broad leaf weeds of wheat like Chenopodium album, Melilotus indiea, Melitlous alba, Lathymus aphaca, Anagallis arvensis, Vicia sativa, vicia hirsurn, Circium arvense with a wide selectivity and broad spectrum activity.'
+          ],
+          application:
+            'Wheat: 25-35 days after sowing (1 application).'
+        }
+      },
+      {
+        id: 70,
+        name: 'Attack',
+        img: 'attack.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Metribuzin 70% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Sugarcane', 'Tomato', 'Potato', 'Wheat', 'Soybean'],
+          dose: '750 gm/1000 L',
+          pest: [
+            'Chenopodium album',
+            'Convolvulus arvensis',
+            'Amaranthus viridis',
+            'Cyperus Rotundus',
+            'Anagallis arvensis',
+            'C. iria',
+            'Cynadon ductylon',
+            'Phaloris minor'
+          ],
+          uses: 'Preparation of spray solution: First add a little quantity of water to the wettable powder and prepare a thin paste. Add this solution slowly into the required quantity of water and stir well. Operators are always recommended to give the spray a thorough stirring when resuming work after breaks. Plant Protection Equipments: Knapsack or foot-operated sprayers fitted with flat fan or flood jet type of nozzle. To ensure better effectiveness, follow the undermentioned guidelines. (1) For pre-emergence application: (a) Ensure that the field does not have clods and stubbles. (b) After spraying metribuzin 70 WP, do not disturb the soil. (2) For pre and post-emergence application: (a) Avoid drift of spray.',
+          advantages: [
+            'Metribuzin 70 WP should be sprayed with flood jet/flat fan nozzles without overlapping spray swaths. To keep uniform swath width, it is advisable to keep the nozzle height constant from ground level, i.e., 48-50 cm.'
+          ],
+          application: 
+            'Soybean: Pre-emergence- 1-2 days after sowing. Wheat: post-emergence- 35 days after sowing. Sugarcane: Pre-emergence- 3-5 days after planting or Post-emergence- 25-30 days after planting. Potato: Pre-emergence- 3-4 days after planting or post-emergence- between emergence and the time when the first potato plant has reached a height of 5 cm. Tomato: Pre-planting- a week before transplanting or post-planting- 15 days after transplanting.'
+        }
+      },
+      
+      {
+        id: 71,
+        name: 'Beamar-58',
+        img: 'beamar-58.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: '2,4-D Amine Salt 58% SL',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: [
+            'Sugarcane', 
+            'Maize', 
+            'Potato', 
+            'Wheat', 
+            'Sorghum', 
+            'Aquatic weeds'
+          ],
+          dose: '4 L/500 L',
+          pest: [
+            'Chenopodium album',
+            'Convolvulus arvensis',
+            'Digera arvensis',
+            'Anagallis arvensis',
+            'Euphorbia hirta',
+            'Cyperus rotundus',
+            'Cyperus iria'
+          ],
+          uses: `Plant Protection Equipment: Knapsack sprayer, foot sprayer, compression battery sprayer & ASPEE – HTP power sprayer fitted with flat fan or flood jet nozzle. 
+          Limitation & Caution for use: Do not spray the crop in the neighborhood of cotton, tobacco, chilies, tomato & grapes as they are very susceptible. Do not use it in those situations where there is a possibility of harming bees. Avoid spray drift. Keep livestock away from the spray area for two weeks. Do not store near seeds, fertilizer & insecticide. Do not inhale or mix with bare hands.`,
+          advantages: [
+            `It is recommended to control Cyperus iria, Striga spp, Trianthema spp., Tridax procumbens, Digera arvensis of sorghum, Trianthema monogyna, Amaranthus spp., etc. of maize, Chenopodium album, Asphodelus tenuifolius, Fumaria spp, Melilotus alba, Spergula arvensis of wheat, Eichhornia crassipes of aquatic weeds, and other weeds of Potato and non-crop area.`
+          ],
+          application: 
+            `Sorghum: Post-emergence, apply when sorghum is 10 – 30 cm tall; 
+            Maize: Pre-emergence, 2-3 days after the sowing of crop;
+            Wheat: Post-emergence, 30 – 35 days after sowing of crop; 
+            Aquatic weeds: When weeds are young & actively growing; 
+            Potato: Pre-emergence of crop/weeds;
+            Non-crop Area: Spraying should be made in fallow land;
+            Mode of application: Mostly blanket application.`
+        }
+      },
+      {
+        id: 72,
+        name: 'Combitec',
+        img: 'combitec.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Clodinafop Propagyl 9% + Metribuzin 20% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '600 gm/300 L',
+          pest: [
+            'Phalaris minor',
+            'Medicago spp',
+            'Chenopodium album',
+            'Cronopus didymus',
+            'Vicia sativa',
+            'Rumex spp',
+            'Dinebra Vetroflexa'
+          ],
+          uses: `Preparation of spray solution: First fill 1/3 or ½ of the knapsack sprayer tank with clean water and put the water-soluble pouch of herbicide. Gently stir the solution until the whole pouch and its contents fully dissolve in water. Now, add the rest of the water to the sprayer tank to make up the volume for spraying.
+          Plant Protection Equipment: Knapsack or foot-operated sprayers fitted with flat fan or flood jet type of nozzle.
+          Limitation for use: It should not be used in crops where it has not been recommended. It should never be used in combination with any insecticides, urea, or plant growth regulators.`,
+          advantages: [
+            `It is a selective and post-emergence herbicide used for weed control in wheat crops, containing Clodinafop Propagyl (9% a.i.), Metribuzin (20% a.i.), and remaining adjuvant.`
+          ],
+          application: 
+            `This herbicide is recommended for post-emergence application, i.e., 35 days after sowing of the wheat crop when weeds are at the 3-4 leaves stage.`
+        }
+      },
+      {
+        id: 73, // Assign a unique ID based on your existing data
+        name: 'Fadal',
+        img: 'fadal.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Quizalofop Ethyl 5% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Cotton', 'Groundnut', 'Onion', 'Soybean', 'Black gram'],
+          dose: '1000 ml/500 L',
+          pest: [
+            'Goose grass',
+            'Wild finger',
+            'Crab grass',
+            'Barnyard grass',
+            'Crowfoot grass'
+          ],
+          uses: `PREPARATION OF SPRAY EMULSION: Add slowly the required quantity of herbicide to water and stir well with a rod or stick till it is properly emulsified.
+          SPRAYING INSTRUCTION:
+          1. Shake the bottle before use.
+          2. Spray uniformly.
+          3. Do not spray against wind direction.
+          4. Wash the sprayer thoroughly with water before and after use.`,
+          advantages: [
+            `Quizalofop ethyl 5% EC, based on Ethyl 2-{4-(6-chloroquinoxalin-2-yloxy) phenoxy} propionate, is a selective post-emergence herbicide for the effective control of Grassy weeds in Soybean, Cotton, Groundnut, Black gram, and Onion crops.`
+          ],
+          application: 
+            `Quizalofop ethyl 5% EC is a selective post-emergence herbicide, recommended for effective control of Grassy weeds in Soybean, Cotton, Groundnut, Black gram, and Onion crops.`
+        }
+      },
+      {
+        id: 74, // Assign a unique ID based on your existing data
+        name: 'Finish',
+        img: 'finish.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Sulfosulfuron 75% WG',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '33 gm/250 L',
+          pest: [
+            'Chenopodium album',
+            'Phaloris minor',
+            'Mellilotus alba'
+          ],
+          uses: `Use the Sachet contents (13.5 gm) in one acre for effective control of Phalaris Minor and other weeds listed above.
+          Mixing:
+          1. Dissolve the entire contents of Sulfosulfuron 75% WG Sachet (13.5 gm) in Six litres of water and mix thoroughly.
+          2. Then add the entire content of cationic surfactant (500 ml) to the above solution and mix thoroughly with a stick.
+          3. Dilute the solution with 100 liters of water to uniformly spray one acre. Sorghum/Maize crops should not be taken as succeeding crops after Wheat crops.`,
+          advantages: [
+            `It is a selective herbicide for early post-emergence control of Phalaris minor and common broad-leaved weeds like Chenopodium spp; and Melilotus alba in wheat.`
+          ],
+          application: 
+            `In wheat crop, apply 30-35 days after sowing when Phalaris minor plants are at 2-4 leaf stage.`
+        }
+      },
+      {
+        id: 75, // Assign a unique ID based on your existing data
+        name: 'Fadal Super',
+        img: 'fadal-super.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Quizalofop Ethyl 10% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Soybean'],
+          dose: '450 ml/500 L',
+          pest: [
+            'Eragrostispilosa',
+            'Digitariamarginata',
+            'Echinocloa spp',
+            'E. viscosa'
+          ],
+          uses: `Spray with the help of knapsack sprayer using a flat fan nozzle on soybean at 15 to 20 days after sowing.`,
+          advantages: [
+            `Quizalofop ethyl 10% EC is a selective post-emergence herbicide for the effective control of grassy weeds in soybean crops.`
+          ],
+          application: 
+            `Shake the bottle before use, measure out the requisite quantity of the herbicide, and mix it well with a small quantity of water. Add the remaining quantity of water as specified with thorough agitation for total coverage of the crop with a suitable sprayer. Apply on soybean 15 to 20 days after sowing.`
+        }
+      },
+      {
+        id: 76, // Assign a unique ID based on your existing data
+        name: 'Goldmix',
+        img: 'goldmix.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Metsulfuron Methyl 10% + Chlorimuron Ethyl 10% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Direct sown Rice', 'Transplanted Rice'],
+          dose: '20 gm/300 L',
+          pest: [
+            'Cyperus difformis',
+            'Monochoria vaginalis',
+            'Eclipta alba',
+            'C. iria'
+          ],
+          uses: `Recommendations for use as a foliar spray using high-volume spraying equipment, such as Knapsack sprayer, rocking sprayer, foot sprayer, etc. Apply herbicide with a flat fan or flood jet nozzle. Add non-ionic surfactant @ 2 ml/L of water to ensure desired efficacy of the product.`,
+          advantages: [
+            `It is a broad-spectrum herbicide effective for the control of different broad-leaf weeds and sedges in transplanted and direct seeded rice (under puddled conditions).`
+          ],
+          application: 
+            `Transplanted Rice (pre-emergence application): 3 days after transplanting. Transplanted Rice (post-emergence application): 21-25 days after transplanting. Direct sown Rice (puddled condition): 20 days after sowing.`
+        }
+      },
+      {
+        id: 77, // Assign a unique ID based on your existing data
+        name: 'Jaikaal',
+        img: 'jaikaal.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: '2,4-D Ethyl Ester 38% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Sugarcane', 'Paddy', 'Maize', 'Wheat', 'Sorghum', 'Aquatic weeds'],
+          dose: '2.94 L/425 L',
+          pest: [
+            'Chenopodium album',
+            'Amaranthus sp',
+            'Digitaria sp',
+            'Cyperus iria',
+            'Eichhornia crassipes',
+            'Echinochloa colonum'
+          ],
+          uses: `It is recommended to control Cyperus iria, Striga sp, Trianthema sp, Tridax procumbens, Digitaria arvensis of sorghum, Trianthema monogyna, Amaranthus sp, etc. of maize; Chenopodium album, Asphodelus tenufolius, Fumaria diffusa, Melilotus alba, Spergula arvensis of wheat; Eichhornia crassipes of aquatic weeds, and other weeds of sugarcane and paddy crops.`,
+          advantages: [
+            `It is a herbicide containing 38% active ingredient, 2,4-D Ethyl Ester by mass and the balance as adjuvants.`
+          ],
+          application: 
+            `It is a selective systemic herbicide that acts as a growth inhibitor. The salts are readily absorbed by the roots, while esters are readily absorbed by the foliage. Translocation occurs, with accumulation principally at the meristematic regions of shoots and roots.`
+        }
+      },
+      {
+        id: 78, // Assign a unique ID based on your existing data
+        name: 'Karona',
+        img: 'karona.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Pretilachlor 50% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '1000 ml/500 L',
+          pest: [
+            'Cyperus difformis',
+            'Eclipta alba',
+            'C. iria',
+            'E. crusigalli',
+            'Echinocloa colonum'
+          ],
+          uses: `Measure out the required amount of the product and mix it well with a small quantity of water. Agitate thoroughly for high-volume application through a knapsack sprayer using a flat fan or flood jet nozzle.`,
+          advantages: [
+            `Efficient for use in high-volume application through knapsack sprayers with flat fan or flood jet nozzles.`
+          ],
+          application: 
+            `Apply within 5 days after transplanting.`
+        }
+      },
+      {
+        id: 79, // Assign a unique ID based on your existing data
+        name: 'Karona Super',
+        img: 'karona-super.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Pretilachlor 37% EW',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '1500 ml / 500 L',
+          pest: [
+            'Cyperus difformis',
+            'Cyperus iria',
+            'Echinochloa colonum',
+            'E. crusigalli'
+          ],
+          uses: `Apply as a pre-emergence spray between 0-5 days after transplanting using a knapsack sprayer fitted with a flat fan nozzle. Avoid flooding the field up to 24 hours after application.`,
+          advantages: [
+            `Pretilachlor 37% EW is a selective pre-emergence herbicide recommended for the control of grasses, sedges, and some broad leaf weeds in transplanted rice. It contains 37% of the active ingredient Pretilachlor, which is equal to 400 g per litre of the formulation.`
+          ],
+          application: 
+            `Apply within 5 days after transplanting to control grasses, sedges, and some broad leaf weeds.`
+        }
+      },
+      {
+        id: 80, // Assign a unique ID based on your existing data
+        name: 'Nexa',
+        img: 'nexa.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Chlorimuron Ethyl 25% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Rice', 'Soybean'],
+          dose: '24 gm/500 L',
+          pest: [
+            'Chenopodium album',
+            'Echinocloa crusigalli',
+            'Parthenium hysterophorus',
+            'Cyperus Rotundus',
+            'C. iria'
+          ],
+          uses: `Use of Iso-octyl Phenoxyl-Polo xethanol 12.5% (Non-ionic surfactant) is approved @ 0.2% with Chlorimuron Ethyl 25% WP in soybean crop only. Its use has not been approved in rice crop.`,
+          advantages: [
+            `The use of Iso-octyl Phenoxyl-Polo xethanol 12.5% (Non-ionic surfactant) is approved @ 0.2% with Chlorimuron Ethyl 25% WP in soybean crop only. Its use has not been approved in rice crop.`
+          ],
+          application: `Soybean: 3-10 days after sowing (once). Rice: 5-10 days after transplanting (once).`
+        }
+      },
+      {
+        id: 81, // Assign a unique ID based on your existing data
+        name: 'O-Cloud',
+        img: 'o-cloud.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Clodinafop – Propargyl 15% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Wheat'],
+          dose: '400 gm/400 L',
+          pest: ['Phaloris minor'],
+          uses: `It is a post-emergence herbicide recommended for controlling grass weeds (Phalaris minor) in wheat.`,
+          advantages: [
+            `This post-emergence herbicide controls most important grass weeds in wheat and contains 150 gms of Clodinafop-propargyl ester per kilogram of wettable powder formulation.`
+          ],
+          application: `Recommended as a post-emergence herbicide, i.e., 30-35 days after sowing of wheat or when grassy weeds are in the 3-4 leaf stage. Use Flat Fan / Flood Jet nozzle and proper water volume (at least 375-400L of water/hectare). Ensure weeds are in the proper stage (3-4 leaf stages).`
+        }
+      },
+      {
+        id: 82, // Assign a unique ID based on your existing data
+        name: 'Omega',
+        img: 'omega.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Imazethapyr 10% SL',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Groundnut', 'Soybean'],
+          dose: '1 L / 500 L',
+          pest: ['Cyperus difformis', 'Euphorbia hirta', 'E. crusigalli', 'Echinocloa colonum'],
+          uses: `Mix thoroughly the recommended quantity of Imazethapyr 10% SL with adequate stirring using a rod or stick. Add the required quantity of water. Use high volume sprays like knapsack or foot sprayers fitted with a flat fan nozzle for application.`,
+          advantages: [
+            `Imazethapyr 10% SL contains 10 gms a.i/kg of product. It is recommended for controlling annual grasses, broad leaf weeds, and sedges in Soybean and Groundnut crops.`
+          ],
+          application: `Apply early post-emergence when weeds are in the 1-2 leaf stage or 7-14 days after sowing. Ensure thorough land preparation and uniform spraying without overlapping. Do not spray against the wind direction. Clean the sprayer thoroughly before and after use.`
+        }
+      },
+      {
+        id: 83, // Assign a unique ID based on your existing data
+        name: 'Omini Gold',
+        img: 'omini_gold.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Bispyribac Sodium 10% SC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Rice'],
+          dose: '200 ml / 300 L',
+          pest: ['Cyperus difformis', 'Eclipta alba', 'C. iria', 'E. crusigalli', 'Echinocloa colonum'],
+          uses: `Shake the bottle before use. Measure out the requisite quantity of herbicide and mix it well with a small quantity of water. Add the remaining water with thorough agitation. Before application, drain the field and re-flood within one day. Maintain water level for at least 10 days post-application. Spray uniformly in the direction of the wind ensuring thorough coverage of the weeds.`,
+          advantages: [
+            `Bispyribac sodium 10% SC is a post-emergence herbicide effective against grasses, sedges, and broad-leaf weeds in rice crops.`
+          ],
+          application: `Nursery/Transplanted: Apply 10-12 days after sowing for nursery rice and 10-14 days after planting for transplanted rice, when most weeds are 3-4 leaves stage. Direct Seed Rice: Apply 15-25 days after sowing. Use a high volume sprayer, such as a knapsack sprayer with a flat fan or flood jet nozzle.`
+        }
+      },
+      {
+        id: 84, // Assign a unique ID based on your existing data
+        name: 'Openda',
+        img: 'openda.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Pendimethalin 30% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Cotton', 'Rice', 'Wheat', 'Soybean'],
+          dose: '3.5 liters / 600 L',
+          pest: ['Phalaris minor', 'Cyperus difformis', 'Euphorbia hirta', 'Echinochloa spp'],
+          uses: `Plant Protection Equipments in use: Knapsack sprayer, foot sprayer, fitted with flat fan/flood jet nozzle.`,
+          advantages: [
+            `It is an emulsifiable pre-emergence selective herbicide containing Pendimethalin 30% w/w and balanced other relevant ingredients.`
+          ],
+          application: `Wheat: Pre-emergence of weeds, immediately after sowing. Cotton: Pre-plant incorporation up to 7 days before planting or pre-emergence within 2 days of sowing. Soybean: Pre-emergence within 24 hours of planting or pre-plant incorporation in top 2-5 cm of soil with suitable farm equipment. Rice: (transplanted or direct sowing) Pre-emergence of weeds. Ensure uniform level of the puddled field. Maintain 5-10 cm of standing water for at least one week after application. Pigeon Pea: Pre-emergence to weeds, 0-2 days after planting/sowing. Chilies: Pre-emergence to weeds, 0-4 days after transplanting. Onion: Pre-emergence to weeds, after transplanting/sowing.`
+        }
+      },
+      {
+        id: 85, // Assign a unique ID based on your existing data
+        name: 'Openda Ultra',
+        img: 'openda-ultra.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Pendimethalin 30% + Imazethapyr 2% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Soybean'],
+          dose: '2.5-3 L / ha',  // Assumed 'ha' for hectare; adjust if necessary
+          pest: ['Echinocloa crusigalli', 'Amaranthus viridis', 'Digeria arvensis', 'Portulaca oleracea', 'Benghalensis', 'Commelina'],
+          uses: `Preparation of spray solution: Take the measured quantity of Pendimethalin 30% + Imazethapyr 2% EC and add it to a small quantity of water. Mix thoroughly and then add the remaining quantity of water while stirring vigorously. Do not spray against the wind direction. Ensure thorough land preparation. Spray uniformly without overlapping. Clear the sprayer thoroughly before and after use.`,
+          advantages: [
+            `Pendimethalin 30% + Imazethapyr 2% EC is a combination product containing 30% Pendimethalin and 2% Imazethapyr as active ingredients. It is a selective herbicide that controls susceptible annual grasses, sedges, and broad-leaf weeds as they germinate. It is recommended for use in Soybean.`
+          ],
+          application: `Incorporate the herbicide into the soil before sowing the crop.`
+        }
+      },
+      {
+        id: 86, // Assign a unique ID based on your existing data
+        name: 'Oxyherb',
+        img: 'oxyherb.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Oxyfluorfen 23.5% EC',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Rice', 'Groundnut', 'Tea', 'Potato', 'Onion', 'Mentha'],
+          dose: '600 ml / 750 L',
+          pest: ['Chenopodium album', 'Digeteria sp', 'Cyperus iria', 'Echinochloa spp'],
+          uses: `For conventional high volume spray. The recommended quantity of water is mentioned above. Commonly used sprayers include bucket pump sprayer, stirrup pump sprayer, knapsack sprayer, wheel barrow sprayer, and compression knapsack sprayer. Use the sprayer with a flood jet or flat fan nozzle, keeping the nozzle at a fixed height from the ground. Spray in a straight line at a uniform speed.`,
+          advantages: [
+            `Oxyfluorfen 23.5% EC [22.8% EC (w/v)] is a selective herbicide with a residual activity, containing 23.5% oxyfluorfen. It effectively controls important weeds in crops such as Rice, Tea, Potato, Onion, Groundnut, and Mentha.`
+          ],
+          application: `Apply pre-emergence within 3-4 days of transplanting/plantation.`
+        }
+      },
+      {
+        id: 87, // Assign a unique ID based on your existing data
+        name: 'Ozin',
+        img: 'ozin.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Atrazine 50% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Sugarcane', 'Maize'],
+          dose: '1 kg / 500 L',
+          pest: ['Digitariamarginata', 'Echinocloa spp', 'Amaranthus viridis', 'Boerhaavia diffusa', 'Euphorbia spp'],
+          uses: `Use with plant protection equipment such as knapsack sprayers, compression knapsack sprayers, or compression knapsack battery sprayers fitted with a flat fan or flood jet nozzle. Caution: Use with care in areas with high groundwater levels.`,
+          advantages: [
+            `Recommended for controlling a wide range of weeds, including Trianthema monogyna, Digitaria arvensis, Echinocloa spp., Flusin spp., Xanthium strumarium, Brachiaria sp., Amaranthus viridies, Clematis viseosa, Polygonum sp. in maize and bajra; Portulaca oleracea, Digitaria sp., Boerhavia diffusa, Euphorbia spp., Tribulus terrestris in sugarcane; Spergula arvensis, Digitaria spp., Chenopodium album in potato crops.`
+          ],
+          application: `For maize: Apply immediately after transplanting (pre-emergence). For sugarcane: Apply pre-emergence on weed-free soil.`
+        }
+      },
+      {
+        id: 88, // Assign a unique ID based on your existing data
+        name: 'Quit',
+        img: 'quit.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Paraquat Dichloride 24% SL',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Cotton', 'Grapes', 'Rice', 'Tea', 'Potato', 'Wheat', 'Aquatic weeds', 'Rubber'],
+          dose: '4 L / 500 L',
+          pest: ['Chenopodium album', 'Imparata cylindrica', 'Digitaria arvensis', 'Anagallis arvensis', 'Cynodon dactylon', 'C. rotundus', 'Cyperus iria'],
+          uses: `Apply using knapsack sprayers, foot sprayers, compression knapsack battery sprayers, or ASPEE-HTP power sprayers fitted with flat fan or flood jet nozzles.`,
+          advantages: [
+            `Non-selective, contact herbicide containing 24% Paraquat Dichloride as the active ingredient, designed for a wide range of target crops and weeds.`
+          ],
+          application: `Non-selective contact herbicide absorbed by foliage with some translocation in the xylem. Apply according to the needs of the crop and weed conditions.`
+        }
+      },
+      {
+        id: 89, // Assign a unique ID based on your existing data
+        name: 'Solid-80',
+        img: 'solid-80.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: '2,4-D Sodium Salt 80% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Wheat', 'Maize', 'Citrus', 'Grapes'],
+          dose: 'As per recommended dosage based on crop and weed type',
+          pest: ['Broad leaved weeds', 'Sedges', 'Germinating grass seedlings'],
+          uses: `Use plant protection equipment such as knapsack sprayers or compression knapsack battery sprayers fitted with flat fan or flood jet nozzles.`,
+          advantages: [
+            `Contains 80% active ingredient 2,4-Dichlorophenoxyacetic acid in soluble powder form with sodium salt. It is a selective herbicide effective against broad-leaved weeds, sedges, and germinating grass seedlings in various crops.`
+          ],
+          application: `Maize & Bajra: Pre-emergence, 1-2 days after sowing. Sorghum: Post-emergence when the crop reaches 10-30 cm height. Rice: If needed, apply 40 days after transplanting. Wheat: Post-emergence, 35 days after sowing.`
+        }
+      },
+      {
+        id: 90, // Assign a unique ID based on your existing data
+        name: 'Saath-Saath',
+        img: 'saath-saath.jpg',  // Image name matches the title and is in lowercase
+        activeIngredient: 'Pyrazosulfuron ethyl 10% WP',
+        url: '#', // Replace this with the correct URL if available
+        details: {
+          targetCrops: ['Transplanted Rice'],
+          dose: '0.15 kg / 500 L',
+          pest: ['Cyperus difformis', 'Monochoria vaginalis', 'Cyperus iria', 'Ludwigia parviflora', 'Fimbristylis miliacea'],
+          uses: `Mix the pesticide with water at the recommended dosage and spray using a high-volume sprayer, such as a knapsack sprayer fitted with a herbicide nozzle. Use 500 to 600 liters of water per hectare. Ensure thorough mixing of the pesticide suspension with a wooden log before spraying.`,
+          advantages: [
+            `Pyrazosulfuron ethyl is a selective, systemic, and pre-emergence herbicide effective against various weeds in transplanted rice.`
+          ],
+          application: `Apply the spray before weed emergence, 3-7 days after transplanting rice.`
+        }
+      },
+     
+    ]
   },
   // {
   //   id: 4,
