@@ -84,7 +84,7 @@ const Navbar = () => {
 
 
   const renderDropdown = (dropdown, subDropdownId = null) => (
-    <ul className="absolute left-0 top-full mt-2 w-56 bg-light-green-200 shadow-md z-40">
+    <ul className="absolute left-0 z-40 w-56 mt-2 shadow-md top-full bg-light-green-200">
       {dropdown.map((item) => (
         <li
           key={item.label}
@@ -101,7 +101,7 @@ const Navbar = () => {
             {item.subDropdown && <IoIosArrowForward className="ml-1" />}
           </NavLink>
           {item.subDropdown && activeSubDropdown === item.label && (
-            <ul className="absolute left-full top-0 mt-0 w-48 bg-light-green-200 shadow-md">
+            <ul className="absolute top-0 w-48 mt-0 shadow-md left-full bg-light-green-200">
               {item.subDropdown.map((subItem) => (
                 <li key={subItem.label}>
                   <NavLink to={subItem.path} className="block px-4 py-2 hover:bg-yellow-100">
@@ -118,7 +118,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-lg">
-      <div className="container w-10/12 flex justify-between mx-auto px-0 md:px-20 py-4">
+      <div className="container flex justify-between w-10/12 px-0 py-4 mx-auto md:px-20">
 
         {/* Navbar Logo */}
 
@@ -128,15 +128,15 @@ const Navbar = () => {
 
         {/* MOBILE MODE: Payment Button and Social Icons */}
 
-        <div className="flex flex-col items-center space-x-4 p-2 lg:hidden">
-          <button className="text-sm bg-dark-green-100 text-white mb-2 py-2 px-2 rounded flex justify-center items-center hover:bg-light-green-300 transition-all duration-200">
+        <div className="flex flex-col items-center p-2 space-x-4 lg:hidden">
+          <button className="flex items-center justify-center px-2 py-2 mb-2 text-sm text-white transition-all duration-200 rounded bg-dark-green-100 hover:bg-light-green-300">
             Pay Now <FaRegHandPointRight className="ml-1" />
           </button>
           <div className="flex space-x-1 ">
             {socialLinks.map(({ url }) => (
               <div
                 key={url}
-                className="text-xl p-1 bg-dark-green-100 hover:bg-light-green-300 rounded-lg flex items-center"
+                className="flex items-center p-1 text-xl rounded-lg bg-dark-green-100 hover:bg-light-green-300"
               >
                 <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height }} />
 
@@ -149,24 +149,24 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
 
-        <button onClick={toggleMenu} className="lg:hidden text-2xl">
+        <button onClick={toggleMenu} className="text-2xl lg:hidden">
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Navbar Links */}
 
-        <div className="hidden lg:flex flex-col items-center gap-4">
+        <div className="flex-col items-center hidden gap-4 lg:flex">
 
           {/* Social Media Icons (for larger screens) */}
 
           <div className="flex justify-end">
             <div className="flex space-x-6">
-              <button className="bg-dark-green-100 text-white py-2 px-4 rounded flex justify-center gap-2 items-center hover:bg-light-green-300 transition-all duration-200">
+              <button className="flex items-center justify-center gap-2 px-4 py-2 text-white transition-all duration-200 rounded bg-dark-green-100 hover:bg-light-green-300">
                 Pay Now <FaRegHandPointRight />
               </button>
 
               {socialLinks.map(({ url }) => (
-                <div key={url} className="text-xl bg-dark-green-100 hover:bg-light-green-300 p-2 rounded-lg flex items-center">
+                <div key={url} className="flex items-center p-2 text-xl rounded-lg bg-dark-green-100 hover:bg-light-green-300">
                   <SocialIcon
                     url={url}
                     style={{ width: 30, height: 30 }}
@@ -188,7 +188,7 @@ const Navbar = () => {
               >
                 <NavLink
                   to={item.path}
-                  className="p-2 flex items-center hover:bg-dark-green-100 rounded-xl"
+                  className="flex items-center p-2 hover:bg-dark-green-100 rounded-xl"
                 >
                   {item.label}
                   {item.dropdown && <IoIosArrowDown className="ml-1" />}
@@ -208,7 +208,7 @@ const Navbar = () => {
 
         
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-0 left-0 w-full  bg-white z-50 p-2">
+          <div className="absolute top-0 left-0 z-50 w-full p-2 bg-white lg:hidden">
             <div className="flex justify-between mb-4">
               {/* Logo */}
               <NavLink to="/" className="text-xl font-bold">
@@ -225,7 +225,7 @@ const Navbar = () => {
                   <NavLink
                     to={item.path}
                     onClick={() => handleMobileDropdownToggle(item.label)}
-                    className="w-full text-left p-2 flex items-center justify-between  hover:bg-dark-green-100 rounded-xl"
+                    className="flex items-center justify-between w-full p-2 text-left hover:bg-dark-green-100 rounded-xl"
                   >
                     <span>{item.label}</span>
                     {item.dropdown && <IoIosArrowDown />}
@@ -237,7 +237,7 @@ const Navbar = () => {
                           <NavLink
                             to= {dropdownItem.path}
                             onClick={() => handleMobileSubMouseEnter(dropdownItem.label)}
-                            className="w-full text-left p-2 flex items-center justify-between bg-light-green-200 m-1 hover:bg-yellow-100 rounded-xl"
+                            className="flex items-center justify-between w-full p-2 m-1 text-left bg-light-green-200 hover:bg-yellow-100 rounded-xl"
                           >
                             <span>{dropdownItem.label}</span>
                             {dropdownItem.subDropdown && <IoIosArrowForward />}
