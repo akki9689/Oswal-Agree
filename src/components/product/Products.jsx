@@ -7,7 +7,6 @@ import { motion, useAnimation } from 'framer-motion';
 
 const Products = () => {
   const { category } = useParams();
-  console.log(category);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const navigate = useNavigate();
   const controls = useAnimation();

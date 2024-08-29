@@ -127,12 +127,9 @@ export const allProducts = [
           targetCrops: ['........'],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
-          uses: 'High performance, residual insecticide for controlling mosquitoes, houseflies, and cockroaches. Suitable for use in domestic, institutional, and public buildings. Low toxicity to humans, usable in hospitals, kitchens, restaurants, and food storage areas.',
+          uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
           advantages: [
-            'Effective against crawling and flying insects in domestic, public, and industrial settings.',
-            'Compatible with most knapsack sprayers and residual spray equipment.',
-            'Low pressure application with even-sized droplets for thorough coverage.',
-            'Suitable for public health pest control.'
+            'It is suitable for the control of crawling and flying insects on domestic, public and industrial premises. It is suitable for use with most types of knapsack sprayers and other residual spray equipment commonly used to control public health pests. Application should be made at low pressure and with a nozzle that produces even-sized droplets. It should be thoroughly mixed with water to give the required concentration. Treated surface should be thoroughly sprayed to the point of minimal run-off. The applicator should ensure uniform coverage and pay particular attention to those areas where insects are most likely to came in contact with the insecticide.'
           ],
           application: 'Contact & Stomach Poison'
         }
