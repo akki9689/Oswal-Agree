@@ -12,7 +12,7 @@ import Oswal from '../../images/Products/Bio-Products/Oswal-Gold.png'
 import  OswalPunch from '../../images/Products/Bio-Products/OSWAL-PUNCH.png'
 import OswalZinc from '../../images/Products/Bio-Products/Oswal-Zinc.png'
 import SATVAT from '../../images/Products/Bio-Products/SAT-VAT.png'
-import  MPSuper from '../../images/Products/Bio-Products/ MP-Super.png'
+import  MPSuper from '../../images/Products/Bio-Products/MP-Super.png'
 import Mit from '../../images/Products/Bio-Products/Mit-Magic.png'
 
 
