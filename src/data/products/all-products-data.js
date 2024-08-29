@@ -1,3 +1,4 @@
+
 // -------------------------------**Insecticides**--------------------------------------
 import fila from '../../images/Products/Insecticides/Fila-Plus-Alphacypermethrin-10-SC.png'
 import expert from '../../images/Products/Insecticides/Expert-Indoxacarb-14.5-SC.png'
