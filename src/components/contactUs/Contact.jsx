@@ -5,9 +5,105 @@ import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
+import {Tooltip} from 'react-tooltip';
+
+
+
+
+
+const CustomInput = ({ id, label, placeholder, register, errors = {}, validation }) => {
+  const isError = errors[id];
+  const isRequiredError = isError && isError.type === 'required';
+
+  // Tooltip styles
+  const tooltipStyles = {
+    backgroundColor: 'white',
+    color: 'black',
+    border: '2px solid #ddd',
+    borderRadius: '4px',
+    padding: '8px',
+    fontSize: '12px',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'absolute',
+    top: '110%', // Position the tooltip just below the input
+    left: '50%',
+    transform: 'translateX(-50%)',
+    whiteSpace: 'nowrap',
+    zIndex: 10, // Ensure the tooltip is on top
+    paddingLeft: '20px', // Adjust for spacing between the icon and text
+    paddingBottom: '20px', // Space for the arrow
+  };
+
+  // Tooltip icon styles
+  const iconStyles = {
+    marginRight: '5px',
+    display: 'inline-block',
+    width: '16px',
+    height: '16px',
+    borderRadius: '50%',
+    backgroundColor: 'orange',
+    color: 'white',
+    textAlign: 'center',
+    lineHeight: '16px',
+    fontSize: '14px',
+    fontWeight: 'bold',
+   
+  };
+
+  // Arrow styles
+  const tooltipArrowStyles = {
+    content: "''",
+    position: 'absolute',
+    bottom: '100%', // Position the arrow just below the tooltip
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: 0,
+    height: 0,
+    borderLeft: '8px solid transparent',
+    borderRight: '8px solid transparent',
+    borderTop: '8px solid white', // Arrow background color
+    borderBottom: '6px solid black', // Arrow border color
+    
+    
+  };
+
+  return (
+    <div className="relative w-full">
+      <input
+        id={id}
+        aria-label={label}
+        placeholder={placeholder}
+        className={`w-full p-2 border-2 ${
+          isError ? 'border-gray-300' : 'border-gray-300'
+        } hover:outline-none focus:outline-none`}
+        {...register(id, validation)}
+        data-tip
+        data-for={`${id}-tooltip`}
+      />
+      {isRequiredError && (
+        <div
+          id={`${id}-tooltip`}
+          style={tooltipStyles}
+          role="tooltip"
+        >
+          <span style={iconStyles}>!</span>
+          {isError.message}
+          <div style={tooltipArrowStyles} />
+        </div>
+      )}
+      {!isRequiredError && isError && (
+        <p className="mt-1 text-sm text-red-600 z-10">{isError.message}</p>
+      )}
+    </div>
+  );
+};
 
 function Contact() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } , reset} = useForm();
+  const notify = (data) => {
+    console.log(data);
+  }
   return (
     <section>
       <div className="w-full py-6" style={{ backgroundImage: `url(${image})` }}>
@@ -46,37 +142,41 @@ function Contact() {
               </div>
               {/* FORM CODE*/}
 
-              <form>
+              <form onSubmit = {handleSubmit(notify)}>
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-row gap-4">
                     {/* Name */}
                     <div className="w-full">
 
-                      <input
+                      <CustomInput
                         id="name"
                         aria-label='Name'
                         placeholder="Name"
-                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                        {...register('name', { required: 'This field is required' })} />
-                      {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
+                        register={register}
+                        errors={errors}
+                        validation={{required:'Please fill out this field'}} />
+                     
 
                     </div>
 
                     {/* Phone */}
 
                     <div className="w-full">
-                      <label htmlFor="phone"></label>
-                      <input
+                      
+                      <CustomInput
                         id="phone"
+                        aria-label='phone'
                         placeholder="Phone"
-                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                        {...register('phone', {
-                          required: 'This field is required', pattern: {
-                            value: /^[6-9]\d{9}$/,
-                            message: 'Please enter a valid Indian phone number',
-                          }
-                        })} />
-                      {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
+                        register={register}
+                        errors={errors}
+                        validation={{required: 'Please out this fill field', pattern: {
+                          value: /^[0-9]{10}$/,
+                          message: 'Phone number must be 10 digits',}}}
+                        // className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                       
+                        />
+
+                      {/* {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>} */}
                     </div>
                   </div>
 
@@ -85,39 +185,46 @@ function Contact() {
                     {/* Email */}
                     <div className="w-full">
 
-                      <input
+                      <CustomInput
                         id="email"
                         aria-label='Email'
                         placeholder="Email"
-                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none  "
-                        {...register('name', {
-                          required: 'This field is required', pattern: /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
-                        })} />
-                      {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
+                        register={register}
+                        errors={errors} 
+                        validation={{required:'Please fill out this field',
+                          pattern: {
+                          value:  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: 'Invalid email format',
+                        }}}/>
+                      {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
 
                     </div>
 
                     {/* Company */}
 
                     <div className="w-full">
-                      <label htmlFor="company"></label>
-                      <input
+                     
+                      <CustomInput
                         id="company"
+                        aria-label='company'
                         placeholder="Company"
-                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                        {...register('company', { required: 'This field is required' })} />
-                      {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
+                        register={register}
+                        errors={errors}
+                        validation={{required:'Please fill out this field'
+                                     
+                        }}/>
+                      {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
                     </div>
                   </div>
 
                   <div className="flex flex-row gap-4">
                     {/* State */}
                     <div className="w-full">
-                      <label htmlFor="state"></label>
+                      
                       <select
                         id="state"
                         className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                        {...register('state', { required: 'Please select an option' })}>
+                        {...register('state', { required: 'Please select the option' })}>
                         <option value="">State</option>
                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands (UT)</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -157,16 +264,22 @@ function Contact() {
                         <option value="West Bengal">West Bengal</option>
                       </select>
 
+                      {errors.state && <p className="mt-1 text-sm text-red-600">{errors.state.message}</p>}
+
                     </div>
                     {/* City */}
                     <div className="w-full">
-                      <label htmlFor="city"></label>
-                      <input
+                      
+                      <CustomInput
                       id="city"
+                      aria-label="city"
                       placeholder="City"
-                      className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                      register={register}
+                      errors={errors}
+                      validation={{required:'Please fill out this field'}}
+                      
                       />
-
+                      {/* {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city.message}</p>} */}
                     </div>
                   </div>
 
@@ -177,10 +290,10 @@ function Contact() {
                     rows="4"
                     id="message"
                     placeholder="Message"
-                    className="w-full p2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                    {...register('message' , {required:'This field is required'})}
+                    className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                    {...register('message')}
                     />
-
+                     {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
                   </div>
 
                   <div>
@@ -208,4 +321,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Contact;
