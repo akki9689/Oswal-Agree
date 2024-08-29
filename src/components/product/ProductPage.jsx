@@ -26,9 +26,10 @@ const ProductPage = () => {
   }
 
   return (
-    <div>
+    <div >
          <Popupname title={category ? category : 'All Products'} />
-      <ProductDetails
+     <div className='pt-10 pb-10'>
+     <ProductDetails
       imageUrl={product.img || 'default-image.png'} // Fallback image
       title={product.name}
       subtitle={product.activeIngredient}
@@ -39,6 +40,7 @@ const ProductPage = () => {
       advantages={product.details.advantages ? product.details.advantages.join(', ') : 'Information not available'}
       applications={product.details.application}
     />
+     </div>
     </div>
   );
 };
