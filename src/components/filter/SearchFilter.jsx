@@ -3,14 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
 import ProductCard from '../common/ProductCard';
 
-const Filter = ({ products, category }) => {
+
+  
+const Filter = ({ products , category }) => {
+
+  console.log("Products: ", products);
+  console.log("Category : " , category )
+
+
   const navigate = useNavigate();
 
-  const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${productName}`);
-  };
+  const handleReadMoreClick = (title , productName) => {
+    navigate(`/products/${title}/${productName}`);
+  
 
-const Filter = ({ products }) => {
+
   return (
     <div className='relative w-full py-16'>
       <div className='grid grid-cols-4 gap-6'>
@@ -22,7 +29,7 @@ const Filter = ({ products }) => {
                 imageSrc={item.img}
                 productName={item.name}
                 productDescription={item.activeIngredient}
-                onReadMoreClick={() => handleReadMoreClick(item.name)}
+                onReadMoreClick={() => handleReadMoreClick(product.title ,item.name)}
               />
             ))
           )
