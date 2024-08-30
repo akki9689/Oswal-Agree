@@ -5,6 +5,7 @@ import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
+import Contact from './components/contactUs/Contact';
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'));
@@ -30,7 +31,7 @@ const App = () => {
             setIsLoading(false);
         }, 100); // Adjust the timing as needed
 
-        return () => clearTimeout(timer); // Cleanup timer on unmount
+    //     return () => clearTimeout(timer); // Cleanup timer on unmount
     }, []);
 
     if (isLoading) {
@@ -57,7 +58,7 @@ const App = () => {
                     </Route>
 
                     {/* Products with dynamic category */}
-                    <Route path='/products/:category' element={<Products />} />
+                    
                     <Route path="/products/:category" element={<Products />} />
                     <Route path="/products/:category/:productName" element={<ProductPage />} />
                     <Route path='/Filter' element={<Filter />} />
@@ -67,9 +68,12 @@ const App = () => {
 
                 </Routes>
             </Suspense>
-            <Footer />
+            <Footer /> 
+{/* 
+            <Contact/> */}
         </div>
     );
+
 };
 
 export default App;
