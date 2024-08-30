@@ -5,8 +5,7 @@ import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
-import Contact from './components/contactUs/Contact';
-import Branches from './components/contactUs/Branches'
+
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'));
@@ -22,6 +21,7 @@ const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
+// import Filter from './components/filter/SearchFilter'
 
 
 const App = () => {
@@ -43,6 +43,7 @@ const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
             <Navbar />
+      
             <Suspense fallback={<Loader />}>
                 <Routes>
                     {/* Homepage */}

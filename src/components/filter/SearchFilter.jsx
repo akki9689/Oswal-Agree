@@ -5,13 +5,12 @@ import ProductCard from '../common/ProductCard';
 
 const Filter = ({ products, category }) => {
   const navigate = useNavigate();
+
 console.log("prod",products)
 console.log("category",category)
   const handleReadMoreClick = (productName) => {
     navigate(`/products/${category}/${productName}`);
   };
-
-const Filter = ({ products }) => {
   return (
     <div className='relative w-full py-16'>
       <div className='grid grid-cols-4 gap-6'>
@@ -33,14 +32,11 @@ const Filter = ({ products }) => {
       </div>
     </div>
   );
-}
 };
-
 const categories = [
   "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
   "Insecticides", "micronutrients", "plantgrowth"
 ];
-
 const crops = [
   "Cotton", "Grapes", "Red Gram", "ChickPea", "Cabbage", "Brinjal", "Okra",
   "Chilli", "Mango", "Rice", "Sugarcane", "Tomato", "Paddy", "Citrus", "Sunflower",
@@ -56,7 +52,6 @@ const crops = [
   "Pumpkin", "Flowers", "Spices", "Orange", "Lentil", "Mint", "Gheya",
   "Capsicum", "Pigeon", "Bittergourd", "Bengal gram", "Pigeon Pea"
 ];
-
 const pests = [
   "Brown Plant Hopper", "Early Shoot Borer", "Root Borer", "Termite",
   "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
@@ -102,23 +97,19 @@ const pests = [
   "Stem Fly Girdle Beetle", "Paddy Leaf Folder", "Top Borer Scirphophaga Excerptalis",
   "Enchinochloa sp", "Trianthema portulacastrum", "Bracharia sp"
 ];
-
 const CropFilter = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCrop, setSelectedCrop] = useState('');
   const [selectedPest, setSelectedPest] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
-
   useEffect(() => {
     const filterData = () => {
       let filtered = allProducts;
-
       if (selectedCategory && selectedCategory !== 'All Products') {
         filtered = filtered.filter(product =>
           product.title.toLowerCase() === selectedCategory.toLowerCase()
         );
       }
-
       if (selectedCrop) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
@@ -128,7 +119,6 @@ const CropFilter = () => {
           )
         );
       }
-
       if (selectedPest) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
@@ -143,16 +133,13 @@ const CropFilter = () => {
 console.log(filtered);
       setFilteredProducts(filtered);
     };
-
     filterData();
   }, [selectedCategory, selectedCrop, selectedPest]);
-
   return (
     <div>
       <div className='py-4 bg-black'>
         <h2 className='text-3xl text-center text-white'>Search Product</h2>
       </div>
-
       <div className='w-full px-5 my-8'>
         <select
           value={selectedCategory}
@@ -166,7 +153,6 @@ console.log(filtered);
             </option>
           ))}
         </select>
-
         <select
           value={selectedCrop}
           onChange={(e) => setSelectedCrop(e.target.value)}
@@ -179,7 +165,6 @@ console.log(filtered);
             </option>
           ))}
         </select>
-
         <select
           value={selectedPest}
           onChange={(e) => setSelectedPest(e.target.value)}
@@ -194,9 +179,9 @@ console.log(filtered);
         </select>
       </div>
 
-      <Filter  products={filteredProducts} category={selectedCategory} />
+      <Filter products={filteredProducts} category={selectedCategory} />
+      
     </div>
   );
 };
-
 export default CropFilter;
