@@ -18,10 +18,11 @@ const Awards = lazy(() => import('./components/about/Awards'));
 const Terms = lazy(() => import('./components/about/Terms'));
 const Faq = lazy(() => import('./components/about/Faq'));
 
-const PhotoGallery =lazy(() => import('./components/Galllery/PhotoGallery'))
+const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
+
 
 const App = () => {
     const [isLoading, setIsLoading] = React.useState(true);
@@ -32,7 +33,7 @@ const App = () => {
             setIsLoading(false);
         }, 100); // Adjust the timing as needed
 
-    //     return () => clearTimeout(timer); // Cleanup timer on unmount
+        //     return () => clearTimeout(timer); // Cleanup timer on unmount
     }, []);
 
     if (isLoading) {
@@ -59,13 +60,16 @@ const App = () => {
                     </Route>
 
                     {/* Products with dynamic category */}
-                    
+
                     <Route path="/products/:category" element={<Products />} />
                     <Route path="/products/:category/:productName" element={<ProductPage />} />
                     <Route path='/Filter' element={<Filter />} />
 
                     {/* Gallery */}
                     <Route path='/photo-gallery' element={<PhotoGallery />} />
+
+                    {/* Contact */}
+
 
                 </Routes>
             </Suspense>

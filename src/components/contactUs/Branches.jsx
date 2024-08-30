@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay} from '@fortawesome/free-solid-svg-icons';
-import { navbarData } from '../../data/nav-links'
+// import { navbarData } from '../../data/nav-links'
 
 
 import {branchItem} from '../../data/contactUs/branchData'
@@ -20,7 +20,7 @@ function Branches() {
 
                     {/* COLUMN NUMBER-1  */}
 
-                    <ul  className="text-gray-600  flex flex-col">
+                    <ul  className="flex flex-col text-gray-600">
                         {branchItem.map(({id , title}) => (
                             id >= 1 && id <= 6 && (
                                 <li key={id} className={`flex items-center w-[90%] xsm:w-5/12 xlg:w-full py-2 ${id !== 1 ? 'border-t-2 border-gray-200':''}`}  

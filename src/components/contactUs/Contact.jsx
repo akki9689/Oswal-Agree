@@ -74,10 +74,10 @@ function Contact() {
   }
   return (
     <section>
-      <div className="w-full px-2 xl:px-6 py-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
-        <div className="w-full flex flex-col smd:space-x-2 gap-6">
+      <div className="w-full px-2 py-6 xl:px-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
+        <div className="flex flex-col w-full gap-6 smd:space-x-2">
           {/* ROW-1   ADDRESS && FORM*/}
-          <div className="w-full px-3  flex flex-wrap md:justify-center md:px-1 gap-8 xl:px-20">
+          <div className="flex flex-wrap w-full gap-8 px-3 md:justify-center md:px-1 xl:px-20">
             {/* ADDRESS */}
             <div className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
               {/* CONTACT US HEADING */}
@@ -112,7 +112,7 @@ function Contact() {
 
               <form onSubmit={handleSubmit(notify)}>
                 <div className="flex flex-col gap-5">
-                  <div className="flex flex-col  md:flex-row gap-4">
+                  <div className="flex flex-col gap-4 md:flex-row">
                     {/* Name */}
                     <div className="w-full">
 
@@ -157,7 +157,7 @@ function Contact() {
                   </div>
 
 
-                  <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex flex-col gap-4 md:flex-row">
                     {/* Email */}
                     <div className="w-full">
 
@@ -194,7 +194,7 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex flex-col gap-4 md:flex-row">
                     {/* State */}
                     <div className="w-full">
 
@@ -235,7 +235,7 @@ function Contact() {
                       rows="4"
                       aria-label="Message"
                       placeholder="Message"
-                      className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                      className="w-full p-2 border-2 border-gray-300 hover:outline-none focus:outline-none "
                       {...register('message')}
                       required={true}
                     />
