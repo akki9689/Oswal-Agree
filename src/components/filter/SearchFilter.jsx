@@ -10,6 +10,7 @@ const Filter = ({ products, category }) => {
     navigate(`/products/${category}/${productName}`);
   };
 
+const Filter = ({ products }) => {
   return (
     <div className='relative w-full py-16'>
       <div className='grid grid-cols-4 gap-6'>
@@ -31,6 +32,7 @@ const Filter = ({ products, category }) => {
       </div>
     </div>
   );
+}
 };
 
 const categories = [
