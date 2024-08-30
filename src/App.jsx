@@ -5,7 +5,8 @@ import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
-
+import Contact from './components/contactUs/Contact';
+import Branches from './components/contactUs/Branches'
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'));
@@ -74,7 +75,8 @@ const App = () => {
             </Suspense>
             <Footer /> 
  
-            
+            {/* <Contact/>  */}
+            {/* <Branches/> */}
         </div>
     );
 

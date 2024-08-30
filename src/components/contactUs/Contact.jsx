@@ -12,27 +12,6 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 
-// const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
-
-//   const isError = errors[id];
-//   const isRequiredError = isError && isError.type === 'required';
-
-
-//   return (
-//     <div className="relative w-full">
-//       <input
-//         id={id}
-//         aria-label={label}
-//         placeholder={placeholder}
-//         className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
-//           } hover:outline-none focus:outline-none`}
-//         {...register(id, validation)}
-//         required={required}
-//       />
-
-//     </div>
-//   );
-// };
 
 function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -63,8 +42,8 @@ function Contact() {
 
     const isError = errors[id];
     const isRequiredError = isError && isError.type === 'required';
-  
-  
+
+
     return (
       <div className="relative w-full">
         <input
@@ -76,11 +55,11 @@ function Contact() {
           {...register(id, validation)}
           required={required}
         />
-          {isError && (
-        <p className="mt-1 text-sm text-red-600">
-          {isRequiredError ? isError.message : isError.message}
-        </p>
-      )}
+        {isError && (
+          <p className="mt-1 text-sm text-red-600">
+            {isRequiredError ? isError.message : isError.message}
+          </p>
+        )}
       </div>
     );
   };
@@ -107,17 +86,17 @@ function Contact() {
               </div>
               {/* ADDRESS HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '50px' }} /><span className="max-w-md text-lg font-bold md:ml-3">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
+                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '40px' }} /><span className="text-lg font-bold md:ml-3  max-w-md">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
               </div>
 
               {/*PHONE HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3">+91-011-49072043</span>
+                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '40px' }} /><span className=" text-lg font-bold md:ml-3">+91-011-49072043</span>
               </div>
 
               {/* EMAIL HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3">info@oswalcrop.com</span>
+                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '40px' }} /><span className=" text-lg font-bold md:ml-3">info@oswalcrop.com</span>
               </div>
 
             </div>
@@ -169,7 +148,7 @@ function Contact() {
                           }
                         }}
                         required={true}
-                 
+
 
                       />
 
@@ -189,14 +168,13 @@ function Contact() {
                         register={register}
                         errors={errors}
                         validation={{
-                        
                           pattern: {
                             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                             message: 'Invalid email format',
                           }
                         }}
                         required={true} />
-                      {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
+                     
 
                     </div>
 
@@ -212,7 +190,7 @@ function Contact() {
                         errors={errors}
                         validation={{}}
                         required={true} />
-                      {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
+                     
                     </div>
                   </div>
 
@@ -242,19 +220,20 @@ function Contact() {
                         placeholder="City"
                         register={register}
                         errors={errors}
-                        validation={{ }}
+                        validation={{}}
                         required={true}
                       />
-                 
+
                     </div>
                   </div>
 
                   {/*Message*/}
                   <div className="w-full">
-                    <label htmlFor="message"></label>
+                  
                     <textarea
+                       id="message"
                       rows="4"
-                      id="message"
+                      aria-label="Message"
                       placeholder="Message"
                       className="w-full p-2 border-2 border-gray-300 hover:outline-none focus:outline-none "
                       {...register('message')}
@@ -266,8 +245,8 @@ function Contact() {
                   <div>
                     <button
                       type='submit'
-                      className="px-5 py-3 font-bold bg-light-green-300 rounded-3xl text-white-shade-100 hover:bg-dark-green-200">SEND MESSAGE</button>
-                       <ToastContainer className="align-center" />
+                      className="px-5 py-3  bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                    <ToastContainer className="align-center" />
                   </div>
 
                 </div>
