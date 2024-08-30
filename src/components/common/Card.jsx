@@ -1,11 +1,19 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({
   title,
   picture = null,  // Default value for picture
   className = ''   // Default value for className
 }) => {
+
+  const navigate = useNavigate();
+
+  const handleClickMore = () => {
+    navigate(`/products/${title}`)
+  }
+
   return (
     // ---------------Card Designing-------------------
     <div className={`relative ${className}`}>
@@ -18,7 +26,7 @@ const Card = ({
           <Button
             buttonText='Click More'
             showIcon={true}
-            handlar={() => console.log('Button clicked!')}
+            handlar={handleClickMore}
             />
         </div>
       </div>

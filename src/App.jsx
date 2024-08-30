@@ -57,7 +57,7 @@ const App = () => {
                     </Route>
 
                     {/* Products with dynamic category */}
-                    <Route path='/products/:category' element={<Products />} />
+                    
                     <Route path="/products/:category" element={<Products />} />
                     <Route path="/products/:category/:productName" element={<ProductPage />} />
                     <Route path='/Filter' element={<Filter />} />
