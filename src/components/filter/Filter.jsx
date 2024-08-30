@@ -1,37 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
-import ProductCard from '../common/ProductCard';
-
-const Filter = ({ products, category }) => {
-  const navigate = useNavigate();
-
-  const handleReadMoreClick = (title, productName) => {
-    navigate(`/products/${title}/${productName}`);
-  };
-
-  return (
-    <div className='relative w-full py-16'>
-      <div className='grid grid-cols-4 gap-6'>
-        {products.length > 0 ? (
-          products.map((product) =>
-            product.productName.map((item) => (
-              <ProductCard
-                key={item.id}
-                imageSrc={item.img}
-                productName={item.name}
-                productDescription={item.activeIngredient}
-                onReadMoreClick={() => handleReadMoreClick(product.title, item.name)}
-              />
-            ))
-          )
-        ) : (
-          <p className='text-lg text-center text-gray-500'>No products found.</p>
-        )}
-      </div>
-    </div>
-  );
-};
+import Filter from '../filter/Filter';
 
 const categories = [
   "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
@@ -108,6 +77,11 @@ const CropFilter = () => {
     const filterData = () => {
       let filtered = allProducts;
 
+      // Debugging output
+      console.log("Selected Category:", selectedCategory);
+      console.log("Selected Crop:", selectedCrop);
+      console.log("Selected Pest:", selectedPest);
+
       // Filter by Category
       if (selectedCategory && selectedCategory !== 'All Products') {
         filtered = filtered.filter(product =>
@@ -136,6 +110,9 @@ const CropFilter = () => {
           )
         );
       }
+
+      // Debugging output
+      console.log("Filtered Products:", filtered);
 
       setFilteredProducts(filtered);
     };
@@ -187,7 +164,7 @@ const CropFilter = () => {
         </select>
       </div>
 
-      <Filter products={filteredProducts} category={selectedCategory} />
+      <Filter products={filteredProducts} />
     </div>
   );
 };
