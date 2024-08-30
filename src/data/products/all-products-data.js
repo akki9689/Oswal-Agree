@@ -556,7 +556,7 @@ export const allProducts = [
             'Citrus',
             'Maize',
             'Peach',
-            ' Potato',
+            'Potato',
             'Banana',
             'Wheat',
             'Jute',

@@ -34,8 +34,8 @@ const Filter = ({ products, category }) => {
 };
 
 const categories = [
-  "All Products", "BioProducts", "Fertilizer", "Fungicide", "Herbicide",
-  "Insecticide", "Micronutrient", "PGR (Plant Growth Regular)"
+  "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
+  "Insecticides", "micronutrients", "plantgrowth"
 ];
 
 const crops = [
@@ -56,7 +56,7 @@ const crops = [
 
 const pests = [
   "Brown Plant Hopper", "Early Shoot Borer", "Root Borer", "Termite",
-  "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall Midge",
+  "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
   "White Backed Plant Hopper", "Whorl Maggot", "Diamon Back Moth",
   "Fruit Borer", "Yellow Stem Borer", "Thrips", "Pod Borer", "Ballworm",
   "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly", "BPH (Brown Plant Hopper)",
@@ -131,11 +131,13 @@ const CropFilter = () => {
           product.productName.some(productItem =>
             productItem.details.pest.some(
               pest => pest.toLowerCase() === selectedPest.toLowerCase()
+              
             )
           )
-        );
+        ); 
       }
-
+  
+console.log(filtered);
       setFilteredProducts(filtered);
     };
 
