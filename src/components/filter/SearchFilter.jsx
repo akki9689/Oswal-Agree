@@ -5,7 +5,8 @@ import ProductCard from '../common/ProductCard';
 
 const Filter = ({ products, category }) => {
   const navigate = useNavigate();
-
+console.log("prod",products)
+console.log("category",category)
   const handleReadMoreClick = (productName) => {
     navigate(`/products/${category}/${productName}`);
   };
@@ -193,7 +194,7 @@ console.log(filtered);
         </select>
       </div>
 
-      <Filter products={filteredProducts} category={selectedCategory} />
+      <Filter  products={filteredProducts} category={selectedCategory} />
     </div>
   );
 };

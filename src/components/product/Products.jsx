@@ -4,7 +4,7 @@ import ProductCard from '../../components/common/ProductCard';
 import { allProducts } from '../../data/products/all-products-data'; 
 import Popupname from '../common/Popupname';
 import { motion, useAnimation } from 'framer-motion';
-
+// ---------------------added
 const Products = () => {
   const { category } = useParams();
   // console.log(category);
