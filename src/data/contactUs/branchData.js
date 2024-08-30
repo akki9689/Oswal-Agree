@@ -17,7 +17,7 @@ export  const branchItem = [
 
     {
       id:4,
-      title:'Bareily | Lucknow (Uttar Pardesh)'
+      title:'Bareily | Lucknow (Uttar Pradesh)'
     },
 
     {

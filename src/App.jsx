@@ -21,6 +21,7 @@ const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
+// import Filter from './components/filter/SearchFilter'
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
             <Navbar />
+      
             <Suspense fallback={<Loader />}>
                 <Routes>
                     {/* Homepage */}
@@ -74,7 +76,8 @@ const App = () => {
             </Suspense>
             <Footer /> 
  
-            
+            {/* <Contact/>  */}
+            {/* <Branches/> */}
         </div>
     );
 
