@@ -12,27 +12,27 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 
-const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
+// const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
 
-  const isError = errors[id];
-  const isRequiredError = isError && isError.type === 'required';
+//   const isError = errors[id];
+//   const isRequiredError = isError && isError.type === 'required';
 
 
-  return (
-    <div className="relative w-full">
-      <input
-        id={id}
-        aria-label={label}
-        placeholder={placeholder}
-        className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
-          } hover:outline-none focus:outline-none`}
-        {...register(id, validation)}
-        required={required}
-      />
+//   return (
+//     <div className="relative w-full">
+//       <input
+//         id={id}
+//         aria-label={label}
+//         placeholder={placeholder}
+//         className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
+//           } hover:outline-none focus:outline-none`}
+//         {...register(id, validation)}
+//         required={required}
+//       />
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
 function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -57,6 +57,33 @@ function Contact() {
     }
 
   }, []);
+
+
+  const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
+
+    const isError = errors[id];
+    const isRequiredError = isError && isError.type === 'required';
+  
+  
+    return (
+      <div className="relative w-full">
+        <input
+          id={id}
+          aria-label={label}
+          placeholder={placeholder}
+          className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
+            } hover:outline-none focus:outline-none`}
+          {...register(id, validation)}
+          required={required}
+        />
+          {isError && (
+        <p className="mt-1 text-sm text-red-600">
+          {isRequiredError ? isError.message : isError.message}
+        </p>
+      )}
+      </div>
+    );
+  };
 
   const notify = (data) => {
     console.log(data);
@@ -116,7 +143,7 @@ function Contact() {
                         placeholder="Name"
                         register={register}
                         errors={errors}
-                        validation={{ required: 'Please fill out this field' }
+                        validation={{}
                         }
                         required={true}
                       />
@@ -136,7 +163,7 @@ function Contact() {
                         register={register}
                         errors={errors}
                         validation={{
-                          required: 'Please out this fill field', pattern: {
+                          pattern: {
                             value: /^[0-9]{10}$/,
                             message: 'Phone number must be 10 digits',
                           }
@@ -162,7 +189,7 @@ function Contact() {
                         register={register}
                         errors={errors}
                         validation={{
-                          required: 'Please fill out this field',
+                        
                           pattern: {
                             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                             message: 'Invalid email format',
@@ -183,10 +210,7 @@ function Contact() {
                         placeholder="Company"
                         register={register}
                         errors={errors}
-                        validation={{
-                          required: 'Please fill out this field'
-
-                        }}
+                        validation={{}}
                         required={true} />
                       {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
                     </div>
@@ -218,7 +242,7 @@ function Contact() {
                         placeholder="City"
                         register={register}
                         errors={errors}
-                        validation={{ required: 'Please fill out this field' }}
+                        validation={{ }}
                         required={true}
                       />
                  
