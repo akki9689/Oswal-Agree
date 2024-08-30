@@ -24,49 +24,88 @@ const CropFilter = () => {
   const [selectedCrop, setSelectedCrop] = useState('');
   const [selectedPest, setSelectedPest] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
+  const [selectedValue , setSelectedValue] = useState([]);
+
+
+  // let selectedValue = [];
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
+    setSelectedValue(prev => [...prev , event.target.value])
+    // selectedValue.push(event.target.value)
   };
 
   const handleCropChange = (event) => {
     setSelectedCrop(event.target.value);
+    setSelectedValue(prev => [...prev , event.target.value])
+    // selectedValue.push(event.target.value)
   };
 
   const handlePestChange = (event) => {
     setSelectedPest(event.target.value);
+    setSelectedValue(prev => [...prev , event.target.value])
+    // selectedValue.push(event.target.value)
   };
 
   const filterData = () => {
-    let filtered = allProducts;
 
-    if (selectedCategory && selectedCategory !== 'All Product') {
-      filtered = filtered.filter(product =>
-        product.title.toLowerCase() === selectedCategory.toLowerCase()
-      );
+    let filtered ;
+    console.log(selectedValue);
+
+    // if (selectedCategory && selectedCategory !== 'All Product') {
+    //   filtered = allProducts.filter(product =>
+    //     product.title.toLowerCase() === selectedCategory.toLowerCase()
+    //   );
+
+    //     if(filtered && selectedCrop){
+    //       console.log(selectedCrop)
+    //       console.log(filtered)
+    //      filtered = filtered[0].productName.filter((product) => 
+    //         product.details.targetCrops.includes(selectedCrop)
+    //       )
+    //       console.log("After selectedcrop : " , filtered)
+
+            
+    //     }
+
+     
+    // }
+    // else{
+    //   filtered = allProducts
+    // }
+
+    // if (selectedCrop) {
+    //   // filtered = filtered.filter(product =>
+    //   //   product.productName.some(productItem =>
+    //   //     productItem.details.targetCrops.some(
+    //   //       crop => crop.toLowerCase() === selectedCrop.toLowerCase()
+    //   //     )
+    //   //   )
+    //   // );
+    // }
+
+    // if (selectedPest) {
+    //   filtered = filtered.filter(product =>
+    //     product.productName.some(productItem =>
+    //       productItem.details.pest.some(
+    //         pest => pest.toLowerCase() === selectedPest.toLowerCase()
+    //       )
+    //     )
+    //   );
+    // }
+
+    if(selectedCategory || selectedCrop || selectedPest){
+
+    }else{
+      setFilteredProducts(allProducts)
     }
 
-    if (selectedCrop) {
-      filtered = filtered.filter(product =>
-        product.productName.some(productItem =>
-          productItem.details.targetCrops.some(
-            crop => crop.toLowerCase() === selectedCrop.toLowerCase()
-          )
-        )
-      );
-    }
 
-    if (selectedPest) {
-      filtered = filtered.filter(product =>
-        product.productName.some(productItem =>
-          productItem.details.pest.some(
-            pest => pest.toLowerCase() === selectedPest.toLowerCase()
-          )
-        )
-      );
-    }
 
-    setFilteredProducts(filtered);
+ 
+    // setFilteredProducts(filtered);
+    
+    
   };
 
   const handleFilterClick = () => {
