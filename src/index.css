@@ -77,3 +77,10 @@
  
 }
 
+.filter-bg{
+  background-image: url('./images//Home/herosection/agro3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
