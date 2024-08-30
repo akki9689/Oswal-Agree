@@ -148,10 +148,7 @@ export default {
     },
 
     extend: {
-      backgroundImage: {
-        'filter-bg': "url('../../src/images/Home/herosection/agro3.jpg')", // Replace with your image path
-      },
-     
+
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },

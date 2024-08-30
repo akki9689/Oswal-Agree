@@ -43,25 +43,25 @@ const CropFilter = () => {
 
     let filtered;
 
-    if(selectedCategory.toLowerCase() === "all product"){
+    if (selectedCategory.toLowerCase() === "all product") {
       setFilteredProducts(allProducts)
-    }else{
+    } else {
 
-       filtered = allProducts.filter((product) => 
+      filtered = allProducts.filter((product) =>
         product.title.toLowerCase() === selectedCategory.toLowerCase()
 
-         // const categoryMatch = selectedCategory ? product.title === selectedCategory : true;
-         // const cropMatch = selectedCrop ? product.targetcrop === selectedCrop : true;
-         // const pestMatch = selectedPest ? product.pest === selectedPest : true;
-         // return categoryMatch
-         //  && cropMatch && pestMatch;
-   
-       );
-      
+        // const categoryMatch = selectedCategory ? product.title === selectedCategory : true;
+        // const cropMatch = selectedCrop ? product.targetcrop === selectedCrop : true;
+        // const pestMatch = selectedPest ? product.pest === selectedPest : true;
+        // return categoryMatch
+        //  && cropMatch && pestMatch;
+
+      );
+
     }
 
 
-   
+
 
 
     setFilteredProducts(filtered);
@@ -73,9 +73,10 @@ const CropFilter = () => {
 
   return (
     <section className='w-full py-10 relative'>
-      <div className="w-11/12 xl:w-10/12 mx-auto">
-        {/* Filter Section with Background Image */}
-        <div className="border-custom-border p-10 bg-filter-bg bg-top">
+
+      {/* Filter Section with Background Image */}
+      <div className="border-custom-border p-10 filter-bg bg-top">
+        <div className="w-11/12 xl:w-10/12 mx-auto">
           <div className="flex flex-wrap gap-6 items-center py-20">
             {/* Select Category */}
             <select
@@ -335,12 +336,15 @@ const CropFilter = () => {
             </button>
           </div>
         </div>
-
-        {/* Render the Filter component with filtered products */}
-
-        <Filter products={filteredProducts} />
-
       </div>
+
+      {/* Render the Filter component with filtered products */}
+
+      <div className="w-11/12 xl:w-10/12 mx-auto">
+        <Filter products={filteredProducts} />
+      </div>
+
+
     </section>
   );
 };
