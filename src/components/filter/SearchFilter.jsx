@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
 import ProductCard from '../common/ProductCard';
@@ -13,16 +13,20 @@ const Filter = ({ products, category }) => {
   return (
     <div className='relative w-full py-16'>
       <div className='grid grid-cols-4 gap-6'>
-        {products.map((product) =>
-          product.productName?.map((item) => (
-            <ProductCard
-              key={item.id}
-              imageSrc={item.img}
-              productName={item.name}
-              productDescription={item.activeIngredient}
-              onReadMoreClick={() => handleReadMoreClick(item.name)}
-            />
-          ))
+        {products.length > 0 ? (
+          products.map((product) =>
+            product.productName.map((item) => (
+              <ProductCard
+                key={item.id}
+                imageSrc={item.img}
+                productName={item.name}
+                productDescription={item.activeIngredient}
+                onReadMoreClick={() => handleReadMoreClick(item.name)}
+              />
+            ))
+          )
+        ) : (
+          <p className='text-lg text-center text-gray-500'>No products found.</p>
         )}
       </div>
     </div>
@@ -30,7 +34,7 @@ const Filter = ({ products, category }) => {
 };
 
 const categories = [
-  "All Products", "Bio Products", "Fertilizer", "Fungicide", "Herbicide",
+  "All Products", "BioProducts", "Fertilizer", "Fungicide", "Herbicide",
   "Insecticide", "Micronutrient", "PGR (Plant Growth Regular)"
 ];
 
@@ -101,72 +105,58 @@ const CropFilter = () => {
   const [selectedCrop, setSelectedCrop] = useState('');
   const [selectedPest, setSelectedPest] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
-  const [selectedValue, setSelectedValue] = useState([]);
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-    setSelectedValue(prev => [...prev, event.target.value]);
-  };
+  useEffect(() => {
+    const filterData = () => {
+      let filtered = allProducts;
 
-  const handleCropChange = (event) => {
-    setSelectedCrop(event.target.value);
-    setSelectedValue(prev => [...prev, event.target.value]);
-  };
+      if (selectedCategory && selectedCategory !== 'All Products') {
+        filtered = filtered.filter(product =>
+          product.title.toLowerCase() === selectedCategory.toLowerCase()
+        );
+      }
 
-  const handlePestChange = (event) => {
-    setSelectedPest(event.target.value);
-    setSelectedValue(prev => [...prev, event.target.value]);
-  };
-
-  const filterData = () => {
-    let filtered = allProducts;
-
-    // Filter by Category
-    if (selectedCategory && selectedCategory !== "All Products") {
-      filtered = filtered.filter(product =>
-        product.title.toLowerCase() === selectedCategory.toLowerCase()
-      );
-    }
-
-    // Filter by Crop
-    if (selectedCrop) {
-      filtered = filtered.map(product => ({
-        ...product,
-        productName: product.productName.filter(item =>
-          item.details.targetCrops.some(crop =>
-            crop.toLowerCase() === selectedCrop.toLowerCase()
+      if (selectedCrop) {
+        filtered = filtered.filter(product =>
+          product.productName.some(productItem =>
+            productItem.details.targetCrops.some(
+              crop => crop.toLowerCase() === selectedCrop.toLowerCase()
+            )
           )
-        )
-      })).filter(product => product.productName.length > 0);
-    }
+        );
+      }
 
-    // Filter by Pest
-    if (selectedPest) {
-      filtered = filtered.map(product => ({
-        ...product,
-        productName: product.productName.filter(item =>
-          item.details.pest.some(pest =>
-            pest.toLowerCase() === selectedPest.toLowerCase()
+      if (selectedPest) {
+        filtered = filtered.filter(product =>
+          product.productName.some(productItem =>
+            productItem.details.pest.some(
+              pest => pest.toLowerCase() === selectedPest.toLowerCase()
+            )
           )
-        )
-      })).filter(product => product.productName.length > 0);
-    }
+        );
+      }
 
-    // Update filtered products state
-    setFilteredProducts(filtered);
-  };
+      setFilteredProducts(filtered);
+    };
+
+    filterData();
+  }, [selectedCategory, selectedCrop, selectedPest]);
 
   return (
-    <>
-      <div className='flex justify-around py-6'>
+    <div>
+      <div className='py-4 bg-black'>
+        <h2 className='text-3xl text-center text-white'>Search Product</h2>
+      </div>
+
+      <div className='w-full px-5 my-8'>
         <select
           value={selectedCategory}
-          onChange={handleCategoryChange}
-          className='p-2 border-2 border-gray-300 rounded'
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className='p-2 mx-2 border rounded'
         >
-          <option value="">Select Category</option>
-          {categories.map(category => (
-            <option key={category} value={category}>
+          <option value=''>Select Category</option>
+          {categories.map((category, index) => (
+            <option key={index} value={category}>
               {category}
             </option>
           ))}
@@ -174,12 +164,12 @@ const CropFilter = () => {
 
         <select
           value={selectedCrop}
-          onChange={handleCropChange}
-          className='p-2 border-2 border-gray-300 rounded'
+          onChange={(e) => setSelectedCrop(e.target.value)}
+          className='p-2 mx-2 border rounded'
         >
-          <option value="">Select Crop</option>
-          {crops.map(crop => (
-            <option key={crop} value={crop}>
+          <option value=''>Select Crop</option>
+          {crops.map((crop, index) => (
+            <option key={index} value={crop}>
               {crop}
             </option>
           ))}
@@ -187,27 +177,20 @@ const CropFilter = () => {
 
         <select
           value={selectedPest}
-          onChange={handlePestChange}
-          className='p-2 border-2 border-gray-300 rounded'
+          onChange={(e) => setSelectedPest(e.target.value)}
+          className='p-2 mx-2 border rounded'
         >
-          <option value="">Select Pest</option>
-          {pests.map(pest => (
-            <option key={pest} value={pest}>
+          <option value=''>Select Pest</option>
+          {pests.map((pest, index) => (
+            <option key={index} value={pest}>
               {pest}
             </option>
           ))}
         </select>
-
-        <button
-          onClick={filterData}
-          className='p-2 text-white bg-blue-500 rounded'
-        >
-          Filter
-        </button>
       </div>
 
       <Filter products={filteredProducts} category={selectedCategory} />
-    </>
+    </div>
   );
 };
 
