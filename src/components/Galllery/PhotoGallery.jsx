@@ -1,11 +1,11 @@
 import React from 'react'
-import Heading from '../common/Heading'
+import Popupname from '../common/Popupname'
 import { photoGallery } from '../../data/gallery/photo-gallery'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import PhotoModal from './PhotoModal'
-import SendQueryModal from '../common/SendQueryModal'
+
 
 const PhotoGallery = () => {
 
@@ -13,7 +13,7 @@ const PhotoGallery = () => {
 
     const [category, setCategory] = useState('all');
     const [modalData, setModalData] = useState("");
-    const [queryModal , setQueryModal] = useState("");
+    
 
     useEffect(() => {
         if (modalData) {
@@ -38,7 +38,7 @@ const PhotoGallery = () => {
 
 
     return (
-        <section className='w-full py-16 relative'>
+        <section className='w-full pt-8 pb-16 relative'>
 
             {/* ----------- container ----------- */}
 
@@ -46,7 +46,7 @@ const PhotoGallery = () => {
 
                 {/* ------- heading --------- */}
 
-                <Heading text="Photo Gallery" isBorder={false} />
+                <Popupname title="PHOTO GALLERY" isBorder={false} />
 
                 {/* ---------- filter title ---------- */}
 
@@ -115,20 +115,14 @@ const PhotoGallery = () => {
 
                 </div>
 
-                <button onClick={()=> setQueryModal("Fila Plus")}>
-                    CLick Here
-                </button>
-
+             
             </div>
 
             {
                 modalData && <PhotoModal modalData={modalData} setModalData={setModalData} />
             }
 
-            {
-                queryModal && <SendQueryModal queryModal={queryModal}  setQueryModal={setQueryModal}/>
-            }
-
+           
            
             
 

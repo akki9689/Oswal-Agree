@@ -1,6 +1,4 @@
-import React from 'react'
-import { FaFilter, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
-import { SocialIcon } from 'react-social-icons';
+
 
 export const navbarData = {
  navItems : [
@@ -9,7 +7,7 @@ export const navbarData = {
      label: 'About Us',
      path: '/about',
      dropdown: [
-       { label: 'Company Profile', path: '/about/companyprofile' },
+       { label: 'Company Profile', path: '/about/company-profile' },
        { label: 'Vision and Mission', path: '/about/vision' },
        { label: 'Awards and Recognition', path: '/about/awards' },
        { label: 'Terms and Condition', path: '/about/terms' },
@@ -18,7 +16,7 @@ export const navbarData = {
    },
    {
      label: 'Product Range',
-     path: '/products',
+     path: '/products/insecticides',
      dropdown: [
        { label: 'Insecticides', path: '/products/insecticides' },
        { label: 'Fungicides', path: '/products/fungicides' },
@@ -31,16 +29,16 @@ export const navbarData = {
    },
    {
      label: 'Gallery',
-     path: '/gallery',
+     path: '/photo-gallery',
      
    },
    
    {
      label: 'Contact Us',
-     path: '/contact',
+     path: '/contact/contact-us',
      dropdown: [
-       { label: 'Contact', path: '/contactUs/contact' },
-       { label: 'Branches', path: '/contactUs/branches' },
+       { label: 'Contact', path: '/contact/contact-us' },
+       { label: 'Branches', path: '/contact/branches' },
      ],
    },
    

@@ -69,5 +69,11 @@
   height: 10px; /* Change active bullet size */
 }
 
-
+.query-container{
+  background-image: url('./images/Common/farm-bg-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ 
+}
 

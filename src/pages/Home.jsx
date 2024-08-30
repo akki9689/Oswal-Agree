@@ -6,8 +6,6 @@ import Product from "../components/Home/Product";
 import OurVision from "../components/Home/OurVision";
 import IconSection from "../components/Home/IconSection";
 
-import PhotoGallery from "../components/Galllery/PhotoGallery";
-
 
 const Home = () => {
   return (
@@ -18,7 +16,7 @@ const Home = () => {
       <Product />
       <OurVision />
       <IconSection />
-      <PhotoGallery />
+     
       
     </div>
   );

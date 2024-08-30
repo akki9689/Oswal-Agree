@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import Button from './Button'
+import SendQueryModal from './SendQueryModal';
+import { useState, useEffect } from 'react';
 
 const ProductDetails = ({
   imageUrl = null,
@@ -12,12 +14,31 @@ const ProductDetails = ({
   advantages,
   applications
 }) => {
-  // Handler function to open the PDF in a new browser tab
+  // Handler function to open the PDF in a new browser tab name
   const handleOpenPDF = () => {
     window.open('/src/pdf/OSWAL-CROP-PROTECTION-CATALOGUE.pdf', '_blank'); // Replace with the actual path to your PDF
   };
 
+  const [queryModal, setQueryModal] = useState("");
+
+  useEffect(() => {
+    if (queryModal) {
+
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+
+
+  }, [queryModal]);
+
+
   return (
+    <>
     <div className='flex flex-col items-center p-6 mx-auto max-w-7xl md:p-7 lg:flex-row lg:p-8 lg:space-x-8 dsx:w-8/12'>
       {/* Left Side: Image */}
       <div className='flex justify-center w-full lg:w-1/3 lg:justify-start'>
@@ -90,7 +111,7 @@ const ProductDetails = ({
           <Button
             buttonText='Send Query'
             showIcon={true}
-            handlar={() => console.log('Button clicked!')} 
+            handlar={() => setQueryModal(title)}
           />
 
           <Button
@@ -100,7 +121,15 @@ const ProductDetails = ({
           />
         </div>
       </div>
+
+     
     </div>
+
+    {
+        queryModal && <SendQueryModal queryModal={queryModal} setQueryModal={setQueryModal} />
+      }
+
+    </>
   )
 }
 
