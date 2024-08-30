@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import image from '../../images/Common/world_map-bg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
-import {Tooltip} from 'react-tooltip';
+import { stateData } from "../../data/contactUs/contactData"
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
 
+const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
 
-const CustomInput = ({ id, label, placeholder, register, errors = {}, validation }) => {
   const isError = errors[id];
   const isRequiredError = isError && isError.type === 'required';
 
@@ -48,7 +50,7 @@ const CustomInput = ({ id, label, placeholder, register, errors = {}, validation
     lineHeight: '16px',
     fontSize: '14px',
     fontWeight: 'bold',
-   
+
   };
 
   // Arrow styles
@@ -64,8 +66,8 @@ const CustomInput = ({ id, label, placeholder, register, errors = {}, validation
     borderRight: '8px solid transparent',
     borderTop: '8px solid white', // Arrow background color
     borderBottom: '6px solid black', // Arrow border color
-    
-    
+
+
   };
 
   return (
@@ -74,42 +76,56 @@ const CustomInput = ({ id, label, placeholder, register, errors = {}, validation
         id={id}
         aria-label={label}
         placeholder={placeholder}
-        className={`w-full p-2 border-2 ${
-          isError ? 'border-gray-300' : 'border-gray-300'
-        } hover:outline-none focus:outline-none`}
+        className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
+          } hover:outline-none focus:outline-none`}
         {...register(id, validation)}
         data-tip
         data-for={`${id}-tooltip`}
+        required={required}
       />
-      {isRequiredError && (
-        <div
-          id={`${id}-tooltip`}
-          style={tooltipStyles}
-          role="tooltip"
-        >
-          <span style={iconStyles}>!</span>
-          {isError.message}
-          <div style={tooltipArrowStyles} />
-        </div>
-      )}
-      {!isRequiredError && isError && (
-        <p className="mt-1 text-sm text-red-600 z-10">{isError.message}</p>
-      )}
+
     </div>
   );
 };
 
 function Contact() {
-  const { register, handleSubmit, formState: { errors } , reset} = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [mapSize, setMapSize] = useState({ width: '80%' });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth > 1024) {
+        setMapSize({ width: '75%' })
+      }
+      else {
+        setMapSize({ width: '100%' })
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+    return () => {
+      window.addEventListener('resize', handleResize);
+    }
+
+  }, []);
+
   const notify = (data) => {
     console.log(data);
+    toast.success('Message Send!', {
+      position: 'top-center',
+      autoClose: 4000
+    })
+    reset() // Clear the form fields
   }
   return (
     <section>
-      <div className="w-full py-6" style={{ backgroundImage: `url(${image})` }}>
-        <div className="w-full flex flex-col smd:space-x-2">
+      <div className="w-full px-2 xl:px-6 py-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
+        <div className="w-full flex flex-col smd:space-x-2 gap-6">
           {/* ROW-1   ADDRESS && FORM*/}
-          <div className="w-full px-3  flex flex-wrap md:justify-center md:px-1 gap-8 smd:px-20">
+          <div className="w-full px-3  flex flex-wrap md:justify-center md:px-1 gap-8 xl:px-20">
             {/* ADDRESS */}
             <div className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
               {/* CONTACT US HEADING */}
@@ -135,14 +151,14 @@ function Contact() {
 
 
             {/* FORM */}
-            <div className="w-full px-3 md:px-1 md:w-[50%] smd:w-[45%] flex flex-col gap-10">
+            <div className="w-full  md:px-1 md:w-[50%] smd:w-[45%] flex flex-col gap-10">
               {/* ENQUIRY FROM HEADING */}
               <div>
                 <h2 className="text-4xl font-bold text-dark-green-200 "><span className="underline decoration-black underline-offset-[30px]" >Enqu</span>iry Form</h2>
               </div>
               {/* FORM CODE*/}
 
-              <form onSubmit = {handleSubmit(notify)}>
+              <form onSubmit={handleSubmit(notify)}>
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-row gap-4">
                     {/* Name */}
@@ -154,27 +170,35 @@ function Contact() {
                         placeholder="Name"
                         register={register}
                         errors={errors}
-                        validation={{required:'Please fill out this field'}} />
-                     
+                        validation={{ required: 'Please fill out this field' }
+                        }
+                        required={true}
+                      />
+
+
 
                     </div>
 
                     {/* Phone */}
 
                     <div className="w-full">
-                      
+
                       <CustomInput
                         id="phone"
                         aria-label='phone'
                         placeholder="Phone"
                         register={register}
                         errors={errors}
-                        validation={{required: 'Please out this fill field', pattern: {
-                          value: /^[0-9]{10}$/,
-                          message: 'Phone number must be 10 digits',}}}
-                        // className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                       
-                        />
+                        validation={{
+                          required: 'Please out this fill field', pattern: {
+                            value: /^[0-9]{10}$/,
+                            message: 'Phone number must be 10 digits',
+                          }
+                        }}
+                        required={true}
+                      // className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+
+                      />
 
                       {/* {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>} */}
                     </div>
@@ -190,12 +214,15 @@ function Contact() {
                         aria-label='Email'
                         placeholder="Email"
                         register={register}
-                        errors={errors} 
-                        validation={{required:'Please fill out this field',
+                        errors={errors}
+                        validation={{
+                          required: 'Please fill out this field',
                           pattern: {
-                          value:  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: 'Invalid email format',
-                        }}}/>
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: 'Invalid email format',
+                          }
+                        }}
+                        required={true} />
                       {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
 
                     </div>
@@ -203,16 +230,18 @@ function Contact() {
                     {/* Company */}
 
                     <div className="w-full">
-                     
+
                       <CustomInput
                         id="company"
                         aria-label='company'
                         placeholder="Company"
                         register={register}
                         errors={errors}
-                        validation={{required:'Please fill out this field'
-                                     
-                        }}/>
+                        validation={{
+                          required: 'Please fill out this field'
+
+                        }}
+                        required={true} />
                       {/* {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>} */}
                     </div>
                   </div>
@@ -220,64 +249,31 @@ function Contact() {
                   <div className="flex flex-row gap-4">
                     {/* State */}
                     <div className="w-full">
-                      
+
                       <select
                         id="state"
-                        className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                        {...register('state', { required: 'Please select the option' })}>
+                        className="w-full p-2 border-2 border-gray-300 hover:outline-none focus:outline-none"
+                        {...register('state', { required: 'Please select the option' })}
+                        required={true}
+                      >
                         <option value="">State</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands (UT)</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh (UT)</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu (UT)</option>
-                        <option value="Delhi">Delhi (UT)</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jammu and Kashmir">Jammu and Kashmir (UT)</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Ladakh">Ladakh (UT)</option>
-                        <option value="Lakshadweep">Lakshadweep (UT)</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Puducherry">Puducherry (UT)</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="West Bengal">West Bengal</option>
+                        {stateData.map(({ id, value, label }) => (
+                          <option key={id} value={value}>{label}</option>
+                        ))}
+
                       </select>
-
-                      {errors.state && <p className="mt-1 text-sm text-red-600">{errors.state.message}</p>}
-
                     </div>
                     {/* City */}
                     <div className="w-full">
-                      
+
                       <CustomInput
-                      id="city"
-                      aria-label="city"
-                      placeholder="City"
-                      register={register}
-                      errors={errors}
-                      validation={{required:'Please fill out this field'}}
-                      
+                        id="city"
+                        aria-label="city"
+                        placeholder="City"
+                        register={register}
+                        errors={errors}
+                        validation={{ required: 'Please fill out this field' }}
+                        required={true}
                       />
                       {/* {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city.message}</p>} */}
                     </div>
@@ -287,23 +283,25 @@ function Contact() {
                   <div className="w-full">
                     <label htmlFor="message"></label>
                     <textarea
-                    rows="4"
-                    id="message"
-                    placeholder="Message"
-                    className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
-                    {...register('message')}
+                      rows="4"
+                      id="message"
+                      placeholder="Message"
+                      className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                      {...register('message')}
+                      required={true}
                     />
-                     {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
+                    {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
                   </div>
 
                   <div>
                     <button
-                    type='submit'
-                    className="px-5 py-3 bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                      type='submit'
+                      className="px-5 py-3 bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                       <ToastContainer className="align-center" />
                   </div>
 
                 </div>
-              </form> 
+              </form>
 
 
 
@@ -311,9 +309,16 @@ function Contact() {
           </div>
 
           {/* ROW-2  MAP*/}
-          <div className="w-full flex justify-center items-center relative overflow-hidden h-0  pb-[50%] m-2">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22771.658681247576!2d77.17803811614137!3d28.710394768348912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fcf000001%3A0xd5d5de14a71e1f1d!2sAzadpur%20Transport%20Centre!5e0!3m2!1sen!2sin!4v1724965332109!5m2!1sen!2sin" width="600" height="450" style={{border:'0',height:'100%',width:'100%',left:'0',top:'0',position:'absolute',justifyContent:'center'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <div className="flex justify-center items-center relative overflow-hidden   pb-[80%] md:pb-[40%] lg:pb-[30%] xlg:pb-[20%]" style={{ width: '100%', maxWidth: mapSize.width, height: '0', margin: '0 auto' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22771.658681247576!2d77.17803811614137!3d28.710394768348912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fcf000001%3A0xd5d5de14a71e1f1d!2sAzadpur%20Transport%20Centre!5e0!3m2!1sen!2sin!4v1724965332109!5m2!1sen!2sin"
+              style={{ border: '0', height: '100%', width: '100%', left: '0', top: '0', position: 'absolute' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
+
 
         </div>
       </div>
