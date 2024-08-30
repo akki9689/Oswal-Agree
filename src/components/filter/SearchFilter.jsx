@@ -5,18 +5,16 @@ import ProductCard from '../common/ProductCard';
 const Filter = ({ products }) => {
   return (
     <div className='w-full py-16 relative'>
-   
-        <div className='grid grid-cols-4 gap-6'>
-          {products.map((product) => product.productName?.map((item) => (
-            <ProductCard
-              key={item.id}
-              imageSrc={item.img}
-              productName={item.name}
-              productDescription={item.activeIngredient}
-            />
-          )))}
-        </div>
-      
+      <div className='grid grid-cols-4 gap-6'>
+        {products.map((product) => product.productName?.map((item) => (
+          <ProductCard
+            key={item.id}
+            imageSrc={item.img}
+            productName={item.name}
+            productDescription={item.activeIngredient}
+          />
+        )))}
+      </div>
     </div>
   );
 };
@@ -40,29 +38,33 @@ const CropFilter = () => {
   };
 
   const filterData = () => {
+    let filtered = allProducts;
 
-    let filtered;
-
-    if (selectedCategory.toLowerCase() === "all product") {
-      setFilteredProducts(allProducts)
-    } else {
-
-      filtered = allProducts.filter((product) =>
+    if (selectedCategory && selectedCategory !== 'All Product') {
+      filtered = filtered.filter(product =>
         product.title.toLowerCase() === selectedCategory.toLowerCase()
-
-        // const categoryMatch = selectedCategory ? product.title === selectedCategory : true;
-        // const cropMatch = selectedCrop ? product.targetcrop === selectedCrop : true;
-        // const pestMatch = selectedPest ? product.pest === selectedPest : true;
-        // return categoryMatch
-        //  && cropMatch && pestMatch;
-
       );
-
     }
 
+    if (selectedCrop) {
+      filtered = filtered.filter(product =>
+        product.productName.some(productItem =>
+          productItem.details.targetCrops.some(
+            crop => crop.toLowerCase() === selectedCrop.toLowerCase()
+          )
+        )
+      );
+    }
 
-
-
+    if (selectedPest) {
+      filtered = filtered.filter(product =>
+        product.productName.some(productItem =>
+          productItem.details.pest.some(
+            pest => pest.toLowerCase() === selectedPest.toLowerCase()
+          )
+        )
+      );
+    }
 
     setFilteredProducts(filtered);
   };
@@ -73,12 +75,9 @@ const CropFilter = () => {
 
   return (
     <section className='w-full py-10 relative'>
-
-      {/* Filter Section with Background Image */}
       <div className="border-custom-border p-10 filter-bg bg-top">
         <div className="w-11/12 xl:w-10/12 mx-auto">
           <div className="flex flex-wrap gap-6 items-center py-20">
-            {/* Select Category */}
             <select
               className="jet-select__control block w-38 px-4 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
               name="select-category"
@@ -92,13 +91,11 @@ const CropFilter = () => {
               <option value="Fertilizers">Fertilizer</option>
               <option value="Fungicides">Fungicide</option>
               <option value="Herbicides">Herbicide</option>
-              {/* <option value="Immunomodulator">Immunomodulator</option> */}
               <option value="Insecticides">Insecticide</option>
-              <option value="micronutrients">Micronutrient </option>
-              <option value="plantgrowth">PGR (Plant Growth Regular)</option>
+              <option value="Micronutrients">Micronutrient</option>
+              <option value="Plantgrowth">PGR (Plant Growth Regular)</option>
             </select>
 
-            {/* Select Crop */}
             <select
               className="jet-select__control block w-38 px-4 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
               name="select-crop"
@@ -107,6 +104,7 @@ const CropFilter = () => {
               onChange={handleCropChange}
             >
               <option value="">Select Crop...</option>
+             
               <option value="" data-label="Select...">Select...</option>
               <option value="Cotton" data-label="Cotton">Cotton</option>
               <option value="Grapes" data-label="Grapes">Grapes</option>
@@ -193,10 +191,8 @@ const CropFilter = () => {
               <option value="Pigeon Pea" data-label="Pigeon Pea">Pigeon Pea</option>
 
 
-              {/* Add more crops as needed */}
             </select>
 
-            {/* Select Pest */}
             <select
               className="jet-select__control block w-38 px-4 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
               name="select-pest"
@@ -205,7 +201,6 @@ const CropFilter = () => {
               onChange={handlePestChange}
             >
               <option value="">Select Pest...</option>
-
               <option value="Brown Plant Hopper">Brown Plant Hopper</option>
               <option value="Early Shoot Borer">Early Shoot Borer</option>
               <option value="Root Borer">Root Borer</option>
@@ -324,27 +319,19 @@ const CropFilter = () => {
               <option value="Yellow Mite" data-label="Yellow Mite">Yellow Mite</option>
               <option value="Seeding Blight" data-label="Seeding Blight">Seeding Blight</option>
               <option value="Leaf Spot" data-label="Leaf Spot">Leaf Spot</option>
-              {/* Add more pests as needed */}
             </select>
 
-            {/* Filter Button */}
             <button
-              className="px-4 py-2 bg-dark-green-200 text-white rounded-sm shadow-sm hover:bg-dark-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="px-6 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus:outline-none"
               onClick={handleFilterClick}
             >
-              Apply Filter
+              Filter
             </button>
           </div>
         </div>
       </div>
 
-      {/* Render the Filter component with filtered products */}
-
-      <div className="w-11/12 xl:w-10/12 mx-auto">
-        <Filter products={filteredProducts} />
-      </div>
-
-
+      <Filter products={filteredProducts} />
     </section>
   );
 };
