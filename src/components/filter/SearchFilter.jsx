@@ -1,10 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
 import ProductCard from '../common/ProductCard';
+import Popupname from '../common/Popupname';
+import { motion, useAnimation } from 'framer-motion';
 //import ProductDetails from '../common/ProductDetails';
 const Filter = ({ products, category }) => { 
+ 
+  // console.log(category);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 const navigate = useNavigate();
+const controls = useAnimation();
+useEffect(() => {
+  const getProducts = () => {
+    if (category) {
+      const categoryData = allProducts.find(cat => cat.title.toLowerCase() === category.toLowerCase());
+      if (categoryData) {
+        setFilteredProducts(categoryData.productName || []);
+      } else {
+        setFilteredProducts([]);
+      }
+    } else {
+      const allProductsList = allProducts.flatMap(cat => cat.productName || []);
+      setFilteredProducts(allProductsList);
+    }
+  };
+
+  getProducts();
+}, [category]);
+
+useEffect(() => {
+  controls.start({
+    opacity: [0, 1],
+    scale: [0.9, 1],
+    transition: { duration: 0.5 },
+  });
+}, [category, controls]);
+
 
 const handleReadMoreClick = (productName) => {
   navigate(`/products/${category}/${productName}`);
@@ -12,6 +44,9 @@ const handleReadMoreClick = (productName) => {
 
   return (
     <div className='w-full py-16 relative'>
+      <motion.div animate={controls}>
+        <Popupname title={category ? category : 'All Products'} />
+      </motion.div>
       <div className='grid grid-cols-4 gap-6'>
         {products.map((product) => product.productName?.map((item) => (
           <ProductCard
