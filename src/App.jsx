@@ -42,7 +42,6 @@ const App = () => {
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
             <Navbar />
-
             <Suspense fallback={<Loader />}>
                 <Routes>
                     {/* Homepage */}
@@ -73,9 +72,9 @@ const App = () => {
 
                 </Routes>
             </Suspense>
-            <Footer />
-            {/* 
-            <Contact/> */}
+            <Footer /> 
+ 
+            
         </div>
     );
 
