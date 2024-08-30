@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 
-
+//---
 const CustomInput = ({ id, label, placeholder, register, errors = {}, validation, required = false }) => {
 
   const isError = errors[id];
@@ -122,10 +122,10 @@ function Contact() {
   }
   return (
     <section>
-      <div className="w-full px-2 xl:px-6 py-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
-        <div className="w-full flex flex-col smd:space-x-2 gap-6">
+      <div className="w-full px-2 py-6 xl:px-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
+        <div className="flex flex-col w-full gap-6 smd:space-x-2">
           {/* ROW-1   ADDRESS && FORM*/}
-          <div className="w-full px-3  flex flex-wrap md:justify-center md:px-1 gap-8 xl:px-20">
+          <div className="flex flex-wrap w-full gap-8 px-3 md:justify-center md:px-1 xl:px-20">
             {/* ADDRESS */}
             <div className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
               {/* CONTACT US HEADING */}
@@ -134,17 +134,17 @@ function Contact() {
               </div>
               {/* ADDRESS HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3  max-w-md">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
+                <FontAwesomeIcon icon={faLocationArrow} style={{ fontSize: '50px' }} /><span className="max-w-md text-lg font-bold md:ml-3">310, Gupta Tower, Commercial Complex, Azadpur, Delhi - 110033 (India)</span>
               </div>
 
               {/*PHONE HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold md:ml-3">+91-011-49072043</span>
+                <FontAwesomeIcon icon={faPhone} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3">+91-011-49072043</span>
               </div>
 
               {/* EMAIL HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} /><span className=" text-lg font-bold md:ml-3">info@oswalcrop.com</span>
+                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} /><span className="text-lg font-bold md:ml-3">info@oswalcrop.com</span>
               </div>
 
             </div>
@@ -196,7 +196,7 @@ function Contact() {
                           }
                         }}
                         required={true}
-                      // className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                      // className="w-full p-2 border-2 border-gray-300 hover:outline-none focus:outline-none "
 
                       />
 
@@ -286,7 +286,7 @@ function Contact() {
                       rows="4"
                       id="message"
                       placeholder="Message"
-                      className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                      className="w-full p-2 border-2 border-gray-300 hover:outline-none focus:outline-none "
                       {...register('message')}
                       required={true}
                     />
@@ -296,7 +296,7 @@ function Contact() {
                   <div>
                     <button
                       type='submit'
-                      className="px-5 py-3 bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                      className="px-5 py-3 font-bold bg-light-green-300 rounded-3xl text-white-shade-100 hover:bg-dark-green-200">SEND MESSAGE</button>
                        <ToastContainer className="align-center" />
                   </div>
 
