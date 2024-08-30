@@ -2659,7 +2659,7 @@ export const allProducts = [
         }
       },
       {
-        id: 100,
+        id: 102,
         name: "Oswal Gold",
         img: Oswal2,
         activeIngredient: "Humic-Humin-Fulvic-Humate 95%",

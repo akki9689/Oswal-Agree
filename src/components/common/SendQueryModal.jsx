@@ -191,11 +191,13 @@ const SendQueryModal = ({ queryModal, setQueryModal,  }) => {
                   className='w-full px-3 py-2 outline-none focus:border focus:border-dark-green-100  rounded-lg'
                 >
                   <option value="">State</option>
+
                   {states.map((state, index) => (
                     <option key={index} value={state}>
                       {state}
                     </option>
                   ))}
+                  
                 </select>
 
               </label>
