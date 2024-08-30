@@ -4,8 +4,8 @@ import ProductCard from '../common/ProductCard';
 
 const Filter = ({ products }) => {
   return (
-    <section className='w-full py-16 relative'>
-      <div className="w-11/12 xl:w-10/12 mx-auto">
+    <div className='w-full py-16 relative'>
+   
         <div className='grid grid-cols-4 gap-6'>
           {products.map((product) => product.productName?.map((item) => (
             <ProductCard
@@ -16,8 +16,8 @@ const Filter = ({ products }) => {
             />
           )))}
         </div>
-      </div>
-    </section>
+      
+    </div>
   );
 };
 
