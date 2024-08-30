@@ -15,8 +15,9 @@ const Filter = ({ products , category }) => {
 
 console.log("prod",products)
 console.log("category",category)
-  const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${productName}`);
+
+  const handleReadMoreClick = (title , productName) => {
+    navigate(`/products/${title}/${productName}`);
   };
   return (
     <div className='relative w-full py-16'>
