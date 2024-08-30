@@ -17,58 +17,6 @@ const CustomInput = ({ id, label, placeholder, register, errors = {}, validation
   const isError = errors[id];
   const isRequiredError = isError && isError.type === 'required';
 
-  // Tooltip styles
-  const tooltipStyles = {
-    backgroundColor: 'white',
-    color: 'black',
-    border: '2px solid #ddd',
-    borderRadius: '4px',
-    padding: '8px',
-    fontSize: '12px',
-    display: 'flex',
-    alignItems: 'center',
-    position: 'absolute',
-    top: '110%', // Position the tooltip just below the input
-    left: '50%',
-    transform: 'translateX(-50%)',
-    whiteSpace: 'nowrap',
-    zIndex: 10, // Ensure the tooltip is on top
-    paddingLeft: '20px', // Adjust for spacing between the icon and text
-    paddingBottom: '20px', // Space for the arrow
-  };
-
-  // Tooltip icon styles
-  const iconStyles = {
-    marginRight: '5px',
-    display: 'inline-block',
-    width: '16px',
-    height: '16px',
-    borderRadius: '50%',
-    backgroundColor: 'orange',
-    color: 'white',
-    textAlign: 'center',
-    lineHeight: '16px',
-    fontSize: '14px',
-    fontWeight: 'bold',
-
-  };
-
-  // Arrow styles
-  const tooltipArrowStyles = {
-    content: "''",
-    position: 'absolute',
-    bottom: '100%', // Position the arrow just below the tooltip
-    left: '50%',
-    transform: 'translateX(-50%)',
-    width: 0,
-    height: 0,
-    borderLeft: '8px solid transparent',
-    borderRight: '8px solid transparent',
-    borderTop: '8px solid white', // Arrow background color
-    borderBottom: '6px solid black', // Arrow border color
-
-
-  };
 
   return (
     <div className="relative w-full">
@@ -79,8 +27,6 @@ const CustomInput = ({ id, label, placeholder, register, errors = {}, validation
         className={`w-full p-2 border-2 ${isError ? 'border-gray-300' : 'border-gray-300'
           } hover:outline-none focus:outline-none`}
         {...register(id, validation)}
-        data-tip
-        data-for={`${id}-tooltip`}
         required={required}
       />
 
@@ -160,7 +106,7 @@ function Contact() {
 
               <form onSubmit={handleSubmit(notify)}>
                 <div className="flex flex-col gap-5">
-                  <div className="flex flex-row gap-4">
+                  <div className="flex flex-col  md:flex-row gap-4">
                     {/* Name */}
                     <div className="w-full">
 
@@ -196,7 +142,7 @@ function Contact() {
                           }
                         }}
                         required={true}
-                      // className="w-full p-2 border-2 border-gray-300  hover:outline-none focus:outline-none "
+                 
 
                       />
 
@@ -205,7 +151,7 @@ function Contact() {
                   </div>
 
 
-                  <div className="flex flex-row gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     {/* Email */}
                     <div className="w-full">
 
@@ -246,7 +192,7 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-4">
+                  <div className="flex flex-col md:flex-row gap-4">
                     {/* State */}
                     <div className="w-full">
 
@@ -275,7 +221,7 @@ function Contact() {
                         validation={{ required: 'Please fill out this field' }}
                         required={true}
                       />
-                      {/* {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city.message}</p>} */}
+                 
                     </div>
                   </div>
 
@@ -296,7 +242,7 @@ function Contact() {
                   <div>
                     <button
                       type='submit'
-                      className="px-5 py-3 bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
+                      className="px-5 py-3  bg-light-green-300 rounded-3xl text-white-shade-100 font-bold hover:bg-dark-green-200">SEND MESSAGE</button>
                        <ToastContainer className="align-center" />
                   </div>
 
@@ -311,7 +257,7 @@ function Contact() {
           {/* ROW-2  MAP*/}
           <div className="flex justify-center items-center relative overflow-hidden   pb-[80%] md:pb-[40%] lg:pb-[30%] xlg:pb-[20%]" style={{ width: '100%', maxWidth: mapSize.width, height: '0', margin: '0 auto' }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22771.658681247576!2d77.17803811614137!3d28.710394768348912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021fcf000001%3A0xd5d5de14a71e1f1d!2sAzadpur%20Transport%20Centre!5e0!3m2!1sen!2sin!4v1724965332109!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.3053020156417!2d77.17508367474034!3d28.710420680540768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021de362cfcd%3A0x68e9dde54c15a87a!2sGupta%20Tower%2C%20Commercial%20Complex%2C%20Gopal%20Nagar%2C%20Azadpur%2C%20Delhi%2C%20110033!5e0!3m2!1sen!2sin!4v1725025585841!5m2!1sen!2sin"
               style={{ border: '0', height: '100%', width: '100%', left: '0', top: '0', position: 'absolute' }}
               allowFullScreen=""
               loading="lazy"

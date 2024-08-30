@@ -69,8 +69,8 @@ const App = () => {
                 </Routes>
             </Suspense>
             <Footer /> 
-{/* 
-            <Contact/> */}
+ 
+            <Contact/> 
         </div>
     );
 
