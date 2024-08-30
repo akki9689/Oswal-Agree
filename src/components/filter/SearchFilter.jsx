@@ -6,8 +6,8 @@ import ProductCard from '../common/ProductCard';
 const Filter = ({ products, category }) => {
   const navigate = useNavigate();
 
-  const handleReadMoreClick = (productName) => {
-    navigate(`/products/${category}/${productName}`);
+  const handleReadMoreClick = (title, productName) => {
+    navigate(`/products/${title}/${productName}`);
   };
 
   return (
@@ -21,7 +21,7 @@ const Filter = ({ products, category }) => {
                 imageSrc={item.img}
                 productName={item.name}
                 productDescription={item.activeIngredient}
-                onReadMoreClick={() => handleReadMoreClick(item.name)}
+                onReadMoreClick={() => handleReadMoreClick(product.title, item.name)}
               />
             ))
           )
@@ -37,7 +37,6 @@ const categories = [
   "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
   "Insecticides", "micronutrients", "plantgrowth"
 ];
-
 const crops = [
   "Cotton", "Grapes", "Red Gram", "ChickPea", "Cabbage", "Brinjal", "Okra",
   "Chilli", "Mango", "Rice", "Sugarcane", "Tomato", "Paddy", "Citrus", "Sunflower",
@@ -53,7 +52,6 @@ const crops = [
   "Pumpkin", "Flowers", "Spices", "Orange", "Lentil", "Mint", "Gheya",
   "Capsicum", "Pigeon", "Bittergourd", "Bengal gram", "Pigeon Pea"
 ];
-
 const pests = [
   "Brown Plant Hopper", "Early Shoot Borer", "Root Borer", "Termite",
   "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
@@ -110,12 +108,14 @@ const CropFilter = () => {
     const filterData = () => {
       let filtered = allProducts;
 
+      // Filter by Category
       if (selectedCategory && selectedCategory !== 'All Products') {
         filtered = filtered.filter(product =>
           product.title.toLowerCase() === selectedCategory.toLowerCase()
         );
       }
 
+      // Filter by Crop
       if (selectedCrop) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
@@ -126,18 +126,17 @@ const CropFilter = () => {
         );
       }
 
+      // Filter by Pest
       if (selectedPest) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
             productItem.details.pest.some(
               pest => pest.toLowerCase() === selectedPest.toLowerCase()
-              
             )
           )
-        ); 
+        );
       }
-  
-console.log(filtered);
+
       setFilteredProducts(filtered);
     };
 
@@ -149,7 +148,6 @@ console.log(filtered);
       <div className='py-4 bg-black'>
         <h2 className='text-3xl text-center text-white'>Search Product</h2>
       </div>
-
       <div className='w-full px-5 my-8'>
         <select
           value={selectedCategory}
@@ -163,7 +161,6 @@ console.log(filtered);
             </option>
           ))}
         </select>
-
         <select
           value={selectedCrop}
           onChange={(e) => setSelectedCrop(e.target.value)}
@@ -176,7 +173,6 @@ console.log(filtered);
             </option>
           ))}
         </select>
-
         <select
           value={selectedPest}
           onChange={(e) => setSelectedPest(e.target.value)}
