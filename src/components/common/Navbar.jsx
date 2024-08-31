@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 import { SocialIcon } from 'react-social-icons';
 import { FaBars, FaTimes, FaRegHandPointRight } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
 import { navbarData } from '../../data/nav-links';
 
@@ -14,7 +14,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
-  const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
   const [iconSize, setIconSize] = useState({ width: 35, height: 35 });
 
   useEffect(() => {
@@ -39,10 +38,6 @@ const Navbar = () => {
     setActiveMobileDropdown(activeMobileDropdown === dropdownId ? null : dropdownId);
   };
 
-  const handleMobileSubDropdownToggle = (subDropdownId) => {
-    setActiveMobileSubDropdown(activeMobileSubDropdown === subDropdownId ? null : subDropdownId);
-  };
-
   const dropdownVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: { opacity: 1, height: 'auto' }
@@ -52,7 +47,7 @@ const Navbar = () => {
     <header className="bg-white shadow-lg">
       <div className="container flex justify-between w-10/12 px-0 py-4 mx-auto md:px-20">
         {/* Navbar Logo */}
-        <NavLink to="/">
+        <NavLink to="/" onClick={toggleMenu}>
           <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
         </NavLink>
 
@@ -164,7 +159,7 @@ const Navbar = () => {
             className="absolute top-0 left-0 z-50 w-full p-2 bg-white shadow-lg md:hidden "
           >
             <div className="flex items-center justify-between mb-4">
-              <NavLink to="/">
+              <NavLink to="/" onClick={toggleMenu}>
                 <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
               </NavLink>
               <button onClick={toggleMenu} className="text-2xl">
@@ -198,8 +193,8 @@ const Navbar = () => {
                         <li key={subItem.label} className="relative">
                           <NavLink
                             to={subItem.path}
-                            className="block w-full p-2 text-lg font-medium border rounded-lg active:bg-yellow-100 border-dark-green-100 "
-                            onClick={() => setIsMenuOpen(false)}
+                            className="block w-full p-2 text-lg font-medium border rounded-lg active:bg-yellow-100 border-dark-green-100"
+                            onClick={toggleMenu}
                           >
                             {subItem.label}
                           </NavLink>
@@ -210,7 +205,7 @@ const Navbar = () => {
                               exit="hidden"
                               variants={dropdownVariants}
                               transition={{ duration: 0.3 }}
-                              className="flex flex-col gap-2 p-2 bg-white border rounded-lg border-dark-green-100 "
+                              className="flex flex-col gap-2 p-2 bg-white border rounded-lg border-dark-green-100"
                               style={{ zIndex: 30 }}
                             >
                               {subItem.subDropdown.map((subSubItem) => (
@@ -218,7 +213,7 @@ const Navbar = () => {
                                   <NavLink
                                     to={subSubItem.path}
                                     className="block p-2 text-lg border-b border-dark-green-100"
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={toggleMenu}
                                   >
                                     {subSubItem.label}
                                   </NavLink>
@@ -232,6 +227,9 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+              <NavLink to="/filter" className="block w-full p-2 text-lg font-semibold text-center text-green-900 border rounded-lg border-dark-green-100 active:bg-yellow-100" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#186d26", fontSize: "28px", fontWeight: "900" }} />
+              </NavLink>
             </div>
           </motion.div>
         )}
