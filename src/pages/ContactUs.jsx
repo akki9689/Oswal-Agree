@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <div>
       <Outlet>
-        
+      
       </Outlet>
     </div>
   )
