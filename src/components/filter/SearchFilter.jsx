@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
 import ProductCard from '../common/ProductCard';
 
-const Filter = ({ products, category }) => {
+const Filter = ({ products }) => {
   const navigate = useNavigate();
 
   const handleReadMoreClick = (title, productName) => {
@@ -35,7 +35,7 @@ const Filter = ({ products, category }) => {
 
 const categories = [
   "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
-  "Insecticides", "micronutrients", "plantgrowth"
+  "Insecticides", "Micronutrients", "Plantgrowth"
 ];
 const crops = [
   "Cotton", "Grapes", "Red Gram", "ChickPea", "Cabbage", "Brinjal", "Okra",
@@ -57,11 +57,11 @@ const pests = [
   "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
   "White Backed Plant Hopper", "Whorl maggot", "Diamon Back Moth",
   "Fruit borer", "Yellow Stem borer", "Thrips", "Pod borer", "Ballworm",
-  "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly","White fly", "BPH (Brown Plant Hopper)",
+  "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly", "White fly", "BPH (Brown Plant Hopper)",
   "GLH (Green Leaf Hopper)", "Hispa", "Psylla", "Mosquito bug", "Girdle beetle",
   "Semilooper", "Shoot fly", "Steam borer", "Rhizome weevil", "Nematode",
   "Ear cockle", "Pink bollworm", "American bollworm", "Spodoptera litura",
-  "Spotted bollworm", "Epliachna Grubs", "White Grub", "Phalaris minor",
+  "Spotted bollworm", "Epliachna Grubs", "Phalaris minor",
   "Medicago spp", "Chenopodium album", "Cronopus didymus", "Vicia sativa",
   "Rumex spp", "Dinebra Vetroflexa", "Goose grass", "Wild finger",
   "Crab grass", "Barnyard grass", "Crowfoot grass", "Eragrostispilosa",
@@ -120,7 +120,7 @@ const CropFilter = () => {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
             productItem.details.targetCrops.some(
-              crop => crop.toLowerCase() === selectedCrop.toLowerCase()
+              crop => crop.toLowerCase().includes(selectedCrop.toLowerCase())
             )
           )
         );
@@ -131,7 +131,7 @@ const CropFilter = () => {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
             productItem.details.pest.some(
-              pest => pest.toLowerCase() === selectedPest.toLowerCase()
+              pest => pest.toLowerCase().includes(selectedPest.toLowerCase())
             )
           )
         );
@@ -144,50 +144,49 @@ const CropFilter = () => {
   }, [selectedCategory, selectedCrop, selectedPest]);
 
   return (
-    <div>
-      <div className='py-4 bg-black'>
-        <h2 className='text-3xl text-center text-white'>Search Product</h2>
-      </div>
-      <div className='w-full px-5 my-8'>
+    <div className='w-full mx-auto mt-10 max-w-7xl'>
+      <div className='flex flex-wrap gap-6 mb-8'>
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className='p-2 mx-2 border rounded'
+          className='px-4 py-2 text-gray-700 border rounded-md'
         >
           <option value=''>Select Category</option>
-          {categories.map((category, index) => (
-            <option key={index} value={category}>
+          {categories.map((category) => (
+            <option key={category} value={category}>
               {category}
             </option>
           ))}
         </select>
+
         <select
           value={selectedCrop}
           onChange={(e) => setSelectedCrop(e.target.value)}
-          className='p-2 mx-2 border rounded'
+          className='px-4 py-2 text-gray-700 border rounded-md'
         >
           <option value=''>Select Crop</option>
-          {crops.map((crop, index) => (
-            <option key={index} value={crop}>
+          {crops.map((crop) => (
+            <option key={crop} value={crop}>
               {crop}
             </option>
           ))}
         </select>
+
         <select
           value={selectedPest}
           onChange={(e) => setSelectedPest(e.target.value)}
-          className='p-2 mx-2 border rounded'
+          className='px-4 py-2 text-gray-700 border rounded-md'
         >
           <option value=''>Select Pest</option>
-          {pests.map((pest, index) => (
-            <option key={index} value={pest}>
+          {pests.map((pest) => (
+            <option key={pest} value={pest}>
               {pest}
             </option>
           ))}
         </select>
       </div>
 
-      <Filter products={filteredProducts} category={selectedCategory} />
+      <Filter products={filteredProducts} />
     </div>
   );
 };

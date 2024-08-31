@@ -155,7 +155,7 @@ export const allProducts = [
         activeIngredient: 'Alphacypermethrin 10% SC',
         url: '#',
         details: {
-          targetCrops: ['........'],
+          targetCrops: [''],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
           uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
@@ -989,7 +989,7 @@ export const allProducts = [
           advantages: [
             'It is recommended to control spotted bollworms and pink bollworms of cotton crop.'
           ],
-          application: '....'
+          application: ''
         }
       },
       {
@@ -2468,7 +2468,7 @@ export const allProducts = [
         details: {
           targetCrops: ['Sugarcane', 'Citrus', 'Potato', 'Tobacco', 'Fruits'],
           dose: '2-4kg/acre',
-          pest: ['.......'],
+          pest: [''],
           uses: 'After Nitrogen and Phosphorus, Potash is the only major nutrient required by all crops. Potash (K) is the only essential plant nutrient which selflessly works for plant growth, it enhances the ability of plants to resist disease and pest attack, cold and other adverse conditions. Potash is essential for formation of starch, in production and translocation of sugars, and is thus of special value for sugarcane, potato, beet root. It improves equality of tobacco, citrus and other fruits, makes grain of cereals plumpy and straw strong. Potash corrects the ill effects of excess of nitrogen. Plants fail to absorb potash even if large quantity is available in the soil as it is in insoluble form.',
           advantages: [
             'It’s contains very effective cell mass of potash solubilizing Bacteria (Frateuria aurentia) which helps to convert insoluble inorganic potash into simple and soluble form, which is easily available to plants.'
@@ -2486,7 +2486,7 @@ export const allProducts = [
         details: {
           targetCrops: ['All Crops'],
           dose: '10-12 Kg/Ha',
-          pest: ['.............'],
+          pest: [''],
           uses: 'Recommended Crops : Cereals: Rice, Wheat, Maize, Sorghum, Bajra, Oats; Pulses: Pigeon Pea, Pea, Gram, Green Gram, Lentil, Black Gram; Oil Seeds: Mustard, Sunflower, Soybean, Ground nut, Linseed, Sesamum; Fodders: Sorghum, Berseem, Oat; Fibres: Cotton, Jute, Sunnhemp; Cash Crops: Sugarcane, Tobacco, Mentha; Vegetables: Potato, Cabbage, Cauliflower, Onion, Okra, Carrot, Radish, Bitter gourd, Bottle gourd, Tomato, Chilli, Brinjal, Capsicum, Peas, Broccoli, French Bean, Muskmelon, Pumpkin, Water Melon, Cucumber, Amaranthus, Lettuce; Spices: Ginger, Tumeric, Garlic, Coriander, Cumin, Carbamom, Fenugreek, Fennel; Flowers: Rose, Gladiolus, Chrysanthemum, Cut Flowers; Fruits: Mango, Litchi, Pear, Peach, Citrus, Banana, Grapes, Guava, Cherry, Apple, Apricot, Bael, Ber, Plum, Papaya, Phalsa, Sapota, Strawberry, Pomegranate; Nuts: Almonds, Walnut; Plantation Crops: Arecanut, Cashew, Cocoa, Coconut, Coffee, Oilpalm, Palmyra palm, Rubber, Tea etc.',
           advantages: [
             'Improves Soil health, Soil fertility status, and Soil Ph. Minimizes recommended chemical fertilizers doses and economic in rainfed areas. Enhances product quality (Aroma, Color, Shining, Taste, Size, Shelf life, etc.) and yield. Crop plants become hardy, enhance flowering and reduce flower & fruit droppings.'
@@ -2529,7 +2529,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Potato", "Vegetables", "Fruits"],
           dose: "250-300 gm/acre in 125 -150 liter water",
-          pest: ["............."],
+          pest: [""],
           uses: "Borohit Plus is a combination of Boron (Ca as CaO 30% and B 4%) in chelated form which is important for physiological and biochemical processes in the plant. Transport of boron and calcium to the vegetable decreases during fruit development. Boron improves the solubility and mobility of calcium in vegetables and regulates the carbohydrate metabolism, besides helping in the absorption of Nitrogen.",
           advantages: [
             "Thus Borohit Plus help in the free transport of calcium coupled with boron and performs even in calcareous soil and hick alkaline soil since it is a chelated mix. Boron is essential to maintain the structural integrity of plant membranes along with calcium and is involved in nucleic acid metabolism. Production of vegetable crops is adversely affected much more than vegetative growth with a low supply of available boron."
@@ -2548,7 +2548,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Vegetables", "Fruits", "All Crops", "Cereals", "Pulses", "Oil Seeds"],
           dose: "1 Kg to 2 Kg per Acre",
-          pest: [".........."],
+          pest: [""],
           uses: "It is granulated organic manure derived from natural sources. it is used for increasing the yield and quality of all crops, including cereals, cotton, oil seeds, pulses, vegetables, fruit crops, plantation crops, etc.",
           advantages: [
             "Increases yield significantly, stops flower and fruit drop, improves the quality of crops, enhances protein synthesis, and increases tolerance against diseases and climatic stress. Compatible with all types of fertilizers and pesticides."
@@ -2565,7 +2565,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Mango", "Sugarcane", "Paddy", "Maize", "Wheat", "Bajra", "Mustard", "Soybean", "Tobacco", "Vegetables", "Fruits", "Pulses", "Jawar"],
           dose: "4 Kg/Acre",
-          pest: ["..........."],
+          pest: [""],
           uses: "Paddy, Sugarcane, Wheat, Pulses, Cotton, Tobacco, Maize, Jawar, Bajra, Soybean. Mango, Mustard, Fruit, and vegetables are in all the sectors of agriculture, horticulture, floriculture, pasture land, etc. It gives excellent results for all Root-type crops such as Groundnut, Potato, Onion, Ginger, and Garlic. It is recommended to be mixed with fertilizers. It can also be used as a broadcast treatment, spot, or band application. ",
           advantages: [
             "Accelerating Germination & improving greenery in plants. Enhancing Seedling Vigour & Root Growth. Improving Uptake & Translocation of Macro & Micro Nutrients. Inducing early maturity and inducing more Flowering forming substances & increasing more Flowers. Helping Plants to resist drought Resulting in Higher Yields & Better Quality of Crops Produce."
@@ -2582,7 +2582,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Paddy", "Fruits", "All Crops", "Horticulture"],
           dose: "250-500 ml/acre",
-          pest: ["........"],
+          pest: [""],
           uses: "Diamond Gold is a distinguished bio-organic fertilizer generated by amino acids and other micronutrients. It affects the biochemical activities and supports and accelerates the process of building up of natural phytohormones (auxins, gibberellins, cytokinins, ethylene) within the plant, plus, phenomenally enhances its immunity potential.",
           advantages: [
             "Effectively secures the plant from natural disparities resulting in the clean splendor, magnificent tillering, and might of retention of flowers and fruits. It also promotes the extensive growth of roots for the overall development of the plant. It also adds to the quality of yield and produce."
@@ -2599,7 +2599,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Chilli", "Sugarcane", "Paddy", "Wheat", "Vegetables", "Fruits", "Oil Seeds"],
           dose: "2 Kg/Acre",
-          pest: ["......................"],
+          pest: [""],
           uses: "It is a granular yield booster derived from natural resources. Absorbed through the roots, it enhances the sun rays absorption capacity (Photosynthesis) of crops. Which gives amazing increase in their productivity and quality.",
           advantages: [
             "Wheat, Paddy, Sugarcane, Chillies, Oilseeds, Fruits and vegetables etc."
@@ -2616,12 +2616,12 @@ export const allProducts = [
         details: {
           targetCrops: ["Vegetables", "Fruits"],
           dose: "250 ml/acre in 200 liter water",
-          pest: ["......."],
+          pest: [""],
           uses: "Use: To increase fruit size and yield in fruits & vegetables. Antidote: Gastric lavage with warm water. In case of poisoning, call a physician immediately.",
           advantages: [
             "With an objective to fulfill the demands of our clients, we are engaged in providing a wide array of Active Constituent Cytokinins And Enzymes."
           ],
-          application: "............"
+          application: ""
         }
       },
       {
@@ -2633,12 +2633,12 @@ export const allProducts = [
         details: {
           targetCrops: ["Sugarcane", "Paddy", "Tea", "Potato", "Banana", "Wheat", "Soybean", "Vegetables"],
           dose: "3 ml/acre in 1 liter water",
-          pest: ["........"],
+          pest: [""],
           uses: "It is Organic Product derived from natural sources of vegetable sea weed. It is used to increase the yield and quality of produce in paddy, wheat, sugarcane, vegetable, soyabean, potato, banana and tea. It is compatible with chemical fertilizer and pesticides. Non toxic and safe to use.",
           advantages: [
-            "........... "
+            " "
           ],
-          application: "........."
+          application: ""
         }
       },
       {
@@ -2650,7 +2650,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Grapes", "Tomato", "Paddy", "Citrus", "Banana", "Soybean", "Pulses"],
           dose: "1 to 2 ml. per litre of water",
-          pest: ["........"],
+          pest: [""],
           uses: "Humic Acid and Amino Acid 14% w/w, Solid Contents (Bentonite Granules) Q.S. to make, Total 100% w/w. Improved soil structure by making the soil more porous, permeable and aerated. Improved germination of seeds, root development chlorophyill and vitamin content. lmproved uptake and translocation of micro/macro nutrients chlorophyll and vitamin content. Improved uptake and translocation of micro/macro nutrients chlorophyll and vitamin content. Improved uptake and translocation of micro / macro nutrients & stabilizes pH. lnducing early maturity by enhancing enzyme activity. Encourages the development of beneficial soil micro organisms. Helping plants to resist drought. Resulting in higher yields and better quality or crops produce.",
           advantages: [
             "lt is recommended on various crops namely Soybean, Cotton, Paddy, Pulses, Citrus, Banana, Grapes, Tomatoes and other vegetables and fruits."
@@ -2667,7 +2667,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Grapes", "Cabbage", "Brinjal", "Mango", "Sugarcane", "Tomato", "Paddy", "Tea", "Maize", "Potato", "Banana", "Wheat", "Bajra", "Mustard", "Soybean", "Apple", "Papaya", "Tobacco", "Vegetables", "Mentha", "Jawar", "Pumpkin"],
           dose: "Use in drip irrigation at the rate of 500 grams per acre.",
-          pest: ["........"],
+          pest: [""],
           uses: "Use in crops Paddy, Wheat, Maize, Mustard, Jowar, Bajra, Potato, Sugarcane, Cotton, Tobacco, Soybean, Tomato, Brinjal, Cabbage and Pumpkin Vegetables, Grapes, Mango, Banana, Apple, Papaya, Tea, Mentha and Flowers crops.",
           advantages: [
             "Treat large size seeds (Paddy, Wheat, Maize, Mustard etc.) at the rate of 5 grams per kg and small size seeds (Brinjal, Chilli, Tomato, Cabbage etc.) at the rate of 5 grams per 50 grams seed.",
@@ -2701,7 +2701,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Grapes", "Sugarcane", "Paddy", "Maize", "Wheat", "Vegetables", "Fruits", "Pomgranate", "Cereals", "Pulses", "Oil Seeds", "Flowers", "Spices", "Orange"],
           dose: "2-4 Kg/Acre",
-          pest: ["........"],
+          pest: [""],
           uses: "It is a micronutrient of macro importance and it acts as a metal activator of enzymes. Its deficiency causes considerable yield losses and plants become prone to diseases. Initial symptoms start with intervienal chiorosis of younger leaves leading to a reduction in shoot growth and shortening of internodes. Mottle leaf, little leaf, etc. in the case of trees are symptoms of zinc deficiency. This is a common problem in alkaline and calcareous soils.",
           advantages: [
             "It is very useful for all crops like – cereals (wheat, paddy, maize), pulses, oilseeds, fruits (grapes, oranges, pomegranates), vegetables, spices, flowers, cotton, sugarcane etc.",
@@ -2718,7 +2718,7 @@ export const allProducts = [
         details: {
           targetCrops: ["All Crops"],
           dose: "25 ml/100 Liter of water.",
-          pest: ["........"],
+          pest: [""],
           uses: "It can be used with all category agrochemicals that is insecticide, Fungicide, Herbicide, Plant Growth Regulator, Fertilizer & Micro Nutrient.",
           advantages: [
             "A non-ionic spray adjuvant, it is a Superspreader surfactant on a Trisiloxane Ethoxylate. Promotes spray volume reduction thereby improving spray coverage. Promotes rapid uptake of agrochemicals into plants via stomatal infiltration making the spray solution rainfast. It is most effective as a tank side adjuvant when spray mixture are within the pH range of 5-8 and are use 24 hours within preparation of the spray solution. Use rates depend on crop, stage, agrochemical & spray volume requirements.",
@@ -2752,7 +2752,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Tomato", "Sunflower", "Rose", "Watermelon", "Gheya", "Capsicum"],
           dose: "100 ml/acre in 100-150 liter water.",
-          pest: ["........"],
+          pest: [""],
           uses: "It is bio Stimulant, available from agrochemical modification. Mit-Magic: Awakens plants from dormant state by stimulating biological action. Increases production by causing rapid growth, and division of plant cells.",
           advantages: [
             "For crops like Capsicum, Tomato, Gheya, Sunflower, Rose, Watermelon, Melon, Cotton, etc.",
@@ -2776,7 +2776,7 @@ export const allProducts = [
         details: {
           targetCrops: ["All Crops"],
           dose: "3-8 Kg/Ha",
-          pest: ["......."],
+          pest: [""],
           uses: "It is a Soil Application. It contains an optimum proportion of Zinc, copper, Boron, Manganese, Iron, and Molybdenum enriched with major nutrients (NPK). This element provides nutrients to horticulture crops. and also to crops like grains, oil seeds, pulses, spices, and plantations.",
           advantages: [
             "It is essential for the growth, and division of cells, and producing husks of grains. It gathers the necessary ingredients required for the growth of the plants, production of seeds, and ripening of the fruits. Zinc is essentially required for the growth of plants. Use Crop: Paddy, Sugarcane, Wheat, Pulses, Vegetables, Potato, Cotton."
@@ -2794,7 +2794,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Vegetables", "Fruits", "Legumes", "Cereals"],
           dose: "8-10Kg/Ha",
-          pest: ["............."],
+          pest: [""],
           uses: "Zinc sulphate monohydrate contain 33% Zinc and 15% Sulphur. It can be used as basal application and as foliar spray also. Valid and farmers affordable /friendly price.",
           advantages: [
             "Useful for all crops i.e. Cereals / Legumes / Vegetables / Fruits / Vegetables etc. It increases production as well quality of the crop produce. In addition to Zinc, it also increased availability of Sulphur to the crops."
@@ -2813,7 +2813,7 @@ export const allProducts = [
         details: {
           targetCrops: ["Cotton", "Chilli", "Sugarcane", "Paddy", "Groundnut", "Vegetables", "Horticulture"],
           dose: "1.5 kg/Ha",
-          pest: [".........."],
+          pest: [""],
           uses: "You can apply uniformly 500 gms of one acre of standing crop or increase the dose depending upon the severity of the Zinc deficiency.",
           advantages: [
             "When used as per the recommendations given below, protect the paddy crop from fungal diseases like sheath blight and blast."
@@ -2876,7 +2876,7 @@ export const allProducts = [
         details: {
             targetCrops: ["Cotton", "Chilli", "Rice", "Tomato", "Groundnut"],
             dose: "250 ml/500 L",
-            pest: [".........."],
+            pest: [""],
             uses: "Use a stick or rod for stirring the diluted solution. Do not eat foods, chew tobacco, drink, or smoke while spraying for making solutions.",
             advantages: [
                 "APPLICATION EQUIPMENT: 1) High-volume knapsack sprayer. 2) Low-volume motorized knapsack sprayer."
@@ -2893,7 +2893,7 @@ export const allProducts = [
         details: {
             targetCrops: ["Cotton", "Chilli", "Rice", "Tomato", "Groundnut", "Potato"],
             dose: "0.25 gm/500 L",
-            pest: [".........."],
+            pest: [""],
             uses: "Use a stick or rod for stirring the diluted solution. Do not eat foods, chew tobacco, drink or smoke while spraying for making solutions. APPLICATION EQUIPMENT: 1) High-volume knapsack sprayer. 2) Low-volume motorized knapsack sprayer. ",
             advantages: [
                 "Triacontanol 0.1% EW, a Plant Growth Regulator is recommended to increase the yield of crops like Cotton, Chillies, Rice, Tomatoes and Groundnuts and Potato."
@@ -2910,7 +2910,7 @@ export const allProducts = [
         details: {
             targetCrops: ["Mango"],
             dose: "30 ml/Tree",
-            pest: [".........."],
+            pest: [""],
             uses: "1. Weather conditions (in general): Not to be used during unfavourable conditions. 2. Soil and water: Light to heavy soil, clean water to be used. 3. Application Technique: Recommended quantity of product to be diluted in clean water (5 ltr) and applied in a furrow 5 cm to 10 cm deep, about 30 cms away from the trunk. Fill up with soil after application or apply as soil —collar drench. 4. Equipment type: Not Applicable. 5. Nozzle Type: Not Applicable. 6.Frequency including maximum no. of sprays: Details given in recommendation table. 7. Instruction of Mixing: Recommended quantity of product to be diluted in clean water (5 ltr) and applied in a furrow 5 cm to 10 cm deep, about 30 cms away from the trunk. Fill up with soil after application or apply as soil —collar drench. ",
             advantages: [
                 "For use as a plant growth regulator in mango. For dosage and details, see leaflet enclosed."
