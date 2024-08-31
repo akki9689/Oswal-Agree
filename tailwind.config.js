@@ -100,10 +100,7 @@ export default {
         600: "#EEA90E",
       },
 
-      yellow: {
-        100: '#E8C204',
-        200: '#EEA90E'
-      }
+    
     },
 
     screens: {
