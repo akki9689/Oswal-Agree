@@ -27,7 +27,7 @@ const Vision2 = () => {
       </div>
 
       {/* ------------- content part ------------ */}
-      <div className='map-bg'>
+      <div data-aos="fade-right"  className='map-bg'>
         {/* --------- container ----------- */}
         <div className='w-10/12 mx-auto flex mmd:flex-row flex-col gap-y-16 justify-between gap-x-4'>
           {/* --------- left side  ------- */}
@@ -46,7 +46,7 @@ const Vision2 = () => {
           </div>
 
           {/* --------- right side ----------- */}
-          <div className='xlg:w-[45%] mmd:w-[48%] w-full'>
+          <div data-aos="fade-left" className='xlg:w-[45%] mmd:w-[48%] w-full'>
             <img src={VisionImage} alt="vision" className='w-full h-full object-cover rounded-2xl' />
           </div>
         </div>

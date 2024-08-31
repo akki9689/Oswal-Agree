@@ -20,7 +20,7 @@ const Awards = () => {
       <div className='mb-8'>
         <Popupname title='Awards and Recognition'/>
       </div>
-      <div className="grid grid-cols-1 mmd:grid-cols-3 gap-8">
+      <div data-aos="fade-up" className="grid grid-cols-1 mmd:grid-cols-3 gap-8">
         {awardsData.map((award, index) => (
           <div
             key={index}

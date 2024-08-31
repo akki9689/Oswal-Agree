@@ -8,6 +8,8 @@ import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
 import ScrollTop from './components/common/ScrollTop';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 // Lazy load components
@@ -23,6 +25,8 @@ const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
+const Contact = lazy(()=> import('./components/contactUs/Contact'));
+const Branches = lazy(() => import('./components/contactUs/Branches'));
 // import Filter from './components/filter/SearchFilter'
 
 
@@ -37,7 +41,24 @@ const App = () => {
       
     });
   
-    }, [location.pathname])
+    }, [location.pathname]);
+
+    
+
+    useEffect(()=> {
+        AOS.init({
+    
+          once:true,
+          duration:900,
+          easing: "ease-out-sine",
+          delay: 100,
+    
+        });
+    
+        AOS.refresh();
+    
+      }, []);
+      
 
 
     
@@ -71,7 +92,10 @@ const App = () => {
                     <Route path='/photo-gallery' element={<PhotoGallery />} />
 
                     {/* Contact */}
-
+                     
+                     <Route path='/contact/contact-us' element={<Contact/>}/>
+                     <Route path='/contact/branches' element={<Branches/>}/>
+                   
 
                 </Routes>
             </Suspense>

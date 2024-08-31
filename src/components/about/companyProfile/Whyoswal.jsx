@@ -16,7 +16,7 @@ const Whyoswal = () => {
   ];
 
   return (
-    <div className="bg-[rgb(196,221,191)] h-auto p-24 flex flex-wrap items-center justify-center mt-20">
+    <div data-aos="fade-up" className="bg-[rgb(196,221,191)] h-auto p-24 flex flex-wrap items-center justify-center mt-20">
       {profileData.map((item, index) => (
         <div key={index} className="text-center w-full">
           <h2 className="text-3xl font-bold mb-4">{item.heading}</h2>
