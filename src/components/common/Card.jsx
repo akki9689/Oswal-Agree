@@ -14,6 +14,8 @@ const Card = ({
     navigate(`/products/${title}`)
   }
 
+ 
+
   return (
     // ---------------Card Designing-------------------
     <div className={`relative ${className}`}>

@@ -1,10 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Footer from './components/common/Footer';
 import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
+import ScrollTop from './components/common/ScrollTop';
 
 
 // Lazy load components
@@ -16,7 +19,6 @@ const Visionabt = lazy(() => import('./components/about/Visionabt'));
 const Awards = lazy(() => import('./components/about/Awards'));
 const Terms = lazy(() => import('./components/about/Terms'));
 const Faq = lazy(() => import('./components/about/Faq'));
-
 const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
@@ -25,6 +27,19 @@ const Filter = lazy(() => import('./components/filter/SearchFilter'));
 
 
 const App = () => {
+
+    const location = useLocation();
+
+    useEffect(()=> {
+      
+      window.scrollTo({
+        top: 10,
+      
+    });
+  
+    }, [location.pathname])
+
+
     const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {
@@ -74,6 +89,8 @@ const App = () => {
 
                 </Routes>
             </Suspense>
+
+            <ScrollTop/>
             <Footer /> 
  
             {/* <Contact/>  */}
@@ -84,3 +101,8 @@ const App = () => {
 };
 
 export default App;
+
+
+//Sabka title thik krna hai : product , card and all product ka title bhi sahi krna hai
+//catalogue jo param se aara usko bhi modify krna hai ki format rhe
+//Filter mei bhi uska naam thik krna hai!
