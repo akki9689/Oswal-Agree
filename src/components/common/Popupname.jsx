@@ -35,7 +35,7 @@ const Popupname = ({ title = "VISION AND MISSION" }) => {
           {title}
         </h1>
         <span 
-          className="block w-16 h-1 bg-[rgb(124,183,22)] mt-2 mx-auto" 
+          className="block w-16 h-1 bg-[rgb(124,183,22)] mt-2 mx-auto"
           data-aos="slide-right" 
           data-aos-delay="600" 
           data-aos-duration="800" 

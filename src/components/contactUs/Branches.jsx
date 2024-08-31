@@ -1,6 +1,7 @@
 import React , {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay} from '@fortawesome/free-solid-svg-icons';
+import Popupname from '../common/Popupname';
 // import { navbarData } from '../../data/nav-links'
 
 
@@ -14,16 +15,20 @@ function Branches() {
     
     
     return (
-        <section>
-            <div className="w-full bg-gray-100 px-10 smd:px-32 py-6 ">
-                <div className="flex flex-col gap-1 xlg:flex-row justify-center xlg:gap-32">
+        <section className='w-full flex flex-col gap-y-10  border border-blue-600'>
+
+                <Popupname title='Branches'/>
+            <div className='w-full bg-gray-100 pt-12 pb-20'>
+
+            <div className="w-10/12  mx-auto  ">
+                <div className="flex flex-col md:flex-row justify-center gap-x-20">
 
                     {/* COLUMN NUMBER-1  */}
 
-                    <ul  className="flex flex-col text-gray-600">
+                    <ul data-aos="fade-right" className="flex flex-col text-gray-600 ">
                         {branchItem.map(({id , title}) => (
                             id >= 1 && id <= 6 && (
-                                <li key={id} className={`flex items-center w-[90%] xsm:w-5/12 xlg:w-full py-2 ${id !== 1 ? 'border-t-2 border-gray-200':''}`}  
+                                <li key={id} className={`flex items-center  w-full py-2 ${id !== 1 ? 'border-t-2 border-gray-200':''}`}  
                                 onMouseEnter={() => setIsHovered(id)} // Set hover state to true
                                 onMouseLeave={() => setIsHovered(null)} // Set hover state to false
                                 > 
@@ -40,9 +45,9 @@ function Branches() {
 
                        {/* COLUMN NUMBER-2 */}
 
-                   <ul className="flex flex-col text-gray-600">
+                   <ul data-aos="fade-left" className="flex flex-col text-gray-600 ">
                     {branchItem.map(({id , title})=>(
-                       id>=7 && id<=12 && ( <li key={id} className={`flex items-center w-[90%] xsm:w-5/12  xlg:w-full py-2 border-t-2 border-gray-200 xsm:border-t-[40%] ${id ===7 ?'xlg:border-none':''}`}
+                       id>=7 && id<=12 && ( <li key={id} className={`flex items-center w-full py-2 border-t-2 border-gray-200 xsm:border-t-[40%] ${id ===7 ?'xlg:border-none':''}`}
                        onMouseEnter = {()=>setIsHovered(id)}
                        onMouseLeave = {()=> setIsHovered(null)}>
                           <FontAwesomeIcon 
@@ -57,6 +62,9 @@ function Branches() {
                 </div>
 
             </div>
+
+            </div>
+            
 
         </section>
     )

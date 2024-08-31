@@ -34,8 +34,8 @@ const Directormsg = () => {
     ];
 
     return (
-        <div className="bg-[rgb(196,221,191)] w-full py-8 flex justify-center">
-            <div className="w-10/12">
+        <div className="bg-[rgb(196,221,191)] w-full pt-8 pb-16 flex justify-center">
+            <div  data-aos="fade-left" className="w-10/12">
                 {directorMsg.map((msg, index) => (
                     <div key={index}>
                         <div className="flex flex-col mmd:flex-row items-start">
@@ -44,13 +44,13 @@ const Directormsg = () => {
                             </h2>
                         </div>
                         <div className="flex flex-col mmd:flex-row items-start gap-2 mmd:gap-4">
-                            <div className="mt-6 mmd:w-1/3 w-full">
+                            <div data-aos="fade-right" className="mt-6 mmd:w-1/3 w-full">
                                 <img
                                     src={msg.directorData[0].img}
                                     alt={msg.directorData[0].name}
                                     className="w-full h-auto rounded-lg object-cover"
                                 />
-                                <div className="text-center mt-2">
+                                <div  className="text-center mt-2">
                                     <h3 className=" font-hind font-bold text-[28px]">{msg.directorData[0].name}</h3>
                                     <p className="text-xl">{msg.directorData[0].position}</p>
                                 </div>

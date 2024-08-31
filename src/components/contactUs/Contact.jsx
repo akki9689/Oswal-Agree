@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import { stateData } from "../../data/contactUs/contactData"
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Popupname from '../common/Popupname';
 
 
 
@@ -74,15 +75,20 @@ function Contact() {
   }
   return (
     <section>
-      <div className="w-full px-2 py-6 xl:px-6" style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }}>
-        <div className="flex flex-col w-full gap-6 smd:space-x-2">
+      <div className="w-full px-2 pb-24  xl:px-6 flex flex-col gap-y-12" >
+
+
+<Popupname title='Contact Us'/>
+
+        <div className="flex flex-col md:w-full w-11/12 mx-auto gap-6 smd:space-x-2  ">
           {/* ROW-1   ADDRESS && FORM*/}
-          <div className="flex flex-wrap w-full gap-8 px-3 md:justify-center md:px-1 xl:px-20">
+          <div style={{ backgroundImage: `url(${image})`, backgroundColor: 'white' }} className="flex flex-wrap w-full gap-8 px-3 md:justify-center md:px-1 xl:px-20">
             {/* ADDRESS */}
-            <div className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
+            <div data-aos="fade-right" className="w-full md:w-[40%] flex flex-col gap-10 text-dark-green-200">
               {/* CONTACT US HEADING */}
-              <div>
-                <h2 className="text-4xl font-bold "><span className="underline decoration-black underline-offset-[30px]" >Cont</span>act Us</h2>
+              <div className='flex flex-col gap-y-3'>
+                <h2 className="text-2xl font-bold ">Contact Us</h2>
+                <div className='w-[80px] h-[3px] bg-black'></div>
               </div>
               {/* ADDRESS HEADING */}
               <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
@@ -103,10 +109,11 @@ function Contact() {
 
 
             {/* FORM */}
-            <div className="w-full  md:px-1 md:w-[50%] smd:w-[45%] flex flex-col gap-10">
+            <div data-aos="fade-left" className="w-full  md:px-1 md:w-[50%] smd:w-[45%] flex flex-col gap-10">
               {/* ENQUIRY FROM HEADING */}
-              <div>
-                <h2 className="text-4xl font-bold text-dark-green-200 "><span className="underline decoration-black underline-offset-[30px]" >Enqu</span>iry Form</h2>
+              <div className='flex flex-col gap-y-3 text-dark-green-200'>
+                <h2 className="text-2xl font-bold ">Enquiry Form</h2>
+                <div className='w-[80px] h-[3px] bg-black'></div>
               </div>
               {/* FORM CODE*/}
 
@@ -258,7 +265,7 @@ function Contact() {
           </div>
 
           {/* ROW-2  MAP*/}
-          <div className="flex justify-center items-center relative overflow-hidden   pb-[80%] md:pb-[40%] lg:pb-[30%] xlg:pb-[20%]" style={{ width: '100%', maxWidth: mapSize.width, height: '0', margin: '0 auto' }}>
+          <div data-aos="fade-up" className="flex justify-center items-center relative overflow-hidden   pb-[80%] md:pb-[40%] lg:pb-[30%] xlg:pb-[20%]" style={{ width: '100%', maxWidth: mapSize.width, height: '0', margin: '0 auto' }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.3053020156417!2d77.17508367474034!3d28.710420680540768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d021de362cfcd%3A0x68e9dde54c15a87a!2sGupta%20Tower%2C%20Commercial%20Complex%2C%20Gopal%20Nagar%2C%20Azadpur%2C%20Delhi%2C%20110033!5e0!3m2!1sen!2sin!4v1725025585841!5m2!1sen!2sin"
               style={{ border: '0', height: '100%', width: '100%', left: '0', top: '0', position: 'absolute' }}
