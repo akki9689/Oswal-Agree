@@ -8,6 +8,8 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
 import { navbarData } from '../../data/nav-links';
+import { useLocation } from 'react-router-dom';
+
 
 const Navbar = () => {
   const { navItems, socialLinks } = navbarData;
@@ -15,21 +17,30 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
-  const [iconSize, setIconSize] = useState({ width: 35, height: 35 });
+  
+
+  const location = useLocation();
 
   useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      setIconSize({ width: screenWidth >= 768 ? 30 : 22, height: screenWidth >= 768 ? 30 : 22 });
-    };
-    window.addEventListener('resize', handleResize);
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+    setActiveDropdown(null);
+    setActiveMobileSubDropdown(null)
+  }, [location.pathname])
 
-    handleResize();
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const screenWidth = window.innerWidth;
+  //     setIconSize({ width: screenWidth >= 768 ? 30 : 22, height: screenWidth >= 768 ? 30 : 22 });
+  //   };
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   handleResize();
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -57,19 +68,28 @@ const Navbar = () => {
         </NavLink>
 
         {/* MOBILE MODE: Payment Button and Social Icons */}
-        <div className="flex flex-col items-center p-2 space-x-4 lg:hidden">
-          <button className="flex items-center justify-center px-2 py-2 mb-2 text-sm text-white transition-all duration-200 rounded-lg bg-dark-green-100 hover:bg-light-green-300">
+        <div className="flex flex-col items-center p-2 gap-y-2 lg:hidden">
+          <button className="flex items-center justify-center px-2 py-2 mb-2 text-sm transition-all duration-200 rounded-lg bg-light-green-200 hover:bg-dark-green-100  hover:text-white">
             Pay Now <FaRegHandPointRight className="ml-1" />
           </button>
-          <div className="flex space-x-1">
-            {socialLinks.map(({ url }) => (
+          <div className="flex gap-x-3">
+
+          {socialLinks.map((social, index) => {
+                const IconComponent = social.icon; // Get the icon component
+                return (
+                  <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color }} className="flex items-center p-1 text-xl rounded-lg bg-light-green-200 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <IconComponent /> 
+                  </a>
+                );
+              })}
+            {/* {socialLinks.map(({ url }) => (
               <div
                 key={url}
                 className="flex items-center p-1 text-xl rounded-lg "
               >
                 <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height }} />
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
 
@@ -80,18 +100,28 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <div className="flex-col items-center hidden gap-4 lg:flex">
+
           {/* Social Media Icons (for larger screens) */}
           <div className="flex justify-end">
-            <div className="flex space-x-6">
-              <button className="flex items-center justify-center gap-2 px-4 py-2 text-white transition-all duration-200 rounded-lg bg-dark-green-100 hover:bg-light-green-300 hover:text-black">
+            <div className="flex gap-x-6">
+              <button className="flex items-center justify-center gap-2 px-4 py-2  transition-all duration-300 rounded-lg bg-light-green-200 hover:bg-dark-green-100  hover:text-white">
                 Pay Now <FaRegHandPointRight />
               </button>
 
-              {socialLinks.map(({ url }) => (
-                <div key={url} className="flex items-center p-2 text-xl rounded-lg">
-                  <SocialIcon url={url} style={{ width: 30, height: 30 }} />
-                </div>
-              ))}
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon; // Get the icon component
+                return (
+                  <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color }} className="flex  items-center  text-xl rounded-lg px-2 py-[2px] transition-all duration-200  bg-light-green-200 hover:scale-110 cursor-pointer ">
+                    <IconComponent /> 
+                  </a>
+                );
+              })}
+
+              {/* {socialLinks.map((item, index) => (
+                <a href={url} target='_blank' rel="noopener noreferrer" key={index} className="flex  items-center  text-xl rounded-lg px-2 py-[2px] transition-all duration-300  bg-light-green-200 hover:bg-dark-green-100 cursor-pointer">
+                  {item.icon}
+                </a>
+              ))} */}
             </div>
           </div>
 

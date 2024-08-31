@@ -83,3 +83,8 @@ const App = () => {
 };
 
 export default App;
+
+
+//Sabka title thik krna hai : product , card and all product ka title bhi sahi krna hai
+//catalogue jo param se aara usko bhi modify krna hai ki format rhe
+//Filter mei bhi uska naam thik krna hai!
