@@ -11,8 +11,8 @@ const Filter = ({ products }) => {
   };
 
   return (
-    <div className='relative w-full py-16'>
-      <div className='grid grid-cols-4 gap-6'>
+    <div className='relative w-full py-8 md:py-16'>
+     <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6'>
         {products.length > 0 ? (
           products.map((product) =>
             product.productName.map((item) => (
@@ -53,8 +53,8 @@ const crops = [
   "Capsicum", "Pigeon", "Bittergourd", "Bengal gram", "Pigeon Pea"
 ];
 const pests = [
-  "Brown Plant Hopper", "Early Shoot Borer", "Root Borer", "Termite",
-  "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
+  "Brown Plant Hopper", "Early shoot borer", "Root borer", "Termite",
+  "Green Leaf Hopper", "Leaf Folder", "Gall midge",
   "White Backed Plant Hopper", "Whorl maggot", "Diamon Back Moth",
   "Fruit borer", "Yellow Stem borer", "Thrips", "Pod borer", "Ballworm",
   "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly", "White fly", "BPH (Brown Plant Hopper)",
@@ -144,12 +144,16 @@ const CropFilter = () => {
   }, [selectedCategory, selectedCrop, selectedPest]);
 
   return (
-    <div className='w-full mx-auto mt-10 max-w-7xl'>
-      <div className='flex flex-wrap gap-6 mb-8'>
+    <div>
+      <div className='py-4 bg-black'>
+        <h2 className='text-3xl text-center text-white'>Search Product</h2>
+      </div>
+      <div className="relative w-full px-4 py-10 md:py-16 md:px-8">
+      <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0 md:space-x-4">
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className='px-4 py-2 text-gray-700 border rounded-md'
+          className="w-full px-4 py-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:w-1/3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
         >
           <option value=''>Select Category</option>
           {categories.map((category) => (
@@ -162,7 +166,7 @@ const CropFilter = () => {
         <select
           value={selectedCrop}
           onChange={(e) => setSelectedCrop(e.target.value)}
-          className='px-4 py-2 text-gray-700 border rounded-md'
+          className="w-full px-4 py-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:w-1/3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
         >
           <option value=''>Select Crop</option>
           {crops.map((crop) => (
@@ -175,7 +179,7 @@ const CropFilter = () => {
         <select
           value={selectedPest}
           onChange={(e) => setSelectedPest(e.target.value)}
-          className='px-4 py-2 text-gray-700 border rounded-md'
+          className="w-full px-4 py-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm md:w-1/3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
         >
           <option value=''>Select Pest</option>
           {pests.map((pest) => (
@@ -184,6 +188,7 @@ const CropFilter = () => {
             </option>
           ))}
         </select>
+      </div>
       </div>
 
       <Filter products={filteredProducts} />
