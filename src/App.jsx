@@ -19,7 +19,6 @@ const Visionabt = lazy(() => import('./components/about/Visionabt'));
 const Awards = lazy(() => import('./components/about/Awards'));
 const Terms = lazy(() => import('./components/about/Terms'));
 const Faq = lazy(() => import('./components/about/Faq'));
-
 const PhotoGallery = lazy(() => import('./components/Galllery/PhotoGallery'))
 const Products = lazy(() => import('./components/product/Products'));
 const ProductPage = lazy(() => import('./components/product/ProductPage'));
