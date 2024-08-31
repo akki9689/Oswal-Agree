@@ -117,11 +117,11 @@ const Navbar = () => {
                     exit="hidden"
                     variants={dropdownVariants}
                     transition={{ duration: 0.3 }}
-                    className="absolute left-0 z-40 w-56 mt-2 rounded-lg shadow-md top-full bg-light-green-200"
+                    className="absolute left-0 z-40 w-56 mt-2 bg-white border rounded-lg shadow-md top-full border-dark-green-100"
                   >
                     {item.dropdown.map((subItem) => (
                       <li key={subItem.label} className="relative">
-                        <NavLink to={subItem.path} className="block px-4 py-2 border-b-2 hover:bg-yellow-100 border-b-dark-green-100">
+                        <NavLink to={subItem.path} className="block px-4 py-2 border-b-2 hover:bg-yellow-100 border-b-dark-green-100 hover:rounded-md hover:text-green-900">
                           {subItem.label}
                         </NavLink>
                         {subItem.subDropdown && (
@@ -130,7 +130,7 @@ const Navbar = () => {
                             animate={activeDropdown === subItem.label ? "visible" : "hidden"}
                             variants={dropdownVariants}
                             transition={{ duration: 0.3 }}
-                            className="absolute top-0 w-48 mt-0 shadow-md left-full bg-light-green-200"
+                            className="absolute top-0 w-48 mt-0 bg-white border shadow-md left-full border-dark-green-100"
                           >
                             {subItem.subDropdown.map((subSubItem) => (
                               <li key={subSubItem.label}>
@@ -161,7 +161,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-0 left-0 z-50 w-full p-2 bg-white shadow-lg md:hidden"
+            className="absolute top-0 left-0 z-50 w-full p-2 bg-white shadow-lg md:hidden "
           >
             <div className="flex items-center justify-between mb-4">
               <NavLink to="/">
@@ -177,7 +177,7 @@ const Navbar = () => {
                 <div key={item.label} className="relative">
                   <button
                     onClick={() => handleMobileDropdownToggle(item.label)}
-                    className="flex items-center justify-between w-full p-2 text-lg font-semibold"
+                    className="flex items-center justify-between w-full p-2 text-lg font-semibold border rounded-lg border-dark-green-100 active:bg-yellow-100"
                   >
                     {item.label}
                     {item.dropdown && (
@@ -191,14 +191,14 @@ const Navbar = () => {
                       exit="hidden"
                       variants={dropdownVariants}
                       transition={{ duration: 0.3 }}
-                      className="flex flex-col gap-2 p-2 bg-light-green-100"
+                      className="flex flex-col gap-2 p-2 bg-white border-dark-green-100"
                       style={{ zIndex: 40 }}
                     >
                       {item.dropdown.map((subItem) => (
                         <li key={subItem.label} className="relative">
                           <NavLink
                             to={subItem.path}
-                            className="block w-full p-2 text-lg font-medium"
+                            className="block w-full p-2 text-lg font-medium border rounded-lg active:bg-yellow-100 border-dark-green-100 "
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {subItem.label}
@@ -210,14 +210,14 @@ const Navbar = () => {
                               exit="hidden"
                               variants={dropdownVariants}
                               transition={{ duration: 0.3 }}
-                              className="flex flex-col gap-2 p-2 bg-light-green-200"
+                              className="flex flex-col gap-2 p-2 bg-white border rounded-lg border-dark-green-100 "
                               style={{ zIndex: 30 }}
                             >
                               {subItem.subDropdown.map((subSubItem) => (
                                 <li key={subSubItem.label}>
                                   <NavLink
                                     to={subSubItem.path}
-                                    className="block p-2 text-lg"
+                                    className="block p-2 text-lg border-b border-dark-green-100"
                                     onClick={() => setIsMenuOpen(false)}
                                   >
                                     {subSubItem.label}
