@@ -28,19 +28,19 @@ const Navbar = () => {
     setActiveMobileSubDropdown(null)
   }, [location.pathname])
 
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      setIconSize({ width: screenWidth >= 768 ? 30 : 22, height: screenWidth >= 768 ? 30 : 22 });
-    };
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const screenWidth = window.innerWidth;
+  //     setIconSize({ width: screenWidth >= 768 ? 30 : 22, height: screenWidth >= 768 ? 30 : 22 });
+  //   };
+  //   window.addEventListener('resize', handleResize);
 
-    handleResize();
+  //   handleResize();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
