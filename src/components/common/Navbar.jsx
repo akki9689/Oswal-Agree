@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
 import { navbarData } from '../../data/nav-links';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const { navItems, socialLinks } = navbarData;
@@ -17,7 +17,7 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
   const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
-  const [iconSize, setIconSize] = useState({ width: 35, height: 35 });
+  
 
   const location = useLocation();
 
