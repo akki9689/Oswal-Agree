@@ -40,21 +40,7 @@ const App = () => {
     }, [location.pathname])
 
 
-    const [isLoading, setIsLoading] = React.useState(true);
-
-    React.useEffect(() => {
-        // Simulate a loading delay for demonstration purposes
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 100); // Adjust the timing as needed
-
-        //     return () => clearTimeout(timer); // Cleanup timer on unmount
-    }, []);
-
-    if (isLoading) {
-        return <Loader />;
-    }
-
+    
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
             <Navbar />

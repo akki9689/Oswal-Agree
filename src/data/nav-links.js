@@ -16,7 +16,7 @@ export const navbarData = {
    },
    {
      label: 'Product Range',
-     path: '/products/insecticides',
+     path: '/',
      dropdown: [
        { label: 'Insecticides', path: '/products/insecticides' },
        { label: 'Fungicides', path: '/products/fungicides' },
@@ -35,7 +35,7 @@ export const navbarData = {
    
    {
      label: 'Contact Us',
-     path: '/contact/contact-us',
+     path: '/',
      dropdown: [
        { label: 'Contact', path: '/contact/contact-us' },
        { label: 'Branches', path: '/contact/branches' },
