@@ -8,7 +8,7 @@ const IconSection = () => {
 
         {/* --------- container --------- */}
 
-        <div className='xlg:w-10/12 mmd:w-11/12 w-10/12 mx-auto grid mmd:grid-cols-4 xs:grid-cols-2 gap-y-10 grid-cols-1 '>
+        <div data-aos="fade-up" className='xlg:w-10/12 mmd:w-11/12 w-10/12 mx-auto grid mmd:grid-cols-4 xs:grid-cols-2 gap-y-10 grid-cols-1 '>
 
         {
             IconSectionData.map((data) => (

@@ -8,8 +8,8 @@ const ProductCard = ({
   onReadMoreClick, // Function passed as a prop in
 }) => {
   return (
-    <div className="w-full max-w-xs mx-auto">
-      <div className="flex flex-col justify-between p-6 transition duration-300 transform bg-white rounded-xl hover:shadow-2xl hover:scale-105 h-[23rem] hover:shadow-richblack-500">
+    <div className="w-full max-w-xs mx-auto cursor-pointer" onClick={onReadMoreClick}>
+      <div className="flex flex-col justify-between p-6 transition duration-300 transform bg-white rounded-xl hover:shadow-xl hover:scale-105 h-[23rem] hover:shadow-richblack-500">
         <div className="flex justify-center mb-2">
           <img src={imageSrc} alt={productName} className="object-contain h-40" />
         </div>

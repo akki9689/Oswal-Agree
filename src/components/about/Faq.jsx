@@ -41,7 +41,7 @@ const Faq = () => {
   return (
     <div className="p-8">
         <div><Popupname title='FREQUENTLY ASKED QUESTIONS'/></div>
-      <div className="w-10/12 mt-16 mx-auto">
+      <div data-aos="fade-right" className="w-10/12 mt-16 mx-auto">
         {faqData.map((item, index) => (
           <div key={index} className="mb-4 border-b pb-4 ml-0 mmd:ml-20">
             <div className="flex items-center cursor-pointer " onClick={() => handleToggle(index)}>

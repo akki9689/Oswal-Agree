@@ -38,10 +38,10 @@ const ProductDetails = ({
 
 
   return (
-    <>
-    <div className='flex flex-col items-center p-6 mx-auto max-w-7xl md:p-7 lg:flex-row lg:p-8 lg:space-x-8 dsx:w-8/12'>
+    <section className='w-full'>
+    <div className='w-10/12 flex flex-col items-center p-6 mx-auto max-w-7xl md:p-7 lg:flex-row lg:p-8 lg:space-x-8 dsx:w-8/12'>
       {/* Left Side: Image */}
-      <div className='flex justify-center w-full lg:w-1/3 lg:justify-start'>
+      <div data-aos="fade-right" className='flex justify-center w-full lg:w-1/3 lg:justify-start'>
         <img
           src={imageUrl}
           alt={title}
@@ -59,17 +59,17 @@ const ProductDetails = ({
       </div>
 
       {/* Right Side: Product Info */}
-      <div className='w-full mt-6 text-justify lg:w-2/3 lg:pl-8 lg:mt-0'>
+      <div data-aos="fade-left" className='w-full mt-6 text-justify lg:w-2/3 lg:pl-8 lg:mt-0'>
         {/* Product Title */}
-        <h1 className='text-xl font-bold text-green-700 md:text-2xl lg:text-3xl'>
+        <h1 className='text-xl font-bold mb-2 text-green-700 md:text-2xl lg:text-3xl'>
           {title}
         </h1>
-        <p className='text-lg font-semibold text-green-700 md:text-xl lg:text-2xl'>
+        <p className='text-lg font-semibold  text-green-700 md:text-xl lg:text-xl'>
           {subtitle}
         </p>
 
         {/* Target Crop, Dose, Pest */}
-        <div className='mt-6 text-sm md:text-base lg:text-lg'>
+        <div className='mt-6 md:text-base text-sm lg:text-[16px] '>
           <div className='grid grid-cols-[auto_auto_1fr] gap-x-4 gap-y-4'>
             <span className='font-bold'>TARGET CROP</span>
             <span>:</span>
@@ -86,24 +86,24 @@ const ProductDetails = ({
         </div>
 
         {/* Uses Section */}
-        <div className='mt-6 text-sm md:text-base lg:text-lg'>
+        <div className='mt-6  md:text-base text-sm lg:text-[16px] '>
           <h2 className='font-bold text-green-700'>
             <span>USES</span>
             <span className='mx-2'>:</span>
           </h2>
-          <p className='mt-2'>{uses}</p>
+          <p className='mt-2 tracking-wide'>{uses}</p>
         </div>
 
         {/* Advantages Section */}
-        <div className='mt-6 text-sm md:text-base lg:text-lg'>
+        <div className='mt-6  md:text-base text-sm lg:text-[16px] '>
           <h2 className='font-bold text-green-700'>ADVANTAGES:</h2>
-          <p className='mt-2'>{advantages}</p>
+          <p className='mt-2 tracking-wide'>{advantages}</p>
         </div>
 
         {/* Time of Applications Section */}
-        <div className='mt-6 text-sm md:text-base lg:text-lg'>
+        <div className='mt-6 text-sm lg:text-[16px]  md:text-base '>
           <h2 className='font-bold text-green-700'>TIME OF APPLICATIONS:</h2>
-          <p className='mt-2 text-blue-700'>{applications}</p>
+          <p className='mt-2 tracking-wide'>{applications}</p>
         </div>
 
         {/* Buttons */}
@@ -129,7 +129,7 @@ const ProductDetails = ({
         queryModal && <SendQueryModal queryModal={queryModal} setQueryModal={setQueryModal} />
       }
 
-    </>
+</section>
   )
 }
 

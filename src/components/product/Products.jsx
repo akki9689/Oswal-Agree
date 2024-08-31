@@ -48,7 +48,7 @@ const Products = () => {
       <motion.div animate={controls}>
         <Popupname title={category ? category : 'All Products'} />
       </motion.div>
-      <div className="grid grid-cols-1 gap-6 pt-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div data-aos="fade-up" className="grid grid-cols-1 gap-8 pt-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
             <ProductCard

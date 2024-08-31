@@ -12,23 +12,25 @@
 .swiper-button-prev {
   width: 30px;
   height: 30px;
-  background-color: rgba(145, 119, 119, 0.6);
+  background-color: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
+  scale: 0.8;
   justify-content: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
-  transition: transform 0.3s ease, background-color 0.3s ease opacity 0.1s ease;
+  /* transition: transform 0.3s ease, background-color 0.3s ease opacity 0.1s ease; */
 }
 
 /* Arrow icon styles */
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  scale:0.8;
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   
 }
 
@@ -36,25 +38,24 @@
 /* Positioning for arrows */
 .swiper-button-next {
   right: 10px;
+  transform: translateX(-20%);
 }
 
 .swiper-button-prev {
   left: 10px;
+  transform: translateX(20%);
 }
 
 /* Hover effect for arrows */
-.swiper-button-next:hover,
+/* .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  transform: translateY(-50%) scale(1.2);  /* Slightly enlarges the button */
-  background-color: rgba(0, 0, 0, 0.8);    /* Darkens the background */
-  opacity: 1; /* Fully opaque on hover */
-}
+ 
+  background-color: rgba(214, 248, 91, 0.8);    
+  opacity: 1; 
+} */
 
 /* Active (clicked) effect */
-.swiper-button-next:active,
-.swiper-button-prev:active {
-  transform: translateY(-50%) scale(1.1);  /* Slightly reduces the scale */
-}
+
 /* Target the pagination bullets */
 /* Custom Swiper Pagination Bullets */
 .swiper-pagination-bullet {
@@ -84,3 +85,18 @@
   background-size: cover;
 }
 
+@media only screen and (max-width: 450px) {
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: none;
+  }
+
+  .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+  
+  
+}
+
+
+}

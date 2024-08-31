@@ -8,6 +8,8 @@ import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
 import ScrollTop from './components/common/ScrollTop';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 // Lazy load components
@@ -39,24 +41,27 @@ const App = () => {
       
     });
   
-    }, [location.pathname])
+    }, [location.pathname]);
+
+    
+
+    useEffect(()=> {
+        AOS.init({
+    
+          once:true,
+          duration:900,
+          easing: "ease-out-sine",
+          delay: 100,
+    
+        });
+    
+        AOS.refresh();
+    
+      }, []);
+      
 
 
-    const [isLoading, setIsLoading] = React.useState(true);
-
-    React.useEffect(() => {
-        // Simulate a loading delay for demonstration purposes
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 100); // Adjust the timing as needed
-
-        //     return () => clearTimeout(timer); // Cleanup timer on unmount
-    }, []);
-
-    if (isLoading) {
-        return <Loader />;
-    }
-
+    
     return (
         <div className='max-w-[100vw] min-h-screen overflow-x-hidden font-open-sans'>
             <Navbar />
@@ -87,7 +92,7 @@ const App = () => {
                     <Route path='/photo-gallery' element={<PhotoGallery />} />
 
                     {/* Contact */}
-                     <Route path='/contact/contact-us' element={<Contact/>}/>
+                     
                      <Route path='/contact/contact-us' element={<Contact/>}/>
                      <Route path='/contact/branches' element={<Branches/>}/>
                        
