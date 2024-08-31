@@ -1,10 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Footer from './components/common/Footer';
 import Navbar from './components/common/Navbar';
 import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
+import ScrollTop from './components/common/ScrollTop';
 
 
 // Lazy load components
@@ -24,6 +27,19 @@ const Filter = lazy(() => import('./components/filter/SearchFilter'));
 
 
 const App = () => {
+
+    const location = useLocation();
+
+    useEffect(()=> {
+      
+      window.scrollTo({
+        top: 10,
+      
+    });
+  
+    }, [location.pathname])
+
+
     const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {
@@ -73,6 +89,8 @@ const App = () => {
 
                 </Routes>
             </Suspense>
+
+            <ScrollTop/>
             <Footer /> 
  
             {/* <Contact/>  */}

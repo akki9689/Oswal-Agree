@@ -1,20 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { SocialIcon } from 'react-social-icons';
 import { FaBars, FaTimes, FaRegHandPointRight } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../images/Home/oswal-crop-logo.jpg';
 import { navbarData } from '../../data/nav-links';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const { navItems, socialLinks } = navbarData;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const [activeMobileSubDropdown, setActiveMobileSubDropdown] = useState(null);
   const [iconSize, setIconSize] = useState({ width: 35, height: 35 });
+
+  const location = useLocation();
+
+  // useEffect(() => {
+  //   setIsMenuOpen(false);
+  //   setActiveDropdown(null);
+  //   setActiveDropdown(null);
+  //   setActiveMobileSubDropdown(null)
+  // }, [location.pathname])
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,6 +50,10 @@ const Navbar = () => {
     setActiveMobileDropdown(activeMobileDropdown === dropdownId ? null : dropdownId);
   };
 
+  const handleMobileSubDropdownToggle = (subDropdownId) => {
+    setActiveMobileSubDropdown(activeMobileSubDropdown === subDropdownId ? null : subDropdownId);
+  };
+
   const dropdownVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: { opacity: 1, height: 'auto' }
@@ -47,24 +63,33 @@ const Navbar = () => {
     <header className="bg-white shadow-lg">
       <div className="container flex justify-between w-10/12 px-0 py-4 mx-auto md:px-20">
         {/* Navbar Logo */}
-        <NavLink to="/" onClick={toggleMenu}>
+        <NavLink to="/">
           <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
         </NavLink>
 
         {/* MOBILE MODE: Payment Button and Social Icons */}
-        <div className="flex flex-col items-center p-2 space-x-4 lg:hidden">
-          <button className="flex items-center justify-center px-2 py-2 mb-2 text-sm text-white transition-all duration-200 rounded-lg bg-dark-green-100 hover:bg-light-green-300">
+        <div className="flex flex-col items-center p-2 gap-y-2 lg:hidden">
+          <button className="flex items-center justify-center px-2 py-2 mb-2 text-sm transition-all duration-200 rounded-lg bg-light-green-200 hover:bg-dark-green-100  hover:text-white">
             Pay Now <FaRegHandPointRight className="ml-1" />
           </button>
-          <div className="flex space-x-1">
-            {socialLinks.map(({ url }) => (
+          <div className="flex gap-x-2">
+
+          {socialLinks.map((social, index) => {
+                const IconComponent = social.icon; // Get the icon component
+                return (
+                  <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color }} className="flex items-center p-1 text-xl rounded-lg bg-light-green-200 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <IconComponent /> 
+                  </a>
+                );
+              })}
+            {/* {socialLinks.map(({ url }) => (
               <div
                 key={url}
                 className="flex items-center p-1 text-xl rounded-lg "
               >
                 <SocialIcon url={url} style={{ width: iconSize.width, height: iconSize.height }} />
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
 
@@ -75,18 +100,28 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <div className="flex-col items-center hidden gap-4 lg:flex">
+
           {/* Social Media Icons (for larger screens) */}
           <div className="flex justify-end">
-            <div className="flex space-x-6">
-              <button className="flex items-center justify-center gap-2 px-4 py-2 text-white transition-all duration-200 rounded-lg bg-dark-green-100 hover:bg-light-green-300 hover:text-black">
+            <div className="flex gap-x-6">
+              <button className="flex items-center justify-center gap-2 px-4 py-2  transition-all duration-300 rounded-lg bg-light-green-200 hover:bg-dark-green-100  hover:text-white">
                 Pay Now <FaRegHandPointRight />
               </button>
 
-              {socialLinks.map(({ url }) => (
-                <div key={url} className="flex items-center p-2 text-xl rounded-lg">
-                  <SocialIcon url={url} style={{ width: 30, height: 30 }} />
-                </div>
-              ))}
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon; // Get the icon component
+                return (
+                  <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color }} className="flex  items-center  text-xl rounded-lg px-2 py-[2px] transition-all duration-200  bg-light-green-200 hover:scale-110 cursor-pointer ">
+                    <IconComponent /> 
+                  </a>
+                );
+              })}
+
+              {/* {socialLinks.map((item, index) => (
+                <a href={url} target='_blank' rel="noopener noreferrer" key={index} className="flex  items-center  text-xl rounded-lg px-2 py-[2px] transition-all duration-300  bg-light-green-200 hover:bg-dark-green-100 cursor-pointer">
+                  {item.icon}
+                </a>
+              ))} */}
             </div>
           </div>
 
@@ -112,11 +147,11 @@ const Navbar = () => {
                     exit="hidden"
                     variants={dropdownVariants}
                     transition={{ duration: 0.3 }}
-                    className="absolute left-0 z-40 w-56 mt-2 bg-white border rounded-lg shadow-md top-full border-dark-green-100"
+                    className="absolute left-0 z-40 w-56 mt-2 rounded-lg shadow-md top-full bg-light-green-200"
                   >
                     {item.dropdown.map((subItem) => (
                       <li key={subItem.label} className="relative">
-                        <NavLink to={subItem.path} className="block px-4 py-2 border-b-2 hover:bg-yellow-100 border-b-dark-green-100 hover:rounded-md hover:text-green-900">
+                        <NavLink to={subItem.path} className="block px-4 py-2 border-b-2 hover:bg-yellow-100 border-b-dark-green-100">
                           {subItem.label}
                         </NavLink>
                         {subItem.subDropdown && (
@@ -125,7 +160,7 @@ const Navbar = () => {
                             animate={activeDropdown === subItem.label ? "visible" : "hidden"}
                             variants={dropdownVariants}
                             transition={{ duration: 0.3 }}
-                            className="absolute top-0 w-48 mt-0 bg-white border shadow-md left-full border-dark-green-100"
+                            className="absolute top-0 w-48 mt-0 shadow-md left-full bg-light-green-200"
                           >
                             {subItem.subDropdown.map((subSubItem) => (
                               <li key={subSubItem.label}>
@@ -156,10 +191,10 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-0 left-0 z-50 w-full p-2 bg-white shadow-lg md:hidden "
+            className="absolute top-0 left-0 z-50 w-full p-2 bg-white shadow-lg md:hidden"
           >
             <div className="flex items-center justify-between mb-4">
-              <NavLink to="/" onClick={toggleMenu}>
+              <NavLink to="/">
                 <img src={logo} alt="Logo" className="w-[70px] xxs:[90px] md:w-[120px]" />
               </NavLink>
               <button onClick={toggleMenu} className="text-2xl">
@@ -172,7 +207,7 @@ const Navbar = () => {
                 <div key={item.label} className="relative">
                   <button
                     onClick={() => handleMobileDropdownToggle(item.label)}
-                    className="flex items-center justify-between w-full p-2 text-lg font-semibold border rounded-lg border-dark-green-100 active:bg-yellow-100"
+                    className="flex items-center justify-between w-full p-2 text-lg font-semibold"
                   >
                     {item.label}
                     {item.dropdown && (
@@ -186,15 +221,15 @@ const Navbar = () => {
                       exit="hidden"
                       variants={dropdownVariants}
                       transition={{ duration: 0.3 }}
-                      className="flex flex-col gap-2 p-2 bg-white border-dark-green-100"
+                      className="flex flex-col gap-2 p-2 bg-light-green-100"
                       style={{ zIndex: 40 }}
                     >
                       {item.dropdown.map((subItem) => (
                         <li key={subItem.label} className="relative">
                           <NavLink
                             to={subItem.path}
-                            className="block w-full p-2 text-lg font-medium border rounded-lg active:bg-yellow-100 border-dark-green-100"
-                            onClick={toggleMenu}
+                            className="block w-full p-2 text-lg font-medium"
+                            onClick={() => setIsMenuOpen(false)}
                           >
                             {subItem.label}
                           </NavLink>
@@ -205,15 +240,15 @@ const Navbar = () => {
                               exit="hidden"
                               variants={dropdownVariants}
                               transition={{ duration: 0.3 }}
-                              className="flex flex-col gap-2 p-2 bg-white border rounded-lg border-dark-green-100"
+                              className="flex flex-col gap-2 p-2 bg-light-green-200"
                               style={{ zIndex: 30 }}
                             >
                               {subItem.subDropdown.map((subSubItem) => (
                                 <li key={subSubItem.label}>
                                   <NavLink
                                     to={subSubItem.path}
-                                    className="block p-2 text-lg border-b border-dark-green-100"
-                                    onClick={toggleMenu}
+                                    className="block p-2 text-lg"
+                                    onClick={() => setIsMenuOpen(false)}
                                   >
                                     {subSubItem.label}
                                   </NavLink>
@@ -227,9 +262,6 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <NavLink to="/filter" className="block w-full p-2 text-lg font-semibold text-center text-green-900 border rounded-lg border-dark-green-100 active:bg-yellow-100" onClick={toggleMenu}>
-                <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#186d26", fontSize: "28px", fontWeight: "900" }} />
-              </NavLink>
             </div>
           </motion.div>
         )}
@@ -239,3 +271,35 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// socialLinks : [
+//     { 
+//      title : "facebook",
+//      link: "https://www.facebook.com/oswalcropprotection",
+//      icon : FaFacebook ,
+//      color: "#316FF6",
+ 
+//      },
+ 
+//     {title : "instagram",
+//      link: "https://www.instagram.com/oswalcrop/",
+//      icon : FaSquareInstagram,
+//      color: "#E4405F",
+//  },
+//     { title : "youtube",
+//      link: "https://www.youtube.com/channel/UCEZxl9GCwmS2POmzUWXkhMg",
+//      icon : FaYoutube,
+//      color: "#FF0000",
+//  },
+//     { title : "whatsapp",
+//      link: "https://wa.me/+919599500406",
+//      icon : IoLogoWhatsapp,
+//      color: "#027148",
+//  },
+//     {title : "linkedin",
+//      link: "https://www.linkedin.com/in/ramesh-bansal-29b203299/",
+//      icon : FaLinkedinIn,
+//      color: "#0077B5 ",
+//  },
+//   ]
