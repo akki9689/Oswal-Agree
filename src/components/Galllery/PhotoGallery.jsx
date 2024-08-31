@@ -72,7 +72,7 @@ const PhotoGallery = () => {
 
                 {/* --------- Photos ---------------- */}
 
-                <div className='grid xlg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-x-4 gap-y-6 px-4 py-4'>
+                <div  className='grid xlg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-x-4 gap-y-6 px-4 py-4'>
 
                     {
                         category === "all" ?
@@ -81,6 +81,7 @@ const PhotoGallery = () => {
                             photoGallery.flatMap((item) => item.images).map((image, index) => (
 
                                 <motion.div
+                               
                                     key={`${category}-${index}`} // Unique key to trigger re-render
                                     initial={{ scale: 0.8 }}
                                     animate={{ scale: 1 }}

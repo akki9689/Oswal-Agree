@@ -10,7 +10,7 @@ const OurVision = () => {
 
       {/* --------- heading part ---------- */}
 
-      <div className=' w-10/12 mx-auto flex flex-col gap-y-7  items-center'>
+      <div data-aos="fade-up" className=' w-10/12 mx-auto flex flex-col gap-y-7  items-center'>
 
         <h1 className='xs:text-[40px] text-[28px] font-bold text-dark-green-200'>Vision & Mission</h1>
 
@@ -29,7 +29,7 @@ const OurVision = () => {
 
           {/* --------- left side  ------- */}
 
-          <div className='xlg:w-[45%] mmd:w-[48%] flex flex-col gap-y-7'>
+          <div data-aos="fade-right" className='xlg:w-[45%] mmd:w-[48%] flex flex-col gap-y-7'>
 
             {/* ------- vision ----- */}
 
@@ -83,7 +83,7 @@ const OurVision = () => {
 
           {/* --------- right side ----------- */}
 
-          <div className='xlg:w-[45%] mmd:w-[48%] w-full '>
+          <div data-aos="fade-left" className='xlg:w-[45%] mmd:w-[48%] w-full '>
 
             <img src={Vision} alt="vision" className='w-full h-full object-cover rounded-2xl' />
 

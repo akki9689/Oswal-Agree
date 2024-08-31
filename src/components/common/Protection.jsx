@@ -15,7 +15,7 @@ export const Protection = ({ data ,spanWidth = 'w-[80%]' }) => {
       <div className="mx-auto xl:w-10/12 mmd:w-11/12 w-10/12 flex flex-col mmd:flex-row mmd:gap-x-16 mmd:items-start">
 
         {/* Images - Above mmd */}
-        <div className="relative flex-1 mmd:order-1 order-2 mmd:mt-36">
+        <div data-aos="fade-right" className="relative flex-1 mmd:order-1 order-2 mmd:mt-36 ">
           <img
             src={oneside}
             alt="First image"
@@ -30,7 +30,7 @@ export const Protection = ({ data ,spanWidth = 'w-[80%]' }) => {
         </div>
 
         {/* Text content (heading, subtitle, and paragraph) - Right side */}
-        <div className="flex-1 mmd:order-2 order-1 mt-8 mmd:mt-0">
+        <div data-aos="fade-left" className="flex-1 mmd:order-2 order-1 mt-8 mmd:mt-0">
           {data.map((item, index) => (
             item.about && (
               <h2 key={index} className="text-[#EEA90E] font-[600] font-open-sans">

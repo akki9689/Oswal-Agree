@@ -8,6 +8,8 @@ import Loader from './components/common/Loader';
 import './App.css';
 import './index.css';
 import ScrollTop from './components/common/ScrollTop';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 // Lazy load components
@@ -37,7 +39,24 @@ const App = () => {
       
     });
   
-    }, [location.pathname])
+    }, [location.pathname]);
+
+    
+
+    useEffect(()=> {
+        AOS.init({
+    
+          once:true,
+          duration:900,
+          easing: "ease-out-sine",
+          delay: 100,
+    
+        });
+    
+        AOS.refresh();
+    
+      }, []);
+      
 
 
     const [isLoading, setIsLoading] = React.useState(true);
