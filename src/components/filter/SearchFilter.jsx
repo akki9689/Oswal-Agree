@@ -3,22 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
 import ProductCard from '../common/ProductCard';
 
-
-  
-const Filter = ({ products , category }) => {
-
-  console.log("Products: ", products);
-  console.log("Category : " , category )
-
-
+const Filter = ({ products, category }) => {
   const navigate = useNavigate();
 
-console.log("prod",products)
-console.log("category",category)
-
-  const handleReadMoreClick = (title , productName) => {
+  const handleReadMoreClick = (title, productName) => {
     navigate(`/products/${title}/${productName}`);
   };
+
   return (
     <div className='relative w-full py-16'>
       <div className='grid grid-cols-4 gap-6'>
@@ -30,7 +21,7 @@ console.log("category",category)
                 imageSrc={item.img}
                 productName={item.name}
                 productDescription={item.activeIngredient}
-                onReadMoreClick={() => handleReadMoreClick(product.title ,item.name)}
+                onReadMoreClick={() => handleReadMoreClick(product.title, item.name)}
               />
             ))
           )
@@ -41,6 +32,7 @@ console.log("category",category)
     </div>
   );
 };
+
 const categories = [
   "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
   "Insecticides", "micronutrients", "plantgrowth"
@@ -63,61 +55,67 @@ const crops = [
 const pests = [
   "Brown Plant Hopper", "Early Shoot Borer", "Root Borer", "Termite",
   "Green Leaf Hopper", "Leaf Folder", "Stem Borer", "Gall midge",
-  "White Backed Plant Hopper", "Whorl Maggot", "Diamon Back Moth",
-  "Fruit Borer", "Yellow Stem Borer", "Thrips", "Pod Borer", "Ballworm",
-  "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly", "BPH (Brown Plant Hopper)",
-  "GLH (Green Leaf Hopper)", "Hispa", "Psylla", "Mosquito Bug", "Girdle Beetle",
-  "Semilooper", "Shoot Fly", "Steam Borer", "Rhizome Weevil", "Nematode",
-  "Ear Cockle", "Pink Bollworm", "American Bollworm", "Spodoptera litura",
-  "Spotted Bollworm", "Epliachna Grubs", "White Grub", "Phalaris Minor",
-  "Medicago Spp", "Chenopodium Album", "Cronopus Didymus", "Vicia Sativa",
-  "Rumex Spp", "Dinebra Vetroflexa", "Goose Grass", "Wild Finger",
-  "Crab Grass", "Barnyard Grass", "Crowfoot Grass", "Eragrostispilosa",
-  "Eviscosa", "Digitariamarginata", "Echinocloa Spp", "Cyperus Difformis",
-  "Ciria", "Monochoria Vaginalis", "Eclipta Alba", "Echinocloa Crusigalli",
-  "Convolvulus Arvensis", "Amaranthus Viridis", "Parthenium Hysterophorus",
-  "Cyperus Rotundus", "Cesculentum", "Convolvulus Aevensis", "Amaranthus SP",
-  "Digeteria SP", "Boerhaavia Diffusa", "Imparata Cylindrica", "Digeria Arvensis",
-  "Anagallis Arvensis", "Portulaca Oleracea", "Powdery Mildew", "Scab",
-  "Late Blight", "Anthracnose", "Fruit Rot", "Sheath Blight", "Grey Mildew",
-  "Red Rot", "Smut", "Rust", "Leaf Blotch", "Purple Blotch", "Dieback",
-  "Yellow Rust", "Downey Mildew", "Tikka Leaf Spot", "Blister Blight",
-  "Stripe Rust", "Sigatoka Leaf Spot", "Loose Smut", "Flag Smut",
-  "Collar Rot", "Root Rot", "Rhizoctonia Solani", "Dirty Panicle",
-  "Set Rot", "Frog Eye Spot", "Blast", "Damping Off", "C. esculantum",
-  "Early Blight", "Anthacnose", "C. Iria", "Cynadon Ductylon",
-  "Phaloris Minor", "Lathyrus Aphaca", "Melilotus Indica", "Euphorbia Hirta",
-  "C. Rotundus", "Cyperus Iria", "Fruit & Shoot Borer", "Hoppers", "Yellow Mite", "Seeding Blight", "Leaf Spot",
-  "Alternaria Leaf Spot/Blight and Scab", "Red Rust", "Grey Blight", "Late Blight Tikka Leaf Spot",
-  "Rice Blast", "White Fly Brown Plant Hopper", "Thrips and Whitefly", "Leaf Eating Caterpillar",
-  "Boll Worms", "Leaf Hoppers", "Red Spider Mite", "Mites", "Capsule Borer", "E. Viscosa",
-  "Mellilotus Alba", "Seath Blight", "Early Leaf Spot", "Stem Rust", "Brown rust", "Leaf Rust",
-  "Karnal Bunt", "Eichhornia Crassipes", "Echinochloa Colonum", "Short Duration Varieties 20-25 DAT",
-  "At the Time of Boll Formation", "30-35 Days After Prunning", "Leaf Minor", "Top Borer",
-  "Jassids", "Leaf Curl", "E. Crusigalli", "Echinocloa Colonum", "Stem Fly", "Bollworm",
-  "Flea Beetle", "Increase Yield", "Broadcast", "WBPH", "White Rust", "Alterneria Blight",
-  "Phytophthora Foot Rot", "Echinochloa SPP", "Benghalensis", "Commelina", "Euphorbia SPP",
-  "Ring Rot", "Ludwigia Parviflora", "Fimbristylis Miliacea", "White Grub", "Leaf Roller",
-  "Green Semilooper", "Pod Blight", "Alternaria Leaf Spot", "Leaf Blight", "Adult Mosquitoes",
-  "Adult Houseflies", "Cockroach", "Gram pod borer", "Pod Fly", "American Boll Warm",
-  "Tabacoo Caterpillar", "Fruit Borers & Caterpillars", "Top Borer ", "Leaf Floder ",
-  "Diamond Back Moth ", "Fruit and Shoot Borer ", "Green Semiloopers ",
-  "Stem Fly Girdle Beetle", "Paddy Leaf Folder", "Top Borer Scirphophaga Excerptalis",
+  "White Backed Plant Hopper", "Whorl maggot", "Diamon Back Moth",
+  "Fruit borer", "Yellow Stem borer", "Thrips", "Pod borer", "Ballworm",
+  "Mite", "Mealy Bug", "Aphids", "Jassid", "White Fly","White fly", "BPH (Brown Plant Hopper)",
+  "GLH (Green Leaf Hopper)", "Hispa", "Psylla", "Mosquito bug", "Girdle beetle",
+  "Semilooper", "Shoot fly", "Steam borer", "Rhizome weevil", "Nematode",
+  "Ear cockle", "Pink bollworm", "American bollworm", "Spodoptera litura",
+  "Spotted bollworm", "Epliachna Grubs", "White Grub", "Phalaris minor",
+  "Medicago spp", "Chenopodium album", "Cronopus didymus", "Vicia sativa",
+  "Rumex spp", "Dinebra Vetroflexa", "Goose grass", "Wild finger",
+  "Crab grass", "Barnyard grass", "Crowfoot grass", "Eragrostispilosa",
+  "Eviscosa", "Digitariamarginata", "Echinocloa spp", "Cyperus difformis",
+  "Ciria", "Monochoria vaginalis", "Eclipta alba", "Echinocloa crusigalli",
+  "Convolvulus arvensis", "Amaranthus viridis", "Parthenium hysterophorus",
+  "Cyperus Rotundus","Cyperus rotundus", "Cesculentum", "Convolvulus Aevensis", "Amaranthus sp",
+  "Digeteria sp", "Boerhaavia diffusa", "Imparata cylindrica", "Digeria arvensis",
+  "Anagallis arvensis", "Portulaca oleracea", "Powdery Mildew","Powdery mildew", "Scab",
+  "Late BLIGHT", "Anthracnose", "fruit Rot", "Sheath blight", "Grey mildew",
+  "Red rot", "Smut", "Rust", "Leaf Blotch", "Purple Blotch", "Dieback",
+  "Yellow Rust", "Downey Mildew", "Tikka Leaf Spot", "Blister blight",
+  "Stripe rust", "Sigatoka leaf spot", "Loose Smut", "Flag Smut",
+  "Collar Rot", "Root Rot", "Rhizoctonia Solani", "Dirty panicle",
+  "Set rot", "Frog eye spot", "Blast", "Damping Off", "C. esculantum",
+  "Early blight", "Anthacnose", "C. iria", "Cynadon ductylon",
+  "Phaloris minor", "Lathyrus aphaca", "Melilotus indica", "Euphorbia hirta",
+  "C. rotundus", "Cyperus iria", "Fruit & shoot borer", "Hoppers", "Yellow Mite", "Seeding Blight", "Leaf Spot",
+  "Alternaria leaf spot/blight and scab", "Red rust", "Grey Blight", "Late Blight Tikka Leaf Spot",
+  "Rice blast", "White fly Brown plant hopper", "Thrips and Whitefly", "Leaf eating caterpillar",
+  "Boll worms", "Leaf hoppers", "Red spider mite", "mites", "Capsule borer", "E. viscosa",
+  "Mellilotus alba", "Seath Blight", "Early leaf spot", "Stem rust", "Brown rust", "Leaf rust",
+  "Karnal bunt", "Eichhornia crassipes", "Echinochloa colonum", "Short duration varieties 20-25 DAT",
+  "At the time of boll formation", "30-35 days after prunning", "Leaf minor", "Top borer",
+  "Jassids", "Leaf curl", "E. crusigalli", "Echinocloa colonum", "Stem fly", "Bollworm",
+  "Flea beetle", "Increase yield", "Broadcast", "WBPH", "White rust", "Alterneria blight",
+  "Phytophthora foot rot", "Echinochloa spp", "Benghalensis", "Commelina", "Euphorbia spp",
+  "Ring rot", "Ludwigia parviflora", "Fimbristylis miliacea", "White Grub", "Leaf roller",
+  "Green semilooper", "Pod blight", "Alternaria Leaf Spot", "Leaf Blight", "Adult Mosquitoes",
+  "Adult Houseflies", "Cockroach", "Gram pod borer", "Pod fly", "American Boll Warm",
+  "Tabacoo caterpillar", "Fruit Borers & Caterpillars", "Top Borer ", "Leaf Floder ",
+  "Diamond Back Moth ", "Fruit and Shoot Borer ", "Green semiloopers ",
+  "stem fly Girdle Beetle", "Paddy leaf Folder", "Top Borer Scirphophaga excerptalis",
   "Enchinochloa sp", "Trianthema portulacastrum", "Bracharia sp"
 ];
+
 const CropFilter = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedCrop, setSelectedCrop] = useState('');
   const [selectedPest, setSelectedPest] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
+
   useEffect(() => {
     const filterData = () => {
       let filtered = allProducts;
+
+      // Filter by Category
       if (selectedCategory && selectedCategory !== 'All Products') {
         filtered = filtered.filter(product =>
           product.title.toLowerCase() === selectedCategory.toLowerCase()
         );
       }
+
+      // Filter by Crop
       if (selectedCrop) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
@@ -127,22 +125,24 @@ const CropFilter = () => {
           )
         );
       }
+
+      // Filter by Pest
       if (selectedPest) {
         filtered = filtered.filter(product =>
           product.productName.some(productItem =>
             productItem.details.pest.some(
               pest => pest.toLowerCase() === selectedPest.toLowerCase()
-              
             )
           )
-        ); 
+        );
       }
-  
-console.log(filtered);
+
       setFilteredProducts(filtered);
     };
+
     filterData();
   }, [selectedCategory, selectedCrop, selectedPest]);
+
   return (
     <div>
       <div className='py-4 bg-black'>
@@ -188,8 +188,8 @@ console.log(filtered);
       </div>
 
       <Filter products={filteredProducts} category={selectedCategory} />
-      
     </div>
   );
 };
+
 export default CropFilter;
