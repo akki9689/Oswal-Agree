@@ -1,9 +1,38 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { allProducts } from '../../data/products/all-products-data';
-import Filter from './Filter';
+import ProductCard from '../common/ProductCard';
 import Popupname from '../common/Popupname';
 
+const Filter = ({ products }) => {
+    const navigate = useNavigate();
+
+    const handleReadMoreClick = (title, productName) => {
+        navigate(`/products/${title}/${productName}`);
+    };
+
+    return (
+        <div className='relative w-full py-8 md:py-16'>
+            <div className='grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+                {products.length > 0 ? (
+                    products.map((product) =>
+
+                        <ProductCard
+                            key={`${product.name} - ${product.id}`}
+                            imageSrc={product.img}
+                            productName={product.name}
+                            productDescription={product.activeIngredient}
+                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("-").toLowerCase())}
+                        />
+
+                    )
+                ) : (
+                    <p className='text-lg text-center text-gray-500'>No products found.</p>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const categories = [
     "All Products", "Bio-Products", "Fertilizers", "Fungicides", "Herbicides",
@@ -75,20 +104,21 @@ const SearchFilter = () => {
 
     const allPro = allProducts.map(pro => pro.productName).flat();
 
-    // console.log(allPro)
+  
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedCrop, setSelectedCrop] = useState('');
     const [selectedPest, setSelectedPest] = useState('');
     const [filteredProducts, setFilteredProducts] = useState(allPro);
 
-  
-
+   
     const filterHandler = () => {
+
+      
+      let filteredCategory;
+      let filteringData;
 
         if (selectedCategory) {
 
-            let filteredCategory;
-            let filteringData;
 
 
             if (selectedCategory.toLowerCase() === "all products") {
@@ -181,7 +211,7 @@ const SearchFilter = () => {
                 <div className='absolute top-0 right-0 left-0 bottom-0 z-[1] bg-white bg-opacity-30'></div>
 
 
-                <div data-aos="fade-right" className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-[1] space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+                <div className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-[2] space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                     <select
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
@@ -224,7 +254,7 @@ const SearchFilter = () => {
                     </select>
 
                     <div>
-                        <button className='border border-richblack-500  w-max flex px-3 py-2 rounded-lg bg-dark-green-200 transition-all duration-200 hover:scale-105  text-white' onClick={filterHandler}>Apply Filter</button>
+                        <button className='border border-richblack-500  w-max flex px-3 py-2 rounded-lg bg-dark-green-200 text-white' onClick={filterHandler}>Apply Filter</button>
                     </div>
 
 
