@@ -22,7 +22,7 @@ const Filter = ({ products }) => {
                             imageSrc={product.img}
                             productName={product.name}
                             productDescription={product.activeIngredient}
-                            onReadMoreClick={() => handleReadMoreClick("insecticides", item.name)}
+                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("-").toLowerCase())}
                         />
 
                     )
@@ -35,8 +35,8 @@ const Filter = ({ products }) => {
 };
 
 const categories = [
-    "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
-    "Insecticides", "micronutrients", "plantgrowth"
+    "All Products", "Bio-Products", "Fertilizers", "Fungicides", "Herbicides",
+    "Insecticides", "Micro-nutrients", "Plant-Growth-Regulator"
 ];
 const crops = [
     "Cotton", "Grapes", "Red Gram", "ChickPea", "Cabbage", "Brinjal", "Okra",
@@ -104,51 +104,13 @@ const TryFilter = () => {
 
     const allPro = allProducts.map(pro => pro.productName).flat();
 
-    // console.log(allPro)
+  
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedCrop, setSelectedCrop] = useState('');
     const [selectedPest, setSelectedPest] = useState('');
     const [filteredProducts, setFilteredProducts] = useState(allPro);
 
-    //   useEffect(() => {
-    //     const filterData = () => {
-    //       let filtered = allProducts;
-
-    //       // Filter by Category
-    //       if (selectedCategory && selectedCategory !== 'All Products') {
-    //         filtered = filtered.filter(product =>
-    //           product.title.toLowerCase() === selectedCategory.toLowerCase()
-    //         );
-    //       }
-
-    //       // Filter by Crop
-    //       if (selectedCrop) {
-    //         filtered = filtered.filter(product =>
-    //           product.productName.some(productItem =>
-    //             productItem.details.targetCrops.some(
-    //               crop => crop.toLowerCase().includes(selectedCrop.toLowerCase())
-    //             )
-    //           )
-    //         );
-    //       }
-
-    //       // Filter by Pest
-    //       if (selectedPest) {
-    //         filtered = filtered.filter(product =>
-    //           product.productName.some(productItem =>
-    //             productItem.details.pest.some(
-    //               pest => pest.toLowerCase().includes(selectedPest.toLowerCase())
-    //             )
-    //           )
-    //         );
-    //       }
-
-    //       setFilteredProducts(filtered);
-    //     };
-
-    //     filterData();
-    //   }, [selectedCategory, selectedCrop, selectedPest]);
-
+   
     const filterHandler = () => {
 
         if (selectedCategory) {
@@ -156,7 +118,6 @@ const TryFilter = () => {
             let filteredCategory;
             let filteringData;
 
-            console.log("Category Choose")
 
             if (selectedCategory.toLowerCase() === "all products") {
                 setFilteredProducts(allPro);
@@ -164,7 +125,7 @@ const TryFilter = () => {
 
                 filteredCategory = allProducts.filter(pro => pro.title.toLowerCase() === selectedCategory.toLowerCase())[0].productName
 
-                console.log(filteredCategory) //it gives all data belongs to selectedCategory
+
 
                 if (selectedCrop && selectedPest) {
 
@@ -173,8 +134,6 @@ const TryFilter = () => {
                         item.details.pest.includes(selectedPest)
                     )
 
-                    console.log("Both Crop and pest choose")
-                    console.log("filter Crop and pest: ", filteringData);
 
                     return setFilteredProducts(filteringData);
 
@@ -184,20 +143,15 @@ const TryFilter = () => {
                         item.details.targetCrops.includes(selectedCrop) || item.details.targetCrops.includes("All Crops")
                     )
 
-                    console.log("Only crop choose");
-                    console.log("filter Crop: ", filteringData)
-
                     return setFilteredProducts(filteringData);
 
                 } else if (selectedPest) {
                     filteringData = filteredCategory.filter(item =>
                         item.details.pest.includes(selectedPest)
                     )
-                    console.log("Only Pest choose");
-                    return setFilteredProducts(filteringData);
+
                 }
 
-                console.log("Only category Choose")
                 return setFilteredProducts(filteredCategory);
 
 
@@ -205,7 +159,7 @@ const TryFilter = () => {
 
         } else {
 
-            console.log("When no category Choose")
+
 
             if (selectedCrop && selectedPest) {
 
@@ -214,9 +168,6 @@ const TryFilter = () => {
                     item.details.pest.includes(selectedPest)
                 )
 
-
-                console.log("Both Crop and pest choose")
-                console.log("filter Crop and pest: ", filteringData);
 
                 return setFilteredProducts(filteringData);
 
@@ -227,16 +178,13 @@ const TryFilter = () => {
                     item.details.targetCrops.includes(selectedCrop) || item.details.targetCrops.includes("All Crops")
                 )
 
-                console.log("Only crop choose");
-                console.log("filter Crop: ", filteringData)
-
                 return setFilteredProducts(filteringData);
 
             } else if (selectedPest) {
                 filteringData = allPro.filter(item =>
                     item.details.pest.includes(selectedPest)
                 )
-                console.log("Only Pest choose");
+
                 return setFilteredProducts(filteringData);
             }
 
@@ -258,10 +206,10 @@ const TryFilter = () => {
 
                 {/* --------- white filter -------- */}
 
-                <div className='absolute top-0 right-0 left-0 bottom-0 z-10 bg-white bg-opacity-30'></div>
+                <div className='absolute top-0 right-0 left-0 bottom-0 z-[1] bg-white bg-opacity-30'></div>
 
 
-                <div className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-20 space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+                <div className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-[2] space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                     <select
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
@@ -270,7 +218,9 @@ const TryFilter = () => {
                         <option value=''>Select Category</option>
                         {categories.map((category) => (
                             <option key={category} value={category}>
-                                {category}
+                                {
+                                    category.includes('-') ? category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ") : category
+                                }
                             </option>
                         ))}
                     </select>

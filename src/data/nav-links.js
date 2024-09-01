@@ -1,11 +1,11 @@
-
+import {  FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 
 export const navbarData = {
  navItems : [
    { label: 'Home', path: '/' },
    {
      label: 'About Us',
-     path: '/about',
+     path: '/about/company-profile',
      dropdown: [
        { label: 'Company Profile', path: '/about/company-profile' },
        { label: 'Vision and Mission', path: '/about/vision' },
@@ -16,15 +16,15 @@ export const navbarData = {
    },
    {
      label: 'Product Range',
-     path: '/',
+     path: '/products/insecticides',
      dropdown: [
        { label: 'Insecticides', path: '/products/insecticides' },
        { label: 'Fungicides', path: '/products/fungicides' },
        { label: 'Herbicides', path: '/products/herbicides' },
        { label: 'Fertilizers', path: '/products/fertilizers' },
-       { label: 'Bio Products', path: '/products/bioproducts' },
-       { label: 'Micro Nutrients', path: '/products/micronutrients' },
-       { label: 'Plant Growth Regulators', path: '/products/plantgrowth' },
+       { label: 'Bio Products', path: '/products/bio-products' },
+       { label: 'Micro Nutrients', path: '/products/micro-nutrients' },
+       { label: 'Plant Growth Regulators', path: '/products/plant-growth-regulator' },
      ],
    },
    {
@@ -35,7 +35,7 @@ export const navbarData = {
    
    {
      label: 'Contact Us',
-     path: '/',
+     path: '/contact/contact-us',
      dropdown: [
        { label: 'Contact', path: '/contact/contact-us' },
        { label: 'Branches', path: '/contact/branches' },
@@ -44,12 +44,43 @@ export const navbarData = {
    
  ],
 
-  socialLinks : [
-   { url: 'https://www.facebook.com'},
-   { url: 'https://instagram.com'},
-   { url: 'https://youtube.com'},
-   { url: 'https://whatsapp.com'},
-   { url: 'https://linkedin.com'},
- ]
+//   socialLinks : [
+//    { url: 'https://www.facebook.com'},
+//    { url: 'https://instagram.com'},
+//    { url: 'https://youtube.com'},
+//    { url: 'https://whatsapp.com'},
+//    { url: 'https://linkedin.com'},
+//  ]
+
+ socialLinks : [
+  { 
+   title : "facebook",
+   link: "https://www.facebook.com/oswalcropprotection",
+   icon : FaFacebookF ,
+   color: "#316FF6",
+
+   },
+
+  {title : "instagram",
+   link: "https://www.instagram.com/oswalcrop/",
+   icon : FaInstagram,
+   color: "#E4405F",
+},
+  { title : "youtube",
+   link: "https://www.youtube.com/channel/UCEZxl9GCwmS2POmzUWXkhMg",
+   icon : FaYoutube,
+   color: "#FF0000",
+},
+  { title : "whatsapp",
+   link: "https://wa.me/+919599500406",
+   icon : FaWhatsapp,
+   color: "#027148",
+},
+  {title : "linkedin",
+   link: "https://www.linkedin.com/in/ramesh-bansal-29b203299/",
+   icon : FaLinkedinIn,
+   color: "#0077B5 ",
+},
+]
 
 }

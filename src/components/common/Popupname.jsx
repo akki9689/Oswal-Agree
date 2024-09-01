@@ -4,7 +4,7 @@ import leaf from '../../images/Common/leaf.png';
 const Popupname = ({ title = "VISION AND MISSION" }) => {
   return (
     <div 
-      className="flex justify-center mt-8" 
+      className="flex justify-center mt-16" 
       data-aos="fade-up" 
       data-aos-duration="400" 
       data-aos-easing="ease-in-out"

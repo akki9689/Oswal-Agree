@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 // index.js or App.js
 import 'swiper/swiper-bundle.css';
 import { Toaster } from 'react-hot-toast';
+import { LoadingProvider } from './components/common/LoadingContext.jsx';
 
 
 AOS.init();
@@ -16,8 +17,10 @@ AOS.init();
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <BrowserRouter>
+  <LoadingProvider>
    <App />
    <Toaster/>
+   </LoadingProvider>
   </BrowserRouter>
    
 
