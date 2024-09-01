@@ -169,6 +169,7 @@ export const allProducts = [
       {
         id: 2,
         name: 'Expert',
+        productType : "Insecticides",
         img: expert,
         activeIngredient: 'Indoxacarb 14.5% SC',
         url: '#',
@@ -188,6 +189,7 @@ export const allProducts = [
         id: 3,
         name: 'Dinozine',
         img: dinozine,
+        productType : "Insecticides",
         activeIngredient: 'Dinotefuran 15% + Pymetrozine 45% WG',
         url: '#',
         details: {
@@ -209,6 +211,7 @@ export const allProducts = [
       {
         id: 4,
         name: 'Airavat',
+        productType : "Insecticides",
         img: airavat,
         activeIngredient: 'Pymetrozine 50% WG',
         url: '#',
@@ -227,6 +230,7 @@ export const allProducts = [
       {
         id: 5,
         name: 'Apollo',
+        productType : "Insecticides",
         img: apollo,
         activeIngredient: 'Fipronil 0.3% GR',
         url: '#',
@@ -256,6 +260,7 @@ export const allProducts = [
       {
         id: 6,
         name: 'Apollo Plus',
+        productType : "Insecticides",
         img: apolloPlus,
         activeIngredient: 'Fipronil 5% SC',
         url: '#',
@@ -286,6 +291,7 @@ export const allProducts = [
       {
         id: 7,
         name: 'Apollo Ultra',
+        productType : "Insecticides",
         img: apolloUltra,
         activeIngredient: 'Fipronil 0.6% GR',
         url: '#',
@@ -304,6 +310,7 @@ export const allProducts = [
       {
         id: 8,
         name: 'Benzo',
+        productType : "Insecticides",
         img: benzo,
         activeIngredient: 'Emamectin Benzoate 5% SG',
         url: '#',
@@ -338,6 +345,7 @@ export const allProducts = [
       {
         id: 9,
         name: 'Black Gold',
+         productType : "Insecticides",
         img: blackGold,
         activeIngredient: 'Buprofezin 25% SC',
         url: '#',
@@ -365,6 +373,7 @@ export const allProducts = [
       {
         id: 10,
         name: 'Cantabil',
+         productType : "Insecticides",
         img: cantabil,
         activeIngredient: 'Fenobucarb (B.P.M.C) 50% EC',
         url: '#',
@@ -383,6 +392,7 @@ export const allProducts = [
       {
         id: 11,
         name: 'Dahak',
+         productType : "Insecticides",
         img: dahak,
         activeIngredient: 'Fipronil 4% + Acetamiprid 4% SC',
         url: '#',
@@ -401,6 +411,7 @@ export const allProducts = [
       {
         id: 12,
         name: 'Daman-70',
+         productType : "Insecticides",
         img: daman70,
         activeIngredient: 'Imidacloprid 70% WG',
         url: '#',
@@ -425,6 +436,7 @@ export const allProducts = [
       {
         id: 13,
         name: 'Dinote',
+         productType : "Insecticides",
         img: dinote,
         activeIngredient: 'Dinotefuran 20% SG',
         url: '#',
@@ -448,6 +460,7 @@ export const allProducts = [
       {
         id: 14,
         name: 'DUM',
+         productType : "Insecticides",
         img: dum,
         activeIngredient: 'Thiamethoxam 12.6% + Lambda-Cyhalothrin 9.5% ZC',
         url: '#',
@@ -489,6 +502,7 @@ export const allProducts = [
       {
         id: 15,
         name: 'Duro',
+         productType : "Insecticides",
         img: duro,
         activeIngredient: 'Diafenthiuron 50% WP',
         url: '#',
@@ -526,6 +540,7 @@ export const allProducts = [
       {
         id: 16,
         name: 'Hillary',
+         productType : "Insecticides",
         img: hillary,
         activeIngredient: 'Pyriproxyfen 5% + Diafenthiuron 25% SE',
         url: '#',
@@ -544,6 +559,7 @@ export const allProducts = [
       {
         id: 17,
         name: 'Kargo',
+         productType : "Insecticides",
         img: kargo,
         activeIngredient: 'Carbofuran 3% CG',
         url: '#',
@@ -594,6 +610,7 @@ export const allProducts = [
       {
         id: 18,
         name: 'Killer',
+         productType : "Insecticides",
         img: killer,
         activeIngredient: 'Lambda Cyhalothrin 5% EC',
         url: '#',
@@ -641,6 +658,7 @@ export const allProducts = [
       {
         id: 19,
         name: 'Killer Super',
+         productType : "Insecticides",
         img: killerSuper,
         activeIngredient: 'Lambda Cyhalothrin 4.9% CS',
         url: '#',
@@ -679,6 +697,7 @@ export const allProducts = [
       {
         id: 20,
         name: 'Killer Ultra',
+         productType : "Insecticides",
         img: killerUltra,
         activeIngredient: 'Lambda Cyhalothrin 2.5% EC',
         url: '#',
@@ -706,6 +725,7 @@ export const allProducts = [
       {
         id: 21,
         name: 'Kshitij',
+         productType : "Insecticides",
         img: kshitij,
         activeIngredient: 'Thiamethoxam 75% SG',
         url: '#',
@@ -731,6 +751,7 @@ export const allProducts = [
       {
         id: 22,
         name: 'LIZZARD 25',
+         productType : "Insecticides",
         img: lizzard25,
         activeIngredient: 'Cypermethrin 25% EC',
         url: '#',
@@ -755,6 +776,7 @@ export const allProducts = [
       {
         id: 23,
         name: 'O-Dan',
+         productType : "Insecticides",
         img: odan,
         activeIngredient: 'Cartap Hydrochloride 4% GR',
         url: '#',
@@ -773,6 +795,7 @@ export const allProducts = [
       {
         id: 24,
         name: 'O-Dan Ultra',
+         productType : "Insecticides",
         img: odanUltra,
         activeIngredient: 'Cartap Hydrochloride 75% SG',
         url: '#',
@@ -791,6 +814,7 @@ export const allProducts = [
       {
         id: 25,
         name: 'O-Nata',
+         productType : "Insecticides",
         img: onata,
         activeIngredient: 'Imidacloprid 17.8% SL',
         url: '#',
@@ -835,6 +859,7 @@ export const allProducts = [
       {
         id: 26,
         name: 'O-Star',
+         productType : "Insecticides",
         img: ostar,
         activeIngredient: 'Bifenthrin 10% EC',
         url: '#',
@@ -860,6 +885,7 @@ export const allProducts = [
       {
         id: 27,
         name: 'O-Tara',
+         productType : "Insecticides",
         img: otara,
         activeIngredient: 'Thiamethoxam 25% WG',
         url: '#',
@@ -904,6 +930,7 @@ export const allProducts = [
       {
         id: 28,
         name: 'o-Tara Pro',
+         productType : "Insecticides",
         img: otaraPro,
         activeIngredient: 'Thiamethoxam 30% FS',
         url: '#',
@@ -943,6 +970,7 @@ export const allProducts = [
       {
         id: 29,
         name: 'Odan-50',
+         productType : "Insecticides",
         img: odan50,
         activeIngredient: 'Cartap Hydrochloride 50% SP',
         url: '#',
@@ -961,6 +989,7 @@ export const allProducts = [
       {
         id: 30,
         name: 'Opride',
+         productType : "Insecticides",
         img: opride,
         activeIngredient: 'Acetamiprid 20% SP',
         url: '#',
@@ -979,6 +1008,7 @@ export const allProducts = [
       {
         id: 31,
         name: 'Orifen',
+         productType : "Insecticides",
         img: orifen,
         activeIngredient: 'Fenvalerate 0.4% DP',
         url: '#',
@@ -996,6 +1026,7 @@ export const allProducts = [
       {
         id: 32,
         name: 'Ozone',
+         productType : "Insecticides",
         img: ozone,
         activeIngredient: 'Imidacloprid 0.3% GR',
         url: '#',
@@ -1014,6 +1045,7 @@ export const allProducts = [
       {
         id: 33,
         name: 'Prime 505',
+         productType : "Insecticides",
         img: prime505,
         activeIngredient: 'Chlorpyriphos 50% + Cypermethrin 5% EC',
         url: '#',
@@ -1044,6 +1076,7 @@ export const allProducts = [
       {
         id: 34,
         name: 'Prime Super',
+         productType : "Insecticides",
         img: primeSuper,
         activeIngredient: 'Chlorpyrifos 16% + Alphacypermethrin 1% EC',
         url: '#',
@@ -1062,6 +1095,7 @@ export const allProducts = [
       {
         id: 35,
         name: 'Shakira',
+         productType : "Insecticides",
         img: shakira,
         activeIngredient: 'Chlorantraniliprole 18.5% SC',
         url: '#',
@@ -1096,6 +1130,7 @@ export const allProducts = [
       {
         id: 36,
         name: 'Radaar',
+         productType : "Insecticides",
         img: radaar,
         activeIngredient: 'Pyriproxyfen 10% EC',
         url: '#',
@@ -1114,6 +1149,7 @@ export const allProducts = [
       {
         id: 37,
         name: 'Shipahi',
+         productType : "Insecticides",
         img: shipahi,
         activeIngredient: 'Fipronil 40% + Imidacloprid 40% WG',
         url: '#',
@@ -1132,6 +1168,7 @@ export const allProducts = [
       {
         id: 38,
         name: 'Shakira GR',
+         productType : "Insecticides",
         img: shakiraGR,
         activeIngredient: 'Chlorantraniliprole 0.4% GR',
         url: '#',
@@ -1152,6 +1189,7 @@ export const allProducts = [
       {
         id: 39,
         name: 'Shooter',
+         productType : "Insecticides",
         img: shooter,
         activeIngredient: 'Profenofos 40% + Cypermethrin 4% EC',
         url: '#',
@@ -1170,6 +1208,7 @@ export const allProducts = [
       {
         id: 40,
         name: 'Seeko',
+         productType : "Insecticides",
         img: seeko,
         activeIngredient: 'Thiamethoxam 0.9% + Fipronil 0.2% GR',
         url: '#',
@@ -1188,6 +1227,7 @@ export const allProducts = [
       {
         id: 41,
         name: 'Super Faster',
+         productType : "Insecticides",
         img: superFaster,
         activeIngredient: 'Chlorpyriphos 10% GR',
         url: '#',
@@ -1206,6 +1246,7 @@ export const allProducts = [
       {
         id: 42,
         name: 'Tango',
+         productType : "Insecticides",
         img: tango,
         activeIngredient: 'Emamectin Benzoate 1.9% EC',
         url: '#',
@@ -1247,6 +1288,7 @@ export const allProducts = [
       {
         id: 43,
         name: 'Zordaar',
+        productType : "Fungicides",
         img: zordaar,
         activeIngredient: 'Tebuconazole 38.39% SC',
         url: '#',
@@ -1270,6 +1312,7 @@ export const allProducts = [
       {
         id: 44,
         name: 'Osavet',
+        productType : "Fungicides",
         img: osavet,
         activeIngredient: 'Sulphur 80% WDG',
         url: '#',
@@ -1297,6 +1340,7 @@ export const allProducts = [
       {
         id: 45,
         name: 'Azoxybin',
+        productType : "Fungicides",
         img: azoxybin,
         activeIngredient: 'Azoxystrobin 23% SC',
         url: '#',
@@ -1322,6 +1366,7 @@ export const allProducts = [
       {
         id: 46,
         name: 'Azoxybin Plus',
+        productType : "Fungicides",
         img: azoxybinPlus,
         activeIngredient: 'Azoxystrobin 11% + Tebuconazole 18.30% SC',
         url: '#',
@@ -1360,6 +1405,7 @@ export const allProducts = [
       {
         id: 47,
         name: 'Azoxybin Top',
+        productType : "Fungicides",
         img: azoxybinTop,
         activeIngredient: 'Azoxystrobin 18.2% + Difenoconazole 11.4% SC',
         url: '#',
@@ -1401,6 +1447,7 @@ export const allProducts = [
       {
         id: 48,
         name: 'Breeza',
+        productType : "Fungicides",
         img: breeza,
         activeIngredient: 'Captan 70% + Hexaconazole 5% WP',
         url: '#',
@@ -1419,6 +1466,7 @@ export const allProducts = [
       {
         id: 49,
         name: 'Carbot',
+        productType : "Fungicides",
         img: carbot,
         activeIngredient: 'Carbendazim 50% WP ',
         url: '#',
@@ -1475,6 +1523,7 @@ export const allProducts = [
       {
         id: 50,
         name: 'Combination',
+        productType : "Fungicides",
         img: combination,
         activeIngredient: 'Tebuconazole 6.7% + Captan 26.9% SC  ',
         url: '#',
@@ -1498,6 +1547,7 @@ export const allProducts = [
       {
         id: 51,
         name: 'Combo-75',
+        productType : "Fungicides",
         img: combo75,
         activeIngredient: 'Carbendazim 12% + Mancozeb 63% WP ',
         url: '#',
@@ -1535,6 +1585,7 @@ export const allProducts = [
       {
         id: 52,
         name: 'Concept Plus',
+        productType : "Fungicides",
         img: conceptPlus,
         activeIngredient: 'Hexaconazole 5% SC',
         url: '#',
@@ -1555,6 +1606,7 @@ export const allProducts = [
       {
         id: 53,
         name: 'Double Century',
+        productType : "Fungicides",
         img: doubleCentury,
         activeIngredient: 'Difenoconazole 25% EC',
         url: '#',
@@ -1580,6 +1632,7 @@ export const allProducts = [
       {
         id: 54,
         name: 'Fullcure',
+        productType : "Fungicides",
         img: fullcure,
         activeIngredient: 'Tebuconazole 25.9% EC ',
         url: '#',
@@ -1606,6 +1659,7 @@ export const allProducts = [
       {
         id: 55,
         name: 'Gillete',
+        productType : "Fungicides",
         img: gillette,
         activeIngredient: 'Propiconazole 25% EC ',
         url: '#',
@@ -1644,6 +1698,7 @@ export const allProducts = [
       {
         id: 56,
         name: 'Odomil',
+        productType : "Fungicides",
         img: odomil,
         activeIngredient: 'Metalaxyl 8% + Mancozeb 64% WP ',
         url: '#',
@@ -1680,6 +1735,7 @@ export const allProducts = [
       {
         id: 57,
         name: 'Oxyl',
+        productType : "Fungicides",
         img: oxyl,
         activeIngredient: 'Metalaxyl 35% WS ',
         url: '#',
@@ -1698,6 +1754,7 @@ export const allProducts = [
       {
         id: 58,
         name: 'Proton',
+        productType : "Fungicides",
         img: proton,
         activeIngredient: 'Isoprothiolane 40% EC ',
         url: '#',
@@ -1716,6 +1773,7 @@ export const allProducts = [
       {
         id: 59,
         name: 'Raka',
+        productType : "Fungicides",
         img: raka,
         activeIngredient: 'Thiophanate Methyl 70% WP ',
         url: '#',
@@ -1734,6 +1792,7 @@ export const allProducts = [
       {
         id: 60,
         name: 'Rio',
+        productType : "Fungicides",
         img: rio,
         activeIngredient: 'Validamycin 3% L ',
         url: '#',
@@ -1753,6 +1812,7 @@ export const allProducts = [
       {
         id: 61,
         name: 'Tebxil',
+        productType : "Fungicides",
         img: tebxil,
         activeIngredient: 'Tebuconazole 2% DS ',
         url: '#',
@@ -1778,6 +1838,7 @@ export const allProducts = [
       {
         id: 62,
         name: 'Tuskon',
+        productType : "Fungicides",
         img: tuskon,
         activeIngredient: 'Propiconazole 10.7% + Tricyclazole 34.2% SE ',
         url: '#',
@@ -1797,6 +1858,7 @@ export const allProducts = [
       {
         id: 63,
         name: 'Utsav-20',
+        productType : "Fungicides",
         img: utsav20,
         activeIngredient: 'Azoxystrobin 11.5% + Mancozeb 30% WP ',
         url: '#',
@@ -1816,6 +1878,7 @@ export const allProducts = [
       {
         id: 64,
         name: 'Vazood',
+        productType : "Fungicides",
         img: vazood,
         activeIngredient: 'Tebuconazole 10% + Sulphur 65% WG ',
         url: '#',
@@ -1835,6 +1898,7 @@ export const allProducts = [
       {
         id: 66,
         name: 'Viberant',
+        productType : "Fungicides",
         img: viberant,
         activeIngredient: 'Thifluzamide 24% SC ',
         url: '#',
@@ -1853,6 +1917,7 @@ export const allProducts = [
       {
         id: 67,
         name: 'Vinasham',
+        productType : "Fungicides",
         img: vinasham,
         activeIngredient: 'Propiconazole 13.9% + Difenconazole 13.9% EC ',
         url: '#',
@@ -1881,6 +1946,7 @@ export const allProducts = [
       {
         id: 68,
         name: 'Melisa',
+        productType : "Herbicides",
         img: melisa,
         activeIngredient: 'Tembotrione 34.4% SC',
         url: '#',
@@ -1903,6 +1969,7 @@ export const allProducts = [
       {
         id: 69,
         name: 'All Grip',
+        productType : "Herbicides",
         img: allgrip,
         activeIngredient: 'Metsulfuron Methyl 20% WP',
         url: '#',
@@ -1929,6 +1996,7 @@ export const allProducts = [
       {
         id: 70,
         name: 'Attack',
+        productType : "Herbicides",
         img: attack,
         activeIngredient: 'Metribuzin 70% WP',
         url: '#',
@@ -1957,6 +2025,7 @@ export const allProducts = [
       {
         id: 71,
         name: 'Beamar-58',
+        productType : "Herbicides",
         img: beamar,
         activeIngredient: '2,4-D Amine Salt 58% SL',
         url: '#',
@@ -1996,6 +2065,7 @@ export const allProducts = [
       {
         id: 72,
         name: 'Combitec',
+        productType : "Herbicides",
         img: combitec,
         activeIngredient: 'Clodinafop Propagyl 9% + Metribuzin 20% WP',
         url: '#',
@@ -2023,6 +2093,7 @@ export const allProducts = [
       {
         id: 73,
         name: 'Fadal',
+        productType : "Herbicides",
         img: fadal,
         activeIngredient: 'Quizalofop Ethyl 5% EC',
         url: '#',
@@ -2057,6 +2128,7 @@ export const allProducts = [
       {
         id: 74,
         name: 'Finish',
+        productType : "Herbicides",
         img: finish,
         activeIngredient: 'Sulfosulfuron 75% WG',
         url: '#',
@@ -2078,6 +2150,7 @@ export const allProducts = [
       {
         id: 75,
         name: 'Fadal Super',
+        productType : "Herbicides",
         img: fadalsuper,
         activeIngredient: 'Quizalofop Ethyl 10% EC',
         url: '#',
@@ -2100,6 +2173,7 @@ export const allProducts = [
       {
         id: 76,
         name: 'Goldmix',
+        productType : "Herbicides",
         img: goldmix,
         activeIngredient: 'Metsulfuron Methyl 10% + Chlorimuron Ethyl 10% WP',
         url: '#',
@@ -2122,6 +2196,7 @@ export const allProducts = [
       {
         id: 77,
         name: 'Jaikaal',
+        productType : "Herbicides",
         img: jaikaal,
         activeIngredient: '2,4-D Ethyl Ester 38% EC',
         url: '#',
@@ -2153,6 +2228,7 @@ export const allProducts = [
       {
         id: 78,
         name: 'Karona',
+        productType : "Herbicides",
         img: karona,
         activeIngredient: 'Pretilachlor 50% EC',
         url: '#',
@@ -2176,6 +2252,7 @@ export const allProducts = [
       {
         id: 79,
         name: 'Karona Super',
+        productType : "Herbicides",
         img: karonasuper,
         activeIngredient: 'Pretilachlor 37% EW',
         url: '#',
@@ -2198,6 +2275,7 @@ export const allProducts = [
       {
         id: 80,
         name: 'Nexa',
+        productType : "Herbicides",
         img: nexa,
         activeIngredient: 'Chlorimuron Ethyl 25% WP',
         url: '#',
@@ -2221,6 +2299,7 @@ export const allProducts = [
       {
         id: 81,
         name: 'O-Cloud',
+        productType : "Herbicides",
         img: ocloud,
         activeIngredient: 'Clodinafop – Propargyl 15% WP',
         url: '#',
@@ -2238,6 +2317,7 @@ export const allProducts = [
       {
         id: 82,
         name: 'Omega',
+        productType : "Herbicides",
         img: omega,
         activeIngredient: 'Imazethapyr 10% SL',
         url: '#',
@@ -2260,6 +2340,7 @@ export const allProducts = [
       {
         id: 83,
         name: 'Omini Gold',
+        productType : "Herbicides",
         img: ominigold,
         activeIngredient: 'Bispyribac Sodium 10% SC',
         url: '#',
@@ -2283,6 +2364,7 @@ export const allProducts = [
       {
         id: 84,
         name: 'Openda',
+        productType : "Herbicides",
         img: openda,
         activeIngredient: 'Pendimethalin 30% EC',
         url: '#',
@@ -2305,6 +2387,7 @@ export const allProducts = [
       {
         id: 85,
         name: 'Openda Ultra',
+        productType : "Herbicides",
         img: opendaultra,
         activeIngredient: 'Pendimethalin 30% + Imazethapyr 2% EC',
         url: '#',
@@ -2329,6 +2412,7 @@ export const allProducts = [
       {
         id: 86,
         name: 'Oxyherb',
+        productType : "Herbicides",
         img: oxyherb,
         activeIngredient: 'Oxyfluorfen 23.5% EC',
         url: '#',
@@ -2358,6 +2442,7 @@ export const allProducts = [
       {
         id: 87,
         name: 'Ozin',
+        productType : "Herbicides",
         img: ozin,
         activeIngredient: 'Atrazine 50% WP',
         url: '#',
@@ -2381,6 +2466,7 @@ export const allProducts = [
       {
         id: 88,
         name: 'Quit',
+        productType : "Herbicides",
         img: quit,
         activeIngredient: 'Paraquat Dichloride 24% SL',
         url: '#',
@@ -2415,6 +2501,7 @@ export const allProducts = [
       {
         id: 89,
         name: 'Solid-80',
+        productType : "Herbicides",
         img: solid80,
         activeIngredient: '2,4-D Sodium Salt 80% WP',
         url: '#',
@@ -2432,6 +2519,7 @@ export const allProducts = [
       {
         id: 90,
         name: 'Saath-Saath',
+        productType : "Herbicides",
         img: saathsaath,
         activeIngredient: 'Pyrazosulfuron ethyl 10% WP',
         url: '#',
@@ -2463,6 +2551,7 @@ export const allProducts = [
       {
         id: 91,
         name: 'Oswal Potash',
+        productType : "Fertilizers",
         img: Oswal,
         activeIngredient: 'Potash Mobilizing Bacteria',
         url: '#',
@@ -2481,6 +2570,7 @@ export const allProducts = [
       {
         id: 92,
         name: 'Grow More',
+        productType : "Fertilizers",
         img: GrowMore,
         activeIngredient: 'Mycorrhizal Biofertiliser',
         url: '#',
@@ -2506,6 +2596,7 @@ export const allProducts = [
       {
         id: 93,
         name: "Thunder",
+        productType : "BioProducts",
         img: Thunder,
         activeIngredient: "Liquid Extract Organic Pest Controller",
         url: "#",
@@ -2524,6 +2615,7 @@ export const allProducts = [
       {
         id: 94,
         name: "Borohit Plus",
+        productType : "BioProducts",
         img: Borohit,
         activeIngredient: "All Vegetables & Cereal and Fruit Crops",
         url: "#",
@@ -2543,6 +2635,7 @@ export const allProducts = [
       {
         id: 95,
         name: "Dhoom",
+        productType : "BioProducts",
         img: Dhoom,
         activeIngredient: "Organic Based Primary Elements",
         url: "#",
@@ -2560,6 +2653,7 @@ export const allProducts = [
       {
         id: 96,
         name: "Diamond Gold",
+        productType : "BioProducts",
         img: Diamondgold,
         activeIngredient: "Crop Vigour Stimulant",
         url: "#",
@@ -2577,6 +2671,7 @@ export const allProducts = [
       {
         id: 97,
         name: "Diamond Gold",
+        productType : "BioProducts",
         img: Diamond,
         activeIngredient: "Organic Fertilizer (Liquid)",
         url: "#",
@@ -2594,6 +2689,7 @@ export const allProducts = [
       {
         id: 98,
         name: "Gazab-G",
+        productType : "BioProducts",
         img: Gazab,
         activeIngredient: "Seaweed 7% + Protein Hydrolysate 3%",
         url: "#",
@@ -2611,6 +2707,7 @@ export const allProducts = [
       {
         id: 99,
         name: "Grow UP",
+        productType : "BioProducts",
         img: Grow,
         activeIngredient: "Bloom Fresh Active Constituent Cytokinins & Enzymes ",
         url: "#",
@@ -2628,6 +2725,7 @@ export const allProducts = [
       {
         id: 100,
         name: "Osovita Gold",
+        productType : "BioProducts",
         img: Osovitagold,
         activeIngredient: "Liquid Sea-Weed Based Bio-Extract",
         url: "#",
@@ -2645,6 +2743,7 @@ export const allProducts = [
       {
         id: 101,
         name: "Osovita-G",
+        productType : "BioProducts",
         img: Osovita,
         activeIngredient: "Granulated Sea Weed Based Bio-Extract",
         url: "#",
@@ -2662,6 +2761,7 @@ export const allProducts = [
       {
         id: 102,
         name: "Oswal Gold",
+        productType : "BioProducts",
         img: Oswal2,
         activeIngredient: "Humic-Humin-Fulvic-Humate 95%",
         url: "#",
@@ -2679,6 +2779,7 @@ export const allProducts = [
       {
         id: 103,
         name: "Oswal Punch",
+        productType : "BioProducts",
         img: OswalPunch,
         activeIngredient: "A Bio Extract Pest Controller",
         url: "#",
@@ -2696,6 +2797,7 @@ export const allProducts = [
       {
         id: 104,
         name: "Oswal Zinc",
+        productType : "BioProducts",
         img: OswalZinc,
         activeIngredient: "Microbial Zinc Solubilizer",
         url: "#",
@@ -2713,6 +2815,7 @@ export const allProducts = [
       {
         id: 105,
         name: "SAT-VAT",
+        productType : "BioProducts",
         img: SATVAT,
         activeIngredient: "Superspreader",
         url: "#",
@@ -2730,6 +2833,7 @@ export const allProducts = [
       {
         id: 106,
         name: "MP Super",
+        productType : "BioProducts",
         img: MPSuper,
         activeIngredient: "Multipurpose Bio Plant Protector Eco Friendly",
         url: "#",
@@ -2747,6 +2851,7 @@ export const allProducts = [
       {
         id: 107,
         name: "Mit Magic",
+        productType : "BioProducts",
         img: Mit,
         activeIngredient: "Bio Plant Stimulant",
         url: "#",
@@ -2765,12 +2870,13 @@ export const allProducts = [
   },
   {
     id: 6,
-    title: 'micronutrients',
+    title: 'Micronutrients',
     image : MICRO_NUTRIENTS,
     productName: [
       {
         id: 108,
         name: "Jaandaar",
+        productType : "Microntrients",
         img: Jaandaar,
         activeIngredient: "Multi-Micronutrients Fertilizers",
         url: "#",
@@ -2789,6 +2895,7 @@ export const allProducts = [
       {
         id: 109,
         name: "Takatwar",
+         productType : "Microntrients",
         img: Takatwar,
         activeIngredient: "Zinc Sulphate Monohydrate (33% Zn)",
         url: "#",
@@ -2808,6 +2915,7 @@ export const allProducts = [
       {
         id: 110,
         name: "Kaabil",
+         productType : "Microntrients",
         img: Kaabil,
         activeIngredient: "Zn-EDTA 12%",
         url: "#",
@@ -2828,12 +2936,13 @@ export const allProducts = [
 
   {
     id: 7,
-    title: 'plantgrowth',
+    title: 'Plantgrowth',
     image : PGR,
     productName: [
       {
         id: 1,
         name: "Jalwa",
+        productType : "Plantgrowth",
         img: Jalwa,
         activeIngredient: "Gibberellic Acid 0.001% L",
         url: "#",
@@ -2852,6 +2961,7 @@ export const allProducts = [
     {
         id: 2,
         name: "Naino Booster",
+        productType : "Plantgrowth",
         img: NainoBooster,
         activeIngredient: "Triacontanol 0.05% GR (Min.)",
         url: "#",
@@ -2871,6 +2981,7 @@ export const allProducts = [
     {
         id: 3,
         name: "Naino Booster Ultra",
+        productType : "Plantgrowth",
         img: Naino,
         activeIngredient: "Triacontanol EC 0.05% Min.",
         url: "#",
@@ -2888,6 +2999,7 @@ export const allProducts = [
     {
         id: 4,
         name: "Naino Plus",
+        productType : "Plantgrowth",
         img: NainoPlus,
         activeIngredient: "Triacontanol EW 0.1% Min",
         url: "#",
@@ -2905,6 +3017,7 @@ export const allProducts = [
     {
         id: 5,
         name: "Seltar",
+        productType : "Plantgrowth",
         img: Seltar,
         activeIngredient: "Paclobutrazol 23% SC",
         url: "#",
