@@ -211,7 +211,7 @@ const SearchFilter = () => {
                 <div className='absolute top-0 right-0 left-0 bottom-0 z-[1] bg-white bg-opacity-30'></div>
 
 
-                <div className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-[2] space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+                <div data-aos="fade-right" className="xlg:w-10/12 w-11/12 mx-auto flex flex-col items-center justify-between z-[2] space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                     <select
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}

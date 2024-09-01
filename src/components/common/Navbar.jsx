@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaRegHandPointRight, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn, FaSearch } from 'react-icons/fa';
+import { FaBars, FaTimes, FaRegHandPointRight , FaSearch } from 'react-icons/fa';
 import { navbarData } from '../../data/nav-links';
 import { motion, AnimatePresence } from 'framer-motion';
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,25 +54,25 @@ const Navbar = () => {
     <>
       {/* Fixed Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-20 px-6 py-4 bg-white shadow-md">
-        <div className="flex items-center justify-center w-7/12 mx-auto md:justify-between">
+        <div className="flex flex-row items-center w-[98%] xsm:w-[95%] xs:w-11/12 sm:w-10/12 lg:w-11/12  xl:w-10/12 mx-auto lg:justify-between ">
           {/* Logo */}
-          <div className="flex-shrink-0 mr-5">
-            <Link to="/"><img src="/src/assets/logo.png" alt="Logo" className="h-[15vh]" /></Link>
-            
+          <div className="flex-shrink-0 ">
+            <Link to="/"><img src="/src/assets/logo.png" alt="Logo" className="sm:h-[15vh] xsm:h-[10vh] h-[8vh]" /></Link>
+
           </div>
 
-          <div>
+          <div className='flex lg:flex-col items-center gap-y-1 ml-4 xsm:ml-8 xs:ml-12 sm:ml-24 md:ml-32 lg:ml-0'>
             <div className="flex flex-col items-center p-2 lg:flex-row gap-y-2 lg:gap-4">
-              <button className="flex items-center justify-center px-2 py-2 text-sm transition-all duration-200 rounded-lg md:px-4 md:text-base bg-light-green-200 hover:bg-dark-green-100 hover:text-white">
+              <button className="flex items-center justify-center px-2 py-2 text-sm transition-all duration-200 rounded-lg md:px-4 md:text-base hover:bg-light-green-200 bg-dark-green-100 text-white hover:text-black">
                 Pay Now <FaRegHandPointRight className="ml-1" />
               </button>
 
-              <div className="flex gap-x-1 md:gap-x-2">
+              <div className="flex  gap-x-1 md:gap-x-2">
                 {navbarData.socialLinks.map((social, index) => {
                   const IconComponent = social.icon; // Get the icon component
                   return (
-                    <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color, width: iconSize.width, height: iconSize.height }} className="flex items-center gap-4 p-1 text-xl transition-all duration-300 rounded-lg cursor-pointer hover:scale-110">
-                      <IconComponent style={{ width: '100%', height: '100%' }} />
+                    <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color, width: iconSize.width, height: iconSize.height }} className="flex justify-center items-center gap-4 p-[2px] text-lg transition-all xs:border border-green-600 hover:border-none hover:bg-light-green-200 duration-300 rounded-lg  cursor-pointer hover:scale-110">
+                      <IconComponent  className='text-xl'/>
                     </a>
                   );
                 })}
@@ -79,7 +80,7 @@ const Navbar = () => {
             </div>
 
             {/* Navigation Items */}
-            <div className="items-center hidden space-x-6 lg:flex">
+            <div className="items-center hidden gap-x-8 lg:flex text-[16px] font-semibold">
               {navbarData.navItems.map((item, idx) => (
                 <div
                   key={idx}
@@ -87,21 +88,23 @@ const Navbar = () => {
                   onMouseEnter={() => toggleDropdown(idx)}
                   onMouseLeave={() => setOpenDropdownIndex(null)}
                 >
-                  <Link to={item.path} className="text-gray-800 transition hover:text-green-600">
+                  <Link to={item.path} className="text-gray-800 transition-all duration-200 hover:text-dark-green-200 flex items-center">
                     {item.label}
+                    {item.dropdown && <RiArrowDropDownLine className='text-2xl'/>
+                    }
                   </Link>
                   {item.dropdown && (
                     <AnimatePresence>
                       {openDropdownIndex === idx && (
                         <motion.ul
-                          className="absolute left-0 z-20 w-48 text-gray-800 rounded-lg shadow-md top-full"
+                          className="absolute left-0 z-20 w-48 text-gray-800 rounded-lg shadow-md top-7 bg-[#cdffcd] "
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
                           {item.dropdown.map((dropdownItem, dropdownIdx) => (
-                            <li key={dropdownIdx} className="bg-white border-b border-black rounded-lg hover:bg-yellow-100">
+                            <li key={dropdownIdx} className=" border-b border-richblack-100 transition-all duration-300 hover:bg-dark-green-100 hover:text-white">
                               <Link
                                 to={dropdownItem.path}
                                 className="block px-4 py-2"
@@ -109,27 +112,29 @@ const Navbar = () => {
                                 {dropdownItem.label}
                               </Link>
                             </li>
+
                           ))}
+                         
                         </motion.ul>
                       )}
                     </AnimatePresence>
                   )}
+
+                  
                 </div>
               ))}
+               <div className="items-center hidden transition-all duration-300 lg:flex hover:scale-110 ">
+                            <a href="/search-product">
+                              <button className="text-dark-green-200 transition duration-300 focus:outline-none hover:text-green-600">
+                                <FaSearch className="w-6 h-6" />
+                              </button>
+                            </a>
+                          </div>
             </div>
           </div>
 
-          {/* Search Icon for Desktop */}
-          <div className="items-center hidden lg:flex">
-            <a href="/search-product">
-            <button className="text-gray-800 transition duration-300 focus:outline-none hover:text-green-600">
-              <FaSearch className="w-6 h-6" />
-            </button>
-            </a>
-          </div>
-
           {/* Mobile Menu Button */}
-          <div className="flex items-center ml-auto lg:hidden">
+          <div className="flex items-center ml-auto lg:hidden ">
             <button onClick={toggleMobileMenu} className="text-gray-800 focus:outline-none">
               {isMobileMenuOpen ? (
                 <FaTimes className="w-6 h-6" />
@@ -144,29 +149,20 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.ul
-              className="absolute left-0 z-20 w-full mt-0 bg-white top-full lg:hidden"
+              className="absolute left-0 z-20 w-full mt-0 bg-white rounded-lg top-full lg:hidden"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {/* Search Icon in Mobile Menu */}
-              <a href="/search-product">
-              <li className="flex items-center justify-between px-4 py-2 text-gray-800 border border-black rounded-lg cursor-pointer hover:bg-gray-100">
-                
-                <span>Search</span>
-                <FaSearch className="w-6 h-6" />
-                
-               
-              </li>
-              </a>
+              
 
               {navbarData.navItems.map((item, idx) => (
                 <li key={idx} className="relative">
                   <a
                     href={item.path}
                     onClick={(e) => handleLinkClick(e, item.dropdown && idx)}
-                    className="flex items-center justify-between gap-3 px-4 py-2 text-gray-800 border border-black rounded-lg cursor-pointer hover:bg-gray-100"
+                    className="flex items-center justify-between gap-3 px-4 py-2 text-gray-800 border-t border-richblack-200  cursor-pointer transition-all duration-200 bg-[#e6ffe6]  hover:bg-dark-green-200 hover:text-white"
                   >
                     <span>{item.label}</span>
                     {item.dropdown && (
@@ -184,17 +180,21 @@ const Navbar = () => {
                   <AnimatePresence>
                     {openDropdownIndex === idx && (
                       <motion.ul
-                        className="pl-4 mt-2 bg-white"
+                        className=" bg-[#90ee90] "
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
                         {item.dropdown.map((dropdownItem, dropdownIdx) => (
-                          <li key={dropdownIdx} className="mb-2 border-b border-black rounded-lg">
+                          <li key={dropdownIdx} className={`
+                            ${
+                              dropdownIdx === item.dropdown.length - 1 ? "" : " border-b border-richblack-200"
+                            }
+                          `}>
                             <Link
                               to={dropdownItem.path}
-                              className="block px-4 py-2 text-gray-800 rounded-lg hover:bg-yellow-100"
+                              className="block px-4 py-2  pl-8 transition-all durtaion-200 hover:bg-dark-green-200 hover:text-white "
                               onClick={handleDropdownItemClick} // Hide menu on dropdown item click
                             >
                               {dropdownItem.label}
@@ -206,6 +206,16 @@ const Navbar = () => {
                   </AnimatePresence>
                 </li>
               ))}
+              {/* Search Icon in Mobile Menu */}
+              <a href="/search-product">
+                <li className="flex items-center justify-between px-4 py-2 text-gray-800 transition-all duration-200 border border-richblack-200 bg-[#e6ffe6] hover:text-white cursor-pointer hover:bg-dark-green-200">
+
+                  <span>Search</span>
+                  <FaSearch className="w-6 h-6" />
+
+
+                </li>
+              </a>
             </motion.ul>
           )}
         </AnimatePresence>
@@ -215,7 +225,7 @@ const Navbar = () => {
       <div className="pt-20">
         {/* Your other components go here */}
         <div className="p-4">
-         
+
         </div>
       </div>
     </>
