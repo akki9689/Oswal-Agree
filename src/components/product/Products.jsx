@@ -38,6 +38,19 @@ const Products = () => {
     });
   }, [category, controls]);
 
+  let title;
+
+  if (category.includes("-")) {
+
+    title = category
+      .split('-')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+
+  }else{
+    title = category;
+  }
+
   const handleReadMoreClick = (productName) => {
     navigate(`/products/${category}/${productName}`);
   };
@@ -46,7 +59,7 @@ const Products = () => {
     <div className="container p-4 mx-auto">
       
       <motion.div animate={controls}>
-        <Popupname title={category ? category : 'All Products'} />
+        <Popupname title={category ? title : 'All Products'} />
       </motion.div>
       <div data-aos="fade-up" className="grid grid-cols-1 gap-8 pt-10 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.length > 0 ? (

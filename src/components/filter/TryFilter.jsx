@@ -35,8 +35,8 @@ const Filter = ({ products }) => {
 };
 
 const categories = [
-    "All Products", "BioProducts", "Fertilizers", "Fungicides", "Herbicides",
-    "Insecticides", "micronutrients", "plantgrowth"
+    "All Products", "Bio-Products", "Fertilizers", "Fungicides", "Herbicides",
+    "Insecticides", "Micro-nutrients", "Plant-Growth-Regulators"
 ];
 const crops = [
     "Cotton", "Grapes", "Red Gram", "ChickPea", "Cabbage", "Brinjal", "Okra",

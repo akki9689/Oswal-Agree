@@ -109,8 +109,8 @@ import GrowMore from '../../images/Products/Fertilizer/Grow-More.png'
 
 // ------------bio Product------------------
 
-import Thunder from '../../images/Products/Bioproducts/Thunder.png'
-import Borohit from '../../images/Products/Bioproducts/Borohit-Plus.png'
+import Thunder from '../../images/Products/BioProducts/Thunder.png'
+import Borohit from '../../images/Products/BioProducts/Borohit-Plus.png'
 import Dhoom from '../../images/Products/BioProducts/Dhoom.png'
 import Diamondgold from '../../images/Products/BioProducts/Diamond-gold.png'
 import Diamond from '../../images/Products/BioProducts/Diamond-gold-Organic.png'
@@ -1937,7 +1937,6 @@ export const allProducts = [
     ]
   },
 
-  // herbicides
   {
     id: 3,
     title: 'Herbicides',
@@ -2590,13 +2589,13 @@ export const allProducts = [
   },
   {
     id: 5,
-    title: 'BioProducts',
+    title: 'Bio-Products',
     image : BIO_PRODUCTS,
     productName: [
       {
         id: 93,
         name: "Thunder",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Thunder,
         activeIngredient: "Liquid Extract Organic Pest Controller",
         url: "#",
@@ -2615,7 +2614,7 @@ export const allProducts = [
       {
         id: 94,
         name: "Borohit Plus",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Borohit,
         activeIngredient: "All Vegetables & Cereal and Fruit Crops",
         url: "#",
@@ -2635,7 +2634,7 @@ export const allProducts = [
       {
         id: 95,
         name: "Dhoom",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Dhoom,
         activeIngredient: "Organic Based Primary Elements",
         url: "#",
@@ -2653,7 +2652,7 @@ export const allProducts = [
       {
         id: 96,
         name: "Diamond Gold",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Diamondgold,
         activeIngredient: "Crop Vigour Stimulant",
         url: "#",
@@ -2671,7 +2670,7 @@ export const allProducts = [
       {
         id: 97,
         name: "Diamond Gold",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Diamond,
         activeIngredient: "Organic Fertilizer (Liquid)",
         url: "#",
@@ -2689,7 +2688,7 @@ export const allProducts = [
       {
         id: 98,
         name: "Gazab-G",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Gazab,
         activeIngredient: "Seaweed 7% + Protein Hydrolysate 3%",
         url: "#",
@@ -2707,7 +2706,7 @@ export const allProducts = [
       {
         id: 99,
         name: "Grow UP",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Grow,
         activeIngredient: "Bloom Fresh Active Constituent Cytokinins & Enzymes ",
         url: "#",
@@ -2725,7 +2724,7 @@ export const allProducts = [
       {
         id: 100,
         name: "Osovita Gold",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Osovitagold,
         activeIngredient: "Liquid Sea-Weed Based Bio-Extract",
         url: "#",
@@ -2743,7 +2742,7 @@ export const allProducts = [
       {
         id: 101,
         name: "Osovita-G",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Osovita,
         activeIngredient: "Granulated Sea Weed Based Bio-Extract",
         url: "#",
@@ -2761,7 +2760,7 @@ export const allProducts = [
       {
         id: 102,
         name: "Oswal Gold",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Oswal2,
         activeIngredient: "Humic-Humin-Fulvic-Humate 95%",
         url: "#",
@@ -2779,7 +2778,7 @@ export const allProducts = [
       {
         id: 103,
         name: "Oswal Punch",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: OswalPunch,
         activeIngredient: "A Bio Extract Pest Controller",
         url: "#",
@@ -2797,7 +2796,7 @@ export const allProducts = [
       {
         id: 104,
         name: "Oswal Zinc",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: OswalZinc,
         activeIngredient: "Microbial Zinc Solubilizer",
         url: "#",
@@ -2815,7 +2814,7 @@ export const allProducts = [
       {
         id: 105,
         name: "SAT-VAT",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: SATVAT,
         activeIngredient: "Superspreader",
         url: "#",
@@ -2833,7 +2832,7 @@ export const allProducts = [
       {
         id: 106,
         name: "MP Super",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: MPSuper,
         activeIngredient: "Multipurpose Bio Plant Protector Eco Friendly",
         url: "#",
@@ -2851,7 +2850,7 @@ export const allProducts = [
       {
         id: 107,
         name: "Mit Magic",
-        productType : "BioProducts",
+        productType : "Bio-Products",
         img: Mit,
         activeIngredient: "Bio Plant Stimulant",
         url: "#",
@@ -2870,13 +2869,13 @@ export const allProducts = [
   },
   {
     id: 6,
-    title: 'Micronutrients',
+    title: 'Micro-nutrients',
     image : MICRO_NUTRIENTS,
     productName: [
       {
         id: 108,
         name: "Jaandaar",
-        productType : "Microntrients",
+        productType : "Micro-nutrients",
         img: Jaandaar,
         activeIngredient: "Multi-Micronutrients Fertilizers",
         url: "#",
@@ -2895,7 +2894,7 @@ export const allProducts = [
       {
         id: 109,
         name: "Takatwar",
-         productType : "Microntrients",
+         productType : "Micro-nutrients",
         img: Takatwar,
         activeIngredient: "Zinc Sulphate Monohydrate (33% Zn)",
         url: "#",
@@ -2915,7 +2914,7 @@ export const allProducts = [
       {
         id: 110,
         name: "Kaabil",
-         productType : "Microntrients",
+         productType : "Micro-nutrients",
         img: Kaabil,
         activeIngredient: "Zn-EDTA 12%",
         url: "#",
@@ -2936,13 +2935,13 @@ export const allProducts = [
 
   {
     id: 7,
-    title: 'Plantgrowth',
+    title: 'Plant-Growth-Regulator',
     image : PGR,
     productName: [
       {
         id: 1,
         name: "Jalwa",
-        productType : "Plantgrowth",
+        productType : "Plant-Growth-Regulator",
         img: Jalwa,
         activeIngredient: "Gibberellic Acid 0.001% L",
         url: "#",
@@ -2961,7 +2960,7 @@ export const allProducts = [
     {
         id: 2,
         name: "Naino Booster",
-        productType : "Plantgrowth",
+        productType : "Plant-Growth-Regulator",
         img: NainoBooster,
         activeIngredient: "Triacontanol 0.05% GR (Min.)",
         url: "#",
@@ -2981,7 +2980,7 @@ export const allProducts = [
     {
         id: 3,
         name: "Naino Booster Ultra",
-        productType : "Plantgrowth",
+        productType : "Plant-Growth-Regulator",
         img: Naino,
         activeIngredient: "Triacontanol EC 0.05% Min.",
         url: "#",
@@ -2999,7 +2998,7 @@ export const allProducts = [
     {
         id: 4,
         name: "Naino Plus",
-        productType : "Plantgrowth",
+        productType : "Plant-Growth-Regulator",
         img: NainoPlus,
         activeIngredient: "Triacontanol EW 0.1% Min",
         url: "#",
@@ -3017,7 +3016,7 @@ export const allProducts = [
     {
         id: 5,
         name: "Seltar",
-        productType : "Plantgrowth",
+        productType : "Plant-Growth-Regulator",
         img: Seltar,
         activeIngredient: "Paclobutrazol 23% SC",
         url: "#",
