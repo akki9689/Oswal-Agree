@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaBars, FaTimes, FaRegHandPointRight, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 import { navbarData } from '../../data/nav-links';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,6 +8,21 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const [closingDropdownIndex, setClosingDropdownIndex] = useState(null);
+  const [iconSize, setIconSize] = useState({ width: '40px', height: '40px' });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIconSize({ width: screenWidth >= 768 ? '40px' : '30px', height: screenWidth >= 768 ? '40px' : '30px' });
+    };
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -38,14 +53,70 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-20 px-6 py-4 bg-white shadow-md">
-      
+
       <div className="flex items-center justify-center w-7/12 mx-auto md:justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 mr-5">
           <img src="/src/assets/logo.png" alt="Logo" className="h-[15vh]" />
         </div>
+        <div>
+          <div className="flex flex-col lg:flex-row items-center p-2 gap-y-2 lg:gap-4 ">
+            <button className="flex items-center justify-center px-2 py-2 md:px-4 md:text-base text-sm transition-all duration-200 rounded-lg bg-light-green-200 hover:bg-dark-green-100  hover:text-white">
+              Pay Now <FaRegHandPointRight className="ml-1" />
+            </button>
+            <div className="flex gap-x-1 md:gap-x-2">
 
-        {/* Navigation Items */}
+              {navbarData.socialLinks.map((social, index) => {
+                const IconComponent = social.icon; // Get the icon component
+                return (
+                  <a key={index} href={social.link} target='_blank' rel="noopener noreferrer" style={{ color: social.color , width: iconSize.width, height: iconSize.height }} className="flex items-center p-1 text-xl rounded-lg  transition-all duration-300 hover:scale-110 cursor-pointer gap-2">
+                    <IconComponent style={{ width: '100%', height: '100%' }}/>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+          {/* Navigation Items */}
+          <div className="items-center hidden space-x-6 lg:flex">
+            {navbarData.navItems.map((item, idx) => (
+              <div
+                key={idx}
+                className="relative group"
+                onMouseEnter={() => toggleDropdown(idx)}
+                onMouseLeave={() => setOpenDropdownIndex(null)}
+              >
+                <Link to={item.path} className="text-gray-800 transition hover:text-green-600">
+                  {item.label}
+                </Link>
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {openDropdownIndex === idx && (
+                      <motion.ul
+                        className="absolute left-0 z-20 w-48 text-gray-800 border rounded-lg shadow-md top-full"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        {item.dropdown.map((dropdownItem, dropdownIdx) => (
+                          <li key={dropdownIdx} className="bg-white border-b border-black rounded-lg hover:bg-yellow-100">
+                            <Link
+                              to={dropdownItem.path}
+                              className="block px-4 py-2"
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Navigation Items
         <div className="items-center hidden space-x-6 lg:flex">
           {navbarData.navItems.map((item, idx) => (
             <div
@@ -83,7 +154,7 @@ const Navbar = () => {
               )}
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <div className="flex items-center ml-auto lg:hidden">
