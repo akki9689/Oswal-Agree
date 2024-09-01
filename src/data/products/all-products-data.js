@@ -156,7 +156,7 @@ export const allProducts = [
         activeIngredient: 'Alphacypermethrin 10% SC',
         url: '#',
         details: {
-          targetCrops: [''],
+          targetCrops: [],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
           uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
@@ -175,6 +175,7 @@ export const allProducts = [
         url: '#',
         details: {
           targetCrops: ['Cotton', 'Cabbage', 'Chilli', 'Tomato', 'Pigeon Pea'],
+          
           dose: 'Cotton, Dose : 1 ml/ 2 lit of water Cabbage, Dose : 1 ml/ 3 Lit of water Tomato, Dose : 1 ml/ lit of water. Chilli, Dose : 1 ml/ 1.5 lit of water Pigeonpea, Dose : 1 ml/ 2.5 lit of water',
           pest: ['Diamon Back Moth', 'Fruit borer', 'Pod borer', 'Boll worms'],
           uses: 'Indoxacarb 14.5% Suspension Concentrate is a broad spectrum contact and stomach insecticide effective as a foliar spray for the control of insect pest of Cotton, Tomato, Chilli, Cabbage and Pigeonpea.',
@@ -2870,13 +2871,13 @@ export const allProducts = [
   },
   {
     id: 6,
-    title: 'Micronutrients',
+    title: 'micronutrients',
     image : MICRO_NUTRIENTS,
     productName: [
       {
         id: 108,
         name: "Jaandaar",
-        productType : "Microntrients",
+        productType : "microntrients",
         img: Jaandaar,
         activeIngredient: "Multi-Micronutrients Fertilizers",
         url: "#",
@@ -2895,7 +2896,7 @@ export const allProducts = [
       {
         id: 109,
         name: "Takatwar",
-         productType : "Microntrients",
+         productType : "microntrients",
         img: Takatwar,
         activeIngredient: "Zinc Sulphate Monohydrate (33% Zn)",
         url: "#",
@@ -2915,7 +2916,7 @@ export const allProducts = [
       {
         id: 110,
         name: "Kaabil",
-         productType : "Microntrients",
+         productType : "microntrients",
         img: Kaabil,
         activeIngredient: "Zn-EDTA 12%",
         url: "#",
@@ -2936,13 +2937,13 @@ export const allProducts = [
 
   {
     id: 7,
-    title: 'Plantgrowth',
+    title: 'plantgrowth',
     image : PGR,
     productName: [
       {
         id: 1,
         name: "Jalwa",
-        productType : "Plantgrowth",
+        productType : "plantgrowth",
         img: Jalwa,
         activeIngredient: "Gibberellic Acid 0.001% L",
         url: "#",
@@ -2961,7 +2962,7 @@ export const allProducts = [
     {
         id: 2,
         name: "Naino Booster",
-        productType : "Plantgrowth",
+        productType : "plantgrowth",
         img: NainoBooster,
         activeIngredient: "Triacontanol 0.05% GR (Min.)",
         url: "#",
@@ -2981,7 +2982,7 @@ export const allProducts = [
     {
         id: 3,
         name: "Naino Booster Ultra",
-        productType : "Plantgrowth",
+        productType : "plantgrowth",
         img: Naino,
         activeIngredient: "Triacontanol EC 0.05% Min.",
         url: "#",
@@ -2999,7 +3000,7 @@ export const allProducts = [
     {
         id: 4,
         name: "Naino Plus",
-        productType : "Plantgrowth",
+        productType : "plantgrowth",
         img: NainoPlus,
         activeIngredient: "Triacontanol EW 0.1% Min",
         url: "#",
@@ -3017,7 +3018,7 @@ export const allProducts = [
     {
         id: 5,
         name: "Seltar",
-        productType : "Plantgrowth",
+        productType : "plantgrowth",
         img: Seltar,
         activeIngredient: "Paclobutrazol 23% SC",
         url: "#",
