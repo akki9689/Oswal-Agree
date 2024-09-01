@@ -160,7 +160,7 @@ export const allProducts = [
         activeIngredient: 'Alphacypermethrin 10% SC',
         url: '#',
         details: {
-          targetCrops: [''],
+          targetCrops: [],
           dose: '10 to 20 ml per liter of water to cover a 50 sq. meter area.',
           pest: ['Adult Mosquitoes', 'Adult Houseflies', 'Cockroach'],
           uses: 'Alphacypermethrin 10% SC is a high performance, residual insecticide that provides control of mosquitoes, houseflies and cockroaches for longer duration. It is suitable for use in domestic and institutional premises & public buildings. It is of low toxicity to humans and can be used in hospitals, kitchens restaurants and food processing and food storage areas.',
@@ -179,6 +179,7 @@ export const allProducts = [
         url: '#',
         details: {
           targetCrops: ['Cotton', 'Cabbage', 'Chilli', 'Tomato', 'Pigeon Pea'],
+          
           dose: 'Cotton, Dose : 1 ml/ 2 lit of water Cabbage, Dose : 1 ml/ 3 Lit of water Tomato, Dose : 1 ml/ lit of water. Chilli, Dose : 1 ml/ 1.5 lit of water Pigeonpea, Dose : 1 ml/ 2.5 lit of water',
           pest: ['Diamon Back Moth', 'Fruit borer', 'Pod borer', 'Boll worms'],
           uses: 'Indoxacarb 14.5% Suspension Concentrate is a broad spectrum contact and stomach insecticide effective as a foliar spray for the control of insect pest of Cotton, Tomato, Chilli, Cabbage and Pigeonpea.',
