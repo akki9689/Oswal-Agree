@@ -55,6 +55,7 @@ const Products = () => {
     navigate(`/products/${category}/${productName}`);
   };
 
+
   return (
     <div className="container p-4 mx-auto">
       
@@ -69,7 +70,7 @@ const Products = () => {
               imageSrc={product.img } 
               productName={product.name}
               productDescription={product.activeIngredient}
-              onReadMoreClick={() => handleReadMoreClick(product.name)}
+              onReadMoreClick={() => handleReadMoreClick(product.name.split(" ").join("-").toLowerCase())}
             />
           ))
         ) : (

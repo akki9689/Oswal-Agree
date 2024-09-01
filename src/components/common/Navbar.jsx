@@ -121,9 +121,11 @@ const Navbar = () => {
 
           {/* Search Icon for Desktop */}
           <div className="items-center hidden lg:flex">
+            <a href="/search-product">
             <button className="text-gray-800 transition duration-300 focus:outline-none hover:text-green-600">
               <FaSearch className="w-6 h-6" />
             </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -149,10 +151,15 @@ const Navbar = () => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               {/* Search Icon in Mobile Menu */}
+              <a href="/search-product">
               <li className="flex items-center justify-between px-4 py-2 text-gray-800 border border-black rounded-lg cursor-pointer hover:bg-gray-100">
+                
                 <span>Search</span>
                 <FaSearch className="w-6 h-6" />
+                
+               
               </li>
+              </a>
 
               {navbarData.navItems.map((item, idx) => (
                 <li key={idx} className="relative">

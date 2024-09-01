@@ -5,7 +5,7 @@ export const navbarData = {
    { label: 'Home', path: '/' },
    {
      label: 'About Us',
-     path: '/about',
+     path: '/about/company-profile',
      dropdown: [
        { label: 'Company Profile', path: '/about/company-profile' },
        { label: 'Vision and Mission', path: '/about/vision' },
@@ -16,15 +16,15 @@ export const navbarData = {
    },
    {
      label: 'Product Range',
-     path: '/',
+     path: '/products/insecticides',
      dropdown: [
        { label: 'Insecticides', path: '/products/insecticides' },
        { label: 'Fungicides', path: '/products/fungicides' },
        { label: 'Herbicides', path: '/products/herbicides' },
        { label: 'Fertilizers', path: '/products/fertilizers' },
-       { label: 'Bio Products', path: '/products/bioproducts' },
-       { label: 'Micro Nutrients', path: '/products/micronutrients' },
-       { label: 'Plant Growth Regulators', path: '/products/plantgrowth' },
+       { label: 'Bio Products', path: '/products/bio-products' },
+       { label: 'Micro Nutrients', path: '/products/micro-nutrients' },
+       { label: 'Plant Growth Regulators', path: '/products/plant-growth-regulator' },
      ],
    },
    {
@@ -35,7 +35,7 @@ export const navbarData = {
    
    {
      label: 'Contact Us',
-     path: '/',
+     path: '/contact/contact-us',
      dropdown: [
        { label: 'Contact', path: '/contact/contact-us' },
        { label: 'Branches', path: '/contact/branches' },

@@ -9,12 +9,27 @@ const ProductPage = () => {
   const { category, productName } = useParams();
   const [product, setProduct] = useState(null);
 
+  let modifyProductName ;
+
+  if (productName.includes("-")) {
+
+    modifyProductName = productName
+      .split('-')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+
+  }else{
+    modifyProductName = productName;
+  }
+
+
+
   useEffect(() => {
     const getProductDetails = () => {
       let foundProduct = null;
       const categoryData = allProducts.find(cat => cat.title.toLowerCase() === category.toLowerCase());
       if (categoryData) {
-        foundProduct = categoryData.productName.find(prod => prod.name.toLowerCase() === decodeURIComponent(productName.toLowerCase()));
+        foundProduct = categoryData.productName.find(prod => prod.name.toLowerCase() === decodeURIComponent(modifyProductName.toLowerCase()));
       }
       setProduct(foundProduct || null);
     };
@@ -22,13 +37,26 @@ const ProductPage = () => {
     getProductDetails();
   }, [category, productName]);
 
+  let productTitle ;
+
+  if (category.includes("-")) {
+
+    productTitle = category
+      .split('-')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+
+  }else{
+    productTitle = category;
+  }
+
   if (!product) {
     return<div> <Loader /></div>;
   }
 
   return (
     <div>
-      <Popupname title={category ? category : 'All Products'} />
+      <Popupname title={category ? productTitle : 'All Products'} />
       
       <div className='pt-10 pb-10'>
         
