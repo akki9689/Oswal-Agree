@@ -27,6 +27,7 @@ const ProductPage = lazy(() => import('./components/product/ProductPage'));
 const Filter = lazy(() => import('./components/filter/SearchFilter'));
 const Contact = lazy(()=> import('./components/contactUs/Contact'));
 const Branches = lazy(() => import('./components/contactUs/Branches'));
+const TryFilter = lazy(() => import('./components/filter/TryFilter'))
 // import Filter from './components/filter/SearchFilter'
 
 
@@ -89,7 +90,7 @@ const App = () => {
                     <Route path='/Filter' element={<Filter />} />
 
                     {/* Gallery */}
-                    <Route path='/photo-gallery' element={<PhotoGallery />} />
+                    <Route path='/photo-gallery' element={<TryFilter />} />
 
                     {/* Contact */}
                      
@@ -114,5 +115,10 @@ export default App;
 
 
 //Sabka title thik krna hai : product , card and all product ka title bhi sahi krna hai
-//catalogue jo param se aara usko bhi modify krna hai ki format rhe
 //Filter mei bhi uska naam thik krna hai!
+
+//Others :
+
+//Akash and Pankaj : Sab product ke andr title define kro
+//Nalini didi : Phir se Pest and crop match kro data se aur sahi kro
+//Ashique: Navbar pr poora work

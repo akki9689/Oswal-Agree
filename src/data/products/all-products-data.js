@@ -151,6 +151,7 @@ export const allProducts = [
       {
         id: 1,
         name: 'Fila Plus',
+        productType : "Insecticides",
         img: fila,
         activeIngredient: 'Alphacypermethrin 10% SC',
         url: '#',
@@ -174,7 +175,7 @@ export const allProducts = [
         details: {
           targetCrops: ['Cotton', 'Cabbage', 'Chilli', 'Tomato', 'Pigeon Pea'],
           dose: 'Cotton, Dose : 1 ml/ 2 lit of water Cabbage, Dose : 1 ml/ 3 Lit of water Tomato, Dose : 1 ml/ lit of water. Chilli, Dose : 1 ml/ 1.5 lit of water Pigeonpea, Dose : 1 ml/ 2.5 lit of water',
-          pest: ['Diamon Back Moth', 'Fruit borer', 'Pod borer, Boll worms'],
+          pest: ['Diamon Back Moth', 'Fruit borer', 'Pod borer', 'Boll worms'],
           uses: 'Indoxacarb 14.5% Suspension Concentrate is a broad spectrum contact and stomach insecticide effective as a foliar spray for the control of insect pest of Cotton, Tomato, Chilli, Cabbage and Pigeonpea.',
           advantages: [
             'P.P. Equipment:-High volume spraying equipment, such as knapsack sprayer, rocking sprayer, foot sprayer etc.'
@@ -2509,7 +2510,7 @@ export const allProducts = [
         activeIngredient: "Liquid Extract Organic Pest Controller",
         url: "#",
         details: {
-          targetCrops: ["Cotton, Cabbage, Brinjal, Sugarcane, Paddy, Pea, Vegetables"],
+          targetCrops: ["Cotton", "Cabbage", "Brinjal", "Sugarcane", "Paddy", "Pea", "Vegetables"],
           dose: "It should be diluted at the rate of 1-2 ml. in 1 litre of water and generally applied at the rate of 150 litre of emulsion per acre.",
           pest: ["Leaf eating caterpillar"],
           uses: "It is biologically derived Extract Liquid Organic Pest Controller for foliar application. It contains Nitrogeneous components. which controls the life cycle of the pest.",
