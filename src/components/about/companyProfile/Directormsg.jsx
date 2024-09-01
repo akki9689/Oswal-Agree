@@ -35,27 +35,27 @@ const Directormsg = () => {
 
     return (
         <div className="bg-[rgb(196,221,191)] w-full pt-8 pb-16 flex justify-center">
-            <div  data-aos="fade-left" className="w-10/12">
+            <div  data-aos="fade-left" className="lg:w-10/12 sm:w-11/12 w-10/12">
                 {directorMsg.map((msg, index) => (
-                    <div key={index}>
+                    <div key={index}  className='mb-6'>
                         <div className="flex flex-col mmd:flex-row items-start">
                             <h2 className="mmd:w-full mmd:text-center  text-2xl font-bold mb-4">
                                 {msg.title}
                             </h2>
                         </div>
-                        <div className="flex flex-col mmd:flex-row items-start gap-2 mmd:gap-4">
+                        <div className="flex flex-col mmd:flex-row items-start gap-2 gap-y-4 mmd:gap-x-20">
                             <div data-aos="fade-right" className="mt-6 mmd:w-1/3 w-full">
                                 <img
                                     src={msg.directorData[0].img}
                                     alt={msg.directorData[0].name}
-                                    className="w-full h-auto rounded-lg object-cover"
+                                    className="w-full h-auto rounded-lg object-cover "
                                 />
-                                <div  className="text-center mt-2">
-                                    <h3 className=" font-hind font-bold text-[28px]">{msg.directorData[0].name}</h3>
+                                <div  className="text-center mt-5">
+                                    <h3 className=" font-hind font-bold text-2xl">{msg.directorData[0].name}</h3>
                                     <p className="text-xl">{msg.directorData[0].position}</p>
                                 </div>
                             </div>
-                            <div className="text-justify text-lg mmd:w-2/3 mt-4 w-full">
+                            <div className="text-justify text-[16px] tracking-wide mmd:w-2/3 mmd:mt-8 w-full">
                                 {msg.para.map((paragraph, idx) => (
                                     <p key={idx} className="mb-2" dangerouslySetInnerHTML={{ __html: paraText(paragraph) }} />
                                 ))}
@@ -63,15 +63,15 @@ const Directormsg = () => {
                         </div>
                         <div className="mt-6">
                             <h4 className="font-bold">{msg.sites[0].tag}</h4>
-                            <p className="text-lg">{msg.sites[1].desc}</p>
+                            <p className="text-[16px] tracking-wide">{msg.sites[1].desc}</p>
                         </div>
                         <div className="mt-4">
                             <h4 className="font-bold">{msg.office[0].tag}</h4>
-                            <p className="text-lg">{msg.office[1].desc}</p>
+                            <p className="text-[16px] tracking-wide">{msg.office[1].desc}</p>
                         </div>
                         <div className="mt-4">
                             <h4 className="font-bold">{msg.works[0].tag}</h4>
-                            <p className="text-lg">{msg.works[1].desc}</p>
+                            <p className="text-[16px] tracking-wide">{msg.works[1].desc}</p>
                         </div>
                     </div>
                 ))}

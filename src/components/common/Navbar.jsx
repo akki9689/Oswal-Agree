@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
 import { navbarData } from '../../data/nav-links';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [closingDropdownIndex, setClosingDropdownIndex] = useState(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,7 +18,8 @@ const Navbar = () => {
     if (openDropdownIndex === index) {
       setOpenDropdownIndex(null); // Close the dropdown if it's already open
     } else {
-      setOpenDropdownIndex(index); // Open the clicked dropdown
+      setClosingDropdownIndex(openDropdownIndex); // Set the currently open dropdown to close
+      setOpenDropdownIndex(index); // Open the new dropdown
     }
   };
 
@@ -35,6 +38,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-20 px-6 py-4 bg-white shadow-md">
+      
       <div className="flex items-center justify-center w-7/12 mx-auto md:justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 mr-5">
@@ -42,32 +46,47 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Items */}
-        <div className="items-center hidden space-x-6 md:flex">
+        <div className="items-center hidden space-x-6 lg:flex">
           {navbarData.navItems.map((item, idx) => (
-            <div key={idx} className="relative group">
+            <div
+              key={idx}
+              className="relative group"
+              onMouseEnter={() => toggleDropdown(idx)}
+              onMouseLeave={() => setOpenDropdownIndex(null)}
+            >
               <Link to={item.path} className="text-gray-800 transition hover:text-green-600">
                 {item.label}
               </Link>
               {item.dropdown && (
-                <ul className="absolute left-0 z-20 hidden w-48 text-gray-800 bg-yellow-300 border shadow-md top-full group-hover:block">
-                  {item.dropdown.map((dropdownItem, dropdownIdx) => (
-                    <li key={dropdownIdx} className="bg-white border-b border-black hover:bg-yellow-100">
-                      <Link
-                        to={dropdownItem.path}
-                        className="block px-4 py-2"
-                      >
-                        {dropdownItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <AnimatePresence>
+                  {openDropdownIndex === idx && (
+                    <motion.ul
+                      className="absolute left-0 z-20 w-48 text-gray-800 border rounded-lg shadow-md top-full"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      {item.dropdown.map((dropdownItem, dropdownIdx) => (
+                        <li key={dropdownIdx} className="bg-white border-b border-black rounded-lg hover:bg-yellow-100">
+                          <Link
+                            to={dropdownItem.path}
+                            className="block px-4 py-2"
+                          >
+                            {dropdownItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               )}
             </div>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center ml-auto md:hidden">
+        <div className="flex items-center ml-auto lg:hidden">
           <button onClick={toggleMobileMenu} className="text-gray-800 focus:outline-none">
             {isMobileMenuOpen ? (
               <FaTimes className="w-6 h-6" />
@@ -79,84 +98,64 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation Items */}
-      {isMobileMenuOpen && (
-        <ul className="absolute left-0 z-20 w-full mt-0 bg-white top-full md:hidden">
-          {navbarData.navItems.map((item, idx) => (
-            <li key={idx} className="relative border-b border-black">
-              <a
-                href={item.path}
-                onClick={(e) => handleLinkClick(e, item.dropdown && idx)}
-                className="flex items-center justify-between px-4 py-2 text-gray-800 cursor-pointer hover:bg-gray-100"
-              >
-                <span>{item.label}</span>
-                {item.dropdown && (
-                  <svg
-                    className={`w-4 h-4 transform transition-transform ${openDropdownIndex === idx ? 'rotate-180' : ''
-                      }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                )}
-              </a>
-              {item.dropdown && openDropdownIndex === idx && (
-                <ul className="pl-4 mt-2 bg-white">
-                  {item.dropdown.map((dropdownItem, dropdownIdx) => (
-                    <li key={dropdownIdx} className="mb-2 border-t border-black rounded-lg">
-                      <Link
-                        to={dropdownItem.path}
-                        className="block px-4 py-2 text-gray-800 hover:bg-yellow-100"
-                        onClick={handleDropdownItemClick} // Hide menu on dropdown item click
-                      >
-                        {dropdownItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-          <div className="flex justify-around p-4">
-            {navbarData.socialLinks.map((link, idx) => (
-              <a
-                key={idx}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-600 transition hover:text-green-800"
-              >
-                {link.label === 'Facebook' && <FaFacebookF />}
-                {link.label === 'Instagram' && <FaInstagram />}
-                {link.label === 'YouTube' && <FaYoutube />}
-                {link.label === 'WhatsApp' && <FaWhatsapp />}
-                {link.label === 'LinkedIn' && <FaLinkedinIn />}
-              </a>
-            ))}
-          </div>
-        </ul>
-      )}
-
-      {/* Desktop Social Media Links */}
-      <div className="items-center hidden space-x-2 md:flex">
-        {navbarData.socialLinks.map((link, idx) => (
-          <a
-            key={idx}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-600 transition hover:text-green-800"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.ul
+            className="absolute left-0 z-20 w-full mt-0 bg-white top-full lg:hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            {link.label === 'Facebook' && <FaFacebookF />}
-            {link.label === 'Instagram' && <FaInstagram />}
-            {link.label === 'YouTube' && <FaYoutube />}
-            {link.label === 'WhatsApp' && <FaWhatsapp />}
-            {link.label === 'LinkedIn' && <FaLinkedinIn />}
-          </a>
-        ))}
-      </div>
+            {navbarData.navItems.map((item, idx) => (
+              <li key={idx} className="relative">
+                <a
+                  href={item.path}
+                  onClick={(e) => handleLinkClick(e, item.dropdown && idx)}
+                  className="flex items-center justify-between gap-3 px-4 py-2 text-gray-800 border border-black rounded-lg cursor-pointer hover:bg-gray-100"
+                >
+                  <span>{item.label}</span>
+                  {item.dropdown && (
+                    <svg
+                      className={`w-4 h-4 transform transition-transform ${openDropdownIndex === idx ? 'rotate-180' : ''
+                        }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </a>
+                <AnimatePresence>
+                  {openDropdownIndex === idx && (
+                    <motion.ul
+                      className="pl-4 mt-2 bg-white"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      {item.dropdown.map((dropdownItem, dropdownIdx) => (
+                        <li key={dropdownIdx} className="mb-2 border-b border-black rounded-lg">
+                          <Link
+                            to={dropdownItem.path}
+                            className="block px-4 py-2 text-gray-800 rounded-lg hover:bg-yellow-100"
+                            onClick={handleDropdownItemClick} // Hide menu on dropdown item click
+                          >
+                            {dropdownItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
