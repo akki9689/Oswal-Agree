@@ -23,7 +23,17 @@ const Products = () => {
       .join(' ')  //join words with spaces
 
       matchTitle = category.split('_').join("-")
-  }else{
+
+  }else if(category.includes("-")){
+    
+    title = category
+      .split('-')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+      matchTitle = category;
+
+  }
+  else{
     title = category;
     matchTitle = category;
   }
