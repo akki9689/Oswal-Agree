@@ -4,6 +4,7 @@ import ProductCard from '../common/ProductCard';
 const Filter = ({ products }) => {
 
     const navigate = useNavigate();
+   
 
     const handleReadMoreClick = (title, productName) => {
         navigate(`/products/${title}/${productName}`);
@@ -20,7 +21,7 @@ const Filter = ({ products }) => {
                             imageSrc={product.img}
                             productName={product.name}
                             productDescription={product.activeIngredient}
-                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("-").toLowerCase())}
+                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("_").toLowerCase())}
                         />
 
                     )

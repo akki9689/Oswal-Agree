@@ -1,38 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import Filter from './Filter';
 import { allProducts } from '../../data/products/all-products-data';
-import ProductCard from '../common/ProductCard';
+
 import Popupname from '../common/Popupname';
 
-const Filter = ({ products }) => {
-    const navigate = useNavigate();
 
-    const handleReadMoreClick = (title, productName) => {
-        navigate(`/products/${title}/${productName}`);
-    };
-
-    return (
-        <div className='relative w-full py-8 md:py-16'>
-            <div className='grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
-                {products.length > 0 ? (
-                    products.map((product) =>
-
-                        <ProductCard
-                            key={`${product.name} - ${product.id}`}
-                            imageSrc={product.img}
-                            productName={product.name}
-                            productDescription={product.activeIngredient}
-                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("-").toLowerCase())}
-                        />
-
-                    )
-                ) : (
-                    <p className='text-lg text-center text-gray-500'>No products found.</p>
-                )}
-            </div>
-        </div>
-    );
-};
 
 const categories = [
     "All Products", "Bio-Products", "Fertilizers", "Fungicides", "Herbicides",
@@ -254,7 +226,7 @@ const SearchFilter = () => {
                     </select>
 
                     <div>
-                        <button className='border border-richblack-500  w-max flex px-3 py-2 rounded-lg bg-dark-green-200 text-white' onClick={filterHandler}>Apply Filter</button>
+                        <button className='border border-richblack-500 transition-all duration-200 hover:scale-110  w-max flex px-3 py-2 rounded-lg bg-dark-green-200 text-white' onClick={filterHandler}>Apply Filter</button>
                     </div>
 
 

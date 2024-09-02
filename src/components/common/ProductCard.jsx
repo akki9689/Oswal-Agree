@@ -7,6 +7,9 @@ const ProductCard = ({
   productDescription,
   onReadMoreClick, // Function passed as a prop in
 }) => {
+
+
+  
   return (
     <div data-aos="fade-up" className="w-full max-w-xs mx-auto cursor-pointer" onClick={onReadMoreClick}>
       <div className="flex flex-col justify-between p-6 transition duration-300 transform bg-white rounded-xl hover:shadow-xl hover:scale-105 h-[23rem] hover:shadow-richblack-500">
