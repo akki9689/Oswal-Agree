@@ -97,14 +97,18 @@ const Navbar = () => {
                     <AnimatePresence>
                       {openDropdownIndex === idx && (
                         <motion.ul
-                          className="absolute left-0 z-20 w-48 text-gray-800 rounded-lg shadow-md top-7 bg-[#cdffcd] "
+                          className="absolute left-0 z-20 w-52 text-gray-800 rounded-lg shadow-md top-7 bg-[#cdffcd] "
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
                           {item.dropdown.map((dropdownItem, dropdownIdx) => (
-                            <li key={dropdownIdx} className=" border-b border-richblack-100 transition-all duration-300 hover:bg-dark-green-100 hover:text-white">
+                            <li key={dropdownIdx} className={` transition-all duration-300 hover:bg-dark-green-100 hover:text-white
+                              ${
+                                dropdownIdx === item.dropdown.length - 1 ? "" : "border-b border-richblack-100"
+                              }
+                            `}>
                               <Link
                                 to={dropdownItem.path}
                                 className="block px-4 py-2"

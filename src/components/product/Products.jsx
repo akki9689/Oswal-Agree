@@ -7,15 +7,31 @@ import { motion, useAnimation } from 'framer-motion';
 // ---------------------added
 const Products = () => {
   const { category } = useParams();
-  // console.log(category);
+ 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const navigate = useNavigate();
   const controls = useAnimation();
 
+  let title;
+  let matchTitle;
+
+  if (category.includes("_")) {
+
+    title = category
+      .split('_')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+
+      matchTitle = category.split('_').join("-")
+  }else{
+    title = category;
+    matchTitle = category;
+  }
+
   useEffect(() => {
     const getProducts = () => {
       if (category) {
-        const categoryData = allProducts.find(cat => cat.title.toLowerCase() === category.toLowerCase());
+        const categoryData = allProducts.find(cat => cat.title.toLowerCase() === matchTitle.toLowerCase());
         if (categoryData) {
           setFilteredProducts(categoryData.productName || []);
         } else {
@@ -38,18 +54,7 @@ const Products = () => {
     });
   }, [category, controls]);
 
-  let title;
-
-  if (category.includes("-")) {
-
-    title = category
-      .split('-')   //splt by hyphen
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
-      .join(' ')  //join words with spaces
-
-  }else{
-    title = category;
-  }
+ 
 
   const handleReadMoreClick = (productName) => {
     navigate(`/products/${category}/${productName}`);
@@ -70,7 +75,7 @@ const Products = () => {
               imageSrc={product.img } 
               productName={product.name}
               productDescription={product.activeIngredient}
-              onReadMoreClick={() => handleReadMoreClick(product.name.split(" ").join("-").toLowerCase())}
+              onReadMoreClick={() => handleReadMoreClick(product.name.split(" ").join("_").toLowerCase())}
             />
           ))
         ) : (

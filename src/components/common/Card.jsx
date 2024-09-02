@@ -10,14 +10,20 @@ const Card = ({
 
   let newTitle;
 
-  if (title.includes("-")) {
+  if (title.includes("_")) {
 
     newTitle = title
-      .split('-')   //splt by hyphen
+      .split('_')   //splt by hyphen
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
       .join(' ')  //join words with spaces
 
-  }else{
+  }else if(title.includes("-")){
+    newTitle = title
+    .split('-')   //splt by hyphen
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+    .join(' ')  //j
+  }
+  else{
     newTitle = title;
   }
 
