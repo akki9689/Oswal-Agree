@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Protection from '../common/Protection';
 import { protectionData } from '../../data/home/protectionData';
 
