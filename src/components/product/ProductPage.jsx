@@ -11,10 +11,10 @@ const ProductPage = () => {
 
   let modifyProductName ;
 
-  if (productName.includes("-")) {
+  if (productName.includes("_")) {
 
     modifyProductName = productName
-      .split('-')   //splt by hyphen
+      .split('_')   //splt by hyphen
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
       .join(' ')  //join words with spaces
 
@@ -24,10 +24,30 @@ const ProductPage = () => {
 
 
 
+  let productTitle ;
+  let matchTitle;
+
+
+
+  if (category.includes("_")) {
+
+    productTitle = category
+      .split('_')   //splt by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
+      .join(' ')  //join words with spaces
+
+      matchTitle = category.split('_').join("-");
+
+  }else{
+    productTitle = category;
+    matchTitle = category;
+  }
+
+
   useEffect(() => {
     const getProductDetails = () => {
       let foundProduct = null;
-      const categoryData = allProducts.find(cat => cat.title.toLowerCase() === category.toLowerCase());
+      const categoryData = allProducts.find(cat => cat.title.toLowerCase() === matchTitle.toLowerCase());
       if (categoryData) {
         foundProduct = categoryData.productName.find(prod => prod.name.toLowerCase() === decodeURIComponent(modifyProductName.toLowerCase()));
       }
@@ -37,19 +57,8 @@ const ProductPage = () => {
     getProductDetails();
   }, [category, productName]);
 
-  let productTitle ;
 
-  if (category.includes("-")) {
-
-    productTitle = category
-      .split('-')   //splt by hyphen
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) //capitalize first letter of each word
-      .join(' ')  //join words with spaces
-
-  }else{
-    productTitle = category;
-  }
-
+ 
   if (!product) {
     return<div> <Loader /></div>;
   }

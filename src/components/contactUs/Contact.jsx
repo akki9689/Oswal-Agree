@@ -66,7 +66,7 @@ function Contact() {
   };
 
   const notify = (data) => {
-    console.log(data);
+   
     toast.success('Message Send!', {
       position: 'top-center',
       autoClose: 4000

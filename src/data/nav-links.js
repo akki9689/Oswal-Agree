@@ -22,9 +22,9 @@ export const navbarData = {
        { label: 'Fungicides', path: '/products/fungicides' },
        { label: 'Herbicides', path: '/products/herbicides' },
        { label: 'Fertilizers', path: '/products/fertilizers' },
-       { label: 'Bio Products', path: '/products/bio-products' },
-       { label: 'Micro Nutrients', path: '/products/micro-nutrients' },
-       { label: 'Plant Growth Regulators', path: '/products/plant-growth-regulator' },
+       { label: 'Bio Products', path: '/products/bio_products' },
+       { label: 'Micro Nutrients', path: '/products/micro_nutrients' },
+       { label: 'Plant Growth Regulators', path: '/products/plant_growth_regulator' },
      ],
    },
    {

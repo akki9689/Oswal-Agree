@@ -21,7 +21,7 @@ const SendQueryModal = ({ queryModal, setQueryModal,  }) => {
       toast.success("Your query has been submitted. We will get back to you soon");
       reset()
       setQueryModal("");
-      // console.log(data)
+      
 
     }
 

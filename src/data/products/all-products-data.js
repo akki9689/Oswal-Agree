@@ -142,8 +142,6 @@ import Seltar from '../../images/Products/PGR/Seltar.png'
 
 // ------------------All Data -------------------
 
-//Please do  not use "-" in product name
-
 
 
 export const allProducts = [
@@ -295,7 +293,7 @@ export const allProducts = [
       },
       {
         id: 7,
-        name: 'Apollo Ultra',
+        name: 'Apollo-Ultra',
         productType : "Insecticides",
         img: apolloUltra,
         activeIngredient: 'Fipronil 0.6% GR',
@@ -780,7 +778,7 @@ export const allProducts = [
       },
       {
         id: 23,
-        name: 'O Dan',
+        name: 'O-Dan',
          productType : "Insecticides",
         img: odan,
         activeIngredient: 'Cartap Hydrochloride 4% GR',
@@ -799,7 +797,7 @@ export const allProducts = [
       },
       {
         id: 24,
-        name: 'O Dan Ultra',
+        name: 'O-Dan Ultra',
          productType : "Insecticides",
         img: odanUltra,
         activeIngredient: 'Cartap Hydrochloride 75% SG',
@@ -818,7 +816,7 @@ export const allProducts = [
       },
       {
         id: 25,
-        name: 'O Nata',
+        name: 'O-Nata',
          productType : "Insecticides",
         img: onata,
         activeIngredient: 'Imidacloprid 17.8% SL',
@@ -863,7 +861,7 @@ export const allProducts = [
       },
       {
         id: 26,
-        name: 'O Star',
+        name: 'O-Star',
          productType : "Insecticides",
         img: ostar,
         activeIngredient: 'Bifenthrin 10% EC',
@@ -889,7 +887,7 @@ export const allProducts = [
       },
       {
         id: 27,
-        name: 'O Tara',
+        name: 'O-Tara',
          productType : "Insecticides",
         img: otara,
         activeIngredient: 'Thiamethoxam 25% WG',
@@ -934,7 +932,7 @@ export const allProducts = [
       },
       {
         id: 28,
-        name: 'o Tara Pro',
+        name: 'o-Tara Pro',
          productType : "Insecticides",
         img: otaraPro,
         activeIngredient: 'Thiamethoxam 30% FS',
@@ -974,7 +972,7 @@ export const allProducts = [
       },
       {
         id: 29,
-        name: 'Odan 50',
+        name: 'Odan-50',
          productType : "Insecticides",
         img: odan50,
         activeIngredient: 'Cartap Hydrochloride 50% SP',
@@ -2692,7 +2690,7 @@ export const allProducts = [
       },
       {
         id: 98,
-        name: "Gazab G",
+        name: "Gazab-G",
         productType : "Bio-Products",
         img: Gazab,
         activeIngredient: "Seaweed 7% + Protein Hydrolysate 3%",
@@ -2746,7 +2744,7 @@ export const allProducts = [
       },
       {
         id: 101,
-        name: "Osovita G",
+        name: "Osovita-G",
         productType : "Bio-Products",
         img: Osovita,
         activeIngredient: "Granulated Sea Weed Based Bio-Extract",
@@ -2818,7 +2816,7 @@ export const allProducts = [
       },
       {
         id: 105,
-        name: "SAT VAT",
+        name: "SAT-VAT",
         productType : "Bio-Products",
         img: SATVAT,
         activeIngredient: "Superspreader",

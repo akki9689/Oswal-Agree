@@ -4,6 +4,7 @@ import ProductCard from '../common/ProductCard';
 const Filter = ({ products }) => {
 
     const navigate = useNavigate();
+   
 
     const handleReadMoreClick = (title, productName) => {
         navigate(`/products/${title}/${productName}`);
@@ -11,7 +12,7 @@ const Filter = ({ products }) => {
 
     return (
         <div className='relative w-full py-8 md:py-16'>
-            <div data-aos="fade-left" className='grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+            <div  className='grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
                 {products.length > 0 ? (
                     products.map((product) =>
 
@@ -20,7 +21,7 @@ const Filter = ({ products }) => {
                             imageSrc={product.img}
                             productName={product.name}
                             productDescription={product.activeIngredient}
-                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("-").toLowerCase())}
+                            onReadMoreClick={() => handleReadMoreClick(product.productType.toLowerCase() , product.name.split(" ").join("_").toLowerCase())}
                         />
 
                     )

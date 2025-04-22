@@ -63,8 +63,7 @@ const App = () => {
 
                     {/* About */}
                     <Route path='/about' element={<About />}>
-                        {/* Redirect /about to /about/company-profile */}
-                        <Route index element={<Navigate to="/about/company-profile" replace />} />
+                      
                         <Route path='company-profile' element={<Companyprofile />} />
                         <Route path='vision' element={<Visionabt />} />
                         <Route path='awards' element={<Awards />} />

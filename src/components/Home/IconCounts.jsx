@@ -36,7 +36,6 @@ const IconCounts = ({data}) => {
 
   } , [inView , target])
 
-  // console.log(num.toLocaleString())
 
 
   return (

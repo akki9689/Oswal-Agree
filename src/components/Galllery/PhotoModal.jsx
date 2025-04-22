@@ -15,7 +15,6 @@ const PhotoModal = ({ modalData, setModalData }) => {
 
   useOnclickOutside(modalRef, closeHandler)
 
-  // console.log(modalData)
 
   const modalVariants = {
     hidden: { opacity: 0, scale: 0.4 }, // Modal starts off-screen (above the viewport)
