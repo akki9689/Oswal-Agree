@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { LoadingContext } from './components/common/LoadingContext';
 
-// Lazy load components
+// Lazy load component
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Companyprofile = lazy(() => import('./components/about/Companyprofile'));
