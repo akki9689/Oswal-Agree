@@ -1,7 +1,7 @@
-import React from "react";
+
 import HeroSection from "../components/Home/HeroSection";
 
-import Companyprotection from "../components/home/Companyprotection";
+import Companyprotection from "../components/Home/Companyprotection";
 import Product from "../components/Home/Product";
 import OurVision from "../components/Home/OurVision";
 import IconSection from "../components/Home/IconSection";
